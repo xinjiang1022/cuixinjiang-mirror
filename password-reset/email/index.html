@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="webkit" name="renderer" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="noindex,nofollow" name="robots" />
+    <title>重置密码 - 午后阳光</title>
+    <link rel="preload" href="/images/wordmark.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/images/logo.png" as="image" type="image/png" />
+    <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
+
+    
+  
+  <link rel="stylesheet" href="/webjars/normalize.css/8.0.1/normalize.css" />
+  <link rel="stylesheet" href="/styles/main.css?v=2.26.1" />
+
+  
+  
+
+  <script>
+    const i18nResources = {
+      sendVerificationCodeSuccess: `发送成功`,
+      sendVerificationCodeFailed: `发送失败，请稍后再试`,
+      sendVerificationCodeSending: `发送中...`,
+      passwordConfirmationFailed: `确认密码不匹配`,
+    };
+  </script>
+
+  <script src="/js/main.js"></script>
+
+
+
+    
+  </head>
+  <body class="gateway-page">
+    
+    <div class="gateway-wrapper">
+      
+  <style>
+    .halo-logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2em;
+    }
+
+    .halo-logo img {
+      width: 6em;
+    }
+  </style>
+  <div class="halo-logo">
+    <img src="/images/wordmark.svg" alt="Halo" />
+  </div>
+
+      <div class="halo-form-wrapper">
+        <h1 class="form-title">重置密码</h1>
+        
+  
+  <form class="halo-form" action="/password-reset/email" method="post"><input type="hidden" name="_csrf" value="x6XCf7i03LknuheAGfhBnk9e8Ld2NcROcthAm8m51M_a8HKhpcbwT96C6Y0K2CayLdV1qSxu3dYTBPdjSu8lr_iA5fm_lUOV"/>
+    
+    
+    <div class="form-item">
+      <label for="email">电子邮箱</label>
+      <div class="form-input">
+        <input type="email" id="email" name="email" autofocus required value="" />
+      </div>
+      
+    </div>
+    <div class="form-item">
+      <button type="submit">提交</button>
+    </div>
+  </form>
+
+
+        
+  
+
+      </div>
+
+      
+  <style>
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2em 0;
+      gap: 0.625rem;
+    }
+
+    .language-switcher label {
+      color: var(--color-text);
+      display: inline-flex;
+    }
+
+    .language-switcher select {
+      all: unset;
+      border: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+      height: 2em;
+      border-radius: var(--rounded-lg);
+      outline: none;
+      padding: 0 2em 0 0.5em;
+      display: inline-flex;
+      align-items: center;
+      color: var(--color-text);
+      background-color: var(--color-text);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.45rem center;
+    }
+
+    .language-switcher select:focus {
+      border-color: var(--color-primary);
+    }
+  </style>
+  <div class="language-switcher">
+    <label for="language-select">
+      <svg viewBox="0 0 24 24" width="1.2em" height="1.2em">
+        <path
+          fill="currentColor"
+          d="m12.87 15.07l-2.54-2.51l.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7l1.62-4.33L19.12 17z"
+        ></path>
+      </svg>
+    </label>
+    <select id="language-select" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="zh-CN" selected="selected">简体中文</option>
+      <option value="zh-TW">繁体中文</option>
+    </select>
+    <script type="text/javascript">
+      function changeLanguage() {
+        const selectedLanguage = document.getElementById("language-select").value;
+        const currentURL = new URL(window.location.href);
+        currentURL.searchParams.set("language", selectedLanguage);
+
+        history.replaceState(null, "", currentURL.toString());
+
+        window.location.reload();
+      }
+    </script>
+  </div>
+
+    </div>
+  
+  </body>
+</html>

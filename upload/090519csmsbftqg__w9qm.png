@@ -1,0 +1,1105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>门户</title>
+<meta name="keywords" content="首页" />
+<meta name="description" content="首页 " />
+<meta property="og:title" content="飞牛私有云论坛 fnOS" />
+<meta property="og:description" content="飞牛私有云论坛 fnOS" />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<base href="https://club.fnnas.com/" /><link rel="stylesheet" type="text/css" href="data/cache/style_2_common.css?w6i" /><!--[if IE]><link rel="stylesheet" type="text/css" href="data/cache/style_2_iefix.css?w6i" /><![endif]--><script type="text/javascript">var STYLEID ='2',STATICURL ='https://club.fnnas.com/static/',IMGDIR ='https://club.fnnas.com/static/image/common',VERHASH ='w6i',charset ='utf-8',discuz_uid ='43774',cookiepre ='pvRK_2132_',cookiedomain ='',cookiepath ='/',showusercard ='1',attackevasive ='0',disallowfloat ='newthread',creditnotice ='1|牛值|,2|飞牛币|,3|登陆天数|',defaultstyle ='',REPORTURL ='aHR0cHM6Ly9jbHViLmZubmFzLmNvbS9kYXRhL2F0dGFjaG1lbnQvZm9ydW0vMjAyNTEwLzMwLzA5MDUxOWNzbXNiZnRxZyoqdzlxbS5wbmc=',SITEURL ='https://club.fnnas.com/',JSPATH ='data/cache/',CSSPATH ='data/cache/style_',DYNAMICURL ='';</script>
+<script src="data/cache/common.js?w6i" type="text/javascript"></script>
+<script src="template/quater_2024_juejin/src/js/jquery.min.js?w6i" type="text/javascript"></script>
+<meta name="application-name" content="飞牛私有云论坛 fnOS" />
+<meta name="msapplication-tooltip" content="飞牛私有云论坛 fnOS" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="msapplication-task" content="name=首页;action-uri=https://club.fnnas.com/portal.php;icon-uri=https://club.fnnas.com/https://club.fnnas.com/static/image/common/portal.ico" /><meta name="msapplication-task" content="name=论坛;action-uri=https://club.fnnas.com/forum.php;icon-uri=https://club.fnnas.com/https://club.fnnas.com/static/image/common/bbs.ico" />
+<meta name="msapplication-task" content="name=圈子;action-uri=https://club.fnnas.com/group.php;icon-uri=https://club.fnnas.com/https://club.fnnas.com/static/image/common/group.ico" /><script src="data/cache/portal.js?w6i" type="text/javascript"></script>
+</head>
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/main.1c1a88a3.chunk.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/11.67a310e0.chunk.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/src/css/head1.css?w6i" />
+<body id="nv_portal" class="pg_index" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<style type="text/css">body{font-family:"PingFang SC","微软雅黑","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;background:#F8F8F8 !important}body{min-width:0 !important}.tab1 .mb-2{margin:0 0 10px 0}.pg_guide .pg{background:none}.thread-post-btn-wrapper{position:fixed;right:3%;bottom:22px;z-index:998;width:48px;height:48px;background:#666666;box-shadow:0px 6px 18px 0px rgba(0,0,0,0.28);border-radius:24px;display:none}.post-btn-icon-hor,.post-btn-icon-ver{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#FFFFFF;border-radius:3px;}.post-btn-icon-hor{width:16px;height:2px;}.post-btn-icon-ver{width:2px;height:16px;}#seccheck{position:relative}#seccheck .p_opt{top:25px !important;left:40px !important;margin-left:0 !important}#post_extra_tb label{margin-bottom:3px}.pm_o .o{width:20px;height:15px}.xld a.d,.xl a.d,.attc a.d,.c a.d,.sinf a.d{font-family:Arial,Helvetica,sans-serif}img,svg{vertical-align:middle}.pc-login{float:right;position:relative;height:64px;display:flex;justify-content:center;align-items:center;}.icon-items:hover,.pc-login:hover .icon{background:rgba(0,0,0,0.04);border-radius:50%;}.pc-login .icon{width:44px;height:44px;display:flex;justify-content:center;align-items:center;}.pc-login .icon .login-img{display:block;position:relative;}.logo-img-wrap{position:relative;}.pc-login .icon img{width:32px;height:32px;}.pc-login .pc-login img{border-radius:50%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}.pc-icon-wrap{display:none;list-style:none;width:100px;min-height:50px;background:#FFFFFF;box-shadow:0px 2px 6px 0px rgba(0,0,0,0.15);border-radius:4px;position:absolute;top:64px;right:0;z-index:10;text-align:center;}.pc-login:hover .pc-icon-wrap{display:block}.pc-icon-wrap .wrap-item{width:100%;font-family:'.AppleSystemUIFont';font-size:12px;color:rgba(0,0,0,0.85);font-weight:400;height:40px;line-height:40px;position:relative;}.pc-login .wrap-item a{text-decoration:none;display:block;color:rgba(0,0,0,0.85);}.pc-login .wrap-item a:hover{background:#F6F6F6}.pc-login .wrap-item span{position:relative;}.icon.common-tooltip{width:44px;height:44px;display:flex;justify-content:center;align-items:center;}.icon.common-tooltip img{width:32px;height:32px;}.input_icons__2xutS img{max-width:100%}.login-style{margin-right:0 !important}#nv_forum.pg_collection .tb_h{padding:5px 20px 0 20px;background:none}#quater_nav{position:fixed;background:#FFFFFF}#quater_nav.navfixed{background:hsla(0,0%,100%,0.9);-webkit-backdrop-filter:hsla(0,0%,100%,0.9);backdrop-filter:blur(40px)}.locked{padding:15px 20px 15px 20px;border:0;border-left:4px solid #BBBBBB;background:#F6F6F6}.picture:last-child .bottomLine{padding-bottom:0;border:0}#nv_home.pg_space .tl th,#nv_home.pg_space .tl td{border-color:#EEEEEE}.ListCard_newsList__pt6wt{padding:15px !important;}.ContainTitleCard_titleCard__muJ_r{background-color:#FFFFFF;border-radius:5px;margin-bottom:20px;}.ContainTitleCard_title__2sQkH{display:flex;align-items:center;justify-content:space-between;height:20px;padding:0 0 15px 0;border-bottom:1px solid rgba(228,230,235,0.5)}.ContainTitleCard_titleName__2sWlb{cursor:pointer;font-weight:400;font-size:16px;display:flex;align-items:center;color:#0e151c;}.ContainTitleCard_refresh__1NYFh{font-weight:400;font-size:12px;color:#8a919f;cursor:pointer;}.ListCard_listCard__EVHPB .ListCard_vector__1lqc8{display:flex;align-items:center;cursor:pointer;color:#8a919f}.ListCard_listCard__EVHPB .ListCard_vector__1lqc8>img{width:10px;height:10px;margin-right:3px;}.ListCard_listCard__EVHPB .ListCard_list__3Umjr{margin-top:6px;}.ListCard_listCard__EVHPB .ListCard_item__tDZ0H{cursor:pointer;display:flex;align-items:center;padding:7px 0;font-size:14px;line-height:22px;}.ListCard_listCard__EVHPB .ListCard_index__3mFA4{line-height:22px;width:22px;height:22px;min-width:22px;margin:0 6px 0 0;color:#8a919f;font-size:15px;font-weight:bold;font-family:Archivo;overflow:hidden}.ListCard_listCard__EVHPB .ListCard_item__tDZ0H .ListCard_content__2HiOo{color:#0e151c;max-width:238px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.ListCard_listCard__EVHPB .ListCard_item__tDZ0H .ListCard_content__2HiOo a:hover{color:#0099ee !important}.ListCard_listCard__EVHPB .ListCard_active_index__VROgv{background:linear-gradient(180deg,#f64242 20%,rgba(246,66,66,.4) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}.ListCard_item__tDZ0H:nth-child(2) .ListCard_index__3mFA4{background:linear-gradient(180deg,#ff7426 20%,rgba(255,116,38,.4) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}.ListCard_item__tDZ0H:nth-child(3) .ListCard_index__3mFA4{background:linear-gradient(180deg,#ffac0c 20%,rgba(255,172,12,.4) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;}.DownCard_downloadCard__1sLVU{position:relative;display:flex;align-items:center;padding:20px;border-radius:5px;background:#FFFFFF;margin-bottom:20px;cursor:pointer;}.DownCard_downloadCard__1sLVU .DownCard_logo__2u52X{width:44px;height:44px;flex-shrink:0;}.DownCard_downloadCard__1sLVU .DownCard_right__2hAq-{margin-left:16px;}.DownCard_downloadCard__1sLVU .DownCard_right__2hAq- .DownCard_title__1FOcq{font-weight:600;font-size:16px;color:#0e151c;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:3px;}.DownCard_downloadCard__1sLVU .DownCard_right__2hAq- .DownCard_detail__2ozTr{font-size:12px;color:rgba(14,21,28,0.6);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.DownCard_downloadCard__1sLVU .DownCard_rightImg__1Gcvn{margin-left:46px;}.a_h{display:none}.a_mu{display:none}.mus_box{display:none}.whole_Box{display:none}#pt{padding:5px 0}#nv_group .tl th,#nv_group .tl td{border-color:#EEEEEE}#nv_group .tl .th{background:none}#nv_group .tl tr:hover th,#nv_group .tl tr:hover td{background:none}.notice_pm{margin-top:16px !important}.notice_all{margin-top:16px !important}.tdats .tfx{width:380px !important}.tdats .tb{width:350px !important}.tscr{width:350px !important}.tdats .tfxf{width:730px !important}#nv_search #scform_srchtxt{height:58px;line-height:58px;border:0;border-right:0}#nv_search #scform_submit{height:58px;line-height:58px;background:none}#scform_submit:before{display:none}#mood_mystatus{width:622px !important}.mi #moodfm textarea{float:left;width:542px !important;height:50px !important;border:0 !important}.biduser{width:935px !important}.ct3_a .mn{width:747px !important}.ct3_a .sd{width:220px !important;background:#FFFFFF}.pbg{height:10px !important;padding:0 !important;overflow:hidden !important;background:#F0F0F0 !important}.pbr{height:10px !important;padding:0 !important;margin:0 !important;overflow:hidden !important;background:#5AAF4A !important}.footer-style{z-index:199;position:relative;bottom:0;width:100%;min-width:500px;height:50px;padding-top:19px;border-top:0;font-family:Arial,Helvetica,sans-serif,'Microsoft Yahei';font-size:14px;color:#000;text-align:center;line-height:14px;background:#FFFFFF;}.footer-style .footer-first{float:left;color:#777777}.footer-style .footer-second{float:right;}.footer-style a{text-decoration:none;color:#777777}.footer-style .footer-first>a{margin:0 7px;}.footer-style .footer-first>span{position:relative;top:-1px;color:#777777}.login-style{cursor:pointer;float:right;margin-right:20px;width:70px;height:30px;line-height:30px;text-align:center;margin-top:13px;background:rgba(0,0,0,0.85);color:#FFFFFF !important;border-radius:18px;font-size:14px;}.login-style:hover{background:#EA4738}#online .x.mbm.cl li a{color:#999999}.mi_phone_head1{float:left;margin:0 10px 0 0}.mi_phone_head1 img{width:30px;height:30px;border-radius:50%}#qmenu::after{display:none}.pc-forum{background-color:#fff;border-radius:5px;font-family:' .AppleSystemUIFont';padding-left:20px;margin-bottom:24px;}.pc-forum .pc-forum-title{font-size:18px;color:#0e151c;letter-spacing:1px;font-weight:400;padding-top:24px;overflow:hidden;font-weight:400;}.pc-forum .pc-forum-content{font-size:14px;color:rgba(0,0,0,0.85);font-weight:400;padding:18px 0 10px 0;}.pc-forum .pc-forum-content .content-item{padding-bottom:18px;width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;position:relative;cursor:pointer;}.pc-forum-content .content-item:before{content:'';width:12px;height:18px;opacity:0.9;border-radius:2px;margin-right:8px;background:url(template/quater_2024_juejin/src/ic_top.png) no-repeat;background-size:contain;vertical-align:sub;display:inline-block;}.dji-community-content a{text-decoration:none;}.pc-forum-button{margin-right:20px;padding-bottom:20px;height:44px;}.pc-forum-button .forum-button{background:rgba(0,0,0,0.04);height:44px;line-height:44px;text-decoration:none;border-radius:4px;cursor:pointer;text-align:center;display:block;font-weight:400;font-size:14px}.pc-forum-button .forum-button:hover{background:rgba(0,0,0,0.06)}.index-topic .pc-forum-content .content-item:before{display:none}.index-topic .pc-forum-content .content-item span{width:18px;height:18px;display:inline-block;}.index-topic .pc-forum-content .content-item:nth-child(1) span{width:12px;height:18px;background:url(template/quater_2024_juejin/src/top1_icon.png) no-repeat;background-size:contain;display:inline-block;margin-right:6px;vertical-align:middle;}.index-topic .pc-forum-content .content-item:nth-child(2) span{width:12px;height:18px;background:url(template/quater_2024_juejin/src/top_2.png) no-repeat;background-size:contain;display:inline-block;margin-right:6px;vertical-align:middle;}.index-topic .pc-forum-content .content-item:nth-child(3) span{width:12px;height:18px;background:url(template/quater_2024_juejin/src/top3.png) no-repeat;background-size:contain;display:inline-block;margin-right:6px;vertical-align:middle;}.index-topic{width:100%;box-sizing:border-box}.common-tooltip-release{display:flex;justify-content:center;align-items:center;position:relative;background-color:#0099ee;height:30px;line-height:30px;width:72px;border-radius:2px;opacity:1;color:#FFFFFF;font-size:14px;cursor:pointer;}.common-tooltip-release a{color:#FFFFFF !important}#samplepanel{position:relative;z-index:200}.nav_box_top{z-index:100}@font-face{font-family:Archivo;src:url(template/quater_2024_juejin/portal/Archivo-ExtraBold.361ffd6.ttf);font-style:normal;font-weight:800}.divider[data-v-41025282]{width:250px;height:1px;box-sizing:border-box;}.divider .content[data-v-41025282]{width:100%;margin:0;height:100%;background:rgba(228,230,235,0.5);}.hot-item-footer[data-v-41025282]{height:32px;display:flex;justify-content:center;align-items:flex-end;}.hot-item-footer .item-footer-button[data-v-41025282]{font-size:14px;color:#8a919f;line-height:1.66rem;display:flex;flex-direction:row;align-items:center;}.hot-item-footer .item-footer-button path[data-v-41025282]{fill:#8a919f;}.signin-tip[data-v-dd4bc01e]{padding:20px;background-color:var(--juejin-layer-1);box-sizing:border-box;}.sidebar-block[data-v-5b96eadb]{background-color:#FFFFFF;box-shadow:0 1px 2px 0 rgba(0,0,0,.05);border-radius:2px;margin-bottom:20px;font-size:14px;line-height:1.29;border-radius:4px;color:#252933;}.first-line[data-v-dd4bc01e]{display:flex;flex-direction:row;align-items:center;justify-content:space-between;}.light-theme,body{--juejin-layer-golden-1:#faf3e5;--juejin-layer-golden-2:#f6e7cb;--juejin-component-hover:#e4e6eb;--juejin-gradientgold_normal_start:#fde8c3;--juejin-gradientgold_normal_end:#edd3a7;--juejin-gradientgold_hover_start:#f1dfc0;--juejin-gradientgold_hover_end:#e6c99b;--juejin-gradientgold_click_start:#e9d5b3;--juejin-gradientgold_click_end:#dac29a;--juejin-layer_loading_start:rgba(228,230,235,0);--juejin-layer_loading_end:rgba(228,230,235,0.5);--juejin-layer_golden_2:#faf3e5;--juejin-font_golden_4:#7e5d25;--juejin-font-golden-1:#7e5d25;--juejin-font-golden-2:#8a795c;--juejin-font-golden-3:#d6b885;--juejin-gray-0:#fff;--juejin-gray-1-1:#e4e6eb;--juejin-gray-1-2:rgba(228,230,235,0.5);--juejin-gray-1-3:#e4e6eb;--juejin-gray-2:#f2f3f5;--juejin-gray-3:#f7f8fa;--juejin-background:#f2f3f5;--juejin-layer-1:#fff;--juejin-layer-2-1:#f7f8fa;--juejin-layer-2-2:rgba(247,248,250,0.7);--juejin-layer-3-fill:#f2f3f5;--juejin-layer-3-border:#e4e6eb;--juejin-layer-4-dropdown:#fff;--juejin-layer-5:#fff;--juejin-brand-1-normal:#1e80ff;--juejin-brand-2-hover:#1171ee;--juejin-brand-3-click:#0060dd;--juejin-brand-4-disable:#abcdff;--juejin-brand-5-light:#eaf2ff;--juejin-mask-1:rgba(0,0,0,0.4);--juejin-mask-2:#fff;--juejin-mask-3:none;--juejin-brand-fill1-normal:rgba(30,128,255,0.05);--juejin-brand-fill2-hover:rgba(30,128,255,0.1);--juejin-brand-fill3-click:rgba(30,128,255,0.2);--juejin-brand-stroke1-normal:rgba(30,128,255,0.3);--juejin-brand-stroke2-hover:rgba(30,128,255,0.45);--juejin-brand-stroke3-click:rgba(30,128,255,0.6);--juejin-font_danger:#ff5132;--juejin-font-1:#252933;--juejin-font-2:#515767;--juejin-font-3:#8a919f;--juejin-font-4:#c2c8d1;--juejin-font-brand1-normal:#1e80ff;--juejin-font-brand2-hover:#1171ee;--juejin-font-brand3-click:#0060dd;--juejin-font-brand4-disable:#abcdff;--juejin-font-success:#2bb91b;--juejin-font-warning:#ff8412;--juejin-font-danger:#ff5132;--juejin-font-white-disable:#fff;--juejin-font-white:#fff;--juejin-success-1-normal:#00b453;--juejin-success-2-deep:#00964e;--juejin-success-3-light:#e2faed;--juejin-warning-1-normal:#ff7426;--juejin-warning-2-deep:#e05e00;--juejin-warning-3-light:#fff3e5;--juejin-danger-1-normal:#f64242;--juejin-danger-2-deep:#cb2634;--juejin-danger-3-light:#fff2ff;--juejin-sub-1-purple:#9f54ff;--juejin-sub-2-blue:#57a0ff;--juejin-sub-3-cyan:#5ad7ff;--juejin-sub-4-green:#33d790;--juejin-sub-5-yellow:#ffcc15;--juejin-sub-6-orange:#ff834e;--juejin-sub-7-red:#ff5e54;--juejin-coupon_1_button:#f64242;--juejin-coupon_1_button_disable:#faa0a0;--juejin-coupon_2_card:rgba(255,245,244,0.7);--juejin-coupon_3_stroke:rgba(246,66,66,0.2);--juejin-navigation:#fff;--juejin-shade-1:rgba(0,0,0,0.4);--juejin-shade-2:rgba(0,0,0,0.6);--juejin-popup:#fff;--juejin-popover:#464646;--juejin-sheets:#f7f8fa;--juejin-coupon-button:#f64242;--juejin-coupon-button-disable:#faa0a0;--juejin-coupon-card:rgba(255,245,244,0.7);--juejin-layer-loading-start:#e4e6eb;--juejin-layer-loading-end:rgba(228,230,235,0.5);--juejin-font-priv-hint:#916be1;--juejin-background-jscore-radar:#232323;--juejin-button-shadow-hover:#ddd;--juejin-bot-icon-side-bg-color:linear-gradient(180deg,#ebf1ff,#fff);--juejin-bot-card-border-color:#eaedf1;--juejin-ai-text:#2f2f2f;--juejin-ai-normal-text:#0c0d0e;--juejin-ai-text-desc:#9299a7;--juejin-ai-message-bgc:#fff;--juejin-ai-button-bgc:#fff;--juejin-ai-code-bgc:#f7f8f9;}@media (max-width:820px){.nav_box_top{display:none}#nv_group.pg_index #ct{width:96% !important;margin:10px auto !important}.pg_group .ct2 .mn{border-radius:0 !important}.group_box_s1{padding:0 3% !important}#nv_group .tfm{width:100%;display:block}#nv_group .tfm tbody{width:100%;display:block}#nv_group .tfm tbody tr{float:left;width:100%;display:block}#nv_group .tfm tbody tr td{float:right;width:calc(100% - 85px)}#nv_group .tfm th{float:left;width:80px;min-width:80px}#nv_group .tfm .px{width:calc(100% - 10px)}#nv_group .tfm .c,#nv_group .tfm .tedt,#nv_group .m_c .tfm .tedt{width:calc(100% - 2px)}.mi_phone_header .logo img{height:24px !important;margin:16px 0 0 0 !important}.footer-style .wp{width:100% !important}.pf_l li{width:100% !important}.footer-style{position:relative !important}.footer_box{height:auto !important;margin-top:10px !important;overflow:hidden}.pg_ranklist .tl .frm{display:none}.pg_ranklist .tl .by{display:none}.pg_ranklist .tl td:last-child{display:none}.pg_ranklist .tl th,.pg_ranklist .tl td{border-color:#EEEEEE}body.pg_post{background:#FFFFFF !important}#e_sml_menu.sllt{max-width:94% !important;left:3% !important}.pg_post .p_pof{width:94% !important;left:3% !important;box-sizing:border-box}.pg_post .fwinmask{width:94% !important;left:3% !important}#fwin_nav.fwinmask{width:94% !important;left:3% !important}#fwin_nav.fwinmask table{width:100% !important}#fwin_nav.fwinmask .pbl{width:100%;border-right:1px solid #CCCCCC}#fwin_nav.fwinmask .pbl li{height:auto !important;min-height:280px !important}#fwin_nav.fwinmask .pbl li:last-child{width:calc(34% - 10px) !important;border-right:0 !important}#fwin_nav.fwinmask{width:100% !important;left:0 !important;margin-top:0;top:50px !important;z-index:900 !important;background:rgba(0,0,0,0.5);height:100vh !important;padding-top:50px;}#fwin_nav.fwinmask .m_c{display:block;width:94%;max-width:100% !important;padding:16px;border-radius:4px;box-sizing:border-box;left:3%;position:relative;}#fwin_nav.fwinmask .m_c .c{padding:0 !important}.numboxx{padding:20px !important}ul.pf_l{padding:0 !important}.pf_l li{width:100% !important}.mus_box{display:none}.pg_post #ct.ct2_a{box-sizing:border-box;padding:20px !important;border-radius:3px;background:#FFFFFF !important}#editorbox{padding:0 !important}#e_controls .y{display:none}.edt .btn{float:none !important;border:0 !important}.simpleedt .bar,.simpleedt .b1r,.simpleedt .b2r{height:auto !important}#postbox input{width:auto !important}.edt .bbar{height:auto !important}.footer-style .wp{width:100%}#gotop{display:none !important}.pbnv{width:auto !important}.thread-post-btn-wrapper{display:block}.search-box{width:94% !important}.search-push{top:64px !important;width:100% !important;padding-bottom:20px;border-radius:0 !important}#scbar_btn{background-size:24px}.search-input .search-close{position:relative;top:0;width:28px;height:28px;background-size:28px !important}#scbar_txt{font-size:16px}.search-push .search-item{padding:0 20px}}</style>
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/font/wenzhang.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/src/css/style.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/src/css/9.d3e1268.css?w6i" />
+<div class="mi_phone_top cl" style="position: relative;">
+<div id="body_overlay" style="display: none;"></div>
+<script type="text/javascript">jQuery(document).ready(function(jQuery) {jQuery('.xiaomi_menu').click(function(){jQuery('#body_overlay').fadeIn(50);jQuery('.icon-cancel-fine').fadeIn(50);})
+jQuery('.icon-cancel-fine').click(function(){jQuery('#body_overlay').fadeOut(50);jQuery('.icon-cancel-fine').fadeOut(50);})
+jQuery('#body_overlay').click(function(){jQuery('#body_overlay').fadeOut(50);jQuery('.icon-cancel-fine').fadeOut(50);})
+})
+</script>
+<div class="quater_phone_nav menu" style="font-family: Arial, Helvetica, sans-serif,'Microsoft Yahei'">
+<div class="z cl" style="width: 180px; padding: 30px 0 30px 20px; margin-bottom: 10px; color: #FFFFFF; line-height: 30px; font-size: 15px; background: rgba(0,0,0,0.85);">
+<a href="home.php?mod=space&amp;uid=43774" target="_blank" title="访问我的空间" id="umnav" onMouseOver="showMenu({'ctrlid':this.id,'ctrlclass':'a'})" class="mi_phone_head1" style="color: #FFFFFF;">
+<img src="https://club.fnnas.com/uc_server/avatar.php?uid=43774&size=small&ts=1" class="user_avatar"> </a>
+lzdl </div>
+<ul>
+<li><a href="portal.php" title="首页">首页</a></li>
+<li><a href="#" title="资讯">资讯</a></li>
+<li><a href="forum.php" title="论坛">论坛</a></li>
+<li><a href="member.php?mod=logging&amp;action=logout&amp;formhash=6e3d10b0">退出登录</a></li>
+</ul>
+</div>
+</div>
+<div style="width: 100%; background: none;" class="mi_phone_box cl">
+<div class="wp cl">
+<div class="mi_phone_header">
+<div class="mi_section">
+<div class="logo z">
+<h2><a href="/portal.php" title="飞牛私有云论坛 fnOS"><img src="template/quater_2024_juejin/src/logo.png"></a></h2>
+</div>
+<div class="xiaomi_menu"><span></span><span></span><span></span></div>
+<script type="text/javascript">jQuery(".xiaomi_menu").click(function(){jQuery('.quater_phone_nav').addClass("on");})
+jQuery(".icon-cancel-fine").click(function(){jQuery('.quater_phone_nav').removeClass("on");})
+jQuery("#body_overlay").click(function(){jQuery('.quater_phone_nav').removeClass("on");})
+</script>
+<a style="float: right; display: block; margin: 16px 3% 0 0;" class="search_button"><img src="template/quater_2024_juejin/src/ic_search.png" width="24"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav_box_top" style="position: relative; height: 64px;">
+<div id="quater_nav">
+<div class="wp cl">
+</div>
+<div id="quater_bar" class="cl " style="width: 100%;">
+<div class="wp cl">
+<div class="quater_logo z" style="height: 28px; margin: 18px 40px 0 0;">
+<h2><a href="/portal.php" title="飞牛私有云论坛 fnOS"><img src="template/quater_2024_juejin/src/logo.png"></a></h2>
+</div>
+<div style="display: none; float: right;">
+<script src="data/cache/logging.js?w6i" type="text/javascript"></script>
+<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&amp;action=login&amp;loginsubmit=yes&amp;infloat=yes&amp;lssubmit=yes" onsubmit="return lsSubmit();">
+<div class="fastlg cl"> <span id="return_ls" style="display:none"></span>
+<div class="y pns">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td><span class="ftid">
+<select name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
+<option value="username">用户名</option>
+<option value="email">Email</option>
+</select>
+</span>
+<script type="text/javascript">simulateSelect('ls_fastloginfield')</script></td>
+<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+<td class="fastlg_l"><label for="ls_cookietime">
+<input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="2592000" tabindex="903" />
+自动登录</label></td>
+<td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td>
+</tr>
+<tr>
+<td><label for="ls_password" class="z psw_w">密码</label></td>
+<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+<td>&nbsp;<a href="member.php?mod=register" class="xi2 xw1">立即注册</a></td>
+</tr>
+</table>
+<input type="hidden" name="quickforward" value="yes" />
+<input type="hidden" name="handlekey" value="ls" />
+</div>
+<div class="fastlg_fm y" style="margin-right: 10px; padding-right: 10px">
+<p><a href="javascript:;" onclick="showWindow('xiaomy_wxlogin', 'plugin.php?id=xiaomy_wxlogin&oper=scan')"><img src="source/plugin/xiaomy_wxlogin/static/images/wxlogin.png" class="vm" /></a></p>
+<p class="hm xg1" style="padding-top: 2px;">微信扫码 , 快速开始</p>
+</div>
+</div>
+</form>
+</div>
+<div class="quater_user logined">
+<div class="quater_user_info">
+<div class="user-main cl">
+<div class="avatar"> <a href="home.php?mod=space&amp;uid=43774" target="_blank" title="访问我的空间" id="umnav" onMouseOver="showMenu({'ctrlid':this.id,'ctrlclass':'a'})">
+<img src="https://club.fnnas.com/uc_server/avatar.php?uid=43774&size=small&ts=1" class="user_avatar"> </a></div>
+<span class="arrow"></span></div>
+<div class="user_menu">
+<ul>
+<div class="cl" style="padding: 5px 0;">
+<li><a href="home.php?mod=spacecp&amp;ac=credit&amp;showcredit=1">积分: 27</a></li>
+<li><a id="msg_menu" href="home.php?mod=space&amp;do=pm" class="msg">消息</a></li>
+<li><a href="home.php?mod=spacecp">设置</a></li>
+<li><a href="home.php?mod=space&amp;do=favorite&amp;view=me">我的收藏</a></li>
+<li class="l4" style="margin-bottom: 5px;"><a href="member.php?mod=logging&amp;action=logout&amp;formhash=6e3d10b0">退出登录</a></li>
+<a href="plugin.php?id=zqlj_sign" target="_blank"><font color="#FF0000"><strong>天天打卡</strong></font></a> </div>
+</ul>
+</div>
+</div>
+</div>
+<ul class="usernav">
+</ul>
+<div class="quater_navigate" style="float: left;">
+<ul>
+<li id="mn_N1646"><a href="portal.php" hidefocus="true">首页</a>
+<i></i>
+</li>
+<li id="mn_forum"><a href="forum.php" hidefocus="true" title="BBS">论坛<span>BBS</span></a>
+<i></i>
+</li>
+<li id="mn_Nccbf"><a href="https://help.fnnas.com/" hidefocus="true" target="_blank">帮助中心</a>
+<i></i>
+</li>
+<li id="mn_N4186"><a href="https://fnos.net/" hidefocus="true" target="_blank">远程访问</a>
+<i></i>
+</li>
+</ul>
+</div>
+<div class="icon-item icon-items ga-data" style="float: right; margin: 10px 13px 0 13px;">
+<a href="javascript:;" id="qmenu" onMouseOver="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu(0);})" style="height: 44px; line-height: 44px; padding: 0; background: none;">
+<div class="icon common-tooltip" id="js_icon" data-tooltip="签到">
+<img src="template/quater_2024_juejin/src/ic_sign.png" style="margin: 6px 0 0 0;">
+</a>
+</div>
+</div>
+<a style="float: right; display: block; margin: 10px 0 0 0; cursor: pointer;" class="search_button">
+<div class="icon-item icon-items ga-data">
+<div class="icon common-tooltip" data-tooltip="搜索">
+<img src="template/quater_2024_juejin/src/ic_search.png">
+</div>
+</div>
+</a>
+<div class="ga-data h_post" data-ga-category="pc-top-upload-buttons-click" data-ga-action="click" data-ga-label="首页" style="float: right; margin-top: 17px; margin-right: 26px; display: none;">
+<div class="common-tooltip-release">
+<a href="forum.php?mod=misc&amp;action=nav">发帖</a>
+</div>
+</div>
+</div>
+</div>
+<script src="template/quater_2024_juejin/src/js/nav.js?w6i" type="text/javascript" type="text/javascript"></script>
+</div>
+</div>
+<div class="nav_slide"> </div><div class="mus_box cl">
+<div id="mu" class="wp cl">
+</div>
+</div>
+<ul id="myprompt_menu" class="p_pop" style="display: none;">
+<li><a href="home.php?mod=space&amp;do=pm" id="pm_ntc" style="background-repeat: no-repeat; background-position: 0 50%;"><em class="prompt_news_0"></em>消息</a></li>
+<li><a href="home.php?mod=follow&amp;do=follower"><em class="prompt_follower_0"></em>新听众</a></li>
+<li class="ignore_noticeli"><a href="javascript:;" onClick="setcookie('ignore_notice', 1);hideMenu('myprompt_menu')" title="暂不提醒"><em class="ignore_notice"></em></a></li>
+</ul>
+<div id="qmenu_menu" class="p_pop " style="display: none;">
+<ul class="cl nav"><li><a href="home.php?mod=space&do=favorite&view=me" style="background-image:url(https://club.fnnas.com/static/image/feed/favorite_b.png) !important">收藏</a></li>
+<li><a href="home.php?mod=medal" style="background-image:url(https://club.fnnas.com/static/image/feed/medal_b.png) !important">勋章</a></li>
+</ul>
+<div id="fjump_menu" class="btda"></div></div>
+<ul class="sub_menu" id="xiaomi_menu" style="display: none;">
+<li style="display: none;"><a href="home.php?mod=space&do=favorite&view=me" style="background-image:url(https://club.fnnas.com/static/image/feed/favorite_b.png) !important">收藏</a></li>
+<li style="display: none;"><a href="home.php?mod=medal" style="background-image:url(https://club.fnnas.com/static/image/feed/medal_b.png) !important">勋章</a></li>
+<li><a href="home.php?mod=spacecp">设置</a></li>
+<li><a href="home.php?mod=space&amp;do=favorite&amp;view=me">我的收藏</a></li>
+<li><a href="plugin.php?id=zqlj_sign" target="_blank"><font color="#FF0000"><strong>天天打卡</strong></font></a></li>
+<li></li>
+<li></li>
+<li></li>
+<li><a href="member.php?mod=logging&amp;action=logout&amp;formhash=6e3d10b0">退出</a></li>
+</ul>
+<div class="mi_section cl">
+<div id="wp" class="wp serch_wp"><style id="diy_style" type="text/css">#frameQn95G2{margin-bottom:4px !important;}#portal_block_4{margin-bottom:-15px !important;}#framecEz3e6{margin-bottom:-10px !important;}#portal_block_100{margin-bottom:8px !important;}#portal_block_5 .dxb_bc{margin-bottom:-4px !important;}#framexh1d31{margin-bottom:18px !important;margin-top:10px !important;}#portal_block_136 .dxb_bc{margin-top:-4px !important;margin-bottom:-4px !important;}#portal_block_135 .dxb_bc{margin-top:-4px !important;margin-bottom:-4px !important;}#framecS17V9{margin-bottom:-8px !important;}</style>
+<style type="text/css">.hot-list-container{width:280px}.gengun.f_fixed{position:fixed;top:84px}.gengun1.f_fixed1{position:fixed;top:387px}.picture:last-child .bottomLine{padding-bottom:26px !important}.imgItem img,.article .bottomPic img{transition:all .5s ease-in-out}.article .bottomPic:hover img{transform:scale(1.2) !important}.boardName-3wdbA:hover{color:#ff6661}.abstractMid-pic:hover,.boardName-3wdbA:hover,.article .titleTop:hover,.titlePic .pic-name:hover{color:#ff6661 !important}.bannerx1{position:relative;width:702px;height:278px;margin-bottom:20px !important;border-radius:5px;overflow:hidden}.bannerx1 .pic img{width:702px;height:278px;display:block;}.bannerx1 .hd{overflow:hidden;zoom:1;position:absolute;bottom:10px;left:25px;z-index:3}.bannerx1 .hd li{float:left;width:6px;height:6px;border-radius:50%;background-color:rgba(255,255,255,0.4);margin-right:6px}.bannerx1 .hd .on{background:#FFFFFF}.p-4{padding:20px;}.bg-white{background-color:#fff !important;}.media{display:flex;padding:20px 0 !important;margin:0 20px !important;margin-bottom:0;border-bottom:1px solid rgba(228,230,235,0.5);align-items:flex-start;}.mr-4,.mx-4{margin-right:20px;}.article-img img{width:110px;border-radius:4px}.position-relative{position:relative !important;}.media-body{flex:1;}.home_article .article_title,.ad_article .article_title{font-weight:bold;font-size:16px;line-height:20px;color:#303030;position:relative;vertical-align:middle;margin-bottom:8px !important;}.article_title{height:20px;overflow:hidden;}.article_title:hover{color:#0099ee}.home_article .article-excerpt,.ad_article .article-excerpt{display:block;width:100%;margin-bottom:15px;-webkit-line-clamp:2;-webkit-box-orient:vertical;height:20px !important;line-height:20px;margin-bottom:24px !important;color:#828a92;font-size:14px;font-weight:400;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.home_article .article-excerpt,.ad_article .article-excerpt,.column-excerpt,.forum_reply,.home_book_info{position:relative;height:2.8em;overflow:hidden;}.home_article .article-excerpt{height:40px;margin-bottom:62px;overflow:hidden;word-break:break-all;}.small,.text-small{font-size:12px !important;}.article_userinfo{width:100%;position:absolute;bottom:-3px;}.text-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.text-828a92{color:#828a92;}.home_article .article_author,.ad_article .article_author{color:#303030;}.row{display:flex;flex-wrap:wrap;}.col{flex-basis:0;flex-grow:1;max-width:100%;}.text-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.text-right{text-align:right !important;}.read_number_style{color:#0099ee;}.right_tool_{color:#303030;}a.right_tool_{text-decoration:none;display:block;overflow:hidden;position:relative;}.mr-auto,.mx-auto{margin-right:auto !important;}.ml-auto,.mx-auto{margin-left:auto !important;}.mb-4,.my-4{margin-bottom:20px !important;}.pb-4,.py-4{padding-bottom:20px !important;}.pt-4,.py-4{padding-top:20px !important;}.text-center{text-align:center !important;}.portal_right{font-size:14px;font-family:Avenir,Tahoma,Arial,PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif !important;}.mt-2,.my-2{margin-top:8px !important;}.col-12{flex:0 0 100%;max-width:100%;}.p-3{padding:15px !important;}.pl-3,.px-3{padding-left:15px !important;}.pr-3,.px-3{padding-right:15px !important;}.bcImg{width:60px;vertical-align:middle}.pr-2,.px-2{padding-right:8px !important;}.mr-3,.mx-3{margin-right:15px !important;}.position-absolute{position:absolute !important;}.pt-3,.py-3{padding-top:15px !important;}.pb-3,.py-3{padding-bottom:15px !important;}h5,.h5{line-height:22px;font-size:18px;}.ranking_list a:hover{color:#0099ee !important}.d-inline-block{display:inline-block !important;}.pl-1,.px-1{padding-left:5px !important;}.pb-1,.py-1{padding-bottom:5px !important;}.pr-1,.px-1{padding-right:5px !important;}.pt-1,.py-1{padding-top:5px !important;}.col-6{flex:0 0 50%;max-width:50%;}.w-100{width:100% !important;}.mb-4,.my-4{margin-bottom:20px !important;}@media (max-width:820px){.left_flow{display:none}.square-content .left-con-box{width:100% !important}.left_side{display:none}.menhu_top{margin-top:0 !important}.mi_section{width:100% !important}.portal_left{width:100% !important;margin-left:0}.portal_right{display:none}.mn{width:100% !important;border-radius:0 !important}.square-content .left-con{width:100% !important;padding:0 3% !important;border-radius:0 !important;box-sizing:border-box}.imgList{width:100% !important;display:block !important}.imgList400{width:100% !important}.imgList2{height:auto !important;max-height:200px !important}.imgItem{float:left;width:100% !important;height:auto !important;max-height:200px !important;margin:0 !important;border-radius:6px !important;display:none}.imgItem img{width:100% !important;height:auto !important;min-width:100% !important;border-radius:6px !important}.imgItem:nth-child(1){display:block !important}.imgItem:nth-child(4n){margin-right:0 !important}.imgList400 .imgItem{width:49% !important;margin:10px 2% 0 0 !important}.imgList400 .imgItem:nth-child(4n){margin:10px 2% 0 0 !important}.imgList400 .imgItem:nth-child(2n){margin-right:0 !important}.article .bottomPic{width:140px !important}.article .oneContent{width:calc(100% - 155px) !important}.bottomLine{margin-top:20px !important}.bannerx1{position:relative;width:100%;height:auto;margin-bottom:15px !important;overflow:hidden}.bannerx1 .pic img{width:100% !important;height:auto !important;display:block;}.imgList1 .imgItem{max-width:100%;width:auto !important;height:auto !important;max-height:200px !important;margin:0 !important;border-radius:6px !important}.imgList1 .imgItem img{max-width:100% !important;height:auto !important;border-radius:6px !important}.article .titleTop{font-size:15px !important;opacity:1 !important}.abstractMid-pic{line-height:22px !important;max-height:22px !important;font-size:15px !important;color:rgba(0,0,0,0.85) !important}.titlePic .pic-name{font-size:14px !important}.titlePic .pic-time{font-size:13px !important}.picture{padding-top:20px !important}.bottomLine{padding-bottom:20px !important}.banner_box{width:94% !important;height:auto !important;padding:15px 3% !important;margin:0 0 8px 0 !important;border-radius:0 !important;background:#FFFFFF}.swiper{position:relative;width:100%;border-radius:4px;overflow:hidden}.swiper-slide{width:100% !important}.swiper-slide img{width:100% !important;height:auto !important}.bg-white{border-radius:0 !important}.bg-white.box_shadow.row.mt-3.p-3{margin-bottom:8px !important}.small.text-center.pl-3{display:none}.bcImg{margin:0 auto}.bg-white.box_shadow.row.mt-3.p-3 div{width:100%;text-align:center;font-size:14px}.media.p-4{padding:12px 0 !important;margin:0 !important}.article-img img{width:100% !important;height:auto !important}.home_article .article_title,.ad_article .article_title{font-size:16px}}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="template/quater_2024_juejin/src/js/jquery.superslide.js?w6i" type="text/javascript" type="text/javascript"></script>
+<script src="template/quater_2024_juejin/src/js/sticky.js?w6i" type="text/javascript" type="text/javascript"></script>
+<script src="template/quater_2024_juejin/src/js/Ajax.js?w6i" type="text/javascript" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/menhu/1.f8bc4a7a.chunk.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/menhu/19.ff66d6ed.chunk.css?w6i" />
+<link rel="stylesheet" type="text/css" id="time_diy" href="template/quater_2024_juejin/portal/menhu/7.d7fd8f2e.chunk.css?w6i" /></div>
+<div class="menhu_top wp" style="margin: 20px auto 0 auto; position: relative;">
+<div class="square-content cl">
+<div class="portal_left cl" style="float: left; width: 900px;">
+<div class="mn" style="float: left; width: 900px; box-shadow: none; border-radius: 0; background: none;">
+<div class="left_flow cl" style="float: left; width: 180px;">
+<div class="index-nav" data-v-cd15ceae="" data-v-033a2ad3="">
+<nav class="side-navigator-wrap" data-v-8754238e="" data-v-033a2ad3="" data-v-cd15ceae="">
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content " data-v-8754238e=""><a href="https://fnnas.com" target="_blank" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4" y="8" width="40" height="32" rx="3" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+<path d="M4 11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V20H4V11Z" fill="none" stroke="#333" stroke-width="4" />
+<circle r="2" transform="matrix(-1.31134e-07 -1 -1 1.31134e-07 10 14)" fill="#333" />
+<circle r="2" transform="matrix(-1.31134e-07 -1 -1 1.31134e-07 16 14)" fill="#333" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+官网
+</span></a> </div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e=""><a href="https://trim-nas.feishu.cn/share/base/form/shrcn5m4MsyeqvEh6c4tm97pQKb" target="_blank" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z" fill="none" stroke="#333" stroke-width="4" />
+<path d="M28 13L21.5 24L19.875 26.75L19.0625 28.125" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M15 35L15.8125 33.625" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M12 29L23 29" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M30 29H36" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M19 13L22.5 18.5L23.375 19.875" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M33 35L29.5 29.5L27.75 26.75L26.875 25.375" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+生态入驻
+</span></a> </div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e=""><a href="https://www.zhipin.com/gongsi/ab73b7cfacff99221XB_2tu8E1I~.html?ka=company-intro" target="_blank" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 23V14L31 4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44H20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="34" cy="32" r="4" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M42 44C42 39.5817 38.4183 36 34 36C29.5817 36 26 39.5817 26 44" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M30 4V14H40" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+人才招聘
+</span></a> </div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="https://fnnas.com/download" target="_blank" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.6777 20.271C7.27476 21.3181 4 25.2766 4 30C4 35.5228 8.47715 40 14 40C14.9474 40 15.864 39.8683 16.7325 39.6221" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M36.0547 20.271C40.4577 21.3181 43.7324 25.2766 43.7324 30C43.7324 35.5228 39.2553 40 33.7324 40C32.785 40 31.8684 39.8683 30.9999 39.6221" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M36 20C36 13.3726 30.6274 8 24 8C17.3726 8 12 13.3726 12 20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M17.0654 30.119L23.9999 37.0764L31.1318 30" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M24 20V33.5382" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+系统下载
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="https://account.fnnas.com" target="_blank" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M24 23C26.7614 23 29 20.7614 29 18C29 15.2386 26.7614 13 24 13C21.2386 13 19 15.2386 19 18C19 20.7614 21.2386 23 24 23Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+<path d="M10.022 38.332C10.3657 33.1206 14.7016 29 20 29H28C33.2914 29 37.6229 33.1097 37.9767 38.3113" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+飞牛账号
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=11" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33 38H22V30H36V22H44V38H39L36 41L33 38Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M4 6H36V30H17L13 34L9 30H4V6Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M12 22H18" stroke="#333" stroke-width="4" stroke-linecap="round" />
+<path d="M12 14H24" stroke="#333" stroke-width="4" stroke-linecap="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+社区通告
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=13&amp;filter=typeid&amp;typeid=4" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36 16V8H20H4V20V32H12" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M12 40H44V28V16H28H12V28V40Z" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+<path d="M12 16L28 28L44 16" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M32 16H12V31" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M44 31V16H24" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+功能建议
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=22" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 42C36 42 38 31.5324 38 28C38 24.8379 38 20.1712 38 14H10C10 17.4423 10 22.109 10 28C10 31.4506 12 42 24 42Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+<path d="M4 8L10 14" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M44 8L38 14" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M4 27H10" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M44 27H38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M7 44L13 38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M41 44L35 38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M24 42V14" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M14.9204 39.0407C17.0024 40.783 19.9244 41.9998 23.9999 41.9998C28.1112 41.9998 31.0487 40.7712 33.1341 39.0137" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M32 12.3333C32 7.73096 28.4183 4 24 4C19.5817 4 16 7.73096 16 12.3333V14H32V12.3333Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+反馈BUG
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=4" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+<path d="M24 28.6248V24.6248C27.3137 24.6248 30 21.9385 30 18.6248C30 15.3111 27.3137 12.6248 24 12.6248C20.6863 12.6248 18 15.3111 18 18.6248" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 37.6248C25.3807 37.6248 26.5 36.5055 26.5 35.1248C26.5 33.7441 25.3807 32.6248 24 32.6248C22.6193 32.6248 21.5 33.7441 21.5 35.1248C21.5 36.5055 22.6193 37.6248 24 37.6248Z" fill="#333" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+问答互动
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content" data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=28" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 6H9C7.34315 6 6 7.34315 6 9V31C6 32.6569 7.34315 34 9 34H39C40.6569 34 42 32.6569 42 31V26" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M24 34V42" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M14 42L34 42" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="37" cy="13" r="3" fill="none" stroke="#333" stroke-width="4" />
+<path d="M37 20V16" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M37 10V6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M30.9378 16.5L34.4019 14.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M39.5982 11.5L43.0623 9.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M30.9375 9.5L34.4016 11.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M39.5979 14.5L43.062 16.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+虚拟机
+</span></a> 
+</div> 
+</div>
+<div class="nav-item-wrap" data-v-8754238e="">
+<div class="nav-item-content " data-v-8754238e="">
+<a href="/forum.php?mod=forumdisplay&amp;fid=25&amp;filter=typeid&amp;typeid=46" class="nav-item" data-v-8754238e=""><svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0691 13C6.25336 13.3494 4.67583 21.0064 5.11403 24.7913C3.36116 27.9356 3.89597 28.7217 5.2104 30.0319C11.7835 36.1459 24.0534 35.7092 29.75 33.5256C35.7096 31.08 38.7486 26.4747 39.0407 24C44.2991 20.5063 44.4063 14.6013 43.676 13C42.896 14.3101 40.6474 15.2721 39.0407 16C37.2879 16.3494 34.7659 15.038 34.0355 13.8734C33.5343 16.5 34.0355 18.5 35.3501 19.5507C37.6376 21.2976 36.4754 23.0633 36.0372 23.5C34.1405 25.3902 30.5308 24.4905 28.7771 21.7343C24.0533 14.3101 18.9905 13 16.0691 13Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M5 28C7.83333 28.5321 13.4 29.5542 17 27" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="12" cy="20" r="2" fill="#333" />
+</svg> <span class="nav-item-text" data-v-8754238e="">
+Docker
+</span></a> 
+</div> 
+</div>
+</nav>
+</div>
+</div>
+<div class="left-con-box cl">
+<div id="diy_f_news_l" class="area"><div id="framecEz3e6" class=" frame move-span cl frame-1"><div id="framecEz3e6_left" class="column frame-1-c"><div id="framecEz3e6_left_temp" class="move-span temp"></div><div id="portal_block_4" class="block move-span"><div id="portal_block_4_content" class="dxb_bc"><link rel="stylesheet" href="template/quater_2024_juejin/src/css/swiper.min.css">
+<script src="template/quater_2024_juejin/src/js/swiper.min.js"></script>
+<div class="banner_box">
+<div class="swiper carousel swiper-container-initialized swiper-container-horizontal">
+<div class="swiper-wrapper"><div class="swiper-slide swiper-slide-prev" title="" style="cursor: pointer; width: 702px;">
+<a href="https://detail.tmall.com/item.htm?id=948974268312#clubba"><img src="data/attachment/block/2a/2a1ac0459f6b0b8e61705f88402dbb1f.jpg" alt="" title="" width="700" height="280"></a>
+</div><div class="swiper-slide swiper-slide-prev" title="" style="cursor: pointer; width: 702px;">
+<a href="https://fnnas.com/"><img src="data/attachment/block/44/4445d93c7f6f830dee0dd5b580b7ee6e.jpg" alt="" title="" width="700" height="280"></a>
+</div></div>
+<div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+<script>jQuery(function () {jQuery('.tabbar_col').eq(0).addClass('active')
+jQuery(".tanchuang_popup").show()
+jQuery(".tanchuang_panel_btn").click(function() {jQuery(".tanchuang_popup").hide()
+})
+var carousel =new Swiper('.carousel',{autoplay:{delay:4000,stopOnLastSlide:false,disableOnInteraction:true
+},pagination:{el:'.carousel .swiper-pagination'
+}
+})
+})
+</script></div></div></div></div><div id="framep3Wre7" class="frame move-span cl frame-1"><div id="framep3Wre7_left" class="column frame-1-c"><div id="framep3Wre7_left_temp" class="move-span temp"></div><div id="portal_block_97" class="block move-span"><div id="portal_block_97_content" class="dxb_bc"><div class="hot-theme-container" style="max-width: 850px; margin: 20px auto; padding: 8px; border-radius: 8px; background: #ffffff; overflow: hidden;">
+<div data-fetch-key="1" class="list_box hot-theme" style="width: 100%;">
+<p class="title1" style="font-size: 16px; font-weight: bold; color: #333; margin: 3px 0 5px; text-align: left; line-height: 1.1;"> 热门话题</p>
+<div class="theme_list" style="column-count: 2; column-gap: 20px;"><a href="forum.php?mod=viewthread&tid=40041" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#应用中心上线 iSCSI，NAS存储空间秒变本地#</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-29</span>
+<span style="margin-right: 10px;">应用中心</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">7518m</span> 
+</span>
+</p>
+</div>
+</a><a href="forum.php?mod=viewthread&tid=39609" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#RA2Web：网页版红警 2！无需安装，Docker #</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-30</span>
+<span style="margin-right: 10px;">攻略分享</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">6831m</span> 
+</span>
+</p>
+</div>
+</a><a href="forum.php?mod=viewthread&tid=39596" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#飞牛ZFS新手说明#</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-30</span>
+<span style="margin-right: 10px;">攻略分享</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">6282m</span> 
+</span>
+</p>
+</div>
+</a><a href="forum.php?mod=viewthread&tid=39213" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#搭建 NAS 音乐库，再也不用担心会员收费，#</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-28</span>
+<span style="margin-right: 10px;">攻略分享</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">5682m</span> 
+</span>
+</p>
+</div>
+</a><a href="forum.php?mod=viewthread&tid=39175" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#论坛里面的KatelyaTV部署不成功的可以试试#</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-29</span>
+<span style="margin-right: 10px;">攻略分享</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">3870m</span> 
+</span>
+</p>
+</div>
+</a><a href="forum.php?mod=viewthread&tid=39903" class="item" target="_blank" style="display: block; margin-bottom: 10px; padding: 10px; border-radius: 6px; background: #f9f9f9; transition: all 0.3s ease; break-inside: avoid;">
+<div class="content-container" style="display: flex; flex-direction: column; width: 100%;">
+<p class="content-title" style="font-size: 14px; font-weight: bold; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 0 5px;">#Docker一键部署 EasyTier：轻松实现异地互#</p>
+<p class="details" style="font-size: 12px; color: #888; margin: 0; text-align: right;">
+<span style="margin-right: 10px;">更新时间：10-28</span>
+<span style="margin-right: 10px;">攻略分享</span>
+<span class="fire-container">
+<span class="fire-icon">🔥</span> 
+<span class="views-text" style="color: #ec471e; font-weight: bold;">3303m</span> 
+</span>
+</p>
+</div>
+</a></div>
+</div>
+</div>
+<style>.item:hover{background:#f0f0f0;transform:scale(1.02);}.fire-container{display:inline-flex;align-items:center;}.fire-icon{display:inline-block;font-size:14px;color:#ec471e;margin-right:4px;transition:transform 0.3s ease,color 0.3s ease;}.item:hover .fire-icon{animation:optimized-burn 0.8s infinite;}@keyframes optimized-burn{0%{transform:scale(1.0) rotate(-1deg);color:#ec471e;}25%{transform:scale(1.2) rotate(1deg);color:#ff8c00;}50%{transform:scale(1.3) rotate(-1deg);color:#ffa500;}75%{transform:scale(1.2) rotate(1deg);color:#ff8c00;}100%{transform:scale(1.0) rotate(-1deg);color:#ec471e;}}.views-text{font-size:12px;}</style></div></div></div></div></div>
+<div class="left-con cl">
+<div class="cl">
+<div class="cl">
+<ul class="xiaomi_list cl">
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=40709" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛fnOS-本周更新通知 2025-10-23</h4>
+<div class="article-excerpt"> 各位 NAS 玩家们周四好本周飞牛更新来啦！
+飞牛正式上线ZFS！支持多种RAID阵列，从速度到容错自由选择还可 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+15</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">6275</span> 人阅读<span class="display_none">&#12539;2025-10-23</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=64815&size=110x74&key=d7ac7ac9b4f3a1b5" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=38619" class="article_url article_card" target="_blank">
+<h4 class="article_title">iSCSI Manager 基础功能介绍</h4>
+<div class="article-excerpt"> 本文将介绍如何配置 iSCSI 的基础功能，更多功能介绍请查看用户组配置说明 和 CHAP 配置说明
+1. 创建LUN
+...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+8</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">4922</span> 人阅读<span class="display_none">&#12539;2025-09-26</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=61129&size=110x74&key=3d5cff2421a260d0" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=38615" class="article_url article_card" target="_blank">
+<h4 class="article_title">iSCSI 名词介绍</h4>
+<div class="article-excerpt"> 本文将介绍 iSCSI 中涉及到一些专有名词，帮助你更好的理解及使用 iSCSI
+1. iSCSI
+iSCSI （Internet Small ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+4</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">2230</span> 人阅读<span class="display_none">&#12539;2025-09-26</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=64095&size=110x74&key=092769bbf06ac4e8" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=34839" class="article_url article_card" target="_blank">
+<h4 class="article_title">公布一件大事：飞牛与零刻，正式达成合作</h4>
+<div class="article-excerpt"> 公布一件大事：飞牛与零刻，正式达成合作
+飞牛从一开始做 NAS 系统，就抱着一个初心——让更多人轻松享有 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+23</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">17767</span> 人阅读<span class="display_none">&#12539;2025-08-20</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=53905&size=110x74&key=72f330fde141a292" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=34346" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛同步功能使用教程</h4>
+<div class="article-excerpt"> 飞牛同步功能介绍
+本文将介绍飞牛同步的基础功能及如何使用。
+1. 下载对应的客户端
+Windows客户端
+电脑端 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+19</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">15926</span> 人阅读<span class="display_none">&#12539;2025-08-15</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=52780&size=110x74&key=cdd2a4a9af57c80c" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=32452" class="article_url article_card" target="_blank">
+<h4 class="article_title">如何启用邮件通知服务</h4>
+<div class="article-excerpt"> 如何启用邮件通知服务
+邮件通知服务可以授权系统发送邮件的能力，如发送 双重验证紧急验证码邮件 和 重置密 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+20</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">8453</span> 人阅读<span class="display_none">&#12539;2025-07-24</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=48741&size=110x74&key=a1761238ed29c27d" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=23936" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛浏览器插件上线，中继也能访问三方应用</h4>
+<div class="article-excerpt"> 三方应用，或者docker部署在家里的nas上， 假如没有公网，通过飞牛中继往往无法使用这些应用
+要做反代或者 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+104</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">66921</span> 人阅读<span class="display_none">&#12539;2025-04-28</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=34640&size=110x74&key=6b0976a6cc2d6536" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=14" class="article_url article_card" target="_blank">
+<h4 class="article_title">关于飞牛私有云 fnOS 系统后续盈利说明</h4>
+<div class="article-excerpt"> 感谢各位NAS核心玩家对飞牛私有云 fnOS的关注和热情！
+关于盈利问题，部分用户担心我们初创公司，持续为爱 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+357</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">133643</span> 人阅读<span class="display_none">&#12539;2024-09-12</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=7674&size=110x74&key=875abf797d4c2472" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=31436" class="article_url article_card" target="_blank">
+<h4 class="article_title">【教程】如何管理你的 FN Connect权益</h4>
+<div class="article-excerpt"> 如何管理 FN Connect权益？
+本文将介绍如何管理 FN Connect权益，包含绑定、解绑、换绑等相关操作说明。
+1. ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+7</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">10327</span> 人阅读<span class="display_none">&#12539;2025-07-11</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=46938&size=110x74&key=c21ece4fdbc2670a" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=12698" class="article_url article_card" target="_blank">
+<h4 class="article_title">AI 相册功能说明</h4>
+<div class="article-excerpt"> [md]# AI 相册功能说明
+**AI 相册**功能将在飞牛 NAS 本地对你的照片和视频进行 **人脸识别** 和 **智能识 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+73</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">50480</span> 人阅读<span class="display_none">&#12539;2025-01-22</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=18093&size=110x74&key=e886ff89ff4a836b" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=10310" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛招聘啦, 推荐成功可获得飞牛NAS整机pro版!</h4>
+<div class="article-excerpt"> </div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+14</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">36148</span> 人阅读<span class="display_none">&#12539;2025-01-02</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=25488&size=110x74&key=50c4f20078ba4967" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=1003" class="article_url article_card" target="_blank">
+<h4 class="article_title">【招募】加入共建团，共建属于NAS核心玩家的飞牛私有云社区！🌟</h4>
+<div class="article-excerpt"> 亲爱的NAS爱好者以及核心玩家们，社区开放仅过去了一天，注册用户已经超过6000，飞牛的小伙伴们也感受到了 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+48</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">21977</span> 人阅读<span class="display_none">&#12539;2024-09-21</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=18758&size=110x74&key=5de05fe10be0ab84" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=45" class="article_url article_card" target="_blank">
+<h4 class="article_title">安装系统异常情况处理</h4>
+<div class="article-excerpt"> 由于设备和环境的复杂情况，你可能在安装 fnOS 时遇到失败。以下为常见的几种情况和解决方法：
+[*] 安装顺 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=5" class="article_author small mr-2" style="float: left;">飞牛社区主理人</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+56</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">66702</span> 人阅读<span class="display_none">&#12539;2024-09-17</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=88&size=110x74&key=9565f3768cbac3ae" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=40685" class="article_url article_card" target="_blank">
+<h4 class="article_title">存储空间显示16EB解决办法</h4>
+<div class="article-excerpt"> 近期遇到部分用户反馈相册无法正常初始化、无法安装AI模型、APP端无法创建文件夹等情况，经过排查发现为快 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+0</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">202</span> 人阅读<span class="display_none">&#12539;2025-10-23</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=64772&size=110x74&key=6cb518f787506366" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=40031" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛fnOS-本周更新通知 2025-10-16</h4>
+<div class="article-excerpt"> 各位 NAS 玩家们周四好，本周飞牛更新来啦！
+全新iSCSI 功能来袭！NAS空间变成本地硬盘，支持格式化、分区 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+17</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">7506</span> 人阅读<span class="display_none">&#12539;2025-10-16</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=63649&size=110x74&key=f5a9fc7ef9a26c45" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=39635" class="article_url article_card" target="_blank">
+<h4 class="article_title">重置用户2FA方法</h4>
+<div class="article-excerpt"> 操作步骤
+查找你要重置的用户id
+id 用户名
+命令行登录，连接pg数据库
+psql -U postgres
+进 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+0</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">606</span> 人阅读<span class="display_none">&#12539;2025-10-11</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=62824&size=110x74&key=29d69312d5599c2a" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=38950" class="article_url article_card" target="_blank">
+<h4 class="article_title">飞牛fnOS-本周更新通知 2025-9-29</h4>
+<div class="article-excerpt"> 各位 NAS 玩家们周一好，本周更新来啦！
+影视APP更新v0.8.54
+更新内容
+【播放】
+升级网页端网盘播放功能， ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+11</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">10368</span> 人阅读<span class="display_none">&#12539;2025-09-29</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=61936&size=110x74&key=1d5bdd44f4caf493" lazy="loaded">
+</div>
+</div>
+<div class="media p-4 home_article bg-white" style="overflow: hidden;">
+<div class="media-body position-relative" style="width:
+                                            calc(100% - 130px);"> <a href="forum.php?mod=viewthread&amp;tid=38620" class="article_url article_card" target="_blank">
+<h4 class="article_title">CHAP 配置说明</h4>
+<div class="article-excerpt"> CHAP 配置说明
+本文将介绍如何在应用中配置 CHAP，以及如何连接配置了CHAP 的 Target。
+1. 配置 CHAP
+目前 ...</div>
+</a>
+<div class="row article_userinfo small mx-0">
+<div class="text-truncate px-0"> <span class="text-828a92 small" style="float: left;">作者 :</span>
+<a href="home.php?mod=space&amp;uid=7300" class="article_author small mr-2" style="float: left;">飞牛技术同学</a>
+<a class="ml-2" style="float: left; text-decoration: none;color: #888; margin-left: 16px !important;">
+<img src="template/quater_2024_juejin/portal/reply.png" style="float: left; margin: 2px 3px 0 0;">
+3</a>
+</div>
+<div class="col text-right text-truncate px-0" style="color: #888;"> <em class="display_none">已有</em> <span class="read_number_style">493</span> 人阅读<span class="display_none">&#12539;2025-09-26</span>
+</div>
+</div>
+</div>
+<div class="ml-4 article-img" style="width: 110px; height: 74px; margin-left: 20px; border-radius: 4px;">
+<img data-v-233fb7ac="" alt="" src="forum.php?mod=image&aid=61145&size=110x74&key=260ac53ccdd454c8" lazy="loaded">
+</div>
+</div>
+</ul>
+<div style="display:none;"><div class="pg"><strong>1</strong><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=2#threadsbody">2</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=3#threadsbody">3</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=4#threadsbody">4</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=5#threadsbody">5</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=6#threadsbody">6</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=7#threadsbody">7</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=8#threadsbody">8</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=9#threadsbody">9</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=10#threadsbody">10</a><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=2262#threadsbody" class="last">... 2262</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location='portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page='+this.value;; doane(event);}" /><span title="共 2262 页"> / 2262 页</span></label><a href="portal.php?mod=index&fid=2&typeid=&order=dateline&amp;page=2#threadsbody" class="nxt">下一页</a></div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".tsj-clamp").click(function () {jQuery(this).toggleClass("max-l-1");})
+</script>
+</div>
+<div id="diy_tab_top" class="area"></div>
+</div>
+</div>
+<div class="portal_right cl" style="float: right; width: 280px;">
+<div class="drag">
+<div id="diy2" class="area"><div id="framecS17V9" class=" frame move-span cl frame-1"><div id="framecS17V9_left" class="column frame-1-c"><div id="framecS17V9_left_temp" class="move-span temp"></div><div id="portal_block_8" class="block move-span"><div id="portal_block_8_content" class="dxb_bc"><div class="portal_block_summary"><div class="signin-tip sidebar-block signin" data-v-dd4bc01e="" data-v-5b96eadb=""><div class="first-line" data-v-dd4bc01e=""><div class="icon-text" data-v-dd4bc01e=""><span class="title" data-v-dd4bc01e="">你好呀！</span> <div class="second-line" data-v-dd4bc01e="">点亮在社区的每一天</div></div> <button class="btn signin-btn" data-v-dd4bc01e=""><span class="btn-text" data-v-dd4bc01e=""><a href="plugin.php?id=zqlj_sign" style="color: #1e80ff;">去签到</a></span></button></div></div></div></div></div></div></div><div id="framexh1d31" class=" frame move-span cl frame-1"><div id="framexh1d31_left" class="column frame-1-c"><div id="framexh1d31_left_temp" class="move-span temp"></div><div id="portal_block_135" class="block move-span"><div id="portal_block_135_content" class="dxb_bc"><div class="portal_block_summary"><a href="https://detail.tmall.com/item.htm?id=948974268312#club" target="_blank"><img src="data/attachment/portal/202508/22/175805dqp9pn55u7p8r297.jpg" width="100%" /></a></div></div></div><div id="portal_block_136" class="block move-span"><div id="portal_block_136_content" class="dxb_bc"><div class="portal_block_summary"><a href="https://item.jd.com/10174648043042.html#club" target="_blank"><img src="data/attachment/portal/202508/22/175816trt5jat5pfm3jrfm.jpg" width="100%" /></a></div></div></div></div></div><div id="frameh3JJ63" class="frame move-span cl frame-1"><div id="frameh3JJ63_left" class="column frame-1-c"><div id="frameh3JJ63_left_temp" class="move-span temp"></div><div id="portal_block_5" class="block move-span"><div id="portal_block_5_content" class="dxb_bc"><div class="ListCard_listCard__EVHPB gengun">
+<div class="ListCard_newsList__pt6wt ContainTitleCard_titleCard__muJ_r" style="height: 253px;">
+<div class="ContainTitleCard_title__2sQkH">
+<div class="ContainTitleCard_titleName__2sWlb"><img src="template/quater_2024_juejin/src/list.png" style="float: left; width: 20px; margin: 0 10px 0 0;">推荐阅读</div>
+<div class="ContainTitleCard_refresh__1NYFh">
+<a class="next">
+<div class="ListCard_vector__1lqc8"><svg data-v-41025282="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="" style="float: left; margin: 2px 8px 0 0; fill: #8a919f;"><path data-v-41025282="" fill-rule="evenodd" clip-rule="evenodd" d="M9.66667 6.66667C9.48257 6.66667 9.33333 6.51743 9.33333 6.33333V5.66667C9.33333 5.48257 9.48257 5.33333 9.66667 5.33333L11.8303 5.3334C10.987 4.12437 9.58586 3.33333 8 3.33333C5.42267 3.33333 3.33333 5.42267 3.33333 8C3.33333 10.5773 5.42267 12.6667 8 12.6667C10.1139 12.6667 11.8996 11.2611 12.4733 9.33358L13.8513 9.33355C13.2449 12.0054 10.8554 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C9.88507 2 11.5671 2.86932 12.6671 4.22893L12.6667 2.33333C12.6667 2.14924 12.8159 2 13 2H13.6667C13.8508 2 14 2.14924 14 2.33333V6C14 6.35145 13.728 6.63939 13.3831 6.66484L13.3333 6.66667H9.66667Z" fill="#8A919F"></path></svg>
+<div>换一批</div>
+</div>
+</a>
+</div>
+</div>
+<div class="rolling_change">
+<div class="ListCard_list__3Umjr"><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">1</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=forumdisplay&fid=13&filter=typeid&typeid=24" style="color: #0e151c;">【官方】已排期需求合集</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">2</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=7507" style="color: #0e151c;">【攻略】如何使用外链分享</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">3</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=13952" style="color: #0e151c;">【攻略】AI相册常见问题</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">4</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=23936" style="color: #0e151c;">【攻略】飞牛中继访问三方应用</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">5</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=3892" style="color: #0e151c;">【必看】转码、解码基础功能说明</a> </span></div></div>
+<div class="ListCard_list__3Umjr"><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">6</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=3021" style="color: #0e151c;">【攻略】社区发帖指南</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">7</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=39596" style="color: #0e151c;">飞牛ZFS新手说明</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">8</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=38427" style="color: #0e151c;">【首发】道理鱼音乐管理更新上线0.1.4稳定版本</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">9</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=36386" style="color: #0e151c;">在docker容器中运行安卓系统redroid</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">10</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=20958" style="color: #0e151c;">热门问题解决方案</a> </span></div></div>
+<div class="ListCard_list__3Umjr"><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">11</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=19724" style="color: #0e151c;">*新手必看*</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">12</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=12587" style="color: #0e151c;">虚拟机使用过程中问题及教程汇总</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">13</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=10032" style="color: #0e151c;">如何安装和使用虚拟机？</a> </span></div></div>
+<div class="ListCard_list__3Umjr"></div>
+</div>
+<script type="text/javascript">jQuery(".ListCard_newsList__pt6wt").slide({mainCell:".rolling_change",effect:"leftLoop",delayTime:800,vis:1,scroll:1,trigger:"click",delayTime:0,easing:"easeOutCubic" });</script>
+<div data-v-41025282="" class="divider" style="margin-top: 4px;"><div data-v-41025282="" class="content"></div></div>
+<div data-v-41025282="" class="hot-item-footer"><a data-v-41025282="" href="forum.php?mod=forumdisplay&fid=25" class="item-footer-button" target="_blank"><span data-v-41025282="">查看更多</span> <svg data-v-41025282="" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path data-v-41025282="" d="M6.6094 4.99959L3.22118 1.61137C3.13982 1.53001 3.13982 1.3981 3.22118 1.31674L3.5158 1.02212C3.59716 0.940757 3.72907 0.940757 3.81043 1.02212L7.49328 4.70496C7.656 4.86768 7.656 5.1315 7.49328 5.29422L3.81043 8.97707C3.72907 9.05843 3.59716 9.05843 3.5158 8.97707L3.22118 8.68244C3.13982 8.60108 3.13982 8.46917 3.22118 8.38781L6.6094 4.99959Z"></path></svg></a></div>
+</div>
+</div></div></div></div></div><div id="frameQn95G2" class=" frame move-span cl frame-1"><div id="frameQn95G2_left" class="column frame-1-c"><div id="frameQn95G2_left_temp" class="move-span temp"></div><div id="frame16LB8r" class="frame move-span cl frame-1"><div id="frame16LB8r_left" class="column frame-1-c"><div id="frame16LB8r_left_temp" class="move-span temp"></div><div id="portal_block_100" class="block move-span"><div id="portal_block_100_content" class="dxb_bc"><div class="portal_block_summary"><a href="forum.php?mod=forumdisplay&amp;fid=22&amp;filter=typeid&amp;typeid=87-#SY" target="_blank"><img src="data/attachment/portal/202507/28/193408cjp4a4vrz1uh1hur.jpg" width="100%" /></a></div></div></div></div></div></div></div><div id="frameFR9U37" class="frame move-span cl frame-1"><div id="frameFR9U37_left" class="column frame-1-c"><div id="frameFR9U37_left_temp" class="move-span temp"></div><div id="portal_block_134" class="block move-span"><div id="portal_block_134_content" class="dxb_bc"><div class="ListCard_listCard__EVHPB gengun">
+<div class="ListCard_newsList__pt6wt ContainTitleCard_titleCard__muJ_r" style="height: 253px;">
+<div class="ContainTitleCard_title__2sQkH">
+<div class="ContainTitleCard_titleName__2sWlb"><img src="template/quater_2024_juejin/src/list.png" style="float: left; width: 20px; margin: 0 10px 0 0;">新手必看</div>
+<div class="ContainTitleCard_refresh__1NYFh">
+<a class="next">
+<div class="ListCard_vector__1lqc8"><svg data-v-41025282="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="" style="float: left; margin: 2px 8px 0 0; fill: #8a919f;"><path data-v-41025282="" fill-rule="evenodd" clip-rule="evenodd" d="M9.66667 6.66667C9.48257 6.66667 9.33333 6.51743 9.33333 6.33333V5.66667C9.33333 5.48257 9.48257 5.33333 9.66667 5.33333L11.8303 5.3334C10.987 4.12437 9.58586 3.33333 8 3.33333C5.42267 3.33333 3.33333 5.42267 3.33333 8C3.33333 10.5773 5.42267 12.6667 8 12.6667C10.1139 12.6667 11.8996 11.2611 12.4733 9.33358L13.8513 9.33355C13.2449 12.0054 10.8554 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C9.88507 2 11.5671 2.86932 12.6671 4.22893L12.6667 2.33333C12.6667 2.14924 12.8159 2 13 2H13.6667C13.8508 2 14 2.14924 14 2.33333V6C14 6.35145 13.728 6.63939 13.3831 6.66484L13.3333 6.66667H9.66667Z" fill="#8A919F"></path></svg>
+<div>换一批</div>
+</div>
+</a>
+</div>
+</div>
+<div class="rolling_change">
+<div class="ListCard_list__3Umjr"><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">1</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=14" style="color: #0e151c;">关于飞牛OS 系统后续盈利说明</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">2</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=45" style="color: #0e151c;">安装系统异常情况处理</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">3</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=1974" style="color: #0e151c;">从零开始使用ipv6实现公网访问</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">4</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=3892" style="color: #0e151c;">关于转码、解码基础功能一些说明</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">5</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=33052" style="color: #0e151c;">关于常见更新失败的问题处理合集</a> </span></div></div>
+<div class="ListCard_list__3Umjr"><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">6</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=12698" style="color: #0e151c;">AI 相册功能说明</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">7</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=41231" style="color: #0e151c;">浏览器访问微信 / QQ 客户端！这款 Docker </a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4 ListCard_active_index__VROgv">8</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=41296" style="color: #0e151c;">使用Docker部署磁力**器bitplay汉化版</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">9</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=27494" style="color: #0e151c;">适用于绿联DXP480T Plus NAS的LED控制</a> </span></div><div class="ListCard_item__tDZ0H"><span class="ListCard_index__3mFA4">10</span><span class="ListCard_content__2HiOo"><a href="forum.php?mod=viewthread&tid=14" style="color: #0e151c;">关于飞牛私有云 fnOS 系统后续盈利说明</a> </span></div></div>
+<div class="ListCard_list__3Umjr"></div>
+<div class="ListCard_list__3Umjr"></div>
+</div>
+<script type="text/javascript">jQuery(".ListCard_newsList__pt6wt").slide({mainCell:".rolling_change",effect:"leftLoop",delayTime:800,vis:1,scroll:1,trigger:"click",delayTime:0,easing:"easeOutCubic" });</script>
+<div data-v-41025282="" class="divider" style="margin-top: 4px;"><div data-v-41025282="" class="content"></div></div>
+<div data-v-41025282="" class="hot-item-footer"><a data-v-41025282="" href="forum.php?mod=forumdisplay&fid=25" class="item-footer-button" target="_blank"><span data-v-41025282="">查看更多</span> <svg data-v-41025282="" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path data-v-41025282="" d="M6.6094 4.99959L3.22118 1.61137C3.13982 1.53001 3.13982 1.3981 3.22118 1.31674L3.5158 1.02212C3.59716 0.940757 3.72907 0.940757 3.81043 1.02212L7.49328 4.70496C7.656 4.86768 7.656 5.1315 7.49328 5.29422L3.81043 8.97707C3.72907 9.05843 3.59716 9.05843 3.5158 8.97707L3.22118 8.68244C3.13982 8.60108 3.13982 8.46917 3.22118 8.38781L6.6094 4.99959Z"></path></svg></a></div>
+</div>
+</div></div></div></div></div><div id="framel2F6HN" class="frame move-span cl frame-1"><div id="framel2F6HN_left" class="column frame-1-c"><div id="framel2F6HN_left_temp" class="move-span temp"></div></div></div><div id="frameBG4SaS" class="frame move-span cl frame-1"><div id="frameBG4SaS_left" class="column frame-1-c"><div id="frameBG4SaS_left_temp" class="move-span temp"></div><div id="portal_block_9" class="block move-span"><div id="portal_block_9_content" class="dxb_bc"><div data-v-41025282="" data-v-5b96eadb="" class="hot-list-container gengun1">
+<div data-v-41025282="" class="hot-list-item" style="padding-bottom: 8px;">
+<div data-v-41025282="" class="hot-item-header">
+<div data-v-41025282="" class="hot-title"><img data-v-41025282="" src="template/quater_2024_juejin/src/user.png" type="icon" alt="icon" class="hot-icon"> <span data-v-41025282="" title="作者榜" class="title-text"> 作者榜 </span></div>
+<div data-v-41025282=""></div>
+</div>
+<div data-v-41025282="" class="divider" style="margin-bottom: 4px;">
+<div data-v-41025282="" class="content"></div>
+</div>
+<ul data-v-41025282="" class="hot-item-body">
+<div data-v-090682e2="" data-v-41025282="" class="skeleton"><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=6482" class="info" target="_blank" title="玉尺书生" data-v-090682e2=""><img data-v-41025282="" src="/uc_server/avatar.php?uid=6482&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=6482" class="info" target="_blank" title="玉尺书生" data-v-090682e2=""><span data-v-41025282="" class="title1">玉尺书生</span> <span data-v-41025282="" class="description"> 首席催更官 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=6482" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=25175" class="info" target="_blank" title="月光微暖冬" data-v-090682e2=""><img data-v-41025282="" src="/uc_server/avatar.php?uid=25175&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=25175" class="info" target="_blank" title="月光微暖冬" data-v-090682e2=""><span data-v-41025282="" class="title1">月光微暖冬</span> <span data-v-41025282="" class="description"> 生命不息 折腾不止 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=25175" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=2158" class="info" target="_blank" title="徐大大" data-v-090682e2=""><img data-v-41025282="" src="/uc_server/avatar.php?uid=2158&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=2158" class="info" target="_blank" title="徐大大" data-v-090682e2=""><span data-v-41025282="" class="title1">徐大大</span> <span data-v-41025282="" class="description"> 公众号：知新坊 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=2158" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=7256" class="info" target="_blank" title="科技智趣坊" data-v-090682e2=""><img data-v-41025282="" src="/uc_server/avatar.php?uid=7256&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=7256" class="info" target="_blank" title="科技智趣坊" data-v-090682e2=""><span data-v-41025282="" class="title1">科技智趣坊</span> <span data-v-41025282="" class="description"> 分享交流，可以关注我的各个平台账号：科技智趣坊 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=7256" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=7" class="info" target="_blank" title="陪玩" data-v-090682e2=""><img data-v-41025282="" src="https://club.fnnas.com/uc_server/avatar.php?uid=7&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=7" class="info" target="_blank" title="陪玩" data-v-090682e2=""><span data-v-41025282="" class="title1">陪玩</span> <span data-v-41025282="" class="description"> 试音9，全麦爆音99，才艺199，包厅999 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=7" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li><li data-v-41025282="" data-v-090682e2="" class="hot-item hot-item-authors">
+<div data-v-41025282="" data-v-090682e2="" class="hot-item-text hot-item-text-authors"> <a data-v-41025282="" href="home.php?mod=space&uid=15673" class="info" target="_blank" title="MR_XIAOBO" data-v-090682e2=""><img data-v-41025282="" src="https://club.fnnas.com/uc_server/avatar.php?uid=15673&size=small" alt="avatar" type="avatar" class="hot-item-img"></a> <span data-v-41025282="" data-v-090682e2="" class="title-authors"><a data-v-41025282="" href="home.php?mod=space&uid=15673" class="info" target="_blank" title="MR_XIAOBO" data-v-090682e2=""><span data-v-41025282="" class="title1">MR_XIAOBO</span> <span data-v-41025282="" class="description"> 论坛闲散人员 </span></a>
+<div data-v-41025282="" data-v-090682e2="" class="action">
+<div data-v-41025282="" data-v-090682e2="" class="follow-wrap">
+<a href="home.php?mod=space&uid=15673" style="cursor: pointer;"><button data-v-41025282="" type="button" class="follow byte-btn byte-btn--text byte-btn--normal" data-v-090682e2=""><span> + 关注 </span></button></a>
+</div>
+</div>
+</span></div>
+</li></div>
+</ul>
+<div data-v-41025282="" class="divider" style="margin-top: 4px;">
+<div data-v-41025282="" class="content"></div>
+</div>
+<div data-v-41025282="" class="hot-item-footer"><a data-v-41025282="" href="#" class="item-footer-button" target="_blank"><span data-v-41025282="">查看更多</span>
+<svg data-v-41025282="" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+<path data-v-41025282="" d="M6.6094 4.99959L3.22118 1.61137C3.13982 1.53001 3.13982 1.3981 3.22118 1.31674L3.5158 1.02212C3.59716 0.940757 3.72907 0.940757 3.81043 1.02212L7.49328 4.70496C7.656 4.86768 7.656 5.1315 7.49328 5.29422L3.81043 8.97707C3.72907 9.05843 3.59716 9.05843 3.5158 8.97707L3.22118 8.68244C3.13982 8.60108 3.13982 8.46917 3.22118 8.38781L6.6094 4.99959Z"></path>
+</svg>
+</a></div>
+</div>
+</div></div></div></div></div></div>
+</div>
+<div class="flow_box" style="width: 280px; min-height: 200px;">
+<div id="diy3" class="area"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="forum.php?mod=misc&amp;action=nav" onclick="showWindow('nav', this.href, 'get', 0)">
+<div class="Posting ga-data thread-post-btn-wrapper">
+<div class="post-btn-icon-hor"></div>
+<div class="post-btn-icon-ver"></div>
+</div>
+</a>
+<script type="text/javascript">jQuery(".index-nav").sticky({topSpacing:84,bottomSpacing:100 });</script>
+<script type="text/javascript">jQuery.noConflict();if (jQuery('.gengun').length >0) {jQuery(window).scroll(function () {var offsetTop =jQuery(window).scrollTop();var heights =jQuery('.gengun').height();if (offsetTop >jQuery('.hot-theme').offset().top + heights) {jQuery('.gengun').addClass('f_fixed');} else {jQuery('.gengun').removeClass('f_fixed');}
+});}
+</script>
+<script type="text/javascript">jQuery.noConflict();if (jQuery('.gengun1').length >0) {jQuery(window).scroll(function () {var offsetTop =jQuery(window).scrollTop();var heights =jQuery('.gengun1').height();if (offsetTop >jQuery('.hot-theme').offset().top + heights) {jQuery('.gengun1').addClass('f_fixed1');} else {jQuery('.gengun1').removeClass('f_fixed1');}
+});}
+</script>
+<script src="template/quater_2024_juejin/src/js/show/imgdisplay.js?w6i" type="text/javascript"></script>
+<script src="template/quater_2024_juejin/src/js/jqueryimg.js?w6i" type="text/javascript" type="text/javascript"></script>
+<script type="text/javascript">jQuery(function () {var ias =jQuery.ias({container:".xiaomi_list",item:".home_article",pagination:".pg",next:".nxt",});ias.extension(new IASSpinnerExtension({html:'<div class="upLoading-3EpSR"><div class="common-loading"><div class="ant-spin ant-spin-lg ant-spin-spinning ant-spin-show-text"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span><div class="ant-spin-text">加载中......</div></div></div></div>'
+}));ias.extension(new IASTriggerExtension({html:'<div class="upAfterTrigger-2bFhG" style="padding: 16px 0 22px 0; color: #999999; font-size: 14px; cursor: pointer;"><a style="display: inline-block; width: 84px; height: 32px; line-height: 32px; border: 1px solid #0099ee; color: #0099ee; border-radius: 4px; text-align: center;">加载更多</a></div>',offset:2,}));ias.extension(new IASNoneLeftExtension({html:'<div class="upAfterTrigger-2bFhG" style="padding: 16px 0 22px 0; color: #999999; font-size: 14px;"><a style="display: inline-block; width: 84px; height: 32px; line-height: 32px; border: 1px solid #0099ee; color: #0099ee; border-radius: 4px; text-align: center;">加载完毕</a></div>',}));});</script></div>
+</div>
+<style type="text/css">#footer{width:100%;height:50px;position:fixed;bottom:0;z-index:999;border-top:1px solid #EEEEEE;background:#fff;}#footer li{width:20%;text-align:center;float:left;}#footer li a{width:100%;display:block;color:#555555;}#footer li p{overflow:hidden;font-size:12px;height:16px;line-height:16px;color:#555555;}#footer li i{display:block;height:30px;font-size:24px;line-height:26px;}#footer .post_b{display:inline-block;background:url(template/quater_2024_juejin/src/post.svg) no-repeat center center #FFFFFF;background-size:50px 50px;width:50px;height:50px;margin-top:-10px;border-radius:50%;padding:6px;box-shadow:0px -2px 1px rgb(0 0 0 / 8%);}#footer li i.icon_b1{background:url(template/quater_2024_juejin/src/icon_b1.svg) no-repeat center center}#footer li a.active i.icon_b1{background:url(template/quater_2024_juejin/src/icon_b1_on.svg) no-repeat center center}#footer li i.icon_b2{background:url(template/quater_2024_juejin/src/icon_b2.svg) no-repeat center center}#footer li a.active i.icon_b2{background:url(template/quater_2024_juejin/src/icon_b2_on.svg) no-repeat center center}#footer li i.icon_b3{background:url(template/quater_2024_juejin/src/icon_b3.svg) no-repeat center center}#footer li a.active i.icon_b3{background:url(template/quater_2024_juejin/src/icon_b3_on.svg) no-repeat center center}#footer li i.icon_b4{background:url(template/quater_2024_juejin/src/icon_b4.svg) no-repeat center center}#footer li a.active i.icon_b4{background:url(template/quater_2024_juejin/src/icon_b4_on.svg) no-repeat center center}@media (max-width:820px){}</style>
+<div id="footer" class="cl" style="display: none;">
+<ul>
+<li>
+<a href="portal.php" class="active">
+<i class="icon_b1"></i>
+<p>首页</p>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="icon_b2"></i>
+<p>资讯</p>
+</a>
+</li>
+<li><div class="post_b"><a href="forum.php?mod=misc&amp;action=nav" onclick="showWindow('nav', this.href, 'get', 0)" style="display: block; width: 50px; height: 50px;"></a></div></li>
+<li>
+<a href="forum.php" class="">
+<i class="icon_b3"></i>
+<p>社区</p>
+</a>
+</li>
+<li class="icon_msg">
+<a href="home.php?mod=space&amp;uid=43774&amp;do=profile&amp;mycenter=1" class="">
+<i class="icon_b4"></i>
+<p>我的</p>
+</a>
+</li>
+</ul>
+</div>
+<div class="search-header-navbar">
+<div class="search-header-layer" id="search-header-layer"></div>
+<div class="search-box">
+<form action="search.php?mod=forum" method="get" id="js_search">
+<div class="search-input">
+<div id="scbar" class="scbar1 cl">
+<form id="scbar_form" method="post" autocomplete="off" onsubmit="searchFocus($('scbar_txt'))" action="search.php?searchsubmit=yes" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="search" />
+<input type="hidden" name="formhash" value="6e3d10b0" />
+<input type="hidden" name="srchtype" value="title" />
+<input type="hidden" name="srhfid" value="0" />
+<input type="hidden" name="srhlocality" value="portal::index" />
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" s class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
+<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech speech /></td>
+<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
+</tr>
+</table>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<div class="search-push">
+<div class="search-item"><a href="search.php?mod=forum&amp;srchtxt=%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;formhash=6e3d10b0&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" sc="1">虚拟机</a></div>
+<div class="search-item"><a href="search.php?mod=forum&amp;srchtxt=%E6%B4%BB%E5%8A%A8&amp;formhash=6e3d10b0&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" sc="1">活动</a></div>
+<div class="search-item"><a href="search.php?mod=forum&amp;srchtxt=fnOS&amp;formhash=6e3d10b0&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" sc="1">fnOS</a></div>
+</div>
+<script type="text/javascript">initSearchmenu('scbar','');</script>
+<span class="search-close" id="search-close"></span>
+</div>
+</form>
+</div>
+</div>
+<script type="text/javascript">jQuery(".search_button").click(function(){jQuery(".search-header-navbar").addClass("nav-active");})
+jQuery(".search-close").click(function(){jQuery(".search-header-navbar").removeClass("nav-active");})
+</script>
+<div class="footer_box cl" style="width: 100%; margin-top: 20px; overflow: hidden;">
+<div class="footer-style" style="height: 36px; padding-top: 24px;"><div class="wp cl"><div class="footer-first"> <script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?f44c77c038dd3fcfea6a8bcb439067e5";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<a href="/forum.php?mod=viewthread&amp;tid=10&amp;page=1&amp;extra=#pid12" target="_blank" rel="noopener noreferrer">隐私政策</a><span>|</span><a href="/forum.phpmod=viewthread&tid=11&page=1&extra=#pid13" target="_blank" rel="noopener noreferrer">联系我们</a> </div><div class="footer-second"><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023020469号</a></div></div></div>
+</div>
+<div id="gotop">
+<a id="totop" title=""></a>
+</div>
+<script type="text/javascript">jQuery.noConflict();jQuery(function(){jQuery("#totop").hide();jQuery(function () {jQuery(window).scroll(function(){if (jQuery(window).scrollTop()>100){jQuery("#totop").fadeIn();}
+else
+{jQuery("#totop").fadeOut();}
+});jQuery("#totop").click(function(){jQuery('body,html').animate({scrollTop:0},500);return false;});});});</script>
+</div>
+</div>
+</body></html>
