@@ -385,6 +385,7 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
+<meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <meta content="Halo 2.26.1" name="generator"/><!-- plugin-comment-widget start -->
 <link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2">
 <link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.2.2" />
@@ -393,8 +394,6 @@ var _hmt = _hmt || [];
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
-              <meta name="baidu-site-verification" content="bd4874a57d69551017898f0fed53a550" />
-              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 <meta name="keywords" content="午后阳光、飞牛NAS教程、内网穿透、halo建站" />
 <meta name="description" content="午后阳光，记录飞牛NAS教程、内网穿透、halo建站等日常技术难题的解决方法与生活随笔。" />
@@ -548,7 +547,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/fei-niu-nasbu-shu-wang-ye-ban-wei-xin-qq";
+        let permalink = "\/archives\/wordpress%E4%B8%ADgravatar%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F%E4%B8%8D%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%85%8D%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE";
         
         // 当前窗口打开
         //window.location.href = permalink;
@@ -1766,23 +1765,18 @@ var _hmt = _hmt || [];
 
     <div class="console-button" tabindex="-1">
         <span class="site-page nav-login">
+            <i class="haofont hao-icon-zhanghao1 " style="font-size: 19.5px;"></i>
             
-            <img src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
-                 alt="Administrator"
-                 style=" width: 24px; height: 24px; border-radius: 9999px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w" />
         </span>
         <div class="back-menu-list-groups">
             <div class="back-menu-list-group" style="margin: -4px -9px -4px -18px">
                 <div class="back-menu-list">
                     
-                        <a class="back-menu-item" rel="external nofollow" target="_blank" href="/console">
-                            <span class="back-menu-item-text">控制台</span>
-                        </a>
-                        <a class="back-menu-item" rel="external nofollow" href="/logout">
-                            <span class="back-menu-item-text">退出登录</span>
-                        </a>
-                    
-                    
+                    <a class="back-menu-item" rel="external nofollow" target="_blank"
+                       href="/login"
+                       onclick="this.href = '/login?redirect_uri=' + encodeURIComponent(window.location.href)">
+                        <span class="back-menu-item-text">登录</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -4033,7 +4027,7 @@ var _hmt = _hmt || [];
             <div class="webinfo-item-title"><i class="haofont hao-icon-bullseye"></i>
                 <div class="item-name">访问量 :</div>
             </div>
-            <div class="item-count">41898</div>
+            <div class="item-count">41908</div>
         </div>
         <div class="webinfo-item">
             <div class="webinfo-item-title"><i class="haofont hao-icon-stopwatch"></i>

@@ -385,6 +385,7 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
+<meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <meta content="Halo 2.26.1" name="generator"/><meta name="description" content="毋庸置疑，hao主题的设计确实非常好看，但是我们所有应用hao主题的站长都遇到了这么一个情况，就是网站在手机端访问，会弹出垃圾广告代码，并且还是带颜色的网站，这种东西如果站长没有及时发现，让网警发现后，站长要负责的，我以前一个网站也是这种被人挂木马，我被请到警察局说明情况并签字，若解释不清，可能被拘"/><!-- plugin-comment-widget start -->
 <link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2">
 <link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.2.2" />
@@ -393,8 +394,6 @@ var _hmt = _hmt || [];
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
-              <meta name="baidu-site-verification" content="bd4874a57d69551017898f0fed53a550" />
-              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="7415d72f-57ac-4691-8cc0-b570af9050f0"></script>
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 </head>
@@ -547,7 +546,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/%E3%80%8A%E6%A2%A6%E3%80%8B-%E8%BD%BB%E9%9F%B3%E4%B9%90%E8%B5%8F%E6%9E%90";
+        let permalink = "\/archives\/yong-fei-niu-nasbu-shu-yi-ge-xiao-cheng-xu";
         
         // 当前窗口打开
         //window.location.href = permalink;

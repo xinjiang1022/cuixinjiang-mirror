@@ -385,6 +385,7 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
+<meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <meta content="Halo 2.26.1" name="generator"/><meta name="description" content="在 NAS 上处理视频无损拼接与压缩转发时，我尝试过不少方案，结果都不太理想：现成的 Docker 镜像找不到，或者得套一层 noVNC，操作卡顿、体验糟糕。后来换个角度想&mdash;&mdash;系统里本来就装了 FFmpeg，真正缺的只是把高频操作封装成脚本而已。 整体思路可以拆成四步： 探测先行，再决定动作 通过 "/><!-- plugin-comment-widget start -->
 <link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2">
 <link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.2.2" />
@@ -393,8 +394,6 @@ var _hmt = _hmt || [];
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
-              <meta name="baidu-site-verification" content="bd4874a57d69551017898f0fed53a550" />
-              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
 <script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-gj8hscpg"></script>
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 </head>
@@ -547,7 +546,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/%E7%90%B5%E7%90%B6%E8%AF%AD%EF%BC%8C%E6%AF%8F%E4%B8%AA%E9%9F%B3%E7%AC%A6%E9%83%BD%E5%9C%A8%E6%95%B2%E6%89%93%E4%BD%A0%E7%9A%84%E5%BF%83%E7%81%B5";
+        let permalink = "\/archives\/%E7%AD%91%E8%B5%B7%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A1%A5%E6%A2%81";
         
         // 当前窗口打开
         //window.location.href = permalink;
@@ -1854,11 +1853,11 @@ var _hmt = _hmt || [];
                         <span class="post-meta-wordcount">
                             <i class="haofont hao-icon-file-word post-meta-icon" title="字数"></i>
                             <span class="post-meta-label">字数:</span>
-                            <span class="word-count">1484</span>
+                            <span class="word-count">1608</span>
                             <span class="post-meta-separator"></span>
                             <i class="haofont hao-icon-clock post-meta-icon" title="阅读耗时"></i>
                             <span class="post-meta-label">阅读耗时:</span>
-                            <span>3 分钟</span>
+                            <span>4 分钟</span>
                         </span>
                         <span class="post-meta-date">
                             <i class="haofont hao-icon-calendar-days post-meta-icon"></i>
@@ -1921,44 +1920,7 @@ var _hmt = _hmt || [];
                 <!-- 文章内容 -->
                 <article  class="post-content  line-numbers" id="article-container">
                     
-                    <p><img src="https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg" alt="题图" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=400 400w, https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=800 800w, https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=1600 1600w, https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=1200 1200w"></p><p>在 NAS 上处理视频无损拼接与压缩转发时，我尝试过不少方案，结果都不太理想：现成的 Docker 镜像找不到，或者得套一层 noVNC，操作卡顿、体验糟糕。后来换个角度想——系统里本来就装了 FFmpeg，真正缺的只是把高频操作封装成脚本而已。</p>
-<p>整体思路可以拆成四步：</p>
-<ol>
-<li>
-<p><strong>探测先行，再决定动作</strong>
-   通过 ffprobe 获取视频的编码格式、分辨率、帧率以及音频参数。只有各项参数完全一致，才能用 <code>-c copy</code> 做无损拼接；参数对不上的，不要强行合并。</p>
-</li>
-<li>
-<p><strong>合并分两种模式</strong></p>
-</li>
-</ol>
-<ul>
-<li>常规 concat：速度快，大部分场景足够应付</li>
-<li>遇到问题时改用 <strong>TS 中转</strong>：依然是 copy 模式，仅更换封装容器，时间轴表现更稳定</li>
-</ul>
-<ol start="3">
-<li>
-<p><strong>压缩转码用于分享</strong>
-   不追求影院级画质，预设几档方案（720 / 1080 / 原分辨率 / HEVC）。纯 CPU 转码较慢；若设备带核显，可启用 VAAPI 加速，像 N3150 这类低功耗小机器也能派上用场。</p>
-</li>
-<li>
-<p><strong>脚本变多后，做一个统一入口</strong>
-   通过菜单选择编号来执行任务，路径写死、自动 chmod，SSH 登录后敲一下即可运行，无需记忆冗长的命令。</p>
-</li>
-</ol>
-<p>整套方案没有 WebUI，也不涉及容器编排，本质上就是 <strong>bash + ffmpeg，再加一点 Python 做文件整理</strong>。换到别的 NAS 系统，只要系统里有 FFmpeg，把脚本拷过去、改一下路径就能继续用。</p>
-<p>脚本我放在下面，欢迎大家挑毛病、调整预设、补充菜单项。这套东西适合：不想折腾镜像、能接受命令行操作、希望把重复劳动一次性解决的人。</p>
-<p>另外我还用 AI 辅助写了几个其他脚本，可以一并试试<a href="https://club.fnnas.com/forum.php?mod=attachment&amp;aid=127113">
- 附件：tools脚本.rar</a></p>
-<ul>
-<li>文件向上级文件夹移动 — python3 movefileup.py</li>
-<li>文件重命名-基准文件名批量改名 — python3 renamebywrite.py</li>
-<li>文件重命名（ajb）— cd ajb + python3 file_renamer_linux.py</li>
-<li>qBittorrent 批量添加种子 — qb_venv/bin/python qbjiaoben.py</li>
-<li>视频无损分组合并 — merge_videos.sh</li>
-<li>视频 TS 中转合并 — merge_videos_ts.sh</li>
-<li>视频压缩转码 — transcode_videos.sh</li>
-</ul>
+                    <p style="">在 NAS 上处理视频无损拼接与压缩转发时，我尝试过不少方案，结果都不太理想：现成的 Docker 镜像找不到，或者得套一层 noVNC，操作卡顿、体验糟糕。后来换个角度想——系统里本来就装了 FFmpeg，真正缺的只是把高频操作封装成脚本而已。</p><p style="">整体思路可以拆成四步：</p><ol><li><p style=""><strong>探测先行，再决定动作</strong>    通过 ffprobe 获取视频的编码格式、分辨率、帧率以及音频参数。只有各项参数完全一致，才能用 <code>-c copy</code> 做无损拼接；参数对不上的，不要强行合并。</p></li><li><p style=""><strong>合并分两种模式</strong></p></li></ol><ul><li><p style="">常规 concat：速度快，大部分场景足够应付</p></li><li><p style="">遇到问题时改用 <strong>TS 中转</strong>：依然是 copy 模式，仅更换封装容器，时间轴表现更稳定</p></li></ul><ol start="3"><li><p style=""><strong>压缩转码用于分享</strong>    不追求影院级画质，预设几档方案（720 / 1080 / 原分辨率 / HEVC）。纯 CPU 转码较慢；若设备带核显，可启用 VAAPI 加速，像 N3150 这类低功耗小机器也能派上用场。</p></li><li><p style=""><strong>脚本变多后，做一个统一入口</strong>    通过菜单选择编号来执行任务，路径写死、自动 chmod，SSH 登录后敲一下即可运行，无需记忆冗长的命令。</p></li></ol><p style="">整套方案没有 WebUI，也不涉及容器编排，本质上就是 <strong>bash + ffmpeg，再加一点 Python 做文件整理</strong>。换到别的 NAS 系统，只要系统里有 FFmpeg，把脚本拷过去、改一下路径就能继续用。</p><p style="">脚本我放在下面，欢迎大家挑毛病、调整预设、补充菜单项。这套东西适合：不想折腾镜像、能接受命令行操作、希望把重复劳动一次性解决的人。</p><p style="">另外我还用 AI 辅助写了几个其他脚本，可以一并试试<a href="https://club.fnnas.com/forum.php?mod=attachment&amp;aid=127113">  附件：tools脚本.rar</a></p><ul><li><p style="">文件向上级文件夹移动 — python3 movefileup.py</p></li><li><p style="">文件重命名-基准文件名批量改名 — python3 renamebywrite.py</p></li><li><p style="">文件重命名（ajb）— cd ajb + python3 file_renamer_linux.py</p></li><li><p style="">qBittorrent 批量添加种子 — qb_venv/bin/python qbjiaoben.py</p></li><li><p style="">视频无损分组合并 — merge_videos.sh</p></li><li><p style="">视频 TS 中转合并 — merge_videos_ts.sh</p></li><li><p style="">视频压缩转码 — transcode_videos.sh</p></li></ul><p style=""></p>
                 </article>
 
                 <!-- 文章ai摘要 -->
