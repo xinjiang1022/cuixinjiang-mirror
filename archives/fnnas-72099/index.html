@@ -221,7 +221,7 @@
         lightbox: 'fancybox',
         lazyload: {
             enable: true,
-            error: "\/upload\/yuangguang66-wkfh.png"
+            error: "\/upload\/wuhouyg.png"
         },
         isFriendLinksInFooter: false,
         loadingBox: true,
@@ -355,6 +355,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南" />
     <meta property="og:url" content="https://www.cuixinjiang.cn/archives/fnnas-72099" />
+    <link rel="canonical" href="https://www.cuixinjiang.cn/archives/fnnas-72099" />
+    
     
         <meta property="og:description" content="需求背景 由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会破坏现有硬盘的分区结构，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。 然而，常规的 XToGo " />
         <meta name="description" content="需求背景 由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会破坏现有硬盘的分区结构，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。 然而，常规的 XToGo " />
@@ -368,6 +370,8 @@
         <meta name="twitter:image" content="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg" />
     
 
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"\u5348\u540E\u9633\u5149","url":"https://www.cuixinjiang.cn"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"\u7528 Ventoy \u6253\u9020\u968F\u8EAB fnOS\uFF1AfnOSToGo \u5B8C\u6574\u5B9E\u8DF5\u6307\u5357","url":"https://www.cuixinjiang.cn/archives/fnnas-72099","datePublished":"2026-09-12","dateModified":"2026-09-13","author":{"@type":"Person","name":"Administrator"},"publisher":{"@type":"Organization","name":"\u5348\u540E\u9633\u5149"},"description":"\u9700\u6C42\u80CC\u666F \u7531\u4E8E x86 \u98DE\u725B\u4E0A\u7684\u670D\u52A1\u5DF2\u5168\u90E8\u8FC1\u81F3 arm \u98DE\u725B\uFF0C\u4F46\u5F00\u53D1\u5E94\u7528\u65F6\u4ECD\u9700\u4F9D\u8D56 x86 \u73AF\u5883\u3002\u82E5\u76F4\u63A5\u5728\u5DF2\u6709\u7CFB\u7EDF\u7684\u7535\u8111\u4E0A\u518D\u88C5\u4E00\u5957\u98DE\u725B\uFF0C\u4F1A\u7834\u574F\u73B0\u6709\u786C\u76D8\u7684\u5206\u533A\u7ED3\u6784\uFF0C\u540E\u7EED\u7EF4\u62A4\u4E5F\u76F8\u5F53\u9EBB\u70E6\u3002\u53D7 UbuntuToGo \u7684\u542F\u53D1\uFF0C\u6211\u51B3\u5B9A\u5236\u4F5C\u4E00\u4E2A fnOSToGo\uFF0C\u4ECE\u6839\u672C\u4E0A\u7ED5\u5F00\u8FD9\u4E9B\u95EE\u9898\u3002 \u7136\u800C\uFF0C\u5E38\u89C4\u7684 XToGo "}</script>
     <!-- Open Graph End -->
 
 
@@ -385,8 +389,7 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
-<meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
-<meta content="Halo 2.26.1" name="generator"/><meta name="description" content="需求背景 由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会破坏现有硬盘的分区结构，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。 然而，常规的 XToGo "/><!-- plugin-comment-widget start -->
+<meta name="generator" content="Halo 2.26.1"/><meta name="description" content="需求背景 由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会破坏现有硬盘的分区结构，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。 然而，常规的 XToGo "/><!-- plugin-comment-widget start -->
 <link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2">
 <link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.2.2" />
 <!-- plugin-comment-widget end -->
@@ -394,7 +397,9 @@ var _hmt = _hmt || [];
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
-<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-qjauo45l"></script>
+              <meta name="baidu-site-verification" content="codeva-OLmTzDegIt" />
+              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-nda90ety"></script>
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 </head>
 
@@ -481,7 +486,7 @@ var _hmt = _hmt || [];
     </style>
     <div id="loading-box" onclick="heo.hideLoading()">
         <div class="loading-bg">
-            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w">
+            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
             <div class="loading-image-dot"></div>
         </div>
     </div>
@@ -509,7 +514,7 @@ var _hmt = _hmt || [];
 <div id="web_bg">
     <div>
         <img class="global_background_img"
-             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=400 400w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=1200 1200w"
+             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=400 400w"
         />
         
     </div>
@@ -546,7 +551,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/%E9%82%A3%E4%BA%9B%E8%BF%87%E5%8E%BB%E7%9A%84%E5%B2%81%E6%9C%88";
+        let permalink = "\/archives\/zai-fei-niu-de-debianzhong-bu-shu-frpsbing-lian-jie-frpc";
         
         // 当前窗口打开
         //window.location.href = permalink;
@@ -581,10 +586,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="Fire">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="&lt;p&gt;Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。&lt;/p&gt;" data-pjax-state=""><p>Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</p></a>
+                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。" data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
                 <time datetime="2026-08-25 09:37:01"></time>
               </div>
             </div>
@@ -593,10 +598,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
                      alt="Administrator">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="&lt;p&gt;心若无所求，👨‍👩‍👦有风无风皆自由&lt;/p&gt;" data-pjax-state=""><p>心若无所求，👨‍👩‍👦有风无风皆自由</p></a>
+                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="心若无所求，👨‍👩‍👦有风无风皆自由" data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
                 <time datetime="2026-08-20 21:54:01"></time>
               </div>
             </div>
@@ -605,10 +610,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="ice">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="&lt;p&gt;很好&lt;/p&gt;" data-pjax-state=""><p>很好</p></a>
+                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="很好" data-pjax-state="">很好</a>
                 <time datetime="2026-07-23 12:43:52"></time>
               </div>
             </div>
@@ -617,10 +622,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
                      alt="Administrator">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="&lt;p&gt;都是基础知识，我备个份😁&lt;/p&gt;" data-pjax-state=""><p>都是基础知识，我备个份😁</p></a>
+                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="都是基础知识，我备个份😁" data-pjax-state="">都是基础知识，我备个份😁</a>
                 <time datetime="2026-06-02 22:30:54"></time>
               </div>
             </div>
@@ -629,10 +634,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="deepseek">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="&lt;p&gt;👍我只是想评论可以吗？&lt;/p&gt;" data-pjax-state=""><p>👍我只是想评论可以吗？</p></a>
+                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="👍我只是想评论可以吗？" data-pjax-state="">👍我只是想评论可以吗？</a>
                 <time datetime="2026-03-20 13:31:20"></time>
               </div>
             </div>
@@ -641,7 +646,7 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="爱哭的小猫">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
                 <a class="comment" href="/" title="现在还没有公共课程？不知道官方在干什么？" data-pjax-state="">现在还没有公共课程？不知道官方在干什么？</a>
@@ -730,6 +735,48 @@ var _hmt = _hmt || [];
           </a><a style="font-size:1em;color:#d3d3d3"
              href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A">
             阳光路上<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ftp%E6%9D%83%E9%99%90">
+            FTP权限<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA">
+            非插件显示<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96">
+            图片自动本地化<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/nicen-localize-image">
+            nicen-localize-image<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90">
+            心灵音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/aplayer">
+            APlayer<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/metingjs">
+            MetingJS<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90">
+            网易云音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/httpd-conf">
+            httpd.conf<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/https%E5%90%8E">
+            https后<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1">
+            CSS样式错乱<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/gravatar%E5%A4%B4%E5%83%8F">
+            Gravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/i-o-deadline-reached">
+            i/o deadline reached<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%A3%9E%E7%89%9Bnas">
+            飞牛NAS<sup>45</sup>
           </a>
         </div>
       </div>
@@ -745,7 +792,7 @@ var _hmt = _hmt || [];
                   九月 2026
                 </span>
                 <div class="card-archive-list-count-group"><span
-                        class="card-archive-list-count">14</span>
+                        class="card-archive-list-count">20</span>
                   <span class="card-archive-list-count-unit">篇</span>
                 </div>
               </a>
@@ -1337,6 +1384,62 @@ var _hmt = _hmt || [];
                    title="阳光路上">
                     <!-- 角标 -->
                     阳光路上<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ftp%E6%9D%83%E9%99%90"
+                   title="FTP权限">
+                    <!-- 角标 -->
+                    FTP权限<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA"
+                   title="非插件显示">
+                    <!-- 角标 -->
+                    非插件显示<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96"
+                   title="图片自动本地化">
+                    <!-- 角标 -->
+                    图片自动本地化<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/nicen-localize-image"
+                   title="nicen-localize-image">
+                    <!-- 角标 -->
+                    nicen-localize-image<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90"
+                   title="心灵音乐">
+                    <!-- 角标 -->
+                    心灵音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/aplayer"
+                   title="APlayer">
+                    <!-- 角标 -->
+                    APlayer<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/metingjs"
+                   title="MetingJS">
+                    <!-- 角标 -->
+                    MetingJS<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"
+                   title="网易云音乐">
+                    <!-- 角标 -->
+                    网易云音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/httpd-conf"
+                   title="httpd.conf">
+                    <!-- 角标 -->
+                    httpd.conf<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/https%E5%90%8E"
+                   title="https后">
+                    <!-- 角标 -->
+                    https后<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1"
+                   title="CSS样式错乱">
+                    <!-- 角标 -->
+                    CSS样式错乱<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/gravatar%E5%A4%B4%E5%83%8F"
+                   title="Gravatar头像">
+                    <!-- 角标 -->
+                    Gravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/i-o-deadline-reached"
+                   title="i/o deadline reached">
+                    <!-- 角标 -->
+                    i/o deadline reached<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%A3%9E%E7%89%9Bnas"
+                   title="飞牛NAS">
+                    <!-- 角标 -->
+                    飞牛NAS<sup>45</sup>
                 </a>
             </div>
         </div>
@@ -1437,7 +1540,7 @@ var _hmt = _hmt || [];
     <!-- 返回主页 -->
     <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
     <a href="/" id="site-name" title="返回博客主页">
-        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=400 400w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w"></span>
+        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
     </a>
 </div>
 
@@ -1779,12 +1882,7 @@ var _hmt = _hmt || [];
             </div>
         </div>
     </div>
-    <div class="nav-button" id="nav-console">
-        <a class="console_switchbutton" href="javascript:void(0);" onclick="heo.showConsole()" rel="external nofollow"
-           title="显示中控台">
-            <i class="haofont hao-icon-dashboard"></i>
-        </a>
-    </div>
+    
 
     <div class="nav-button" id="nav-totop" onclick="btf.scrollToDest(0,500)">
         <a class="totopbtn">
@@ -1804,7 +1902,7 @@ var _hmt = _hmt || [];
 </nav>
             <div class="coverdiv loaded" id="coverdiv">
                 <img alt="cover" class="nolazyload" id="post-cover"
-                     src="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=400 400w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=800 800w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=1600 1600w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=1200 1200w">
+                     src="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=800 800w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=1200 1200w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=1600 1600w, https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=400 400w">
             </div>
 
             <div id="post-info">
@@ -1853,15 +1951,15 @@ var _hmt = _hmt || [];
                         <span class="post-meta-wordcount">
                             <i class="haofont hao-icon-file-word post-meta-icon" title="字数"></i>
                             <span class="post-meta-label">字数:</span>
-                            <span class="word-count">11578</span>
+                            <span class="word-count">10901</span>
                             <span class="post-meta-separator"></span>
                             <i class="haofont hao-icon-clock post-meta-icon" title="阅读耗时"></i>
                             <span class="post-meta-label">阅读耗时:</span>
-                            <span>28 分钟</span>
+                            <span>27 分钟</span>
                         </span>
                         <span class="post-meta-date">
                             <i class="haofont hao-icon-calendar-days post-meta-icon"></i>
-                            <time title="2026-09-11 10:59:08" datetime="2026-09-11">2026/09/11</time>
+                            <time title="2026-09-12 22:44:45" datetime="2026-09-12">2026/09/12</time>
                         </span>
                         
                         <span class="post-meta-wechat" title="该文章在博客首发">
@@ -1875,7 +1973,7 @@ var _hmt = _hmt || [];
                            title="热度" >
                             <i class="haofont hao-icon-fire post-meta-icon"></i>
                             <span class="post-meta-label">热度:</span>
-                            <span id="visit">0</span>
+                            <span id="visit">1</span>
                         </a>
                         <a class="post-meta-commentcount"  data-flag-title="评论数"
                            title="评论数"
@@ -1920,11 +2018,11 @@ var _hmt = _hmt || [];
                 <!-- 文章内容 -->
                 <article  class="post-content  line-numbers" id="article-container">
                     
-                    <h2 style="" id="%E9%9C%80%E6%B1%82%E8%83%8C%E6%99%AF">需求背景</h2><p style="">由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会<strong>破坏现有硬盘的分区结构</strong>，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。</p><p style="">然而，常规的 XToGo 方案通常要<strong>独占整块 U 盘，或者对 U 盘重新分区</strong>，这会破坏 U 盘原本的用途，<strong>便携性也不理想</strong>。</p><p style="">于是我换了思路：把飞牛系统装进一个虚拟磁盘，再通过 Ventoy 来引导它。</p><h2 style="" id="%E6%80%BB%E4%BD%93%E8%AF%B4%E6%98%8E">总体说明</h2><h3 style="" id="%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E6%80%8E%E4%B9%88%E9%80%89">存储介质怎么选</h3><p style="">整套操作系统都要放进 U 盘里运行，而 NAS 场景下应用、数据库、Docker 会产生大量小文件读写，对 4K 性能要求极高。普通 USB 2.0 / 3.0 / 3.1 U 盘根本扛不住，必须选<strong>固态 U 盘</strong>，或者用<strong>固态硬盘搭配硬盘盒</strong>。</p><h3 style="" id="%E6%9C%AC%E6%96%87%E6%89%80%E7%94%A8%E7%8E%AF%E5%A2%83">本文所用环境</h3><ul><li><p style="">Windows 11（用于创建 vhd 虚拟磁盘）</p></li><li><p style="">Ventoy 1.1.17（负责 fnOSToGo 的引导）</p></li><li><p style="">VMware Workstation Pro（用于安装飞牛，个人使用免费）</p></li><li><p style="">飞牛 fnOS 安装镜像（请到官网获取最新版本）</p></li></ul><h3 style="" id="%E4%B8%BB%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">主要参考资料</h3><ul><li><p style=""><a href="https://www.ventoy.net/cn/plugin_vtoyboot.html">Ventoy 官方文档 Linux vDisk 文件启动插件</a></p></li><li><p style=""><a href="https://www.ottoli.org/howto/ventoy-ubuntu-to-go">基于 Ventoy 实现 Ubuntu To Go</a></p></li></ul><h3 style="" id="%E6%96%B9%E6%A1%88%E5%B1%80%E9%99%90%E6%80%A7">方案局限性</h3><ul><li><p style="">依赖 vtoyboot，只支持 <strong>vhd 固定大小</strong>格式，vhdx 与动态扩展均不支持</p></li><li><p style="">飞牛系统升级（内核 / initramfs 发生变化）后，必须<strong>重新跑一遍 vtoyboot 脚本</strong>，否则虚拟磁盘可能无法引导</p></li><li><p style="">性能受限于 U 盘读写速度，适合当作随身开发或体验环境，不适合 7×24 高负载长期运行</p></li></ul><h2 style="" id="1%EF%B8%8F%E2%83%A3-%E5%AE%89%E8%A3%85-ventoy">1️⃣ 安装 Ventoy</h2><p style="">进入 <a href="https://www.ventoy.net/cn/download.html">Ventoy 官网</a>，下载 ventoy-1.1.17-windows.zip。</p><p style="">解压后运行 Ventoy2Disk.exe，选中目标 U 盘，点击安装。</p><p style="">该操作会清空 U 盘，请提前备份数据。</p><p style="">安装完毕后，U 盘剩余空间就是一个普通的 exFAT 分区，ISO 镜像和日常文件都能照常存放，与 fnOSToGo 互不影响——这正是本方案不牺牲 U 盘原有功能的核心所在。</p><h2 style="" id="2%EF%B8%8F%E2%83%A3-%E5%88%9B%E5%BB%BA-vhd-%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98">2️⃣ 创建 vhd 虚拟磁盘</h2><p style="">右键 Windows 徽标，进入 磁盘管理，选择 创建 VHD。</p><p style=""></p><p style="">创建时有几个要点：</p><ul><li><p style="">建议<strong>把位置直接选在 U 盘上</strong>（若追求安装速度，也可先建在本地 SSD，装完再复制回 U 盘）</p></li><li><p style="">容量按需设置，一般推荐 30G：系统分区 20G、Swap 3G、剩下约 10G 留给存储空间（固定大小 VHD 在创建时就占满全部空间）</p></li><li><p style="">虚拟硬盘格式<strong>必须</strong>是 VHD、固定大小（vtoyboot 不支持 vhdx 和动态扩展）</p></li><li><p style="">必须是<strong>全新创建</strong>的磁盘，不能拿装过系统的旧盘来用</p></li></ul><p style=""></p><p style="">创建完成后：</p><ul><li><p style="">右键该磁盘，选择 初始化磁盘</p></li><li><p style="">分区形式选 GPT</p></li><li><p style="">记下磁盘编号，例如这里是 磁盘 3，后面会用到</p></li></ul><p style=""></p><h2 style="" id="3%EF%B8%8F%E2%83%A3-%E6%8A%8A%E9%A3%9E%E7%89%9B%E8%A3%85%E8%BF%9B-vhd-%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98">3️⃣ 把飞牛装进 vhd 虚拟磁盘</h2><p style="">准备工作：</p><ul><li><p style="">到<a href="https://www.fnnas.com/download">飞牛官网下载页</a>获取最新的系统安装 iso 镜像</p></li></ul><h3 style="" id="1.-%E5%BB%BA%E7%AB%8B%E8%99%9A%E6%8B%9F%E6%9C%BA">1. 建立虚拟机</h3><p style="">以<strong>管理员身份</strong>启动 VMware（使用物理磁盘功能一般需要管理员权限），新建虚拟机，选择 自定义(高级)，除以下环节外，其余按默认或自身情况设置即可。</p><ul><li><p style="">内存建议 2G 以上，处理器建议 2 核以上</p></li><li><p style="">网络适配器建议用 桥接模式，方便后续联网安装 grub2 和 vtoyboot 脚本；同时在 VMware 顶部菜单 编辑 - 虚拟网络编辑器 中，把桥接网络绑定到宿主机实际联网的那块物理网卡</p></li><li><p style="">选择稍后安装操作系统</p></li></ul><p style=""></p><ul><li><p style="">操作系统选 Linux - 其他 Linux 6.x 内核 64 位（飞牛基于 Debian 深度定制，内核较新；图中原教程选的是 Ubuntu 64 位，操作一致）</p></li></ul><p style=""></p><ul><li><p style="">使用物理磁盘（适用于高级用户）</p></li></ul><p style=""></p><ul><li><p style="">设备选择步骤2️⃣中记下的磁盘编号（如磁盘 3 就选 PhysicalDrive3），使用整个磁盘</p></li></ul><p style=""></p><p style="">⚠️ 请反复确认磁盘编号与容量，<strong>选错物理磁盘会清空对应硬盘的数据</strong></p><ul><li><p style="">创建完成后点击 编辑虚拟机设置</p></li><li><p style="">将 CD/DVD 设为 使用 ISO 映像文件，并选中准备好的飞牛安装镜像</p></li></ul><p style=""></p><pre><code>- 移除打印机（避免不必要的bug）
+                    <h2 id="heading-1"  style="">需求背景</h2><p style="">由于 x86 飞牛上的服务已全部迁至 arm 飞牛，但开发应用时仍需依赖 x86 环境。若直接在已有系统的电脑上再装一套飞牛，会<strong>破坏现有硬盘的分区结构</strong>，后续维护也相当麻烦。受 UbuntuToGo 的启发，我决定制作一个 fnOSToGo，从根本上绕开这些问题。</p><p style="">然而，常规的 XToGo 方案通常要<strong>独占整块 U 盘，或者对 U 盘重新分区</strong>，这会破坏 U 盘原本的用途，<strong>便携性也不理想</strong>。</p><p style="">于是我换了思路：把飞牛系统装进一个虚拟磁盘，再通过 Ventoy 来引导它。</p><h2 id="heading-2"  style="">总体说明</h2><h3 id="heading-3"  style="">存储介质怎么选</h3><p style="">整套操作系统都要放进 U 盘里运行，而 NAS 场景下应用、数据库、Docker 会产生大量小文件读写，对 4K 性能要求极高。普通 USB 2.0 / 3.0 / 3.1 U 盘根本扛不住，必须选<strong>固态 U 盘</strong>，或者用<strong>固态硬盘搭配硬盘盒</strong>。</p><h3 id="heading-4"  style="">本文所用环境</h3><ul><li><p style="">Windows 11（用于创建 vhd 虚拟磁盘）</p></li><li><p style="">Ventoy 1.1.17（负责 fnOSToGo 的引导）</p></li><li><p style="">VMware Workstation Pro（用于安装飞牛，个人使用免费）</p></li><li><p style="">飞牛 fnOS 安装镜像（请到官网获取最新版本）</p></li></ul><h3 id="heading-5"  style="">主要参考资料</h3><ul><li><p style=""><a href="https://www.ventoy.net/cn/plugin_vtoyboot.html">Ventoy 官方文档 Linux vDisk 文件启动插件</a></p></li><li><p style=""><a href="https://www.ottoli.org/howto/ventoy-ubuntu-to-go">基于 Ventoy 实现 Ubuntu To Go</a></p></li></ul><h3 id="heading-6"  style="">方案局限性</h3><ul><li><p style="">依赖 vtoyboot，只支持 <strong>vhd 固定大小</strong>格式，vhdx 与动态扩展均不支持</p></li><li><p style="">飞牛系统升级（内核 / initramfs 发生变化）后，必须<strong>重新跑一遍 vtoyboot 脚本</strong>，否则虚拟磁盘可能无法引导</p></li><li><p style="">性能受限于 U 盘读写速度，适合当作随身开发或体验环境，不适合 7×24 高负载长期运行</p></li></ul><h2 id="heading-7"  style="">1️⃣ 安装 Ventoy</h2><p style="">进入 <a href="https://www.ventoy.net/cn/download.html">Ventoy 官网</a>，下载 ventoy-1.1.17-windows.zip。</p><p style="">解压后运行 Ventoy2Disk.exe，选中目标 U 盘，点击安装。</p><p style="">该操作会清空 U 盘，请提前备份数据。</p><p style="">安装完毕后，U 盘剩余空间就是一个普通的 exFAT 分区，ISO 镜像和日常文件都能照常存放，与 fnOSToGo 互不影响——这正是本方案不牺牲 U 盘原有功能的核心所在。</p><h2 id="heading-8"  style="">2️⃣ 创建 vhd 虚拟磁盘</h2><p style="">右键 Windows 徽标，进入 磁盘管理，选择 创建 VHD。</p><p style=""></p><p style="">创建时有几个要点：</p><ul><li><p style="">建议<strong>把位置直接选在 U 盘上</strong>（若追求安装速度，也可先建在本地 SSD，装完再复制回 U 盘）</p></li><li><p style="">容量按需设置，一般推荐 30G：系统分区 20G、Swap 3G、剩下约 10G 留给存储空间（固定大小 VHD 在创建时就占满全部空间）</p></li><li><p style="">虚拟硬盘格式<strong>必须</strong>是 VHD、固定大小（vtoyboot 不支持 vhdx 和动态扩展）</p></li><li><p style="">必须是<strong>全新创建</strong>的磁盘，不能拿装过系统的旧盘来用</p></li></ul><p style=""></p><p style="">创建完成后：</p><ul><li><p style="">右键该磁盘，选择 初始化磁盘</p></li><li><p style="">分区形式选 GPT</p></li><li><p style="">记下磁盘编号，例如这里是 磁盘 3，后面会用到</p></li></ul><p style=""></p><h2 id="heading-9"  style="">3️⃣ 把飞牛装进 vhd 虚拟磁盘</h2><p style="">准备工作：</p><ul><li><p style="">到<a href="https://www.fnnas.com/download">飞牛官网下载页</a>获取最新的系统安装 iso 镜像</p></li></ul><h3 id="heading-10"  style="">1. 建立虚拟机</h3><p style="">以<strong>管理员身份</strong>启动 VMware（使用物理磁盘功能一般需要管理员权限），新建虚拟机，选择 自定义(高级)，除以下环节外，其余按默认或自身情况设置即可。</p><ul><li><p style="">内存建议 2G 以上，处理器建议 2 核以上</p></li><li><p style="">网络适配器建议用 桥接模式，方便后续联网安装 grub2 和 vtoyboot 脚本；同时在 VMware 顶部菜单 编辑 - 虚拟网络编辑器 中，把桥接网络绑定到宿主机实际联网的那块物理网卡</p></li><li><p style="">选择稍后安装操作系统</p></li></ul><p style=""></p><ul><li><p style="">操作系统选 Linux - 其他 Linux 6.x 内核 64 位（飞牛基于 Debian 深度定制，内核较新；图中原教程选的是 Ubuntu 64 位，操作一致）</p></li></ul><p style=""></p><ul><li><p style="">使用物理磁盘（适用于高级用户）</p></li></ul><p style=""></p><ul><li><p style="">设备选择步骤2️⃣中记下的磁盘编号（如磁盘 3 就选 PhysicalDrive3），使用整个磁盘</p></li></ul><p style=""></p><p style="">⚠️ 请反复确认磁盘编号与容量，<strong>选错物理磁盘会清空对应硬盘的数据</strong></p><ul><li><p style="">创建完成后点击 编辑虚拟机设置</p></li><li><p style="">将 CD/DVD 设为 使用 ISO 映像文件，并选中准备好的飞牛安装镜像</p></li></ul><p style=""></p><pre><code>- 移除打印机（避免不必要的bug）
 
 - 在`选项` - `高级`中选择`UEFI`
 
-</code></pre><p style=""></p><h3 style="" id="2.-%E5%AE%89%E8%A3%85%E9%A3%9E%E7%89%9B">2. 安装飞牛</h3><p style="">启动虚拟机，按提示完成安装（界面图文可参考<a href="https://help.fnnas.com/articles/v1/start/install-os">飞牛官方安装帮助</a>）。</p><ul><li><p style="">选择 Graphical Install（图形化安装流程），回车继续</p></li><li><p style="">选择系统盘：列表中应当只有步骤2️⃣创建的那块虚拟磁盘（按容量核对），回车或按 Alt+N 继续</p></li><li><p style="">设置系统分区与 Swap 大小：一般建议系统分区 20 GB、Swap 3 GB，剩余约 10 GB 留给存储空间</p></li><li><p style="">确认格式化：所选系统盘会被格式化——反正格的只是虚拟磁盘，宿主机数据毫发无损，这正是本方案的价值所在</p></li><li><p style="">安装完成后会自动进入网络设置，保持 DHCP 自动获取 IP 即可，<strong>记下这里的 IP 地址</strong>（如 192.168.x.x），回车或按 Alt+S 保存</p></li><li><p style="">重启前，可在 编辑虚拟机设置 中取消 CD/DVD 的 启动时连接，避免重启后再次进入安装器</p></li><li><p style="">重启成功后会进入终端登录页，屏幕上显示访问地址，即表示安装成功</p></li></ul><h3 style="" id="3.-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A3%9E%E7%89%9B">3. 初始化飞牛</h3><p style="">在宿主机浏览器访问 http://虚拟机IP:5666，完成初始化。</p><ul><li><p style="">设置设备名称与管理员账号</p></li><li><p style="">创建存储空间：<strong>建议此时就在虚拟机里建好存储空间</strong>，选择系统盘的剩余空间即可</p></li></ul><p style="">至此飞牛安装完毕，可以先按需配置 Docker、应用中心等常用环境，再继续下一步。</p><h3 style="" id="4.-%E5%AE%89%E8%A3%85-vtoyboot-%E8%84%9A%E6%9C%AC">4. 安装 vtoyboot 脚本</h3><p style="">飞牛是无桌面的 NAS 系统，vtoyboot 脚本只能通过 SSH 执行。</p><p style="">先在飞牛 Web 界面 设置 - SSH 中开启 SSH（默认关闭），然后在宿主机终端连接飞牛：</p><pre><code>ssh 管理员用户名@虚拟机IP
+</code></pre><p style=""></p><h3 id="heading-11"  style="">2. 安装飞牛</h3><p style="">启动虚拟机，按提示完成安装（界面图文可参考<a href="https://help.fnnas.com/articles/v1/start/install-os">飞牛官方安装帮助</a>）。</p><ul><li><p style="">选择 Graphical Install（图形化安装流程），回车继续</p></li><li><p style="">选择系统盘：列表中应当只有步骤2️⃣创建的那块虚拟磁盘（按容量核对），回车或按 Alt+N 继续</p></li><li><p style="">设置系统分区与 Swap 大小：一般建议系统分区 20 GB、Swap 3 GB，剩余约 10 GB 留给存储空间</p></li><li><p style="">确认格式化：所选系统盘会被格式化——反正格的只是虚拟磁盘，宿主机数据毫发无损，这正是本方案的价值所在</p></li><li><p style="">安装完成后会自动进入网络设置，保持 DHCP 自动获取 IP 即可，<strong>记下这里的 IP 地址</strong>（如 192.168.x.x），回车或按 Alt+S 保存</p></li><li><p style="">重启前，可在 编辑虚拟机设置 中取消 CD/DVD 的 启动时连接，避免重启后再次进入安装器</p></li><li><p style="">重启成功后会进入终端登录页，屏幕上显示访问地址，即表示安装成功</p></li></ul><h3 id="heading-12"  style="">3. 初始化飞牛</h3><p style="">在宿主机浏览器访问 http://虚拟机IP:5666，完成初始化。</p><ul><li><p style="">设置设备名称与管理员账号</p></li><li><p style="">创建存储空间：<strong>建议此时就在虚拟机里建好存储空间</strong>，选择系统盘的剩余空间即可</p></li></ul><p style="">至此飞牛安装完毕，可以先按需配置 Docker、应用中心等常用环境，再继续下一步。</p><h3 id="heading-13"  style="">4. 安装 vtoyboot 脚本</h3><p style="">飞牛是无桌面的 NAS 系统，vtoyboot 脚本只能通过 SSH 执行。</p><p style="">先在飞牛 Web 界面 设置 - SSH 中开启 SSH（默认关闭），然后在宿主机终端连接飞牛：</p><pre><code>ssh 管理员用户名@虚拟机IP
 
 </code></pre><p style="">按照 <a href="https://github.com/ventoy/vtoyboot/releases">vtoyboot</a> 官方教程，应先安装 grub2，这样可同时支持 UEFI 与 Legacy BIOS 启动：</p><pre><code>sudo apt install grub2
 
@@ -1942,7 +2040,7 @@ sudo bash vtoyboot.sh
 
 </code></pre><p style="">脚本执行完毕后，用 poweroff 命令<strong>正常关机</strong>（不要直接关闭虚拟机电源）：</p><pre><code>sudo poweroff
 
-</code></pre><p style="">注意：</p><ul><li><p style="">安装完成后<strong>不要给虚拟机创建快照</strong>，否则虚拟磁盘将无法被 Ventoy 引导</p></li></ul><h2 style="" id="4%EF%B8%8F%E2%83%A3-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80">4️⃣ 修改文件后缀</h2><p style="">关闭虚拟机后，重新打开 磁盘管理，右键虚拟磁盘选择 分离 VHD。</p><p style="">然后将 .vhd 文件重命名，把后缀改为 .vtoy。推荐保留原后缀并追加 .vtoy，例如 fnos.vhd.vtoy。</p><p style="">如果创建虚拟磁盘时没有把位置选在 U 盘，请确保把该文件复制到 U 盘。</p><p style="">另外提醒：之后在 Windows 中附加该 VHD 时，系统可能提示磁盘 需要格式化，一律选择取消，切勿格式化。</p><h2 style="" id="5%EF%B8%8F%E2%83%A3-%E5%BC%95%E5%AF%BC%E8%BF%9B%E5%85%A5-fnostogo">5️⃣ 引导进入 fnOSToGo</h2><p style="">关闭计算机后开机，迅速按下快速启动快捷键，选择从 U 盘启动（或进入 BIOS 调整启动顺序；同时<strong>在 BIOS 中关闭 Secure Boot</strong>，飞牛暂不支持安全启动）。</p><p style="">各品牌快速启动快捷键：</p><p style="">主板品牌 启动按键 笔记本品牌 启动按键 台式机品牌 启动按键</p><p style="">华硕主板 F8 联想笔记本 F12 联想台式机 F12</p><p style="">技嘉主板 F12 宏基笔记本 F12 惠普台式机 F12</p><p style="">微星主板 F11 华硕笔记本 ESC 宏基台式机 F12</p><p style="">映泰主板 F9 惠普笔记本 F9 戴尔台式机 ESC</p><p style="">梅捷主板 ESC或F12 联想Thinkpad F12 神舟台式机 F12</p><p style="">七彩虹主板 ESC或F11 戴尔笔记本 F12 华硕台式机 F8</p><p style="">华擎主板 F11 神舟笔记本 F12 方正台式机 F12</p><p style="">斯巴达克主板 ESC 东芝笔记本 F12 **台式机 F12</p><p style="">昂达主板 F11 三星笔记本 F12 海尔台式机 F12</p><p style="">双**板 ESC IBM笔记本 F12 明基台式机 F8</p><p style="">翔升主板 F10 富士通笔记本 F12</p><p style="">精英主板 ESC或F11 海尔笔记本 F12</p><p style="">冠盟主板 F11或F12 方正笔记本 F12</p><p style="">富士康主板 ESC或F12 **笔记本 F12</p><p style="">顶星主板 F11或F12 微星笔记本 F11</p><p style="">铭瑄主板 ESC 明基笔记本 F9</p><p style="">盈通主板 F8 技嘉笔记本 F12</p><p style="">捷波主板 ESC Gateway笔记本 F12</p><p style="">Intel主板 F12 eMachines笔记本 F12</p><p style="">杰微主板 ESC或F8 索尼笔记本 ESC</p><p style="">致铭主板 F12 苹果笔记本 长按"option"键</p><p style="">磐英主板 ESC</p><p style="">磐正主板 ESC</p><p style="">冠铭主板 F9</p><p style="">进入 Ventoy 引导菜单后，选择 fnos.vhd.vtoy 回车即可。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-iubq.png" alt="图片" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-iubq.png?width=400 400w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=1200 1200w"></figure><p style="">飞牛启动成功后，终端界面（接显示器可见）会显示 IP 与访问地址，用浏览器访问 http://IP:5666 即可；也可以通过路由器后台，或用飞牛手机 App 的 发现局域网内设备 找到新 IP。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-FWYG.png" alt="图片" width="1920px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-FWYG.png?width=400 400w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=1200 1200w"></figure><p style="">用 Ventoy 启动 fnOSToGo 后，可能因识别不到存储空间的物理硬盘，导致 设置 - 存储空间管理 中显示缺失硬盘。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-muaI.png" alt="图片" width="1390px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-muaI.png?width=400 400w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=1200 1200w"></figure><p style="">但<strong>文件系统和应用安装都不受影响，可以正常使用</strong>，无需理会。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-iTfy.png" alt="图片" width="1558px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-iTfy.png?width=400 400w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=1200 1200w"></figure><p style="">⚠️ fnOSToGo 启动后，设置 - 存储空间管理 中可能会列出宿主机的硬盘或其他移动硬盘，<strong>请勿对其初始化或创建存储空间</strong>，以免破坏原有数据。</p><h2 style="" id="%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E6%8A%A4">日常使用与维护</h2><ul><li><p style=""><strong>正常关机</strong>：请通过 Web 界面或 SSH（sudo poweroff）关机后再拔 U 盘，直接断电可能导致虚拟磁盘文件系统损坏</p></li><li><p style=""><strong>系统更新后重跑 vtoyboot</strong>：在 Web 界面升级系统后（涉及内核、initramfs 变更），需重新执行一次 vtoyboot 脚本，否则下次可能无法引导。最简便的做法：直接在 Ventoy 引导起来的飞牛中 SSH 执行 3️⃣-4 的脚本，正常关机即可；也可以把 .vtoy 改回 .vhd 挂回 VMware 操作</p></li><li><p style=""><strong>迁移</strong>：整个系统就是 U 盘上的一个文件，复制到其他 U 盘 / 移动硬盘后仍可通过 Ventoy 引导；Ventoy 也支持引导本地硬盘中的 vdisk 文件，参考 <a href="https://www.ventoy.net/cn/doc_vlnk.html">Ventoy 启动本地硬盘中的镜像文件</a></p></li><li><p style=""><strong>性能</strong>：若出现卡顿，多半是 U 盘 4K 性能不足，建议更换固态 U 盘或移动固态硬盘</p></li></ul><h2 style="" id="%E7%A1%AC%E7%9B%98%E6%89%A9%E5%AE%B9%E6%96%B9%E6%B3%95">硬盘扩容方法</h2><ol><li><p style="">把 .vtoy 文件后缀改回 .vhd</p></li><li><p style="">打开 powershell（win+run 输入 powershell），执行以下命令：</p></li></ol><pre><code># 运行diskpart
+</code></pre><p style="">注意：</p><ul><li><p style="">安装完成后<strong>不要给虚拟机创建快照</strong>，否则虚拟磁盘将无法被 Ventoy 引导</p></li></ul><h2 id="heading-14"  style="">4️⃣ 修改文件后缀</h2><p style="">关闭虚拟机后，重新打开 磁盘管理，右键虚拟磁盘选择 分离 VHD。</p><p style="">然后将 .vhd 文件重命名，把后缀改为 .vtoy。推荐保留原后缀并追加 .vtoy，例如 fnos.vhd.vtoy。</p><p style="">如果创建虚拟磁盘时没有把位置选在 U 盘，请确保把该文件复制到 U 盘。</p><p style="">另外提醒：之后在 Windows 中附加该 VHD 时，系统可能提示磁盘 需要格式化，一律选择取消，切勿格式化。</p><h2 id="heading-15"  style="">5️⃣ 引导进入 fnOSToGo</h2><p style="">关闭计算机后开机，迅速按下快速启动快捷键，选择从 U 盘启动（或进入 BIOS 调整启动顺序；同时<strong>在 BIOS 中关闭 Secure Boot</strong>，飞牛暂不支持安全启动）。</p><p style="">各品牌快速启动快捷键：</p><p style="">主板品牌 启动按键 笔记本品牌 启动按键 台式机品牌 启动按键</p><p style="">华硕主板 F8 联想笔记本 F12 联想台式机 F12</p><p style="">技嘉主板 F12 宏基笔记本 F12 惠普台式机 F12</p><p style="">微星主板 F11 华硕笔记本 ESC 宏基台式机 F12</p><p style="">映泰主板 F9 惠普笔记本 F9 戴尔台式机 ESC</p><p style="">梅捷主板 ESC或F12 联想Thinkpad F12 神舟台式机 F12</p><p style="">七彩虹主板 ESC或F11 戴尔笔记本 F12 华硕台式机 F8</p><p style="">华擎主板 F11 神舟笔记本 F12 方正台式机 F12</p><p style="">斯巴达克主板 ESC 东芝笔记本 F12 **台式机 F12</p><p style="">昂达主板 F11 三星笔记本 F12 海尔台式机 F12</p><p style="">双**板 ESC IBM笔记本 F12 明基台式机 F8</p><p style="">翔升主板 F10 富士通笔记本 F12</p><p style="">精英主板 ESC或F11 海尔笔记本 F12</p><p style="">冠盟主板 F11或F12 方正笔记本 F12</p><p style="">富士康主板 ESC或F12 **笔记本 F12</p><p style="">顶星主板 F11或F12 微星笔记本 F11</p><p style="">铭瑄主板 ESC 明基笔记本 F9</p><p style="">盈通主板 F8 技嘉笔记本 F12</p><p style="">捷波主板 ESC Gateway笔记本 F12</p><p style="">Intel主板 F12 eMachines笔记本 F12</p><p style="">杰微主板 ESC或F8 索尼笔记本 ESC</p><p style="">致铭主板 F12 苹果笔记本 长按"option"键</p><p style="">磐英主板 ESC</p><p style="">磐正主板 ESC</p><p style="">冠铭主板 F9</p><p style="">进入 Ventoy 引导菜单后，选择 fnos.vhd.vtoy 回车即可。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-iubq.png" alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-iubq.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-iubq.png?width=400 400w"></figure><p style="">飞牛启动成功后，终端界面（接显示器可见）会显示 IP 与访问地址，用浏览器访问 http://IP:5666 即可；也可以通过路由器后台，或用飞牛手机 App 的 发现局域网内设备 找到新 IP。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-FWYG.png" alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南" width="1920px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-FWYG.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-FWYG.png?width=400 400w"></figure><p style="">用 Ventoy 启动 fnOSToGo 后，可能因识别不到存储空间的物理硬盘，导致 设置 - 存储空间管理 中显示缺失硬盘。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-muaI.png" alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南" width="1390px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-muaI.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-muaI.png?width=400 400w"></figure><p style="">但<strong>文件系统和应用安装都不受影响，可以正常使用</strong>，无需理会。</p><figure style="align-items: start; display: flex; flex-direction: column" data-content-type="image"><img src="https://www.cuixinjiang.cn/upload/image-iTfy.png" alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南" width="1558px" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-iTfy.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-iTfy.png?width=400 400w"></figure><p style="">⚠️ fnOSToGo 启动后，设置 - 存储空间管理 中可能会列出宿主机的硬盘或其他移动硬盘，<strong>请勿对其初始化或创建存储空间</strong>，以免破坏原有数据。</p><h2 id="heading-16"  style="">日常使用与维护</h2><ul><li><p style=""><strong>正常关机</strong>：请通过 Web 界面或 SSH（sudo poweroff）关机后再拔 U 盘，直接断电可能导致虚拟磁盘文件系统损坏</p></li><li><p style=""><strong>系统更新后重跑 vtoyboot</strong>：在 Web 界面升级系统后（涉及内核、initramfs 变更），需重新执行一次 vtoyboot 脚本，否则下次可能无法引导。最简便的做法：直接在 Ventoy 引导起来的飞牛中 SSH 执行 3️⃣-4 的脚本，正常关机即可；也可以把 .vtoy 改回 .vhd 挂回 VMware 操作</p></li><li><p style=""><strong>迁移</strong>：整个系统就是 U 盘上的一个文件，复制到其他 U 盘 / 移动硬盘后仍可通过 Ventoy 引导；Ventoy 也支持引导本地硬盘中的 vdisk 文件，参考 <a href="https://www.ventoy.net/cn/doc_vlnk.html">Ventoy 启动本地硬盘中的镜像文件</a></p></li><li><p style=""><strong>性能</strong>：若出现卡顿，多半是 U 盘 4K 性能不足，建议更换固态 U 盘或移动固态硬盘</p></li></ul><h2 id="heading-17"  style="">硬盘扩容方法</h2><ol><li><p style="">把 .vtoy 文件后缀改回 .vhd</p></li><li><p style="">打开 powershell（win+run 输入 powershell），执行以下命令：</p></li></ol><pre><code># 运行diskpart
 diskpart
 # 加载vhd镜像
 Select vdisk file=&lt;pathToVHD&gt;
@@ -1959,7 +2057,7 @@ lsblk                                        # 确认最后一个分区的编号
 sudo growpart /dev/sda 4                     # 将该分区扩展至磁盘末尾
 sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 分区则执行 sudo resize2fs /dev/sda4
 
-</code></pre><ol><li><p style="">关闭虚拟机，在 Windows 磁盘管理中右键虚拟磁盘选择 分离 VHD，然后把<strong>后缀名改回</strong> .vtoy</p></li></ol><h2 style="" id="%E6%88%90%E5%93%81%E5%88%86%E4%BA%AB">成品分享</h2><p style="">不想自己动手的话，可以直接下载已制作好的 fnOSToGo 和 Fygo（飞牛海外版）。</p><ul><li><p style=""><a href="https://pan.quark.cn/s/f6df70c05def?pwd=We3J">分享链接</a></p></li><li><p style="">提取码：We3J</p></li></ul><p style="">镜像规模 30G（20G 系统空间、10G 存储空间），准备一个 30G 以上的 U 盘，解压即可使用；解压后会占用 30G 空间，请确保 U 盘剩余空间充足。U 盘先装好 Ventoy，再把解压出的 fnos.vhd.vtoy / fygo.vhd.vtoy 文件放进 U 盘，即可按 5️⃣ 的步骤引导启动。</p><p style="">飞牛镜像的账号密码均为 fnos / fnos，Fygo 为 fygo / fygo。</p>
+</code></pre><ol><li><p style="">关闭虚拟机，在 Windows 磁盘管理中右键虚拟磁盘选择 分离 VHD，然后把<strong>后缀名改回</strong> .vtoy</p></li></ol><h2 id="heading-18"  style="">成品分享</h2><p style="">不想自己动手的话，可以直接下载已制作好的 fnOSToGo 和 Fygo（飞牛海外版）。</p><ul><li><p style=""><a href="https://pan.quark.cn/s/f6df70c05def?pwd=We3J">分享链接</a></p></li><li><p style="">提取码：We3J</p></li></ul><p style="">镜像规模 30G（20G 系统空间、10G 存储空间），准备一个 30G 以上的 U 盘，解压即可使用；解压后会占用 30G 空间，请确保 U 盘剩余空间充足。U 盘先装好 Ventoy，再把解压出的 fnos.vhd.vtoy / fygo.vhd.vtoy 文件放进 U 盘，即可按 5️⃣ 的步骤引导启动。</p><p style="">飞牛镜像的账号密码均为 fnos / fnos，Fygo 为 fygo / fygo。</p>
                 </article>
 
                 <!-- 文章ai摘要 -->
@@ -1985,7 +2083,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                     <!--                 th:src="@{${#strings.isEmpty(site.logo) ?  assets_link + '/images/hao-logo.jpg' : site.logo}}">-->
                     <!-- 获取当前文章对象（假设变量为 $post） -->
                     <img class="post-copyright__author_img_back entered loading"
-                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w"/>
+                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w"/>
                 </a>
             </div>
             <div class="post-copyright__author_name">午后阳光</div>
@@ -2062,14 +2160,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
 
                 <nav class="pagination-post needEndHide" id="pagination">
                     <div class="prev-post pull-left">
-                        <a href="/archives/fnnas-72385">
+                        <a href="/archives/fnnas-72043">
                             <img alt="cover" id="preimg" class="nolazyload"
                                  src=""
 
-                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72385-ktv.jpg?width=800">
+                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72043-bd.jpg?width=800">
                             <div class="pagination-info">
                                 <div class="label">上一篇</div>
-                                <div class="prev_info">声场 KTV：本地曲库驱动的家庭点歌与播放系统</div>
+                                <div class="prev_info">飞牛影视播放 115 网盘 ISO 蓝光原盘：绕过代理直连 AList 的改造方案</div>
                             </div>
                         </a>
                     </div>
@@ -2099,6 +2197,62 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
             <!-- 建议阅读，这里可以自定义文章数量，然后遍历展示 -->
             
                 <div>
+                    <a href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-BMjt.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-14
+                            </div>
+                            <div class="title" style="color: white">Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-gzbh.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-OXZF.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-ASCN.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
                     <a href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">
                         <img alt="cover" class="cover" id="preimg"
                              src=""
@@ -2113,74 +2267,20 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 </div>
             
                 <div>
-                    <a href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">
+                    <a href="/archives/fnnas-72575" title="升级 openclaw 翻车后，我改用 Docker 部署最新版：完整经验分享">
                         <img alt="cover" class="cover" id="preimg"
                              src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-cAUo.png?width=800">
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-kSRD.png?width=800">
                         <div class="content is-center">
                             <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
+                                2026-09-12
                             </div>
-                            <div class="title" style="color: white">内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密</div>
+                            <div class="title" style="color: white">升级 openclaw 翻车后，我改用 Docker 部署最新版：完整经验分享</div>
                         </div>
                     </a>
                 </div>
             
-                <div>
-                    <a href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72130-webdav.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72385-ktv.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">声场 KTV：本地曲库驱动的家庭点歌与播放系统</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72437" title="NAS 视频处理不求人：用 FFmpeg 脚本替代 Docker 方案">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">NAS 视频处理不求人：用 FFmpeg 脚本替代 Docker 方案</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-71999" title="零侵入方案：为飞牛音乐接入全网在线曲库的完整指南">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-71999-music.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">零侵入方案：为飞牛音乐接入全网在线曲库的完整指南</div>
-                        </div>
-                    </a>
-                </div>
+                
             
         </div>
         <!-- 两篇文章 -->
@@ -2213,15 +2313,15 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
 
         
 
-        <div id="comment-content-halo-run-Post-post-qjauo45l"></div>
+        <div id="comment-content-halo-run-Post-post-nda90ety"></div>
 <script type="module" data-pjax>
   import { init } from "/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2";
   init(
-    "#comment-content-halo-run-Post-post-qjauo45l",
+    "#comment-content-halo-run-Post-post-nda90ety",
     {
       group: "content.halo.run",
       kind: "Post",
-      name: "post-qjauo45l",
+      name: "post-nda90ety",
     }
   );
 </script>
@@ -2272,12 +2372,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
             </a>
         </div>
 
-        <div class="card-info-social-icons is-center">
-
-            <a class="social-icon" rel="external nofollow" target="_blank" href="/wechat" title="微信">
-                <i class="haofont hao-icon-weixin"></i>
-            </a>
-        </div>
+        
 
         <style>
             /* 社交按钮 */
@@ -2436,6 +2531,50 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
     <div class="aside-list">
         <!-- 最新文章，用户可以自定义展示数量 -->
         <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">
+                <img alt="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-BMjt.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐</a>
+                <time title="2026-09-14 08:32:13" datetime="2026-09-14 08:32:13">2026-09-14 08:32:13</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">
+                <img alt="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-gzbh.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了</a>
+                <time title="2026-09-13 20:34:35" datetime="2026-09-13 20:34:35">2026-09-13 20:34:35</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">
+                <img alt="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-OXZF.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复</a>
+                <time title="2026-09-13 14:37:33" datetime="2026-09-13 14:37:33">2026-09-13 14:37:33</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">
+                <img alt="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-ASCN.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录</a>
+                <time title="2026-09-13 08:34:36" datetime="2026-09-13 08:34:36">2026-09-13 08:34:36</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
             <a class="thumbnail" href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">
                 <img alt="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决"
                      src=""
@@ -2443,51 +2582,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
             </a>
             <div class="content">
                 <a class="title" href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决</a>
-                <time title="2026-09-12 08:32:53" datetime="2026-09-12 08:32:53">2026-09-12 08:32:53</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">
-                <img alt="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-cAUo.png?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密</a>
-                <time title="2026-09-11 20:36:24" datetime="2026-09-11 20:36:24">2026-09-11 20:36:24</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">
-                <img alt="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72130-webdav.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录</a>
-                <time title="2026-09-11 11:06:53" datetime="2026-09-11 11:06:53">2026-09-11 11:06:53</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72099" title="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南">
-                <img alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72099" title="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南">用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南</a>
-                <time title="2026-09-11 10:59:08" datetime="2026-09-11 10:59:08">2026-09-11 10:59:08</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">
-                <img alt="声场 KTV：本地曲库驱动的家庭点歌与播放系统"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72385-ktv.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">声场 KTV：本地曲库驱动的家庭点歌与播放系统</a>
-                <time title="2026-09-11 10:59:02" datetime="2026-09-11 10:59:02">2026-09-11 10:59:02</time>
+                <time title="2026-09-12 23:03:32" datetime="2026-09-12 23:03:32">2026-09-12 23:03:32</time>
             </div>
         </div>
     </div>
@@ -2515,7 +2610,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="&lt;p&gt;Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。&lt;/p&gt;" data-pjax-state=""><p>Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</p></a>
+                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb"
+                       title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。"
+                       data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                    <div class="name">
+                        <span>Fire / </span>
+                        <time
+                                datetime="2026-08-25 09:37:01"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2527,7 +2629,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="&lt;p&gt;心若无所求，👨‍👩‍👦有风无风皆自由&lt;/p&gt;" data-pjax-state=""><p>心若无所求，👨‍👩‍👦有风无风皆自由</p></a>
+                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739"
+                       title="心若无所求，👨‍👩‍👦有风无风皆自由"
+                       data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-08-20 21:54:01"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2539,7 +2648,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="&lt;p&gt;很好&lt;/p&gt;" data-pjax-state=""><p>很好</p></a>
+                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb"
+                       title="很好"
+                       data-pjax-state="">很好</a>
+                    <div class="name">
+                        <span>ice / </span>
+                        <time
+                                datetime="2026-07-23 12:43:52"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2551,7 +2667,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="&lt;p&gt;都是基础知识，我备个份😁&lt;/p&gt;" data-pjax-state=""><p>都是基础知识，我备个份😁</p></a>
+                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651"
+                       title="都是基础知识，我备个份😁"
+                       data-pjax-state="">都是基础知识，我备个份😁</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-06-02 22:30:54"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2563,7 +2686,14 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="&lt;p&gt;👍我只是想评论可以吗？&lt;/p&gt;" data-pjax-state=""><p>👍我只是想评论可以吗？</p></a>
+                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813"
+                       title="👍我只是想评论可以吗？"
+                       data-pjax-state="">👍我只是想评论可以吗？</a>
+                    <div class="name">
+                        <span>deepseek / </span>
+                        <time
+                                datetime="2026-03-20 13:31:20"></time>
+                    </div>
                 </div>
             </div>
         
@@ -2607,7 +2737,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
             <li class="card-category-list-item">
                 <a class="card-category-list-link" href="/categories/zhuanyejilu">
                         <span class="card-category-list-name" title="专业记录">专业记录</span>
-                    <span class="card-category-list-count">83</span>
+                    <span class="card-category-list-count">89</span>
                 </a>
             </li>
         </ul>
@@ -2669,7 +2799,20 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
 
     
     <!-- 底部 banner -->
-    
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
     
     
@@ -2711,7 +2854,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                    rel="noopener external nofollow noreferrer noopener"
                    target="_blank">
                     <span>本网站由</span>&nbsp;&nbsp;
-                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=400 400w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w" />
+                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
                     &nbsp;&nbsp;<span>提供CDN加速/云存储服务</span>
                 </a>
                 <!-- 华为云 -->
@@ -2726,7 +2869,7 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
                 <a class="footer-banner-link" href="https://beian.miit.gov.cn/#/Integrated/index"
                    rel="noopener external nofollow noreferrer noopener"
                    target="_blank">
-                    <span>鲁ICP备2025178327号-1</span>
+                    <span>鲁ICP备2025178327号</span>
                     
                 </a>
                 <a class="footer-banner-link" href="http://www.beian.gov.cn/portal/registerSystemInfo"
@@ -3001,6 +3144,10 @@ sudo btrfs filesystem resize max /vol1       # 存储空间为 Btrfs 时；ext4 
     <script src="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.min.js"></script>
     <link href="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.css" rel="stylesheet">
 </th:bloc>
+    
+    <!-- 51统计 -->
+    <!-- 51统计 -->
+
     
     <script>
         let pjaxSelectors = ['title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax', '#site-config']

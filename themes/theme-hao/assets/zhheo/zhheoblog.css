@@ -9528,8 +9528,7 @@ span.recent-post-top-text {
     #recent-posts {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        column-gap: .75rem;
+        justify-content: space-between;
         align-items: flex-start;
         align-content: flex-start;
         -webkit-user-select: none

@@ -221,7 +221,7 @@
         lightbox: 'fancybox',
         lazyload: {
             enable: true,
-            error: "\/upload\/yuangguang66-wkfh.png"
+            error: "\/upload\/wuhouyg.png"
         },
         isFriendLinksInFooter: false,
         loadingBox: true,
@@ -355,6 +355,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="PVE 9.2 核显直通飞牛虚拟机：AMD GPU 全流程命令手册" />
     <meta property="og:url" content="https://www.cuixinjiang.cn/archives/fnnas-72022" />
+    <link rel="canonical" href="https://www.cuixinjiang.cn/archives/fnnas-72022" />
+    
     
         <meta property="og:description" content="在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。 一、PCI 设备识别与状态检查 首先需要确认 GPU 及" />
         <meta name="description" content="在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。 一、PCI 设备识别与状态检查 首先需要确认 GPU 及" />
@@ -368,6 +370,8 @@
         <meta name="twitter:image" content="https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg" />
     
 
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"\u5348\u540E\u9633\u5149","url":"https://www.cuixinjiang.cn"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PVE 9.2 \u6838\u663E\u76F4\u901A\u98DE\u725B\u865A\u62DF\u673A\uFF1AAMD GPU \u5168\u6D41\u7A0B\u547D\u4EE4\u624B\u518C","url":"https://www.cuixinjiang.cn/archives/fnnas-72022","datePublished":"2026-09-12","dateModified":"2026-09-12","author":{"@type":"Person","name":"Administrator"},"publisher":{"@type":"Organization","name":"\u5348\u540E\u9633\u5149"},"description":"\u5728 Proxmox VE 9.2 \u73AF\u5883\u4E0B\u5C06 AMD \u6838\u663E\u76F4\u901A\u7ED9\u98DE\u725B\uFF08fnOS\uFF09\u865A\u62DF\u673A\uFF0C\u6D89\u53CA PCI \u8BBE\u5907\u8BC6\u522B\u3001\u9A71\u52A8\u7ED1\u5B9A\u5207\u6362\u3001VBIOS \u63D0\u53D6\u3001\u865A\u62DF\u673A\u53C2\u6570\u914D\u7F6E\u4EE5\u53CA Guest \u5185\u90E8\u9A8C\u8BC1\u7B49\u591A\u4E2A\u73AF\u8282\u3002\u4EE5\u4E0B\u6309\u64CD\u4F5C\u6D41\u7A0B\u6574\u7406\u5E38\u7528\u547D\u4EE4\uFF0C\u4FBF\u4E8E\u5FEB\u901F\u67E5\u9605\u4E0E\u6392\u67E5\u3002 \u4E00\u3001PCI \u8BBE\u5907\u8BC6\u522B\u4E0E\u72B6\u6001\u68C0\u67E5 \u9996\u5148\u9700\u8981\u786E\u8BA4 GPU \u53CA"}</script>
     <!-- Open Graph End -->
 
 
@@ -385,8 +389,7 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
-<meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
-<meta content="Halo 2.26.1" name="generator"/><meta name="description" content="在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。 一、PCI 设备识别与状态检查 首先需要确认 GPU 及"/><!-- plugin-comment-widget start -->
+<meta name="generator" content="Halo 2.26.1"/><meta name="description" content="在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。 一、PCI 设备识别与状态检查 首先需要确认 GPU 及"/><!-- plugin-comment-widget start -->
 <link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2">
 <link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.2.2" />
 <!-- plugin-comment-widget end -->
@@ -394,7 +397,9 @@ var _hmt = _hmt || [];
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
-<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-wcclwayc"></script>
+              <meta name="baidu-site-verification" content="codeva-OLmTzDegIt" />
+              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-urcduz2r"></script>
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 </head>
 
@@ -481,7 +486,7 @@ var _hmt = _hmt || [];
     </style>
     <div id="loading-box" onclick="heo.hideLoading()">
         <div class="loading-bg">
-            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w">
+            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
             <div class="loading-image-dot"></div>
         </div>
     </div>
@@ -509,7 +514,7 @@ var _hmt = _hmt || [];
 <div id="web_bg">
     <div>
         <img class="global_background_img"
-             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=400 400w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=1200 1200w"
+             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=400 400w"
         />
         
     </div>
@@ -546,7 +551,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/%E7%8E%A9%E8%BD%AC%E6%89%8B%E6%9C%BAotg%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD";
+        let permalink = "\/archives\/%E5%85%B3%E4%BA%8Ewordpress%E7%BD%91%E7%AB%99%E5%9B%A0%E5%8D%A0%E7%94%A8%E8%B5%84%E6%BA%90%E8%A2%AB%E6%9A%82%E5%81%9C";
         
         // 当前窗口打开
         //window.location.href = permalink;
@@ -581,10 +586,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="Fire">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="&lt;p&gt;Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。&lt;/p&gt;" data-pjax-state=""><p>Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</p></a>
+                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。" data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
                 <time datetime="2026-08-25 09:37:01"></time>
               </div>
             </div>
@@ -593,10 +598,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
                      alt="Administrator">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="&lt;p&gt;心若无所求，👨‍👩‍👦有风无风皆自由&lt;/p&gt;" data-pjax-state=""><p>心若无所求，👨‍👩‍👦有风无风皆自由</p></a>
+                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="心若无所求，👨‍👩‍👦有风无风皆自由" data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
                 <time datetime="2026-08-20 21:54:01"></time>
               </div>
             </div>
@@ -605,10 +610,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="ice">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="&lt;p&gt;很好&lt;/p&gt;" data-pjax-state=""><p>很好</p></a>
+                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="很好" data-pjax-state="">很好</a>
                 <time datetime="2026-07-23 12:43:52"></time>
               </div>
             </div>
@@ -617,10 +622,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
                      alt="Administrator">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="&lt;p&gt;都是基础知识，我备个份😁&lt;/p&gt;" data-pjax-state=""><p>都是基础知识，我备个份😁</p></a>
+                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="都是基础知识，我备个份😁" data-pjax-state="">都是基础知识，我备个份😁</a>
                 <time datetime="2026-06-02 22:30:54"></time>
               </div>
             </div>
@@ -629,10 +634,10 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="deepseek">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
-                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="&lt;p&gt;👍我只是想评论可以吗？&lt;/p&gt;" data-pjax-state=""><p>👍我只是想评论可以吗？</p></a>
+                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="👍我只是想评论可以吗？" data-pjax-state="">👍我只是想评论可以吗？</a>
                 <time datetime="2026-03-20 13:31:20"></time>
               </div>
             </div>
@@ -641,7 +646,7 @@ var _hmt = _hmt || [];
                 <img src=""
                      data-lazy-src="https://cravatar.cn/avatar/?d=mp"
                      alt="爱哭的小猫">
-                
+                <div class="name"><span>stonewu</span></div>
               </a>
               <div class="content">
                 <a class="comment" href="/" title="现在还没有公共课程？不知道官方在干什么？" data-pjax-state="">现在还没有公共课程？不知道官方在干什么？</a>
@@ -730,6 +735,48 @@ var _hmt = _hmt || [];
           </a><a style="font-size:1em;color:#d3d3d3"
              href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A">
             阳光路上<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ftp%E6%9D%83%E9%99%90">
+            FTP权限<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA">
+            非插件显示<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96">
+            图片自动本地化<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/nicen-localize-image">
+            nicen-localize-image<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90">
+            心灵音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/aplayer">
+            APlayer<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/metingjs">
+            MetingJS<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90">
+            网易云音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/httpd-conf">
+            httpd.conf<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/https%E5%90%8E">
+            https后<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1">
+            CSS样式错乱<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/gravatar%E5%A4%B4%E5%83%8F">
+            Gravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/i-o-deadline-reached">
+            i/o deadline reached<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%A3%9E%E7%89%9Bnas">
+            飞牛NAS<sup>45</sup>
           </a>
         </div>
       </div>
@@ -745,7 +792,7 @@ var _hmt = _hmt || [];
                   九月 2026
                 </span>
                 <div class="card-archive-list-count-group"><span
-                        class="card-archive-list-count">14</span>
+                        class="card-archive-list-count">20</span>
                   <span class="card-archive-list-count-unit">篇</span>
                 </div>
               </a>
@@ -1337,6 +1384,62 @@ var _hmt = _hmt || [];
                    title="阳光路上">
                     <!-- 角标 -->
                     阳光路上<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ftp%E6%9D%83%E9%99%90"
+                   title="FTP权限">
+                    <!-- 角标 -->
+                    FTP权限<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA"
+                   title="非插件显示">
+                    <!-- 角标 -->
+                    非插件显示<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96"
+                   title="图片自动本地化">
+                    <!-- 角标 -->
+                    图片自动本地化<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/nicen-localize-image"
+                   title="nicen-localize-image">
+                    <!-- 角标 -->
+                    nicen-localize-image<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90"
+                   title="心灵音乐">
+                    <!-- 角标 -->
+                    心灵音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/aplayer"
+                   title="APlayer">
+                    <!-- 角标 -->
+                    APlayer<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/metingjs"
+                   title="MetingJS">
+                    <!-- 角标 -->
+                    MetingJS<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"
+                   title="网易云音乐">
+                    <!-- 角标 -->
+                    网易云音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/httpd-conf"
+                   title="httpd.conf">
+                    <!-- 角标 -->
+                    httpd.conf<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/https%E5%90%8E"
+                   title="https后">
+                    <!-- 角标 -->
+                    https后<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1"
+                   title="CSS样式错乱">
+                    <!-- 角标 -->
+                    CSS样式错乱<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/gravatar%E5%A4%B4%E5%83%8F"
+                   title="Gravatar头像">
+                    <!-- 角标 -->
+                    Gravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/i-o-deadline-reached"
+                   title="i/o deadline reached">
+                    <!-- 角标 -->
+                    i/o deadline reached<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%A3%9E%E7%89%9Bnas"
+                   title="飞牛NAS">
+                    <!-- 角标 -->
+                    飞牛NAS<sup>45</sup>
                 </a>
             </div>
         </div>
@@ -1437,7 +1540,7 @@ var _hmt = _hmt || [];
     <!-- 返回主页 -->
     <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
     <a href="/" id="site-name" title="返回博客主页">
-        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=400 400w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w"></span>
+        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
     </a>
 </div>
 
@@ -1779,12 +1882,7 @@ var _hmt = _hmt || [];
             </div>
         </div>
     </div>
-    <div class="nav-button" id="nav-console">
-        <a class="console_switchbutton" href="javascript:void(0);" onclick="heo.showConsole()" rel="external nofollow"
-           title="显示中控台">
-            <i class="haofont hao-icon-dashboard"></i>
-        </a>
-    </div>
+    
 
     <div class="nav-button" id="nav-totop" onclick="btf.scrollToDest(0,500)">
         <a class="totopbtn">
@@ -1804,7 +1902,7 @@ var _hmt = _hmt || [];
 </nav>
             <div class="coverdiv loaded" id="coverdiv">
                 <img alt="cover" class="nolazyload" id="post-cover"
-                     src="https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=400 400w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=800 800w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=1600 1600w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=1200 1200w">
+                     src="https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=800 800w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=1200 1200w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=1600 1600w, https://www.cuixinjiang.cn/upload/cover-72022-gpu.jpg?width=400 400w">
             </div>
 
             <div id="post-info">
@@ -1850,15 +1948,15 @@ var _hmt = _hmt || [];
                         <span class="post-meta-wordcount">
                             <i class="haofont hao-icon-file-word post-meta-icon" title="字数"></i>
                             <span class="post-meta-label">字数:</span>
-                            <span class="word-count">20423</span>
+                            <span class="word-count">19372</span>
                             <span class="post-meta-separator"></span>
                             <i class="haofont hao-icon-clock post-meta-icon" title="阅读耗时"></i>
                             <span class="post-meta-label">阅读耗时:</span>
-                            <span>51 分钟</span>
+                            <span>48 分钟</span>
                         </span>
                         <span class="post-meta-date">
                             <i class="haofont hao-icon-calendar-days post-meta-icon"></i>
-                            <time title="2026-09-11 10:46:10" datetime="2026-09-11">2026/09/11</time>
+                            <time title="2026-09-12 22:44:42" datetime="2026-09-12">2026/09/12</time>
                         </span>
                         
                         <span class="post-meta-wechat" title="该文章在博客首发">
@@ -1917,7 +2015,7 @@ var _hmt = _hmt || [];
                 <!-- 文章内容 -->
                 <article  class="post-content  line-numbers" id="article-container">
                     
-                    <p style="">在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。</p><h2 style="" id="%E4%B8%80%E3%80%81pci-%E8%AE%BE%E5%A4%87%E8%AF%86%E5%88%AB%E4%B8%8E%E7%8A%B6%E6%80%81%E6%A3%80%E6%9F%A5">一、PCI 设备识别与状态检查</h2><p style="">首先需要确认 GPU 及其音频控制器的 PCI 地址与驱动绑定情况。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i vga</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有 VGA 设备及其厂商/设备 ID</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i audio</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有音频设备（GPU 音频控制器）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s 05:00.0</code></p></td><td colspan="1" rowspan="1"><p style="">查看指定 PCI 设备的详细信息，包括当前绑定的内核驱动</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s 05:00.1</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 音频控制器的驱动绑定状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -la /sys/bus/pci/devices/0000:05:00.0/rom</code></p></td><td colspan="1" rowspan="1"><p style="">检查 VBIOS ROM 接口是否存在（vfio 接管后会被移除）</p></td></tr></tbody></table></div><h2 style="" id="%E4%BA%8C%E3%80%81%E9%A9%B1%E5%8A%A8%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E7%BB%91">二、驱动绑定与解绑</h2><p style="">在 amdgpu 与 vfio-pci 之间切换绑定，是直通配置的关键步骤。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/vfio-pci/unbind</code></p></td><td colspan="1" rowspan="1"><p style="">解除 vfio-pci 对 GPU 的绑定</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/amdgpu/bind</code></p></td><td colspan="1" rowspan="1"><p style="">手动将 amdgpu 驱动绑定到 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/amdgpu/unbind</code></p></td><td colspan="1" rowspan="1"><p style="">解除 amdgpu 对 GPU 的绑定</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/vfio-pci/bind</code></p></td><td colspan="1" rowspan="1"><p style="">手动将 vfio-pci 重新绑定到 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo 1 &gt; /sys/bus/pci/rescan</code></p></td><td colspan="1" rowspan="1"><p style="">触发 PCI 总线重新扫描，唤醒休眠设备</p></td></tr></tbody></table></div><h2 style="" id="%E4%B8%89%E3%80%81%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86">三、内核模块管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>modprobe amdgpu</code></p></td><td colspan="1" rowspan="1"><p style="">手动加载 amdgpu 驱动模块</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lsmod \| grep amdgpu</code></p></td><td colspan="1" rowspan="1"><p style="">检查 amdgpu 模块是否已加载</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>update-initramfs -u -k all</code></p></td><td colspan="1" rowspan="1"><p style="">重建 initramfs，使驱动配置修改生效</p></td></tr></tbody></table></div><h2 style="" id="%E5%9B%9B%E3%80%81vbios-%E6%8F%90%E5%8F%96">四、VBIOS 提取</h2><p style="">直通时通常需要为虚拟机提供 GPU 的 VBIOS 文件。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /sys/kernel/debug/dri/0/amdgpu_vbios &gt; /usr/share/kvm/vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">从 debugfs 接口提取 VBIOS（amdgpu 驱动正常加载时可用）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -lh /usr/share/kvm/vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">检查提取的 VBIOS 文件大小（正常 50KB~256KB）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>hexdump -C /usr/share/kvm/vbios_lucienne.rom \| head -5</code></p></td><td colspan="1" rowspan="1"><p style="">验证 VBIOS 文件头（有效文件以 <strong>55 aa</strong> 开头）</p></td></tr></tbody></table></div><h2 style="" id="%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">五、配置文件管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/modprobe.d/pve-blacklist.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看驱动黑名单配置</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/modprobe.d/vfio.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看 vfio 设备 ID 绑定配置</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/default/grub</code></p></td><td colspan="1" rowspan="1"><p style="">查看内核启动参数（含 IOMMU 相关配置）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>sed -i 's/^blacklist amdgpu/#blacklist amdgpu/' /etc/modprobe.d/pve-blacklist.conf</code></p></td><td colspan="1" rowspan="1"><p style="">临时取消 amdgpu 黑名单（注释掉该行）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /etc/modprobe.d/pve-blacklist.conf /etc/modprobe.d/pve-blacklist.conf.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份配置文件</p></td></tr></tbody></table></div><h2 style="" id="%E5%85%AD%E3%80%81%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%BF%97%E6%8E%92%E6%9F%A5">六、系统日志排查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i amdgpu \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看 amdgpu 驱动相关内核日志（排查绑定失败原因）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| tail -50 \| grep -iE "amdgpu\|gpu\|drm\|pci"</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU/DRM/PCI 综合日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i iommu</code></p></td><td colspan="1" rowspan="1"><p style="">查看 IOMMU 分组及初始化状态</p></td></tr></tbody></table></div><h2 style="" id="%E4%B8%83%E3%80%81%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C">七、系统操作</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>reboot</code></p></td><td colspan="1" rowspan="1"><p style="">重启系统（修改内核参数/驱动配置后必须重启生效）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>whoami</code> / <code>id</code></p></td><td colspan="1" rowspan="1"><p style="">确认当前用户身份</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>apt install -y firmware-amd-graphics</code></p></td><td colspan="1" rowspan="1"><p style="">安装 AMD GPU 固件（amdgpu 驱动依赖）</p></td></tr></tbody></table></div><hr><h2 style="" id="%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%90%AF%E5%8A%A8%E9%AA%8C%E8%AF%81%E5%91%BD%E4%BB%A4">虚拟机配置与启动验证命令</h2><h2 style="" id="%E4%B8%80%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA-pci-%E8%AE%BE%E5%A4%87%E7%9B%B4%E9%80%9A%E9%85%8D%E7%BD%AE">一、虚拟机 PCI 设备直通配置</h2><p style="">以 VM 100 为例，将 GPU 及其音频控制器直通给虚拟机。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=1</code></p></td><td colspan="1" rowspan="1"><p style="">将 GPU（VGA 控制器）直通到 VM 100，启用 x-vga 模式</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci1 0000:05:00.1,pcie=1</code></p></td><td colspan="1" rowspan="1"><p style="">将 GPU 音频控制器直通到 VM 100</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=1,romfile=vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">直通 GPU 并指定 VBIOS ROM 文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=on</code></p></td><td colspan="1" rowspan="1"><p style="">使用旧版 x-vga 参数（部分旧内核需要）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/pve/qemu-server/100.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看 VM 100 的完整配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm config 100</code></p></td><td colspan="1" rowspan="1"><p style="">查看 VM 100 的配置（等效命令）</p></td></tr></tbody></table></div><h2 style="" id="%E4%BA%8C%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86">二、虚拟机生命周期管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm start 100</code></p></td><td colspan="1" rowspan="1"><p style="">启动虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm stop 100</code></p></td><td colspan="1" rowspan="1"><p style="">强制停止虚拟机（相当于拔电源）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm shutdown 100</code></p></td><td colspan="1" rowspan="1"><p style="">优雅关闭虚拟机（发送 ACPI 关机信号）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm reboot 100</code></p></td><td colspan="1" rowspan="1"><p style="">重启虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm reset 100</code></p></td><td colspan="1" rowspan="1"><p style="">硬重置虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm status 100</code></p></td><td colspan="1" rowspan="1"><p style="">查看虚拟机当前运行状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm list</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有虚拟机及其状态</p></td></tr></tbody></table></div><h2 style="" id="%E4%B8%89%E3%80%81vnc%2F%E6%98%BE%E7%A4%BA%E7%9B%B8%E5%85%B3">三、VNC/显示相关</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga none</code></p></td><td colspan="1" rowspan="1"><p style="">禁用默认 VGA 设备（直通 GPU 时推荐，避免冲突）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga std</code></p></td><td colspan="1" rowspan="1"><p style="">使用标准 VGA（不直通时的默认值）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga virtio</code></p></td><td colspan="1" rowspan="1"><p style="">使用 virtio 半虚拟化显卡（性能更好但不兼容某些 OS）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga qxl</code></p></td><td colspan="1" rowspan="1"><p style="">使用 QXL 显卡（适合 Linux 桌面虚拟机）</p></td></tr></tbody></table></div><h2 style="" id="%E5%9B%9B%E3%80%81iommu-%E5%88%86%E7%BB%84%E6%A3%80%E6%9F%A5">四、IOMMU 分组检查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>find /sys/kernel/iommu_groups/ -type l \| sort -V</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有 IOMMU 分组及设备</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>for d in /sys/kernel/iommu_groups/devices/*; do echo "$(basename $(dirname $d)): $(lspci -nns ${d##*/})"; done</code></p></td><td colspan="1" rowspan="1"><p style="">按 IOMMU 分组显示设备归属</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -la /sys/kernel/iommu_groups/</code></p></td><td colspan="1" rowspan="1"><p style="">查看 IOMMU 组总数</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /sys/kernel/iommu_groups/*/devices/* 2&gt;/dev/null \| grep 0000:05</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 所在的 IOMMU 分组</p></td></tr></tbody></table></div><h2 style="" id="%E4%BA%94%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%86%85%E9%83%A8%E9%AA%8C%E8%AF%81%EF%BC%88%E5%9C%A8-guest-os-%E4%B8%AD%E6%89%A7%E8%A1%8C%EF%BC%89">五、虚拟机内部验证（在 Guest OS 中执行）</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i vga</code></p></td><td colspan="1" rowspan="1"><p style="">确认 Guest 内能看到直通的 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s &lt;GPU地址&gt;</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 GPU 的驱动绑定状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i amdgpu \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 amdgpu 驱动加载日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i drm \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 DRM 子系统状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls /dev/dri/</code></p></td><td colspan="1" rowspan="1"><p style="">检查 DRM 设备节点是否创建（直通成功标志）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls /dev/dri/card*</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 渲染节点</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>glxinfo \| grep -i "opengl renderer"</code></p></td><td colspan="1" rowspan="1"><p style="">验证 GPU 硬件加速是否生效（需安装 mesa-utils）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>vainfo</code></p></td><td colspan="1" rowspan="1"><p style="">检查视频硬解码加速是否可用（需安装 vainfo）</p></td></tr></tbody></table></div><h2 style="" id="%E5%85%AD%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5">六、常见问题排查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm start 100 2&gt;&amp;1 \| tee /tmp/vm_start.log</code></p></td><td colspan="1" rowspan="1"><p style="">启动 VM 并将输出保存到日志文件（排查启动失败）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>journalctl -u qemu-server -n 50</code></p></td><td colspan="1" rowspan="1"><p style="">查看 QEMU 服务日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /var/log/syslog \| grep -i "qemu\|vfio\|iommu" \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看系统日志中的直通相关信息</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i vfio \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 vfio 驱动相关内核日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i "error\|fail" \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看最近的内核错误信息</p></td></tr></tbody></table></div><h2 style="" id="%E4%B8%83%E3%80%81%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89">七、性能调优（可选）</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -cpu host</code></p></td><td colspan="1" rowspan="1"><p style="">将虚拟机 CPU 设置为 host 模式（直通 GPU 时推荐）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -numa 0</code></p></td><td colspan="1" rowspan="1"><p style="">启用 NUMA 支持（多核场景下提升性能）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -machine q35</code></p></td><td colspan="1" rowspan="1"><p style="">使用 Q35 芯片组（比 i440fx 更适合 PCIe 直通）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -args "-cpu host,+topoext"</code></p></td><td colspan="1" rowspan="1"><p style="">添加 AMD 拓扑扩展参数（AMD CPU 推荐）</p></td></tr></tbody></table></div><h2 style="" id="%E5%85%AB%E3%80%81%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D">八、配置备份与恢复</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /etc/pve/qemu-server/100.conf /root/vm100.conf.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份虚拟机配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /root/vm100.conf.bak /etc/pve/qemu-server/100.conf</code></p></td><td colspan="1" rowspan="1"><p style="">恢复虚拟机配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /usr/share/kvm/vbios_lucienne.rom /root/vbios_lucienne.rom.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份 VBIOS 文件</p></td></tr></tbody></table></div><p style=""></p>
+                    <p style="">在 Proxmox VE 9.2 环境下将 AMD 核显直通给飞牛（fnOS）虚拟机，涉及 PCI 设备识别、驱动绑定切换、VBIOS 提取、虚拟机参数配置以及 Guest 内部验证等多个环节。以下按操作流程整理常用命令，便于快速查阅与排查。</p><h2 id="heading-1"  style="">一、PCI 设备识别与状态检查</h2><p style="">首先需要确认 GPU 及其音频控制器的 PCI 地址与驱动绑定情况。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i vga</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有 VGA 设备及其厂商/设备 ID</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i audio</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有音频设备（GPU 音频控制器）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s 05:00.0</code></p></td><td colspan="1" rowspan="1"><p style="">查看指定 PCI 设备的详细信息，包括当前绑定的内核驱动</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s 05:00.1</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 音频控制器的驱动绑定状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -la /sys/bus/pci/devices/0000:05:00.0/rom</code></p></td><td colspan="1" rowspan="1"><p style="">检查 VBIOS ROM 接口是否存在（vfio 接管后会被移除）</p></td></tr></tbody></table></div><h2 id="heading-2"  style="">二、驱动绑定与解绑</h2><p style="">在 amdgpu 与 vfio-pci 之间切换绑定，是直通配置的关键步骤。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/vfio-pci/unbind</code></p></td><td colspan="1" rowspan="1"><p style="">解除 vfio-pci 对 GPU 的绑定</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/amdgpu/bind</code></p></td><td colspan="1" rowspan="1"><p style="">手动将 amdgpu 驱动绑定到 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/amdgpu/unbind</code></p></td><td colspan="1" rowspan="1"><p style="">解除 amdgpu 对 GPU 的绑定</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo "0000:05:00.0" &gt; /sys/bus/pci/drivers/vfio-pci/bind</code></p></td><td colspan="1" rowspan="1"><p style="">手动将 vfio-pci 重新绑定到 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>echo 1 &gt; /sys/bus/pci/rescan</code></p></td><td colspan="1" rowspan="1"><p style="">触发 PCI 总线重新扫描，唤醒休眠设备</p></td></tr></tbody></table></div><h2 id="heading-3"  style="">三、内核模块管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>modprobe amdgpu</code></p></td><td colspan="1" rowspan="1"><p style="">手动加载 amdgpu 驱动模块</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lsmod \| grep amdgpu</code></p></td><td colspan="1" rowspan="1"><p style="">检查 amdgpu 模块是否已加载</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>update-initramfs -u -k all</code></p></td><td colspan="1" rowspan="1"><p style="">重建 initramfs，使驱动配置修改生效</p></td></tr></tbody></table></div><h2 id="heading-4"  style="">四、VBIOS 提取</h2><p style="">直通时通常需要为虚拟机提供 GPU 的 VBIOS 文件。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /sys/kernel/debug/dri/0/amdgpu_vbios &gt; /usr/share/kvm/vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">从 debugfs 接口提取 VBIOS（amdgpu 驱动正常加载时可用）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -lh /usr/share/kvm/vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">检查提取的 VBIOS 文件大小（正常 50KB~256KB）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>hexdump -C /usr/share/kvm/vbios_lucienne.rom \| head -5</code></p></td><td colspan="1" rowspan="1"><p style="">验证 VBIOS 文件头（有效文件以 <strong>55 aa</strong> 开头）</p></td></tr></tbody></table></div><h2 id="heading-5"  style="">五、配置文件管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/modprobe.d/pve-blacklist.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看驱动黑名单配置</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/modprobe.d/vfio.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看 vfio 设备 ID 绑定配置</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/default/grub</code></p></td><td colspan="1" rowspan="1"><p style="">查看内核启动参数（含 IOMMU 相关配置）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>sed -i 's/^blacklist amdgpu/#blacklist amdgpu/' /etc/modprobe.d/pve-blacklist.conf</code></p></td><td colspan="1" rowspan="1"><p style="">临时取消 amdgpu 黑名单（注释掉该行）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /etc/modprobe.d/pve-blacklist.conf /etc/modprobe.d/pve-blacklist.conf.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份配置文件</p></td></tr></tbody></table></div><h2 id="heading-6"  style="">六、系统日志排查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i amdgpu \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看 amdgpu 驱动相关内核日志（排查绑定失败原因）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| tail -50 \| grep -iE "amdgpu\|gpu\|drm\|pci"</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU/DRM/PCI 综合日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i iommu</code></p></td><td colspan="1" rowspan="1"><p style="">查看 IOMMU 分组及初始化状态</p></td></tr></tbody></table></div><h2 id="heading-7"  style="">七、系统操作</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>reboot</code></p></td><td colspan="1" rowspan="1"><p style="">重启系统（修改内核参数/驱动配置后必须重启生效）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>whoami</code> / <code>id</code></p></td><td colspan="1" rowspan="1"><p style="">确认当前用户身份</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>apt install -y firmware-amd-graphics</code></p></td><td colspan="1" rowspan="1"><p style="">安装 AMD GPU 固件（amdgpu 驱动依赖）</p></td></tr></tbody></table></div><hr><h1 style="" id="%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%90%AF%E5%8A%A8%E9%AA%8C%E8%AF%81%E5%91%BD%E4%BB%A4">虚拟机配置与启动验证命令</h1><h2 id="heading-8"  style="">一、虚拟机 PCI 设备直通配置</h2><p style="">以 VM 100 为例，将 GPU 及其音频控制器直通给虚拟机。</p><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=1</code></p></td><td colspan="1" rowspan="1"><p style="">将 GPU（VGA 控制器）直通到 VM 100，启用 x-vga 模式</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci1 0000:05:00.1,pcie=1</code></p></td><td colspan="1" rowspan="1"><p style="">将 GPU 音频控制器直通到 VM 100</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=1,romfile=vbios_lucienne.rom</code></p></td><td colspan="1" rowspan="1"><p style="">直通 GPU 并指定 VBIOS ROM 文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -hostpci0 0000:05:00.0,pcie=1,x-vga=on</code></p></td><td colspan="1" rowspan="1"><p style="">使用旧版 x-vga 参数（部分旧内核需要）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /etc/pve/qemu-server/100.conf</code></p></td><td colspan="1" rowspan="1"><p style="">查看 VM 100 的完整配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm config 100</code></p></td><td colspan="1" rowspan="1"><p style="">查看 VM 100 的配置（等效命令）</p></td></tr></tbody></table></div><h2 id="heading-9"  style="">二、虚拟机生命周期管理</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm start 100</code></p></td><td colspan="1" rowspan="1"><p style="">启动虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm stop 100</code></p></td><td colspan="1" rowspan="1"><p style="">强制停止虚拟机（相当于拔电源）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm shutdown 100</code></p></td><td colspan="1" rowspan="1"><p style="">优雅关闭虚拟机（发送 ACPI 关机信号）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm reboot 100</code></p></td><td colspan="1" rowspan="1"><p style="">重启虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm reset 100</code></p></td><td colspan="1" rowspan="1"><p style="">硬重置虚拟机</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm status 100</code></p></td><td colspan="1" rowspan="1"><p style="">查看虚拟机当前运行状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm list</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有虚拟机及其状态</p></td></tr></tbody></table></div><h2 id="heading-10"  style="">三、VNC/显示相关</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga none</code></p></td><td colspan="1" rowspan="1"><p style="">禁用默认 VGA 设备（直通 GPU 时推荐，避免冲突）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga std</code></p></td><td colspan="1" rowspan="1"><p style="">使用标准 VGA（不直通时的默认值）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga virtio</code></p></td><td colspan="1" rowspan="1"><p style="">使用 virtio 半虚拟化显卡（性能更好但不兼容某些 OS）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -vga qxl</code></p></td><td colspan="1" rowspan="1"><p style="">使用 QXL 显卡（适合 Linux 桌面虚拟机）</p></td></tr></tbody></table></div><h2 id="heading-11"  style="">四、IOMMU 分组检查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>find /sys/kernel/iommu_groups/ -type l \| sort -V</code></p></td><td colspan="1" rowspan="1"><p style="">列出所有 IOMMU 分组及设备</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>for d in /sys/kernel/iommu_groups/devices/*; do echo "$(basename $(dirname $d)): $(lspci -nns ${d##*/})"; done</code></p></td><td colspan="1" rowspan="1"><p style="">按 IOMMU 分组显示设备归属</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls -la /sys/kernel/iommu_groups/</code></p></td><td colspan="1" rowspan="1"><p style="">查看 IOMMU 组总数</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /sys/kernel/iommu_groups/*/devices/* 2&gt;/dev/null \| grep 0000:05</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 所在的 IOMMU 分组</p></td></tr></tbody></table></div><h2 id="heading-12"  style="">五、虚拟机内部验证（在 Guest OS 中执行）</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nn \| grep -i vga</code></p></td><td colspan="1" rowspan="1"><p style="">确认 Guest 内能看到直通的 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>lspci -nnk -s &lt;GPU地址&gt;</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 GPU 的驱动绑定状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i amdgpu \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 amdgpu 驱动加载日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i drm \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 Guest 内 DRM 子系统状态</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls /dev/dri/</code></p></td><td colspan="1" rowspan="1"><p style="">检查 DRM 设备节点是否创建（直通成功标志）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>ls /dev/dri/card*</code></p></td><td colspan="1" rowspan="1"><p style="">查看 GPU 渲染节点</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>glxinfo \| grep -i "opengl renderer"</code></p></td><td colspan="1" rowspan="1"><p style="">验证 GPU 硬件加速是否生效（需安装 mesa-utils）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>vainfo</code></p></td><td colspan="1" rowspan="1"><p style="">检查视频硬解码加速是否可用（需安装 vainfo）</p></td></tr></tbody></table></div><h2 id="heading-13"  style="">六、常见问题排查</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm start 100 2&gt;&amp;1 \| tee /tmp/vm_start.log</code></p></td><td colspan="1" rowspan="1"><p style="">启动 VM 并将输出保存到日志文件（排查启动失败）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>journalctl -u qemu-server -n 50</code></p></td><td colspan="1" rowspan="1"><p style="">查看 QEMU 服务日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cat /var/log/syslog \| grep -i "qemu\|vfio\|iommu" \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看系统日志中的直通相关信息</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i vfio \| tail -20</code></p></td><td colspan="1" rowspan="1"><p style="">查看 vfio 驱动相关内核日志</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>dmesg \| grep -i "error\|fail" \| tail -30</code></p></td><td colspan="1" rowspan="1"><p style="">查看最近的内核错误信息</p></td></tr></tbody></table></div><h2 id="heading-14"  style="">七、性能调优（可选）</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -cpu host</code></p></td><td colspan="1" rowspan="1"><p style="">将虚拟机 CPU 设置为 host 模式（直通 GPU 时推荐）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -numa 0</code></p></td><td colspan="1" rowspan="1"><p style="">启用 NUMA 支持（多核场景下提升性能）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -machine q35</code></p></td><td colspan="1" rowspan="1"><p style="">使用 Q35 芯片组（比 i440fx 更适合 PCIe 直通）</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>qm set 100 -args "-cpu host,+topoext"</code></p></td><td colspan="1" rowspan="1"><p style="">添加 AMD 拓扑扩展参数（AMD CPU 推荐）</p></td></tr></tbody></table></div><h2 id="heading-15"  style="">八、配置备份与恢复</h2><div class="halo-table-wrapper" data-table-layout="auto" style="box-sizing: border-box; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; min-width: 0;"><table data-table-layout="auto" style="display: table; width: 100%; min-width: 100%; table-layout: auto;"><tbody><tr><th colspan="1" rowspan="1"><p style="">命令</p></th><th colspan="1" rowspan="1"><p style="">说明</p></th></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /etc/pve/qemu-server/100.conf /root/vm100.conf.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份虚拟机配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /root/vm100.conf.bak /etc/pve/qemu-server/100.conf</code></p></td><td colspan="1" rowspan="1"><p style="">恢复虚拟机配置文件</p></td></tr><tr><td colspan="1" rowspan="1"><p style=""><code>cp /usr/share/kvm/vbios_lucienne.rom /root/vbios_lucienne.rom.bak</code></p></td><td colspan="1" rowspan="1"><p style="">备份 VBIOS 文件</p></td></tr></tbody></table></div><p style=""></p>
                 </article>
 
                 <!-- 文章ai摘要 -->
@@ -1943,7 +2041,7 @@ var _hmt = _hmt || [];
                     <!--                 th:src="@{${#strings.isEmpty(site.logo) ?  assets_link + '/images/hao-logo.jpg' : site.logo}}">-->
                     <!-- 获取当前文章对象（假设变量为 $post） -->
                     <img class="post-copyright__author_img_back entered loading"
-                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w"/>
+                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w"/>
                 </a>
             </div>
             <div class="post-copyright__author_name">午后阳光</div>
@@ -2016,25 +2114,25 @@ var _hmt = _hmt || [];
 
                 <nav class="pagination-post needEndHide" id="pagination">
                     <div class="prev-post pull-left">
-                        <a href="/archives/fnnas-72043">
+                        <a href="/archives/fnnas-72002">
                             <img alt="cover" id="preimg" class="nolazyload"
                                  src=""
 
-                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72043-bd.jpg?width=800">
+                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72002-wifi.jpg?width=800">
                             <div class="pagination-info">
                                 <div class="label">上一篇</div>
-                                <div class="prev_info">飞牛影视播放 115 网盘 ISO 蓝光原盘：绕过代理直连 AList 的改造方案</div>
+                                <div class="prev_info">博通 BCM4360 无线网卡驱动安装指南（适配内核 6.17~7.x）</div>
                             </div>
                         </a>
                     </div>
                     <div class="next-post pull-right">
-                        <a href="/archives/fnnas-72002">
+                        <a href="/archives/fnnas-72043">
                             <img alt="cover" id="preimg" class="nolazyload"
                                  src=""
-                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72002-wifi.jpg?width=800">
+                                 data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72043-bd.jpg?width=800">
                             <div class="pagination-info">
                                 <div class="label">下一篇</div>
-                                <div class="next_info">博通 BCM4360 无线网卡驱动安装指南（适配内核 6.17~7.x）</div>
+                                <div class="next_info">飞牛影视播放 115 网盘 ISO 蓝光原盘：绕过代理直连 AList 的改造方案</div>
                             </div>
                         </a>
                     </div>
@@ -2053,6 +2151,62 @@ var _hmt = _hmt || [];
             <!-- 建议阅读，这里可以自定义文章数量，然后遍历展示 -->
             
                 <div>
+                    <a href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-BMjt.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-14
+                            </div>
+                            <div class="title" style="color: white">Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-gzbh.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-OXZF.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-ASCN.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-13
+                            </div>
+                            <div class="title" style="color: white">fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
                     <a href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">
                         <img alt="cover" class="cover" id="preimg"
                              src=""
@@ -2067,71 +2221,15 @@ var _hmt = _hmt || [];
                 </div>
             
                 <div>
-                    <a href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">
+                    <a href="/archives/fnnas-72575" title="升级 openclaw 翻车后，我改用 Docker 部署最新版：完整经验分享">
                         <img alt="cover" class="cover" id="preimg"
                              src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-cAUo.png?width=800">
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-kSRD.png?width=800">
                         <div class="content is-center">
                             <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
+                                2026-09-12
                             </div>
-                            <div class="title" style="color: white">内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72130-webdav.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72099" title="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72385-ktv.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">声场 KTV：本地曲库驱动的家庭点歌与播放系统</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-72437" title="NAS 视频处理不求人：用 FFmpeg 脚本替代 Docker 方案">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72437-ffmpeg.jpg?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-11
-                            </div>
-                            <div class="title" style="color: white">NAS 视频处理不求人：用 FFmpeg 脚本替代 Docker 方案</div>
+                            <div class="title" style="color: white">升级 openclaw 翻车后，我改用 Docker 部署最新版：完整经验分享</div>
                         </div>
                     </a>
                 </div>
@@ -2169,15 +2267,15 @@ var _hmt = _hmt || [];
 
         
 
-        <div id="comment-content-halo-run-Post-post-wcclwayc"></div>
+        <div id="comment-content-halo-run-Post-post-urcduz2r"></div>
 <script type="module" data-pjax>
   import { init } from "/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.2.2";
   init(
-    "#comment-content-halo-run-Post-post-wcclwayc",
+    "#comment-content-halo-run-Post-post-urcduz2r",
     {
       group: "content.halo.run",
       kind: "Post",
-      name: "post-wcclwayc",
+      name: "post-urcduz2r",
     }
   );
 </script>
@@ -2228,12 +2326,7 @@ var _hmt = _hmt || [];
             </a>
         </div>
 
-        <div class="card-info-social-icons is-center">
-
-            <a class="social-icon" rel="external nofollow" target="_blank" href="/wechat" title="微信">
-                <i class="haofont hao-icon-weixin"></i>
-            </a>
-        </div>
+        
 
         <style>
             /* 社交按钮 */
@@ -2392,6 +2485,50 @@ var _hmt = _hmt || [];
     <div class="aside-list">
         <!-- 最新文章，用户可以自定义展示数量 -->
         <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">
+                <img alt="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-BMjt.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72711" title="Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐">Mihomo 配置还要 SSH 手改 YAML？这个开源面板让飞牛玩家告别繁琐</a>
+                <time title="2026-09-14 08:32:13" datetime="2026-09-14 08:32:13">2026-09-14 08:32:13</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">
+                <img alt="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-gzbh.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72703" title="飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了">飞牛相册 AI 到底吃不吃核显？Intel / AMD 硬件加速实测结论来了</a>
+                <time title="2026-09-13 20:34:35" datetime="2026-09-13 20:34:35">2026-09-13 20:34:35</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">
+                <img alt="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-OXZF.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-71920" title="IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复">IYUUPlus 装完打开 502？问题出在数据目录是空的，5 步修复</a>
+                <time title="2026-09-13 14:37:33" datetime="2026-09-13 14:37:33">2026-09-13 14:37:33</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">
+                <img alt="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-ASCN.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-71928" title="fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录">fnOS 系统盘空间告急？128GB 无损迁移 500GB 实战全记录</a>
+                <time title="2026-09-13 08:34:36" datetime="2026-09-13 08:34:36">2026-09-13 08:34:36</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
             <a class="thumbnail" href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">
                 <img alt="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决"
                      src=""
@@ -2399,51 +2536,7 @@ var _hmt = _hmt || [];
             </a>
             <div class="content">
                 <a class="title" href="/archives/fnnas-72582" title="点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决">点关机却秒变重启？云星 Z690 装飞牛 OS 的电源管理坑，三条内核参数解决</a>
-                <time title="2026-09-12 08:32:53" datetime="2026-09-12 08:32:53">2026-09-12 08:32:53</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">
-                <img alt="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-cAUo.png?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-71950" title="内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密">内网服务对外“通网”的新姿势：一个工具同时解决 IPv6 访问和 HTTPS 加密</a>
-                <time title="2026-09-11 20:36:24" datetime="2026-09-11 20:36:24">2026-09-11 20:36:24</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">
-                <img alt="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72130-webdav.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72130" title="飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录">飞牛 fnOS 远程挂载全挂？一份配置损坏引发的连锁故障排查实录</a>
-                <time title="2026-09-11 11:06:53" datetime="2026-09-11 11:06:53">2026-09-11 11:06:53</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72099" title="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南">
-                <img alt="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72099-ventoy.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72099" title="用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南">用 Ventoy 打造随身 fnOS：fnOSToGo 完整实践指南</a>
-                <time title="2026-09-11 10:59:08" datetime="2026-09-11 10:59:08">2026-09-11 10:59:08</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">
-                <img alt="声场 KTV：本地曲库驱动的家庭点歌与播放系统"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/cover-72385-ktv.jpg?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-72385" title="声场 KTV：本地曲库驱动的家庭点歌与播放系统">声场 KTV：本地曲库驱动的家庭点歌与播放系统</a>
-                <time title="2026-09-11 10:59:02" datetime="2026-09-11 10:59:02">2026-09-11 10:59:02</time>
+                <time title="2026-09-12 23:03:32" datetime="2026-09-12 23:03:32">2026-09-12 23:03:32</time>
             </div>
         </div>
     </div>
@@ -2471,7 +2564,14 @@ var _hmt = _hmt || [];
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="&lt;p&gt;Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。&lt;/p&gt;" data-pjax-state=""><p>Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</p></a>
+                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb"
+                       title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。"
+                       data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                    <div class="name">
+                        <span>Fire / </span>
+                        <time
+                                datetime="2026-08-25 09:37:01"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2483,7 +2583,14 @@ var _hmt = _hmt || [];
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="&lt;p&gt;心若无所求，👨‍👩‍👦有风无风皆自由&lt;/p&gt;" data-pjax-state=""><p>心若无所求，👨‍👩‍👦有风无风皆自由</p></a>
+                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739"
+                       title="心若无所求，👨‍👩‍👦有风无风皆自由"
+                       data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-08-20 21:54:01"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2495,7 +2602,14 @@ var _hmt = _hmt || [];
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="&lt;p&gt;很好&lt;/p&gt;" data-pjax-state=""><p>很好</p></a>
+                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb"
+                       title="很好"
+                       data-pjax-state="">很好</a>
+                    <div class="name">
+                        <span>ice / </span>
+                        <time
+                                datetime="2026-07-23 12:43:52"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2507,7 +2621,14 @@ var _hmt = _hmt || [];
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="&lt;p&gt;都是基础知识，我备个份😁&lt;/p&gt;" data-pjax-state=""><p>都是基础知识，我备个份😁</p></a>
+                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651"
+                       title="都是基础知识，我备个份😁"
+                       data-pjax-state="">都是基础知识，我备个份😁</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-06-02 22:30:54"></time>
+                    </div>
                 </div>
             </div>
             <div class="aside-list-item">
@@ -2519,7 +2640,14 @@ var _hmt = _hmt || [];
                 <div class="content">
                     <a class="comment"
                        style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
-                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="&lt;p&gt;👍我只是想评论可以吗？&lt;/p&gt;" data-pjax-state=""><p>👍我只是想评论可以吗？</p></a>
+                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813"
+                       title="👍我只是想评论可以吗？"
+                       data-pjax-state="">👍我只是想评论可以吗？</a>
+                    <div class="name">
+                        <span>deepseek / </span>
+                        <time
+                                datetime="2026-03-20 13:31:20"></time>
+                    </div>
                 </div>
             </div>
         
@@ -2563,7 +2691,7 @@ var _hmt = _hmt || [];
             <li class="card-category-list-item">
                 <a class="card-category-list-link" href="/categories/zhuanyejilu">
                         <span class="card-category-list-name" title="专业记录">专业记录</span>
-                    <span class="card-category-list-count">83</span>
+                    <span class="card-category-list-count">89</span>
                 </a>
             </li>
         </ul>
@@ -2625,7 +2753,20 @@ var _hmt = _hmt || [];
 
     
     <!-- 底部 banner -->
-    
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
     
     
@@ -2667,7 +2808,7 @@ var _hmt = _hmt || [];
                    rel="noopener external nofollow noreferrer noopener"
                    target="_blank">
                     <span>本网站由</span>&nbsp;&nbsp;
-                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=400 400w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w" />
+                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
                     &nbsp;&nbsp;<span>提供CDN加速/云存储服务</span>
                 </a>
                 <!-- 华为云 -->
@@ -2682,7 +2823,7 @@ var _hmt = _hmt || [];
                 <a class="footer-banner-link" href="https://beian.miit.gov.cn/#/Integrated/index"
                    rel="noopener external nofollow noreferrer noopener"
                    target="_blank">
-                    <span>鲁ICP备2025178327号-1</span>
+                    <span>鲁ICP备2025178327号</span>
                     
                 </a>
                 <a class="footer-banner-link" href="http://www.beian.gov.cn/portal/registerSystemInfo"
@@ -2957,6 +3098,10 @@ var _hmt = _hmt || [];
     <script src="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.min.js"></script>
     <link href="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.css" rel="stylesheet">
 </th:bloc>
+    
+    <!-- 51统计 -->
+    <!-- 51统计 -->
+
     
     <script>
         let pjaxSelectors = ['title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax', '#site-config']
