@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- head 中自定义的  -->
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="var(--heo-card-bg)" name="theme-color">
+    <title>飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议 | 午后阳光</title>
+    <link rel="shortcut icon"
+          href="/wp-content/uploads/2024/12/cropped-ico.png"/>
+
+    <script src="/themes/theme-hao/assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="/themes/theme-hao/assets/js/heo.js?v=1.7.3"></script>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/zhheoblog.css?v=1.7.3">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/custom.css?v=1.7.3">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/commentBarrage.css">
+
+    
+
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <link rel="stylesheet" href="/themes/theme-hao/assets/libs/swiper/swiper-bundle.min.css"/>
+    
+    <!-- 右下角通知 -->
+    <link href="/themes/theme-hao/assets/libs/node-snackbar/snackbar.min.css"
+          media="print"
+          onload='this.media="all"'
+          rel="stylesheet"
+    />
+
+    <!-- 代码块自动识别语言 -->
+    
+    <!-- 解决 pjax问题  自动识别语言-->
+    
+
+    <!-- 自动识别语言 -->
+    
+        <script src="/themes/theme-hao/assets/libs/prism/highlight.min.js"></script>
+
+
+        <script>
+            document.addEventListener("pjax:complete", function () {
+                hljs.highlightAll()
+            })
+            document.addEventListener("DOMContentLoaded", function () {
+                hljs.highlightAll()
+            })
+        </script>
+
+    
+
+
+
+    <!--  代码块-->
+    
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/prism.min.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/code.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="light"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-light.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="dark"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-dark.css">
+    <script data-pjax type="text/javascript" src="/themes/theme-hao/assets/libs/prism/prism.min.js"></script>
+
+    <style>
+
+        #article-container .code-toolbar pre.close{
+            overflow: hidden;
+            height: 300px;
+        }
+    </style>
+
+
+
+    <!-- 页脚内容-样式一 -->
+    
+
+
+    <script>
+        (win => {
+            win.saveToLocal = {
+                set: function setWithExpiry(key, value, ttl) {
+                    if (ttl === 0) return
+                    const now = new Date()
+                    const expiryDay = ttl * 86400000
+                    const item = {
+                        value: value,
+                        expiry: now.getTime() + expiryDay,
+                    }
+                    localStorage.setItem(key, JSON.stringify(item))
+                },
+
+                get: function getWithExpiry(key) {
+                    const itemStr = localStorage.getItem(key)
+
+                    if (!itemStr) {
+                        return undefined
+                    }
+                    const item = JSON.parse(itemStr)
+                    const now = new Date()
+
+                    if (now.getTime() > item.expiry) {
+                        localStorage.removeItem(key)
+                        return undefined
+                    }
+                    return item.value
+                }
+            }
+
+            win.getScript = url => new Promise((resolve, reject) => {
+                const script = document.createElement('script')
+                script.src = url
+                script.async = true
+                script.onerror = reject
+                script.onload = script.onreadystatechange = function () {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    script.onload = script.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(script)
+            })
+
+            win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+                const link = document.createElement('link')
+                link.rel = 'stylesheet'
+                link.href = url
+                if (id) link.id = id
+                link.onerror = reject
+                link.onload = link.onreadystatechange = function() {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    link.onload = link.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(link)
+            })
+
+            win.activateDarkMode = function () {
+                document.documentElement.setAttribute('data-theme', 'dark')
+                document.documentElement.classList.add('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            win.activateLightMode = function () {
+                document.documentElement.setAttribute('data-theme', 'light')
+                document.documentElement.classList.remove('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            const t = saveToLocal.get('theme')
+
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+            const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+            const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+            if (t === undefined) {
+                if (isLightMode) activateLightMode()
+                else if (isDarkMode) activateDarkMode()
+                else if (isNotSpecified || hasNoSupport) {
+                    const now = new Date()
+                    const hour = now.getHours()
+                    const isNight = hour <= 6 || hour >= 18
+                    isNight ? activateDarkMode() : activateLightMode()
+                }
+                window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+                    if (saveToLocal.get('theme') === undefined) {
+                        e.matches ? activateDarkMode() : activateLightMode()
+                    }
+                })
+            } else if (t === 'light') activateLightMode()
+            else activateDarkMode()
+
+            if("system" === 'dark')
+                activateDarkMode()
+            if("system" === 'light')
+                activateLightMode()
+
+            const asideStatus = saveToLocal.get('aside-status')
+            if (asideStatus !== undefined) {
+                if (asideStatus === 'hide') {
+                    document.documentElement.classList.add('hide-aside')
+                } else {
+                    document.documentElement.classList.remove('hide-aside')
+                }
+            }
+        })(window)
+    </script>
+
+    <!-- 动态加载条 -->
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"
+            src="/themes/theme-hao/assets/libs/pace/pace.min.js">
+    </script>
+
+    <!-- 复制 https://githubfast.com/zenorocha/clipboard.js -->
+    <script src="/themes/theme-hao/assets/libs/clipboard/clipboard.min.js"></script>
+
+    <!-- 关于统计-->
+    <script src="/themes/theme-hao/assets/libs/countup/countup.js"></script>
+
+    <!-- icon图标 -->
+    <link rel="stylesheet" href="/themes/theme-hao/assets/icon/iconfont.css?v=1.7.3">
+
+    <!-- 声明一些公共信息 -->
+<script id="site-config">
+    var GLOBAL_CONFIG = {
+        // 页面类型 index,page,post,tag,category
+        htmlType: "post",
+        postTitle: "\u98DE\u725B\u5347\u7EA7\u540E\u663E\u5361\u786C\u89E3\u5931\u6548\uFF1FTESLA P4 \u7528\u6237\u7684\u9A71\u52A8\u56F0\u5883\u4E0E\u6362\u5361\u5EFA\u8BAE",
+        isPost: true,
+        isHome: false,
+        copyright: undefined,
+        lightbox: 'fancybox',
+        lazyload: {
+            enable: true,
+            error: "\/upload\/wuhouyg.png"
+        },
+        isFriendLinksInFooter: false,
+        loadingBox: true,
+        loadProgressBar: true,
+        navMusicEnable: false,
+        isMusic: false,
+        helloText: ["\uD83E\uDD16\uFE0F \u6570\u7801\u79D1\u6280\u7231\u597D\u8005"," \uD83D\uDD0D \u5206\u4EAB\u4E0E\u70ED\u5FC3\u5E2E\u52A9"," \uD83C\uDFE0 \u667A\u80FD\u5BB6\u5C45\u5C0F\u80FD\u624B"," \uD83D\uDD28 \u8BBE\u8BA1\u5F00\u53D1\u4E00\u6761\u9F99"," \uD83E\uDD1D \u4E13\u4FEE\u4EA4\u4E92\u4E0E\u8BBE\u8BA1"," \uD83C\uDFC3 \u811A\u8E0F\u5B9E\u5730\u884C\u52A8\u6D3E"," \uD83E\uDDF1 \u56E2\u961F\u5C0F\u7EC4\u53D1\u52A8\u673A"," \uD83D\uDCA2 \u58EE\u6C49\u4EBA\u72E0\u8BDD\u4E0D\u591A"],
+        profileStyle: "default",
+        rightMenuEnable: true,
+        date_suffix: {
+            just: '刚刚',
+            min: '分钟前',
+            hour: '小时前',
+            day: '天前',
+            month: '个月前'
+        },
+        Snackbar: {
+            chs_to_cht: "你已切换为繁体",
+            cht_to_chs: "你已切换为简体",
+            day_to_night: "你已切换为深色模式",
+            night_to_day: "你已切换为浅色模式",
+            bgLight: "#63a600",
+            bgDark: "#dfa70c",
+            position: "top-center",
+        },
+        translate: {
+            defaultEncoding: 2,
+            translateDelay: 0,
+            msgToTraditionalChinese: "繁",
+            msgToSimplifiedChinese: "简",
+            rightMenuMsgToTraditionalChinese: "轉為繁體",
+            rightMenuMsgToSimplifiedChinese: "转为简体"
+        },
+        prism: {
+            enable: true,
+            enable_title: true,
+            enable_hr: true,
+            enable_line: true,
+            enable_copy: true,
+            enable_expander: true,
+            prism_limit: Number(300) + 30,
+            enable_height_limit: false
+        },
+        source: {
+            power: {
+                powerLink: "\/",
+                showNum: 3,
+                username: null
+            },
+            links: {
+                linksUrl: "\/link",
+                linksNum: 3,
+            },
+            jQuery: "\/themes\/theme-hao\/assets\/libs\/jquery\/jquery.min.js",
+            justifiedGallery: {
+                js: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+                css: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+            },
+            fancybox: {
+                js: "\/themes\/theme-hao\/assets\/libs\/fancybox\/jquery.fancybox.min.js",
+                css: '/null'
+            },
+            comments: {
+                use: "commentWidget",
+                maxBarrage: 1,
+                barrageTime: 4000,
+                mailMd5: "",
+                lazyload: false,
+                textarea: "appearance-none"
+            },
+            post: {
+                dynamicBackground: false
+            },
+            tool: {
+                switch: false
+            },
+            postAi: {
+                ai: "",
+                randomNum: null,
+                basicWordCount: null,
+                btnLink: "",
+                gptName: "",
+                modeName: "local",
+                switchBtn: false,
+                keys: "",
+                Referers: "",
+            },
+            img: {
+                src: "data-lazy-src"
+            },
+            twikoo: {
+                js: "\/themes\/theme-hao\/assets\/libs\/twikoo\/twikoo.all.min.js",
+                twikooUrl: "",
+                accessToken: "",
+            },
+            artalk: {
+                js: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.js",
+                css: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.css",
+                artalkUrl: "",
+                siteName: "",
+            },
+            waline: {
+                js: "https:\/\/cdn.cbd.int\/@waline\/client@2.15.7\/dist\/waline.js",
+                serverURL: "",
+                locale: "{'placeholder': '\u6B22\u8FCE\u8BC4\u8BBA', 'sofa': '\u6765\u53D1\u8BC4\u8BBA\u5427~1'}"
+            },
+            footer: {
+                default_enable: true
+            },
+            about: {
+                rewardList: [],
+                rewardAmount: 10
+            }
+        }
+    };
+
+</script>
+
+
+
+
+    
+    <!--  解决 katex pjax问题 -->
+    
+    <script src="/themes/theme-hao/assets/js/custom.js?v=1.7.3"></script>
+    
+        
+    
+    <!-- Open Graph Start -->
+    <meta property="og:site_name" content="午后阳光" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议" />
+    <meta property="og:url" content="https://www.cuixinjiang.cn/archives/fnnas-73014" />
+    <link rel="canonical" href="https://www.cuixinjiang.cn/archives/fnnas-73014" />
+    
+    
+        <meta property="og:description" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议 系统升级前用 NVIDIA 560 驱动硬解一切正常，升级后系统里只剩 580 驱动可选，硬解反而出了问题。这块 TESLA P4 该换驱动还是换卡？论坛老哥们的回答很直接：旧驱动不兼容新系统，实在不行换卡——而最便宜的替代方案，指" />
+        <meta name="description" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议 系统升级前用 NVIDIA 560 驱动硬解一切正常，升级后系统里只剩 580 驱动可选，硬解反而出了问题。这块 TESLA P4 该换驱动还是换卡？论坛老哥们的回答很直接：旧驱动不兼容新系统，实在不行换卡——而最便宜的替代方案，指" />
+        <meta property="og:image" content="https://www.cuixinjiang.cn/upload/image-SFLR.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议" />
+    <meta name="twitter:url" content="https://www.cuixinjiang.cn/archives/fnnas-73014" />
+    
+        <meta name="twitter:description" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议 系统升级前用 NVIDIA 560 驱动硬解一切正常，升级后系统里只剩 580 驱动可选，硬解反而出了问题。这块 TESLA P4 该换驱动还是换卡？论坛老哥们的回答很直接：旧驱动不兼容新系统，实在不行换卡——而最便宜的替代方案，指" />
+        <meta name="twitter:image" content="https://www.cuixinjiang.cn/upload/image-SFLR.png" />
+    
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"\u5348\u540E\u9633\u5149","url":"https://www.cuixinjiang.cn"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"\u98DE\u725B\u5347\u7EA7\u540E\u663E\u5361\u786C\u89E3\u5931\u6548\uFF1FTESLA P4 \u7528\u6237\u7684\u9A71\u52A8\u56F0\u5883\u4E0E\u6362\u5361\u5EFA\u8BAE","url":"https://www.cuixinjiang.cn/archives/fnnas-73014","datePublished":"2026-09-17","dateModified":"2026-09-17","author":{"@type":"Person","name":"Administrator"},"publisher":{"@type":"Organization","name":"\u5348\u540E\u9633\u5149"},"description":"\u98DE\u725B\u5347\u7EA7\u540E\u663E\u5361\u786C\u89E3\u5931\u6548\uFF1FTESLA P4 \u7528\u6237\u7684\u9A71\u52A8\u56F0\u5883\u4E0E\u6362\u5361\u5EFA\u8BAE \u7CFB\u7EDF\u5347\u7EA7\u524D\u7528 NVIDIA 560 \u9A71\u52A8\u786C\u89E3\u4E00\u5207\u6B63\u5E38\uFF0C\u5347\u7EA7\u540E\u7CFB\u7EDF\u91CC\u53EA\u5269 580 \u9A71\u52A8\u53EF\u9009\uFF0C\u786C\u89E3\u53CD\u800C\u51FA\u4E86\u95EE\u9898\u3002\u8FD9\u5757 TESLA P4 \u8BE5\u6362\u9A71\u52A8\u8FD8\u662F\u6362\u5361\uFF1F\u8BBA\u575B\u8001\u54E5\u4EEC\u7684\u56DE\u7B54\u5F88\u76F4\u63A5\uFF1A\u65E7\u9A71\u52A8\u4E0D\u517C\u5BB9\u65B0\u7CFB\u7EDF\uFF0C\u5B9E\u5728\u4E0D\u884C\u6362\u5361\u2014\u2014\u800C\u6700\u4FBF\u5B9C\u7684\u66FF\u4EE3\u65B9\u6848\uFF0C\u6307"}</script>
+    <!-- Open Graph End -->
+
+
+    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?80e7423c8b31cdeee98630881eac33cb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-6884282846111963">
+<meta name="halo-showcase-verify" content="true" />
+<meta name="generator" content="Halo 2.26.1"/><meta name="description" content="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议 系统升级前用 NVIDIA 560 驱动硬解一切正常，升级后系统里只剩 580 驱动可选，硬解反而出了问题。这块 TESLA P4 该换驱动还是换卡？论坛老哥们的回答很直接：旧驱动不兼容新系统，实在不行换卡&mdash;&mdash;而最便宜的替代方案，指"/><!-- PluginSearchWidget start -->
+<script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
+<link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
+<!-- PluginSearchWidget end -->
+              <meta name="baidu-site-verification" content="codeva-isZaNyZ2Yy" />
+              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
+<!-- plugin-comment-widget start -->
+<link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.3.1">
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.3.1" />
+<!-- plugin-comment-widget end -->
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="post-auldaiz2"></script>
+<link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
+</head>
+
+<body>
+
+<!-- loading 页面 -->
+<!-- loading页面 -->
+
+    <style type="text/css">
+        #loading-box {
+            -webkit-user-select: none;
+        }
+
+        #loading-box .loading-bg {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: var(--heo-card-bg);
+            z-index: 1999;
+            opacity: 1;
+            transition: 0.2s;
+            pointer-events: all;
+            animation: showLoading 0.3s 0s backwards;
+        }
+
+        #loading-box.loaded .loading-bg {
+            pointer-events: none;
+            transition: 0.2s;
+            animation: hideLoading 0.3s 0s forwards;
+        }
+
+        #loading-box .loading-img {
+            width: 100px;
+            margin: auto;
+            animation-duration: 0.2s;
+            animation-name: loadingAction;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #loading-box .loading-image-dot {
+            width: 30px;
+            height: 30px;
+            background: #6bdf8f;
+            position: absolute;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(18px, 24px);
+            -moz-transform: translate(18px, 24px);
+            -o-transform: translate(18px, 24px);
+            -ms-transform: translate(18px, 24px);
+            transform: translate(18px, 24px);
+        }
+
+        @keyframes loadingAction {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes hideLoading {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes showLoading {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div id="loading-box" onclick="heo.hideLoading()">
+        <div class="loading-bg">
+            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
+            <div class="loading-image-dot"></div>
+        </div>
+    </div>
+    <script>
+        var preloader = {
+            endLoading: () => {
+                //- document.body.style.overflow = 'auto';
+                document.getElementById('loading-box').classList.add("loaded")
+            },
+            initLoading: () => {
+                //- document.body.style.overflow = '';
+                document.getElementById('loading-box').classList.remove("loaded")
+            }
+        }
+        window.addEventListener('load', preloader.endLoading())
+        setTimeout(function () {
+            preloader.endLoading();
+        }, 3000)
+    </script>
+
+
+
+
+<!-- 网站背景 -->
+<div id="web_bg">
+    <div>
+        <img class="global_background_img"
+             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=400 400w"
+        />
+        
+    </div>
+</div>
+
+
+    <style>
+        @media screen and (min-width: 1300px) {
+            .global_background_img {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                position: fixed;
+                z-index: -999;
+                background: var(--heo-background);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        
+        @media screen and (max-width: 1300px) {
+            .global_background_img {
+                display: none;
+            }
+        }
+    
+    </style>
+
+
+<script
+>
+    function toRandomPost() {
+        // 随机跳转全站的一篇文章
+        let permalink = "\/archives\/zai-fei-niu-nasdi-ceng-an-zhuang-bao-ta";
+        
+        // 当前窗口打开
+        //window.location.href = permalink;
+        pjax.loadUrl(permalink);
+        // window.open(permalink);
+    }
+
+</script>
+
+<!-- 网站背景 -->
+<div id="an_music_bg"></div>
+
+<!-- 控制台 -->
+<!-- TODO 控制台功能 -->
+<div id="console" >
+  <div class="close-btn" onclick="heo.hideConsole()" href="javascript:void(0);">
+    <i class="haofont hao-icon-circle-xmark"></i>
+  </div>
+  <div class="console-card-group">
+    <!-- 评论，需要使用评论插件，获取最近评论 -->
+    <div class="console-card-group-left">
+      <div class="console-card" id="card-newest-comments" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">互动</div>
+          <span class="author-content-item-title">最近评论</span>
+        </div>
+        <div class="aside-list">
+          
+            <!-- BUG：由于当前的列出所有评论API无过滤功能，非文章页的评论无法查询到页面信息，所以非文章评论跳转至首页-->
+            <div class="aside-list-item" >
+              <a href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="Fire">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。" data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                <time datetime="2026-08-25 09:37:01"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
+                     alt="Administrator">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="心若无所求，👨‍👩‍👦有风无风皆自由" data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                <time datetime="2026-08-20 21:54:01"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="ice">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="很好" data-pjax-state="">很好</a>
+                <time datetime="2026-07-23 12:43:52"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
+                     alt="Administrator">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="都是基础知识，我备个份😁" data-pjax-state="">都是基础知识，我备个份😁</a>
+                <time datetime="2026-06-02 22:30:54"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="deepseek">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="👍我只是想评论可以吗？" data-pjax-state="">👍我只是想评论可以吗？</a>
+                <time datetime="2026-03-20 13:31:20"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="爱哭的小猫">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/" title="现在还没有公共课程？不知道官方在干什么？" data-pjax-state="">现在还没有公共课程？不知道官方在干什么？</a>
+                <time datetime="2026-02-26 15:17:26"></time>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <script data-pjax>
+              window.addEventListener('load', () => {
+                $(".aside-list time").each(function () {
+                  var timeVal = $(this).attr("datetime");
+                  $(this).text(btf.diffDateExact(timeVal,true));
+                })
+              });
+            </script>
+          
+          </div>
+      </div>
+    </div>
+    <!-- 右侧展示 tag -->
+    <div class="console-card-group-right">
+      <div class="console-card tags" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">标签</div>
+          <span class="author-content-item-title">寻找感兴趣的领域</span>
+        </div>
+        <div class="card-tag-cloud">
+          <a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AD%90%E5%AF%BC%E8%88%AA">
+            子导航<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F">
+            安全联盟<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BF%AE%E6%94%B9">
+            导航栏修改<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%B8%A6www%E5%9F%9F%E5%90%8D">
+            带www域名<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">
+            常用命令<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%8D%A2%E7%A9%BA%E9%97%B4">
+            换空间<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B">
+            最新教程<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/cravatar%E5%A4%B4%E5%83%8F">
+            Cravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90">
+            流量分析<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%94%B5%E8%84%91%E5%AD%97%E4%BD%93">
+            电脑字体<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87">
+            背景图片<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0">
+            自动添加<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%87%AA%E5%8A%A8%E8%8D%89%E7%A8%BF">
+            自动草稿<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5">
+            超级链接<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91">
+            重定向<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A">
+            阳光路上<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ftp%E6%9D%83%E9%99%90">
+            FTP权限<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA">
+            非插件显示<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96">
+            图片自动本地化<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/nicen-localize-image">
+            nicen-localize-image<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90">
+            心灵音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/aplayer">
+            APlayer<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/metingjs">
+            MetingJS<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90">
+            网易云音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/httpd-conf">
+            httpd.conf<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/https%E5%90%8E">
+            https后<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1">
+            CSS样式错乱<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/gravatar%E5%A4%B4%E5%83%8F">
+            Gravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/i-o-deadline-reached">
+            i/o deadline reached<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%A3%9E%E7%89%9Bnas">
+            飞牛NAS<sup>45</sup>
+          </a>
+        </div>
+      </div>
+      <!-- 底部展示时间归档 -->
+      <div class="console-card history" onclick="heo.hideConsole()">
+        <div class="item-headline"><i class="fas fa-archive"></i><span>文章</span></div>
+        <ul class="card-archive-list">
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">31</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/05"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  五月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/02"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  二月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">18</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">28</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">27</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/08"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  八月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">14</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">4</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/03"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  三月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/02"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  二月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/01"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  一月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">4</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/08"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  八月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/05"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  五月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/04"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  四月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">7</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/01"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  一月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">10</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">13</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="button-group">
+    <div class="console-btn-item">
+      <a class="darkmode_switchbutton" href="javascript:void(0);" onclick="navFn.switchDarkMode();" rel="external nofollow"
+         title="显示模式切换"><i class="haofont hao-icon-moon-clear-fill" style="font-size:1rem"></i>
+      </a>
+    </div>
+    <div class="console-btn-item" id="consoleHideAside" onclick="heo.hideAsideBtn()" title="边栏显示控制"><a
+            class="asideSwitch" data-pjax-state=""><i class="haofont hao-icon-arrows-left-right"></i></a></div>
+    <div class="console-btn-item on" id="consoleCommentBarrage" onclick="heo.switchCommentBarrage()" title="热评开关"><a
+            class="commentBarrage" data-pjax-state=""><i class="haofont hao-icon-chat--fill"></i></a></div>
+
+    <!--<div class="console-btn-item" id="consoleKeyboard" onclick="heo.keyboardToggle()" title="快捷键开关"><a-->
+    <!--        class="keyboard-switch"><i class="fa-duotone fa-keyboard"></i></a>-->
+    <!--</div>-->
+    <!--<div class="console-btn-item" id="assist-open" onclick="heo.hideConsole()" title="无障碍工具栏"><a-->
+    <!--        class="assist-btn"><i class="fa-duotone fa-wheelchair"></i></a>-->
+    <!--</div>-->
+    
+  </div>
+  <div class="console-mask" href="javascript:void(0);" onclick="heo.hideConsole()" rel="external nofollow">
+  </div>
+</div>
+
+
+<!-- 侧栏，主要是手机端时会使用 -->
+<div id="sidebar">
+    <div id="menu-mask"></div>
+    <div id="sidebar-menus">
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" href="javascript:void(0);" onclick="rm.switchDarkMode()"
+               rel="external nofollow" title="显示模式切换">
+                <i class="haofont hao-icon-moon" style="font-size: 0.9rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">外链</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://mail.cuixinjiang.cn">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">我的邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mail.163.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">163邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://account.aliyun.com/login/login.htm">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">阿里云</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://fn.cuixinjiang.cn">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">飞牛</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mp.weixin.qq.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">微信平台</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://yiyan.baidu.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">文心一言</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.doubao.com/chat/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">豆包</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.baidu.com">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">百度</span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+
+            </div>
+        
+        
+            <div class="menus_items">
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>文章分类</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="/categories/shenghuobiji">
+                                        
+                                            <i class="haofont hao-icon-file-word"></i>
+                                        
+                                        
+                                        <span>生活笔记</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/xinlingyinyue">
+                                        
+                                            <i class="haofont hao-icon-radio"></i>
+                                        
+                                        
+                                        <span>心灵音乐</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/tupiangushi">
+                                        
+                                            <i class="haofont hao-icon-images"></i>
+                                        
+                                        
+                                        <span>图片故事</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/wzzhizuo">
+                                        
+                                            <i class="haofont hao-icon-shapes"></i>
+                                        
+                                        
+                                        <span>网站制作</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/zhuanyejilu">
+                                        
+                                            <i class="haofont hao-icon-paper-plane"></i>
+                                        
+                                        
+                                        <span>专业记录</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories">
+                                        
+                                            <i class="haofont hao-icon-dashboard"></i>
+                                        
+                                        
+                                        <span>所有分类</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/archives">
+                                        
+                                            <i class="haofont hao-icon-book"></i>
+                                        
+                                        
+                                        <span>归档</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/tags">
+                                        
+                                            <i class="haofont hao-icon-list-ul"></i>
+                                        
+                                        
+                                        <span>标签</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+            </div>
+        
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline"></div>
+            <div class="card-tag-cloud">
+                <a class="tag-item" style="font-size:1em" href="/tags/%E5%AD%90%E5%AF%BC%E8%88%AA"
+                   title="子导航">
+                    <!-- 角标 -->
+                    子导航<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F"
+                   title="安全联盟">
+                    <!-- 角标 -->
+                    安全联盟<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BF%AE%E6%94%B9"
+                   title="导航栏修改">
+                    <!-- 角标 -->
+                    导航栏修改<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%B8%A6www%E5%9F%9F%E5%90%8D"
+                   title="带www域名">
+                    <!-- 角标 -->
+                    带www域名<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+                   title="常用命令">
+                    <!-- 角标 -->
+                    常用命令<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%8D%A2%E7%A9%BA%E9%97%B4"
+                   title="换空间">
+                    <!-- 角标 -->
+                    换空间<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B"
+                   title="最新教程">
+                    <!-- 角标 -->
+                    最新教程<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/cravatar%E5%A4%B4%E5%83%8F"
+                   title="Cravatar头像">
+                    <!-- 角标 -->
+                    Cravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"
+                   title="流量分析">
+                    <!-- 角标 -->
+                    流量分析<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%94%B5%E8%84%91%E5%AD%97%E4%BD%93"
+                   title="电脑字体">
+                    <!-- 角标 -->
+                    电脑字体<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"
+                   title="背景图片">
+                    <!-- 角标 -->
+                    背景图片<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0"
+                   title="自动添加">
+                    <!-- 角标 -->
+                    自动添加<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%87%AA%E5%8A%A8%E8%8D%89%E7%A8%BF"
+                   title="自动草稿">
+                    <!-- 角标 -->
+                    自动草稿<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5"
+                   title="超级链接">
+                    <!-- 角标 -->
+                    超级链接<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91"
+                   title="重定向">
+                    <!-- 角标 -->
+                    重定向<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A"
+                   title="阳光路上">
+                    <!-- 角标 -->
+                    阳光路上<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ftp%E6%9D%83%E9%99%90"
+                   title="FTP权限">
+                    <!-- 角标 -->
+                    FTP权限<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA"
+                   title="非插件显示">
+                    <!-- 角标 -->
+                    非插件显示<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96"
+                   title="图片自动本地化">
+                    <!-- 角标 -->
+                    图片自动本地化<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/nicen-localize-image"
+                   title="nicen-localize-image">
+                    <!-- 角标 -->
+                    nicen-localize-image<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90"
+                   title="心灵音乐">
+                    <!-- 角标 -->
+                    心灵音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/aplayer"
+                   title="APlayer">
+                    <!-- 角标 -->
+                    APlayer<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/metingjs"
+                   title="MetingJS">
+                    <!-- 角标 -->
+                    MetingJS<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"
+                   title="网易云音乐">
+                    <!-- 角标 -->
+                    网易云音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/httpd-conf"
+                   title="httpd.conf">
+                    <!-- 角标 -->
+                    httpd.conf<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/https%E5%90%8E"
+                   title="https后">
+                    <!-- 角标 -->
+                    https后<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1"
+                   title="CSS样式错乱">
+                    <!-- 角标 -->
+                    CSS样式错乱<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/gravatar%E5%A4%B4%E5%83%8F"
+                   title="Gravatar头像">
+                    <!-- 角标 -->
+                    Gravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/i-o-deadline-reached"
+                   title="i/o deadline reached">
+                    <!-- 角标 -->
+                    i/o deadline reached<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%A3%9E%E7%89%9Bnas"
+                   title="飞牛NAS">
+                    <!-- 角标 -->
+                    飞牛NAS<sup>45</sup>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 左下角音乐 -->
+
+
+<!-- 内容 -->
+
+    <div class="post" id="body-wrap">
+
+        <header class="post-bg" id="page-header">
+            <nav class="show" id="nav">
+    <div id="nav-group">
+
+        <!-- 导航栏左侧 -->
+        <!-- 导航栏左侧 -->
+<div id="blog_name" >
+
+    
+        <!-- 菜单栏左侧按钮，没有配置时，则不展示-->
+        <div class="back-home-button" tabindex="-1">
+
+            <i class="back-home-button-icon haofont hao-icon-apps-fill" style="font-size: 1rem"></i>
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">外链</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://mail.cuixinjiang.cn">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">我的邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mail.163.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">163邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://account.aliyun.com/login/login.htm">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">阿里云</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://fn.cuixinjiang.cn">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">飞牛</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mp.weixin.qq.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">微信平台</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://yiyan.baidu.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">文心一言</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.doubao.com/chat/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">豆包</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.baidu.com">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">百度</span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    
+    <!-- 返回主页 -->
+    <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
+    <a href="/" id="site-name" title="返回博客主页">
+        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
+    </a>
+</div>
+
+        <div id="page-name-mask">
+            <div id="page-name" >
+                <a id="page-name-text" onclick="btf.scrollToDest(0,500)">飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议</a>
+            </div>
+        </div>
+
+        <!-- 导航栏中间 -->
+        <div id="menus">
+    
+    <div class="menus_items">
+        
+        <!-- 第一层仅展示使用，不做跳转 -->
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               href="/">
+                
+                <span>首页</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            
+            
+            <a class="site-page" rel="external nofollow">
+                
+                <span>文章分类</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/shenghuobiji">
+                    
+                    
+                        <i class="haofont hao-icon-file-word"
+                           style="font-size:.9em"></i>
+                    
+                    <span>生活笔记</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/xinlingyinyue">
+                    
+                    
+                        <i class="haofont hao-icon-radio"
+                           style="font-size:.9em"></i>
+                    
+                    <span>心灵音乐</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/tupiangushi">
+                    
+                    
+                        <i class="haofont hao-icon-images"
+                           style="font-size:.9em"></i>
+                    
+                    <span>图片故事</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/wzzhizuo">
+                    
+                    
+                        <i class="haofont hao-icon-shapes"
+                           style="font-size:.9em"></i>
+                    
+                    <span>网站制作</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/zhuanyejilu">
+                    
+                    
+                        <i class="haofont hao-icon-paper-plane"
+                           style="font-size:.9em"></i>
+                    
+                    <span>专业记录</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/categories">
+                    
+                    
+                        <i class="haofont hao-icon-dashboard"
+                           style="font-size:.9em"></i>
+                    
+                    <span>所有分类</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/archives">
+                    
+                    
+                        <i class="haofont hao-icon-book"
+                           style="font-size:.9em"></i>
+                    
+                    <span>归档</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/tags">
+                    
+                    
+                        <i class="haofont hao-icon-list-ul"
+                           style="font-size:.9em"></i>
+                    
+                    <span>标签</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               target="_blank"
+               href="/tuku">
+                
+                <span>图片回忆</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               href="/wechat">
+                
+                <span>留言板</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               target="_blank"
+               href="/link">
+                
+                <span>友情链接</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+    
+    </div>
+</div>
+
+        <!-- 导航栏右侧 -->
+        <!-- 导航栏菜单栏 -->
+<div id="nav-right">
+
+    <!-- 功能都需要添加开关 -->
+
+    <!-- 随机前往一个开往项目网站 -->
+    <div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站">
+        <a class="site-page" href="https://www.travellings.cn/go.html"  rel="external nofollow"
+           title="随机前往一个开往项目网站">
+            <i class="haofont hao-icon-eicon_train-line"></i>
+        </a>
+    </div>
+
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" href="javascript:void(0);" onclick="toRandomPost()" title="随机文章">
+            <i class="haofont hao-icon-signal-tower-fill"></i>
+        </a>
+    </div>
+
+    <!-- 切换模式 -->
+    <div class="nav-button" id="darkmode_button">
+        <a class="console_switchbutton" href="javascript:void(0);"  onclick="navFn.switchDarkMode();" rel="external nofollow"
+           title="切换模式 - 日夜交替，黑白互换。">
+            <i class="haofont hao-icon-moon-clear-fill" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+    <!-- 搜索使用搜索插件 -->
+    <div class="nav-button" id="search-button">
+        <a class="site-page social-icon search" href="javascript:SearchWidget.open();" rel="external nofollow"
+           title="站内搜索">
+            <i class="haofont hao-icon-search--line"></i>
+        </a>
+    </div>
+
+    <div class="console-button" tabindex="-1">
+        <span class="site-page nav-login">
+            <i class="haofont hao-icon-zhanghao1 " style="font-size: 19.5px;"></i>
+            
+        </span>
+        <div class="back-menu-list-groups">
+            <div class="back-menu-list-group" style="margin: -4px -9px -4px -18px">
+                <div class="back-menu-list">
+                    
+                    <a class="back-menu-item" rel="external nofollow" target="_blank"
+                       href="/login"
+                       onclick="this.href = '/login?redirect_uri=' + encodeURIComponent(window.location.href)">
+                        <span class="back-menu-item-text">登录</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="nav-button" id="nav-totop" onclick="btf.scrollToDest(0,500)">
+        <a class="totopbtn">
+            <i class="haofont hao-icon-arrow-up" style="font-size: 1rem;"></i><span id="percent">0</span>
+        </a>
+    </div>
+
+    <div id="toggle-menu">
+        <a class="site-page">
+            <i class="haofont hao-icon-bars"></i>
+        </a>
+    </div>
+</div>
+
+
+    </div>
+</nav>
+            <div class="coverdiv loaded" id="coverdiv">
+                <img alt="cover" class="nolazyload" id="post-cover"
+                     src="https://www.cuixinjiang.cn/upload/image-SFLR.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-SFLR.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=400 400w">
+            </div>
+
+            <div id="post-info">
+                <div id="post-firstinfo">
+                    <div class="meta-firstline">
+                        <!-- 这里要跳转到版权页 -->
+                        
+                            <a class="post-meta-original"
+                               title="该文章为原创文章，注意版权协议"
+                               href="https://www.cuixinjiang.cn"
+                            >原创</a>
+                            
+                        
+                        <span class="post-meta-categories">
+                            <a class="post-meta-categories" href="/categories/zhuanyejilu"
+                               title="专业记录">专业记录</a>
+                        </span>
+                        <div class="tag_share">
+                            <div class="post-meta__tag-list">
+                                <a class="post-meta__tags" href="/tags/%E9%A3%9E%E7%89%9BfnOS"
+                                   title="飞牛fnOS">
+                                    <span class="tags-name tags-punctuation">飞牛fnOS</span>
+                                </a><a class="post-meta__tags" href="/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8"
+                                   title="显卡驱动">
+                                    <span class="tags-name tags-punctuation">显卡驱动</span>
+                                </a><a class="post-meta__tags" href="/tags/%E7%A1%AC%E8%A7%A3"
+                                   title="硬解">
+                                    <span class="tags-name tags-punctuation">硬解</span>
+                                </a><a class="post-meta__tags" href="/tags/TESLA%20P4"
+                                   title="TESLA P4">
+                                    <span class="tags-name tags-punctuation">TESLA P4</span>
+                                </a><a class="post-meta__tags" href="/tags/NVIDIA"
+                                   title="NVIDIA">
+                                    <span class="tags-name tags-punctuation">NVIDIA</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="post-title">飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议</h1>
+                <div id="post-meta">
+                    <div class="meta-secondline">
+                        <span class="post-meta-author" data-flag-title="文章作者" title="文章作者">
+                            <i class="haofont hao-icon-zuozhe post-meta-icon"></i>Administrator
+                        </span>
+                        <span class="post-meta-wordcount">
+                            <i class="haofont hao-icon-file-word post-meta-icon" title="字数"></i>
+                            <span class="post-meta-label">字数:</span>
+                            <span class="word-count">2019</span>
+                            <span class="post-meta-separator"></span>
+                            <i class="haofont hao-icon-clock post-meta-icon" title="阅读耗时"></i>
+                            <span class="post-meta-label">阅读耗时:</span>
+                            <span>5 分钟</span>
+                        </span>
+                        <span class="post-meta-date">
+                            <i class="haofont hao-icon-calendar-days post-meta-icon"></i>
+                            <time title="2026-09-17 14:41:22" datetime="2026-09-17">2026/09/17</time>
+                        </span>
+                        
+                        <span class="post-meta-wechat" title="该文章在博客首发">
+                            
+                                <i class="haofont hao-icon-rss post-meta-icon"></i>博客独享
+                            
+
+                            
+                        </span>
+                        <a class="post-meta-pv" data-flag-title="热度"
+                           title="热度" >
+                            <i class="haofont hao-icon-fire post-meta-icon"></i>
+                            <span class="post-meta-label">热度:</span>
+                            <span id="visit">2</span>
+                        </a>
+                        <a class="post-meta-commentcount"  data-flag-title="评论数"
+                           title="评论数"
+                           href="#post-comment">
+                            <i class="haofont hao-icon-chat--fill post-meta-icon" style="font-size: 17px;"></i>
+                            <span class="post-meta-label">评论:</span>
+                            <span id="comment-count">0</span>
+                            
+                            
+                        </a>
+                        
+                            
+                        
+                    </div>
+
+                </div>
+            </div>
+            <section class="main-hero-waves-area waves-area">
+                <svg class="waves-svg" preserveAspectRatio="none" shape-rendering="auto" viewBox="0 24 150 28"
+                     xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path
+                                d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"
+                                id="gentle-wave"></path>
+                    </defs>
+                    <g class="parallax">
+                        <use href="#gentle-wave" x="48" y="0"></use>
+                        <use href="#gentle-wave" x="48" y="3"></use>
+                        <use href="#gentle-wave" x="48" y="5"></use>
+                        <use href="#gentle-wave" x="48" y="7"></use>
+                    </g>
+                </svg>
+            </section>
+        </header>
+        <main class="layout right-aside" id="content-inner">
+            <div id="post">
+
+
+                <!-- 文章ai摘要 -->
+                
+
+                <!-- 文章内容 -->
+                <article  class="post-content  line-numbers" id="article-container">
+                    
+                    <p><img alt="题图" src="https://www.cuixinjiang.cn/upload/image-SFLR.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="https://www.cuixinjiang.cn/upload/image-SFLR.png?width=1600 1600w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=800 800w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=1200 1200w, https://www.cuixinjiang.cn/upload/image-SFLR.png?width=400 400w" /></p>
+<h1>飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议</h1>
+<blockquote>
+<p>系统升级前用 NVIDIA 560 驱动硬解一切正常，升级后系统里只剩 580 驱动可选，硬解反而出了问题。这块 TESLA P4 该换驱动还是换卡？论坛老哥们的回答很直接：旧驱动不兼容新系统，实在不行换卡——而最便宜的替代方案，指向了一张 Intel 卡。</p>
+</blockquote>
+<h2 id="heading-1">问题现象</h2>
+<p>一位飞牛用户的配置是 <strong>NVIDIA TESLA P4</strong> 显卡：</p>
+<ul>
+<li>升级前安装 <strong>560 驱动</strong>，硬解正常、体验良好；</li>
+<li><strong>系统升级后，驱动列表里只剩 580 驱动</strong>，装上新驱动后<strong>硬解开始出问题</strong>；</li>
+<li>想更新回旧驱动，却不知道如何操作，开始纠结「换驱动还是换显卡」。</li>
+</ul>
+<h2 id="heading-2">原因分析</h2>
+<p>回复给出的判断很明确：<strong>以前的 560 驱动与新系统不兼容</strong>。</p>
+<p>系统升级后，内核和应用框架都变了，旧版驱动（560）无法在新环境正常工作，飞牛侧也不再提供旧版选择，用户只能被迫使用 580 驱动——而 580 在这台机器上的硬解表现并不理想，于是出现了「升级前好好的，升级后硬解坏」的典型现象。</p>
+<p>另外要提醒的是：<strong>TESLA P4 本质是计算卡</strong>（NVIDIA 数据中心系列），没有视频输出接口，硬解能力也偏弱。拿它做 NAS 的转码/硬解主力，本身就不是它的强项，遇到驱动换代问题会比消费级显卡更难处理。</p>
+<h2 id="heading-3">解决办法</h2>
+<p><strong>方案一：优先尝试驱动回退/兼容方案</strong></p>
+<p>如果系统支持手动安装驱动包，可以尝试：</p>
+<ol>
+<li>在飞牛应用/驱动市场查找是否有旧版 560 驱动的安装包（部分系统提供历史版本）；</li>
+<li>若没有官方旧版入口，可考虑手动安装兼容版本的 NVIDIA 驱动（需要内核匹配，操作有风险，建议先在论坛确认同机型成功案例）。</li>
+</ol>
+<p><strong>方案二：换卡——最便宜的可用选择是 Intel DG1</strong></p>
+<p>如果驱动回退走不通，回复给出的建议很直接：<strong>换卡的话，Intel DG1 算是最便宜的选择了</strong>。</p>
+<ul>
+<li>DG1（Intel Iris Xe）价格便宜，自带完善的硬解单元（H.264/H.265/VP9 等），对飞牛影视转码场景足够用；</li>
+<li>相比 TESLA P4，DG1 在 NAS 场景下驱动兼容性和功耗表现更友好；</li>
+<li>升级前先确认飞牛对 DG1 的支持情况和驱动配置（部分机型需开启对应内核模块）。</li>
+</ul>
+<h2 id="heading-4">避坑提醒</h2>
+<ol>
+<li><strong>升级前先确认显卡驱动兼容性</strong>：大版本系统升级可能改变内核和驱动接口，老卡（尤其是计算卡/专业卡）很容易出现驱动断层，升级前先查论坛同类机型案例；</li>
+<li><strong>硬解异常优先怀疑驱动层</strong>：升级后硬解突然失效，先查驱动版本和内核兼容性，别急着换硬件；</li>
+<li><strong>别拿计算卡当硬解卡</strong>：TESLA 系列适合 AI 推理/计算，视频硬解能力弱且驱动迭代跟得慢；NAS 转码选带媒体引擎的消费级/入门级卡（Intel DG1、Arc 系列）体验更好；</li>
+<li><strong>换卡前确认功耗与供电</strong>：NAS 机箱电源通常有限，DG1 等低功耗卡更合适，大功耗卡可能还要换电源。</li>
+</ol>
+<h2 id="heading-5">小结</h2>
+<p>飞牛升级后 TESLA P4 硬解失效，根因是旧版 560 驱动与新系统不兼容、新版 580 驱动硬解表现不佳。解决路径是：优先尝试驱动回退；走不通就换卡，<strong>Intel DG1 是最便宜的务实之选</strong>。同时记住「计算卡≠硬解卡」，NAS 转码场景选带媒体引擎的消费级卡，能少踩很多驱动坑。</p>
+                </article>
+
+                <!-- 文章ai摘要 -->
+                
+
+                <!-- 版权声明 -->
+                <!-- 版权声明 -->
+
+    <!-- 默认样式 -->
+    <!-- 版权样式默认 -->
+
+
+
+    <!-- 样式一 -->
+    <!-- 版权样式一 -->
+
+    <!-- 版权声明 -->
+    <div class="post-copyright">
+        <div class="post-copyright__author_group">
+            <div>
+                <a class="post-copyright__author_img" href="/authors/xinjiang1022" data-pjax-state="">
+                    <!--                <img class="post-copyright__author_img_back entered loading"-->
+                    <!--                 th:src="@{${#strings.isEmpty(site.logo) ?  assets_link + '/images/hao-logo.jpg' : site.logo}}">-->
+                    <!-- 获取当前文章对象（假设变量为 $post） -->
+                    <img class="post-copyright__author_img_back entered loading"
+                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w"/>
+                </a>
+            </div>
+            <div class="post-copyright__author_name">午后阳光</div>
+            <div class="post-copyright__author_desc">记录生活的点滴</div>
+        </div>
+        <div class="post-tools" id="post-tools">
+            <div class="post-tools-left">
+                
+                <div class="shareRight">
+                    <div class="share-link mobile">
+                        <div class="share-qrcode">
+                            <div class="share-button" title="使用手机访问这篇文章"><i
+                                    class="haofont hao-icon-qrcode"></i>
+                            </div>
+                            <div class="share-main">
+                                <div class="share-main-all">
+                                    <div id="qrcode"></div>
+                                    <div class="reward-dec">使用手机访问这篇文章</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="share-link weibo">
+                        <a class="share-button" rel="noopener external nofollow noreferrer noopener" target="_blank"
+                           href="https://service.weibo.com/share/share.php?title=飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议"
+                           title="分享到微博">
+                            <i class="haofont hao-icon-weibo" style="font-size:22px"></i></a>
+                    </div>
+                    <div class="share-link copyurl">
+                        <div class="share-button" id="post-share-url" onclick="rm.copyPageUrl()" title="复制链接"><i
+                                class="haofont hao-icon-link"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post-copyright__notice">
+            <span class="post-copyright-info">本文是原创文章，完整转载请注明来自 <a href="/" target="_blank" >午后阳光</a></span>
+        </div>
+
+
+    </div>
+    <div class="post-tools-right">
+        <div class="tag_share">
+            <div class="post-meta__tag-list">
+                <a class="post-meta__tags" href="/tags/%E9%A3%9E%E7%89%9BfnOS">
+                    <span class="tags-punctuation">飞牛fnOS</span>
+
+                    <span class="tagsPageCount">18</span>
+                </a><a class="post-meta__tags" href="/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8">
+                    <span class="tags-punctuation">显卡驱动</span>
+
+                    <span class="tagsPageCount">1</span>
+                </a><a class="post-meta__tags" href="/tags/%E7%A1%AC%E8%A7%A3">
+                    <span class="tags-punctuation">硬解</span>
+
+                    <span class="tagsPageCount">1</span>
+                </a><a class="post-meta__tags" href="/tags/TESLA%20P4">
+                    <span class="tags-punctuation">TESLA P4</span>
+
+                    <span class="tagsPageCount">1</span>
+                </a><a class="post-meta__tags" href="/tags/NVIDIA">
+                    <span class="tags-punctuation">NVIDIA</span>
+
+                    <span class="tagsPageCount">1</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/themes/theme-hao/assets/css/post-copyright-one.css?v=1.7.3">
+
+
+
+
+
+                <nav class="pagination-post needEndHide" id="pagination">
+                    <div class="prev-post pull-left">
+                        <a href="/archives/fnnas-72952">
+                            <img alt="cover" id="preimg" class="nolazyload"
+                                 src=""
+
+                                 data-lazy-src="https://www.cuixinjiang.cn/upload/image-vVBk.png?width=800">
+                            <div class="pagination-info">
+                                <div class="label">上一篇</div>
+                                <div class="prev_info">外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="next-post pull-right">
+                        <a href="/archives/fnnas-73011">
+                            <img alt="cover" id="preimg" class="nolazyload"
+                                 src=""
+                                 data-lazy-src="https://www.cuixinjiang.cn/upload/image-axPQ.png?width=800">
+                            <div class="pagination-info">
+                                <div class="label">下一篇</div>
+                                <div class="next_info">全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势</div>
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+                <!-- 阅读建议 -->
+                
+<!-- 阅读建议 -->
+
+    <div class="relatedPosts">
+        <div class="headline">
+            <i class="haofont hao-icon-cainixihuan" style="font-size: 1.1rem;"></i>
+            <span>阅读建议</span>
+        </div>
+        <!-- 六篇文章 -->
+        <div class="relatedPosts-list">
+            <!-- 建议阅读，这里可以自定义文章数量，然后遍历展示 -->
+            
+                <div>
+                    <a href="/archives/fnnas-73040" title="日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-BvSa.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-18
+                            </div>
+                            <div class="title" style="color: white">日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-73011" title="全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-axPQ.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-17
+                            </div>
+                            <div class="title" style="color: white">全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72952" title="外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-vVBk.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-17
+                            </div>
+                            <div class="title" style="color: white">外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72847" title="想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-ExFj.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-16
+                            </div>
+                            <div class="title" style="color: white">想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72836" title="飞牛相册回收站里的照片删不掉？SSD 缓存故障后缩略图残留的清理实录">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-RTJa.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-16
+                            </div>
+                            <div class="title" style="color: white">飞牛相册回收站里的照片删不掉？SSD 缓存故障后缩略图残留的清理实录</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-72874" title="飞牛升级后局域网 SMB 突然全挂？十几台电脑齐刷刷报密码错误，问题出在这">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-HQIx.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-16
+                            </div>
+                            <div class="title" style="color: white">飞牛升级后局域网 SMB 突然全挂？十几台电脑齐刷刷报密码错误，问题出在这</div>
+                        </div>
+                    </a>
+                </div>
+            
+        </div>
+        <!-- 两篇文章 -->
+        
+    </div>
+    <link rel="stylesheet"
+          href="/themes/theme-hao/assets/css/related-posts-six.css?v=1.7.3">
+    
+
+                <hr>
+                
+                
+    <!-- 已知问题 PJAX 下，comment 首次请求会出错。当前的临时解决办法是使用 js 重试 -->
+    <div id="post-comment">
+        <div class="comment-head">
+            <div class="comment-headline"><i class="haofont hao-icon-chat--fill" style="font-size: 20px;"></i> <span>评论</span></div>
+            <div  class="comment-randomInfo">
+                <a onclick="heo.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a>
+                <a href="/privacy">隐私政策</a>
+            </div>
+            <div class="comment-tips" id="comment-tips">
+                <span>你无需删除空行，直接评论以获取最佳展示效果</span>
+            </div>
+        </div>
+
+
+        
+
+        
+
+        
+
+        <div id="comment-content-halo-run-Post-post-auldaiz2"></div>
+<script type="module" data-pjax>
+  import { init } from "/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.3.1";
+  init(
+    "#comment-content-halo-run-Post-post-auldaiz2",
+    {
+      group: "content.halo.run",
+      kind: "Post",
+      name: "post-auldaiz2",
+    }
+  );
+</script>
+
+    </div>
+
+
+            </div>
+
+            <!-- 侧栏 -->
+            <div class="aside-content" id="aside-content">
+
+    <!-- 侧栏部件，不包含 toc 则直接遍历 -->
+    
+
+    <!-- 侧栏部件，toc 之后的组件需要被 sticky_layout 包裹 -->
+    
+        
+            
+            
+                <!-- 侧边栏自我介绍 -->
+
+<div class="card-widget card-info" >
+
+    <!-- 默认 -->
+    
+        <!-- 描述信息 -->
+        <div class="card-content" style="background-image: url(/upload/bingjingtup.png);">
+            <div class="card-info-avatar is-center">
+                <div class="author-info__top-group">
+                    <div class="author-info__sayhi" id="author-info__sayhi" onclick="heo.changeSayHelloText()">你好啊！我是
+                    </div>
+                    <img class="avatar-img"
+                         src=""
+                         data-lazy-src="/wp-content/uploads/2024/12/logo.png">
+                </div>
+                
+                <div class="author-info__name">午后大叔</div>
+                <div class="author-info__description">🤖️ 数码科技爱好者</br>🔍 分享与热心帮助</br>🏠 智能家居小能手</br>🤝 专修交互与设计</br>🏃 脚踏实地行动派</br>🧱 团队小组发动机</div>
+            </div>
+        </div>
+
+        <!-- 跳转信息 -->
+        <div class="banner-button-group">
+            <a class="banner-button" href="/about">
+                <i class="haofont hao-icon-circle-arrow-right"></i>
+                <span class="banner-button-text">了解更多</span>
+            </a>
+        </div>
+
+        
+
+        <style>
+            /* 社交按钮 */
+            #aside-content .card-info #card-info-btn {
+                display: none;
+            }
+
+            #aside-content .card-info .card-info-social-icons {
+                margin: 0;
+                padding-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                cursor: pointer;
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+            }
+
+            #aside-content .card-info .card-info-social-icons .social-icon {
+                margin: 0;
+                margin-right: 8px;
+            }
+
+            #aside-content .card-info .card-info-social-icons i {
+                background: var(--heo-white-op);
+                color: var(--heo-white);
+                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            #aside-content .card-info .card-info-social-icons i:hover {
+                background: var(--heo-white-op);
+                transform: scale(1.1);
+                color: var(--heo-white);
+                box-shadow: none;
+            }
+
+            #aside-content .card-info .banner-button {
+                height: 40px;
+                width: 124px;
+                border-radius: 20px;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: 1300px) {
+                #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+
+                [data-theme=dark] #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+            }
+
+            #aside-content .card-info img {
+                width: 28px;
+                right: 24px;
+                top: 20px;
+                border-radius: 500px;
+                transition: all 0.5s ease 0s;
+                position: absolute;
+            }
+
+            #aside-content .card-info .author-info__name {
+                font-weight: 500;
+                font-size: 1.57em;
+            }
+
+            #aside-content .card-info .author-info__name {
+                text-align: left;
+                font-weight: bold;
+                color: var(--heo-white);
+                font-size: 28px;
+                line-height: 1.1;
+                margin-top: 0.8rem;
+                margin-bottom: 0.4rem;
+            }
+        </style>
+
+    
+
+
+    <!-- 样式一 -->
+    
+
+</div>
+
+            
+            
+            
+            
+            
+                <div class="card-widget heo-right-widget" id="card-wechat" onclick="javascript:window.open(&#39;/wechat&#39;)">
+    <div id="flip-wrapper">
+        <div id="flip-content">
+            <div class="face"
+                 style="background: url(/upload/wechat2-dqzi.png) center center / 100% no-repeat;"></div>
+            <div class="back face"
+                 style="background: url(/upload/wechat2-dqzi.png) center center / 100% no-repeat;"></div>
+        </div>
+    </div>
+
+    <style>
+        #aside-content .card-widget#card-wechat {
+            background: #07C160;
+        }
+        #aside-content .card-widget#card-wechat::before {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 0;
+            background: url(/themes/theme-hao/assets/images/gzh_cover.png) center center no-repeat;
+            content: '';
+            background-size: cover;
+            transition: .2s cubic-bezier(.45,.04,.43,1.21)
+        }
+        #aside-content .card-widget#card-wechat:hover:before {
+            top: 100%;
+            opacity: 0;
+            transition: .3s ease-out
+        }
+
+    </style>
+</div>
+
+            
+            
+            
+            
+                <div class="sticky_layout">
+            
+            
+                <!-- 目录 -->
+<div class="card-widget" id="card-toc">
+    <div class="item-headline">
+        <i class="haofont hao-icon-bars"></i>
+        <span>文章目录</span>
+        <span class="toc-percentage"></span>
+    </div>
+    <!-- 目录容器 -->
+    <div class="toc-content"></div>
+</div>
+            
+            
+            
+            
+            
+                <div class="card-widget card-recent-post">
+    <div class="item-headline"><i class="haofont hao-icon-eicon_map-2-line1"></i><span>最近发布</span></div>
+    <div class="aside-list">
+        <!-- 最新文章，用户可以自定义展示数量 -->
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73040" title="日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解">
+                <img alt="日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-BvSa.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73040" title="日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解">日志显示频繁登录失败？你的公网 NAS 可能正在被暴力破解</a>
+                <time title="2026-09-18 08:34:07" datetime="2026-09-18 08:34:07">2026-09-18 08:34:07</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73011" title="全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势">
+                <img alt="全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-axPQ.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73011" title="全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势">全家人的照片如何汇集到一台飞牛？多账号相册备份与共享的正确姿势</a>
+                <time title="2026-09-17 20:34:40" datetime="2026-09-17 20:34:40">2026-09-17 20:34:40</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73014" title="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议">
+                <img alt="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-SFLR.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73014" title="飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议">飞牛升级后显卡硬解失效？TESLA P4 用户的驱动困境与换卡建议</a>
+                <time title="2026-09-17 14:41:22" datetime="2026-09-17 14:41:22">2026-09-17 14:41:22</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72952" title="外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪">
+                <img alt="外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-vVBk.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72952" title="外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪">外网突然访问不了飞牛？内网一切正常、虚拟机都能通，问题出在哪</a>
+                <time title="2026-09-17 08:33:48" datetime="2026-09-17 08:33:48">2026-09-17 08:33:48</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-72847" title="想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕">
+                <img alt="想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-ExFj.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-72847" title="想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕">想让飞牛 Docker 应用有固定网址直接访问？官方没这功能，但可以这样绕</a>
+                <time title="2026-09-16 20:35:08" datetime="2026-09-16 20:35:08">2026-09-16 20:35:08</time>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            
+            
+            
+            
+                <!-- 最新评论 -->
+<div class="card-widget card-recent-post" >
+    <a onclick="pjax.loadUrl(&quot;\/pinglun&quot;)"
+       title="查看更多"
+       class="card-more-btn"
+       style="cursor:pointer" draggable="false"><i class="haofont hao-icon-chevron-right"></i></a>
+    <div class="item-headline"><i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i><span>最新评论</span></div>
+    <div class="aside-list" id="newcomm">
+        
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/406260b4f06fe8735ab053253894cd5715a307df1b563f027e72ede1cd02d9dd">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb"
+                       title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。"
+                       data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                    <div class="name">
+                        <span>Fire / </span>
+                        <time
+                                datetime="2026-08-25 09:37:01"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739"
+                       title="心若无所求，👨‍👩‍👦有风无风皆自由"
+                       data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-08-20 21:54:01"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/61096e1e922eb5d8789413754804c87133d3518e6a96caf15883a8dc1efe42be">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb"
+                       title="很好"
+                       data-pjax-state="">很好</a>
+                    <div class="name">
+                        <span>ice / </span>
+                        <time
+                                datetime="2026-07-23 12:43:52"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651"
+                       title="都是基础知识，我备个份😁"
+                       data-pjax-state="">都是基础知识，我备个份😁</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-06-02 22:30:54"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/d1db009995751fb39acdbc8d717c1caa31c8e6684e2fe079dce71792d4b163ca">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813"
+                       title="👍我只是想评论可以吗？"
+                       data-pjax-state="">👍我只是想评论可以吗？</a>
+                    <div class="name">
+                        <span>deepseek / </span>
+                        <time
+                                datetime="2026-03-20 13:31:20"></time>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            
+            
+            
+            
+            
+                <!-- 目录 -->
+<div class="card-widget card-categories">
+    <div class="item-headline"><i class="haofont hao-icon-folder-open"></i><span>分类</span></div>
+    <div class="aside-list">
+        <ul class="card-category-list">
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/wzzhizuo">
+                        <span class="card-category-list-name" title="网站制作">网站制作</span>
+                    <span class="card-category-list-count">68</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/shenghuobiji">
+                        <span class="card-category-list-name" title="生活笔记">生活笔记</span>
+                    <span class="card-category-list-count">11</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/xinlingyinyue">
+                        <span class="card-category-list-name" title="心灵音乐">心灵音乐</span>
+                    <span class="card-category-list-count">14</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/tupiangushi">
+                        <span class="card-category-list-name" title="图片故事">图片故事</span>
+                    <span class="card-category-list-count">4</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/zhuanyejilu">
+                        <span class="card-category-list-name" title="专业记录">专业记录</span>
+                    <span class="card-category-list-count">100</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+            
+            
+            
+                </div>
+        </main>
+
+        <!-- 底部 -->
+        <!-- 页脚模块 -->
+<footer id="footer">
+
+    
+
+    <!-- 社交链接，需要填入 href class title -->
+    <div id="footer_deal">
+        
+            
+        
+
+        <img class="footer_mini_logo"
+             src=""
+             data-lazy-src="/upload/%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E5%9B%BE%E6%A0%87-QThY.png" title="返回顶部" onclick="btf.scrollToDest(0, 500)">
+
+        
+            
+        
+    </div>
+
+    <!-- 相关地址  -->
+    
+        <div id="heo-footer">
+            <div class="footer-group">
+                <h3 class="footer-title">关于我</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="/about" target="_self">关于我</a><a class="footer-item" href="/pinglun" target="_self">留言评论</a><a class="footer-item" href="/tuku" target="_self">图片回忆</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">服务</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://chat.deepseek.com/sign_in" target="_blank">deepseek</a><a class="footer-item" href="https://account.aliyun.com/login/login.htm" target="_blank">阿里云</a><a class="footer-item" href="https://tongji.baidu.com" target="_blank">百度统计</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">外链</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://mp.weixin.qq.com/" target="_blank">微信公众号</a><a class="footer-item" href="http://mail.cuixinjiang.cn" target="_blank">我的邮箱</a><a class="footer-item" href="https://cloud.tencent.com" target="_blank">腾讯云</a>
+                </div>
+            </div>
+            
+        </div>
+
+    
+    <!-- 底部 banner -->
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+    
+    
+    
+    
+
+    <style>
+        .copyright,
+        #ghbdages,
+        #workboard {
+            text-align: center;
+        }
+    </style>
+
+    
+
+    <div id="footer-banner" style="padding:0.3rem">
+        <div class="footer-banner-links">
+            <div class="footer-banner-left">
+                <div id="footer-banner-tips">
+                    <div style="display: flex;flex-direction: row;align-items: center;">
+                        
+                            ©2025 - 2026
+                        
+                        
+                        By <a class="footer-banner-link" href="/" target="_blank">午后阳光</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-banner-right">
+                
+                <!-- 又拍云 -->
+                
+                <!-- 阿里云 -->
+                
+                <!-- 腾讯云 -->
+                <a class="footer-banner-link cloud" href="https://cloud.tencent.com/"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>本网站由</span>&nbsp;&nbsp;
+                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
+                    &nbsp;&nbsp;<span>提供CDN加速/云存储服务</span>
+                </a>
+                <!-- 华为云 -->
+                
+                <!-- 自定义云服务信息 -->
+                
+                
+                <!-- 订阅 需要 RSS 插件支持 -->
+                <a class="footer-banner-link" href="/rss.xml">订阅</a>
+                
+                <a class="footer-banner-link" href="/about">关于</a>
+                <a class="footer-banner-link" href="https://beian.miit.gov.cn/#/Integrated/index"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>鲁ICP备2025178327号</span>
+                    
+                </a>
+                <a class="footer-banner-link" href="http://www.beian.gov.cn/portal/registerSystemInfo"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>鲁公网安备37070502000656号</span>
+                    
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 右下角 snackbar 弹窗 -->
+    
+    <div id="quit-box" onclick="RemoveRewardMask()"></div>
+
+    <!--评论弹幕弹窗 -->
+    <div class="comment-barrage needEndHide" style="display: none;"></div>
+
+    <style>
+        a.footer-banner-link.cloud {
+            display: flex;
+            align-items: center;
+        }
+        img.cloud-logo {
+            height: 32px;
+        }
+    </style>
+    
+    
+        <style>
+            @media screen and (min-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-card-bg-none) 0%, #fff0 25%);
+                    margin-top: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+            @media screen and (max-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-background) 0%, #fff0 25%);
+                    margin-top: 0;
+                    z-index: 3;
+                }
+            }
+        
+        </style>
+    
+    
+</footer>
+
+
+
+
+    </div>
+
+
+
+
+<!-- todo 右下角悬浮操作按钮 -->
+
+    <div id="rightside">
+        <div id="rightside-config-hide">
+            <button id="readmode" type="button" title="阅读模式"><i class="haofont hao-icon-book-open"></i></button>
+            
+            <button id="darkmode" type="button" title="浅色和深色模式转换"><i class="haofont hao-icon-circle-half-stroke"></i></button>
+            <button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="haofont hao-icon-arrows-left-right"></i></button>
+        </div>
+        <div id="rightside-config-show">
+            <button id="rightside-config" type="button" title="设置"><i class="haofont hao-icon-gear"></i></button>
+            <button class="close" id="mobile-toc-button" type="button" title="目录"><i class="haofont hao-icon-list-ul"></i></button>
+            <a id="to_comment" href="#post-comment" title="直达评论" ><i class="haofont hao-icon-chat--fill" style="font-size: 17px;"></i></a>
+            <a id="switch-commentBarrage" href="javascript:heo.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕" draggable="false" data-pjax-state="external"><i class="haofont hao-icon-danmu"></i></a>
+            <button id="go-up" type="button" title="回到顶部"><i class="haofont hao-icon-arrow-up"></i></button>
+            
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/css/read-mode.css?v=1.7.3">
+
+
+
+<!-- 右键菜单 -->
+<div class="js-pjax">
+    <div id="rightMenu">
+        <div class="rightMenu-group rightMenu-small">
+            <div class="rightMenu-item" id="menu-backward"><i class="haofont hao-icon-arrow-left"></i></div>
+            <div class="rightMenu-item" id="menu-forward"><i class="haofont hao-icon-arrow-right"></i></div>
+            <div class="rightMenu-item" id="menu-refresh"><i class="haofont hao-icon-arrow-rotate-right"></i></div>
+            <div class="rightMenu-item" id="menu-top"><i class="haofont hao-icon-arrow-up"></i></div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuPlugin">
+            <div class="rightMenu-item" id="menu-copytext">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制选中文本</span>
+            </div>
+            <div class="rightMenu-item" id="menu-pastetext">
+                <i class="haofont hao-icon-paste"></i>
+                <span>粘贴文本</span>
+            </div>
+            <a class="rightMenu-item" id="menu-commenttext">
+                <i class="haofont hao-icon-comment-medical"></i>
+                <span>引用到评论</span>
+            </a>
+            <div class="rightMenu-item" id="menu-newwindow">
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copylink">
+                <i class="haofont hao-icon-link"></i>
+                <span>复制链接地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copyimg">
+                <i class="haofont hao-icon-images"></i>
+                <span>复制此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-downloadimg">
+                <i class="haofont hao-icon-download"></i>
+                <span>下载此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-newwindowimg" >
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-search">
+                <i class="haofont hao-icon-search--line"></i>
+                <span>站内搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-searchBaidu">
+                <i class="haofont hao-icon-baidu"></i>
+                <span>百度搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-toggle" style="">
+                <i class="haofont hao-icon-play"></i>
+                <span>播放音乐</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-back" style="">
+                <i class="haofont hao-icon-backward"></i>
+                <span>切换到上一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-forward" style="">
+                <i class="haofont hao-icon-forward"></i>
+                <span>切换到下一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-playlist"
+                 style="" onclick="javascript:window.open(&#39;https://music.163.com/#/playlist?id=707486358&#39;)">
+                <i class="haofont hao-icon-radio"></i>
+                <span>查看所有歌曲</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-copyMusicName" style="">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制歌名</span>
+            </div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <a class="rightMenu-item menu-link" id="menu-randomPost" onclick="toRandomPost()">
+                <i class="haofont hao-icon-shuffle"></i>
+                <span>随便逛逛</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../categories">
+                <i class="haofont hao-icon-cube"></i>
+                <span>博客分类</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../tags">
+                <i class="haofont hao-icon-tags"></i>
+                <span>文章标签</span>
+            </a>
+        </div>
+        <!-- <div class="rightMenu-group rightMenu-line">
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-hand-holding"></i>
+                <span>隐私协议</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-closed-captioning"></i>
+                <span>版权协议</span>
+            </a>
+        </div> -->
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <div class="rightMenu-item" id="menu-copy">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-commentBarrage"
+                 rel="external nofollow noreferrer" draggable="false" style="display: flex;">
+                <i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i>
+                <span class="menu-commentBarrage-text">关闭热评</span>
+            </div>
+            <div class="rightMenu-item" id="menu-darkmode">
+                <i class="haofont hao-icon-moon-clear-fill" style="font-size: 19px;"></i>
+                <span class="menu-darkmode-text">深色模式</span>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rightmenu-mask"></div>
+</div>
+
+
+<div>
+    <script src="/themes/theme-hao/assets/js/utils.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/halo.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/main.js?v=1.7.3"></script>
+    <script charset="utf-8" data-pjax src="/themes/theme-hao/assets/zhheo/blogex.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/tw_cn.js?v=1.7.3"></script>
+    <!-- https://instant.page/ 网站预加载， 放在 </body> 之前 -->
+    <script src="/themes/theme-hao/assets/libs/instantpage/instantpage.min.js"
+            type="module"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/vanilla-lazyload/lazyload.iife.min.js"></script>
+    
+    <!-- 右下角通知 https://www.polonel.com/snackbar/ -->
+    <!-- todo head 中有它的 css，应该可以写一块，并改成后台可配置的功能，代码中应该还有他的 js -->
+    <script src="/themes/theme-hao/assets/libs/node-snackbar/snackbar.min.js"></script>
+    
+    <div class="js-pjax">
+        <!-- 动态标题 -->
+        <!-- 动态标题 -->
+
+    </div>
+    
+    <!-- 评论 -->
+    
+    
+    <!--音乐-->
+    <script>var meting_api = "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r"; </script>
+    
+    <!-- 深色模式下添加粒子效果canvas -->
+    <canvas id="universe" width="1312" height="880"></canvas>
+    <script async="" src="/themes/theme-hao/assets/libs/canvas/dark.js"></script>
+    
+    <!-- https://davidshimjs.github.io/qrcodejs/ 生成二维码 -->
+    <!-- 应该是文章页分享使用 -->
+    <script data-pjax src="/themes/theme-hao/assets/libs/qrcode/qrcode.min.js" ></script>
+    
+    <!--  https://raphamorim.io/waterfall.js/  应该是这个 还有相关的 js 代码 是否可以调整-->
+    <script src="/themes/theme-hao/assets/libs/waterfall/waterfall.min.js"></script>
+    
+    <!-- 获取主色 https://lokeshdhakar.com/projects/color-thief/ -->
+    <!--<script th:src="@{/assets/libs/color-thief/color-thief.umd.js}"></script>-->
+    <script src="/themes/theme-hao/assets/libs/fast-average-color/index.browser.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/view-image/view-image.min.js"></script>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/libs/aplayer/APlayer.min.css"
+          media="all" onload="this.media='all'">
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/APlayer.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/Meting2.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/pjax/pjax.min.js"></script>
+    
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <script data-pjax
+            src="/themes/theme-hao/assets/libs/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- 右键菜单 -->
+    <script src="/themes/theme-hao/assets/zhheo/rightmenu.js"></script>
+    
+    <!-- 评论弹幕 -->
+    
+    
+    <!-- Tocbot 目录生成 start -->
+    <!-- Tocbot 目录生成 start -->
+<th:bloc>
+    <script src="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <link href="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.css" rel="stylesheet">
+</th:bloc>
+    
+
+    <script>
+        let pjaxSelectors = ['title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax', '#site-config']
+        
+        pjaxSelectors.unshift('meta[property="og:type"]', 'meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]', 'meta[property="og:description"]'
+                , 'meta[name="twitter:title"]', 'meta[name="twitter:url"]', 'meta[name="twitter:description"]', 'meta[name="twitter:image"]')
+        
+        var pjax = new Pjax({
+            elements: 'a:not([target="_blank"])',
+            selectors: pjaxSelectors,
+            cacheBust: false,
+            analytics: false,
+            scrollRestoration: false
+        })
+        
+        document.addEventListener('pjax:send', function () {
+            
+            // removeEventListener toc scroll
+            window.removeEventListener('scroll', window.tocScrollFn)
+            
+            typeof preloader === 'object' && preloader.initLoading()
+            
+            if (window.aplayers) {
+                for (let i = 0; i < window.aplayers.length; i++) {
+                    if (!window.aplayers[i].options.fixed) {
+                        window.aplayers[i].destroy()
+                    }
+                }
+            }
+            
+            typeof typed === 'object' && typed.destroy()
+            
+            //reset readmode
+            const $bodyClassList = document.body.classList
+            $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+        })
+        
+        document.addEventListener('pjax:complete', function () {
+            window.refreshFn()
+            
+            document.querySelectorAll('script[data-pjax]').forEach(item => {
+                        const newScript = document.createElement('script')
+                        const content = item.text || item.textContent || item.innerHTML || ""
+                        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+                        newScript.appendChild(document.createTextNode(content))
+                        item.parentNode.replaceChild(newScript, item)
+                    }
+            )
+            
+            GLOBAL_CONFIG.lazyload.enable && window.lazyLoadInstance.update()
+            
+            typeof chatBtnFn === 'function' && chatBtnFn()
+            typeof panguInit === 'function' && panguInit()
+            
+            // google analytics
+            typeof gtag === 'function' && gtag('config', '', {
+                'page_path': window.location.pathname
+            });
+            
+            // baidu analytics
+            typeof _hmt === 'object' && _hmt.push(['_trackPageview', window.location.pathname]);
+            
+            typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+            
+            // Analytics
+            if (false) {
+                MtaH5.pgv()
+            }
+            
+            // prismjs
+            typeof Prism === 'object' && Prism.highlightAll()
+            
+            typeof preloader === 'object' && preloader.endLoading()
+        })
+        
+        document.addEventListener('pjax:error', (e) => {
+                    if (e.request.status === 404 || e.request.status === 500) {
+                        window.location.href = e.request.responseURL;
+                    }
+                }
+        )
+    </script>
+
+
+</div>
+
+<!-- 根据配置设置 css 变量值，全局 css 通过变量值进行处理 -->
+<style type="text/css">
+    [data-theme=light] {
+        --heo-theme: #63a600 !important;
+        --heo-theme-op: #63a60023 !important;
+        --heo-theme-op-deep: #63a600dd !important;
+        --heo-theme-none: #63a60000 !important;
+    }
+
+    [data-theme=dark] {
+        --heo-theme: #dfa70c !important;
+        --heo-theme-op: #dfa70c23 !important;
+        --heo-theme-op-deep: #dfa70cdd !important;
+        --heo-theme-none: #dfa70c00 !important;
+    }
+
+    :root {
+        --halo-comment-widget-component-card-bg: var(--heo-card-bg);
+        --halo-comment-widget-component-theme-op: var(--heo-theme-op);
+        --halo-comment-widget-component-card-border: var(--heo-card-border);
+        --halo-comment-widget-component-shadow-border: var(--heo-shadow-border);
+        --halo-comment-widget-component-secondtext: var(--heo-secondtext);
+        --halo-comment-widget-component-lighttext: var(--heo-lighttext);
+        --halo-comment-widget-component-secondbg: var(--heo-secondbg);
+        --halo-comment-widget-component-fontcolor: var(--heo-fontcolor);
+        --halo-comment-widget-component-main: var(--heo-main);
+        --halo-comment-widget-component-background: var(--heo-background);
+        --halo-comment-widget-component-white: var(--heo-white);
+        --halo-comment-widget-component-shadow-black: var(--heo-shadow-black);
+    }
+    #page {
+        --halo-comment-widget-component-padding: 1rem;
+    }
+
+    .color-scheme-dark,.dark,[data-color-scheme=dark] {
+        --halo-search-widget-color-modal-layer: var(--heo-maskbgdeep);
+        --halo-search-widget-color-modal-content-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-input: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-form-input-placeholder: #6b7280d9;
+        --halo-search-widget-color-form-input-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-divider: #bbbbbb0f;
+        --halo-search-widget-color-result-item-bg: var(--heo-card-bg);
+        --halo-search-widget-color-result-item-hover-bg: #90939914;
+        --halo-search-widget-color-result-item-title: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-result-item-content: #ffffff82;
+        --halo-search-widget-color-command-kbd-item: #c0c4ccb3;
+        --halo-search-widget-color-command-kbd-border: #bbbbbb0f;
+        --halo-search-widget-color-result-empty: #6b7280d9
+    }
+
+    [data-theme=light] {
+        --halo-search-widget-color-result-item-title : #4B5563
+    }
+    
+        #aside-content #card-toc .toc-content a.toc-link:not(.active)  {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    
+</style>
+
+<script data-pjax="">
+    
+    //页脚友联
+    GLOBAL_CONFIG.isFriendLinksInFooter && heo.addFriendLinksInFooter()
+    //音乐页面切换歌曲调用
+    if (GLOBAL_CONFIG.isMusic) {
+        heo.changeMusicBg(false);
+    }
+    //代码块
+    if (GLOBAL_CONFIG.prism.enable) {
+        halo.addPrismTool()
+        halo.dataCodeTheme()
+    }
+
+</script>
+</body>
+
+</html>
