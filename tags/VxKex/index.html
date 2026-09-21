@@ -1,0 +1,4305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- head 中自定义的  -->
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="var(--heo-card-bg)" name="theme-color">
+    <title>标签: VxKex | 午后阳光</title>
+    <link rel="shortcut icon"
+          href="/wp-content/uploads/2024/12/cropped-ico.png"/>
+
+    <script src="/themes/theme-hao/assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="/themes/theme-hao/assets/js/heo.js?v=1.7.3"></script>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/zhheoblog.css?v=1.7.3">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/custom.css?v=1.7.3">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/commentBarrage.css">
+
+    
+
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <link rel="stylesheet" href="/themes/theme-hao/assets/libs/swiper/swiper-bundle.min.css"/>
+    
+    <!-- 右下角通知 -->
+    <link href="/themes/theme-hao/assets/libs/node-snackbar/snackbar.min.css"
+          media="print"
+          onload='this.media="all"'
+          rel="stylesheet"
+    />
+
+    <!-- 代码块自动识别语言 -->
+    
+    <!-- 解决 pjax问题  自动识别语言-->
+    
+
+    <!-- 自动识别语言 -->
+    
+        <script src="/themes/theme-hao/assets/libs/prism/highlight.min.js"></script>
+
+
+        <script>
+            document.addEventListener("pjax:complete", function () {
+                hljs.highlightAll()
+            })
+            document.addEventListener("DOMContentLoaded", function () {
+                hljs.highlightAll()
+            })
+        </script>
+
+    
+
+
+
+    <!--  代码块-->
+    
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/prism.min.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/code.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="light"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-light.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="dark"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-dark.css">
+    <script data-pjax type="text/javascript" src="/themes/theme-hao/assets/libs/prism/prism.min.js"></script>
+
+    <style>
+
+        #article-container .code-toolbar pre.close{
+            overflow: hidden;
+            height: 300px;
+        }
+    </style>
+
+
+
+    <!-- 页脚内容-样式一 -->
+    
+
+
+    <script>
+        (win => {
+            win.saveToLocal = {
+                set: function setWithExpiry(key, value, ttl) {
+                    if (ttl === 0) return
+                    const now = new Date()
+                    const expiryDay = ttl * 86400000
+                    const item = {
+                        value: value,
+                        expiry: now.getTime() + expiryDay,
+                    }
+                    localStorage.setItem(key, JSON.stringify(item))
+                },
+
+                get: function getWithExpiry(key) {
+                    const itemStr = localStorage.getItem(key)
+
+                    if (!itemStr) {
+                        return undefined
+                    }
+                    const item = JSON.parse(itemStr)
+                    const now = new Date()
+
+                    if (now.getTime() > item.expiry) {
+                        localStorage.removeItem(key)
+                        return undefined
+                    }
+                    return item.value
+                }
+            }
+
+            win.getScript = url => new Promise((resolve, reject) => {
+                const script = document.createElement('script')
+                script.src = url
+                script.async = true
+                script.onerror = reject
+                script.onload = script.onreadystatechange = function () {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    script.onload = script.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(script)
+            })
+
+            win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+                const link = document.createElement('link')
+                link.rel = 'stylesheet'
+                link.href = url
+                if (id) link.id = id
+                link.onerror = reject
+                link.onload = link.onreadystatechange = function() {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    link.onload = link.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(link)
+            })
+
+            win.activateDarkMode = function () {
+                document.documentElement.setAttribute('data-theme', 'dark')
+                document.documentElement.classList.add('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            win.activateLightMode = function () {
+                document.documentElement.setAttribute('data-theme', 'light')
+                document.documentElement.classList.remove('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            const t = saveToLocal.get('theme')
+
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+            const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+            const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+            if (t === undefined) {
+                if (isLightMode) activateLightMode()
+                else if (isDarkMode) activateDarkMode()
+                else if (isNotSpecified || hasNoSupport) {
+                    const now = new Date()
+                    const hour = now.getHours()
+                    const isNight = hour <= 6 || hour >= 18
+                    isNight ? activateDarkMode() : activateLightMode()
+                }
+                window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+                    if (saveToLocal.get('theme') === undefined) {
+                        e.matches ? activateDarkMode() : activateLightMode()
+                    }
+                })
+            } else if (t === 'light') activateLightMode()
+            else activateDarkMode()
+
+            if("system" === 'dark')
+                activateDarkMode()
+            if("system" === 'light')
+                activateLightMode()
+
+            const asideStatus = saveToLocal.get('aside-status')
+            if (asideStatus !== undefined) {
+                if (asideStatus === 'hide') {
+                    document.documentElement.classList.add('hide-aside')
+                } else {
+                    document.documentElement.classList.remove('hide-aside')
+                }
+            }
+        })(window)
+    </script>
+
+    <!-- 动态加载条 -->
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"
+            src="/themes/theme-hao/assets/libs/pace/pace.min.js">
+    </script>
+
+    <!-- 复制 https://githubfast.com/zenorocha/clipboard.js -->
+    <script src="/themes/theme-hao/assets/libs/clipboard/clipboard.min.js"></script>
+
+    <!-- 关于统计-->
+    <script src="/themes/theme-hao/assets/libs/countup/countup.js"></script>
+
+    <!-- icon图标 -->
+    <link rel="stylesheet" href="/themes/theme-hao/assets/icon/iconfont.css?v=1.7.3">
+
+    <!-- 声明一些公共信息 -->
+<script id="site-config">
+    var GLOBAL_CONFIG = {
+        // 页面类型 index,page,post,tag,category
+        htmlType: "tag",
+        postTitle: "",
+        isPost: false,
+        isHome: false,
+        copyright: undefined,
+        lightbox: 'fancybox',
+        lazyload: {
+            enable: true,
+            error: "\/upload\/wuhouyg.png"
+        },
+        isFriendLinksInFooter: false,
+        loadingBox: true,
+        loadProgressBar: true,
+        navMusicEnable: false,
+        isMusic: false,
+        helloText: ["\uD83E\uDD16\uFE0F \u6570\u7801\u79D1\u6280\u7231\u597D\u8005"," \uD83D\uDD0D \u5206\u4EAB\u4E0E\u70ED\u5FC3\u5E2E\u52A9"," \uD83C\uDFE0 \u667A\u80FD\u5BB6\u5C45\u5C0F\u80FD\u624B"," \uD83D\uDD28 \u8BBE\u8BA1\u5F00\u53D1\u4E00\u6761\u9F99"," \uD83E\uDD1D \u4E13\u4FEE\u4EA4\u4E92\u4E0E\u8BBE\u8BA1"," \uD83C\uDFC3 \u811A\u8E0F\u5B9E\u5730\u884C\u52A8\u6D3E"," \uD83E\uDDF1 \u56E2\u961F\u5C0F\u7EC4\u53D1\u52A8\u673A"," \uD83D\uDCA2 \u58EE\u6C49\u4EBA\u72E0\u8BDD\u4E0D\u591A"],
+        profileStyle: "default",
+        rightMenuEnable: true,
+        date_suffix: {
+            just: '刚刚',
+            min: '分钟前',
+            hour: '小时前',
+            day: '天前',
+            month: '个月前'
+        },
+        Snackbar: {
+            chs_to_cht: "你已切换为繁体",
+            cht_to_chs: "你已切换为简体",
+            day_to_night: "你已切换为深色模式",
+            night_to_day: "你已切换为浅色模式",
+            bgLight: "#63a600",
+            bgDark: "#dfa70c",
+            position: "top-center",
+        },
+        translate: {
+            defaultEncoding: 2,
+            translateDelay: 0,
+            msgToTraditionalChinese: "繁",
+            msgToSimplifiedChinese: "简",
+            rightMenuMsgToTraditionalChinese: "轉為繁體",
+            rightMenuMsgToSimplifiedChinese: "转为简体"
+        },
+        prism: {
+            enable: true,
+            enable_title: true,
+            enable_hr: true,
+            enable_line: true,
+            enable_copy: true,
+            enable_expander: true,
+            prism_limit: Number(300) + 30,
+            enable_height_limit: false
+        },
+        source: {
+            power: {
+                powerLink: "\/",
+                showNum: 3,
+                username: null
+            },
+            links: {
+                linksUrl: "\/link",
+                linksNum: 3,
+            },
+            jQuery: "\/themes\/theme-hao\/assets\/libs\/jquery\/jquery.min.js",
+            justifiedGallery: {
+                js: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+                css: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+            },
+            fancybox: {
+                js: "\/themes\/theme-hao\/assets\/libs\/fancybox\/jquery.fancybox.min.js",
+                css: '/null'
+            },
+            comments: {
+                use: "commentWidget",
+                maxBarrage: 1,
+                barrageTime: 4000,
+                mailMd5: "",
+                lazyload: false,
+                textarea: "appearance-none"
+            },
+            post: {
+                dynamicBackground: false
+            },
+            tool: {
+                switch: false
+            },
+            postAi: {
+                ai: "",
+                randomNum: null,
+                basicWordCount: null,
+                btnLink: "",
+                gptName: "",
+                modeName: "local",
+                switchBtn: false,
+                keys: "",
+                Referers: "",
+            },
+            img: {
+                src: "data-lazy-src"
+            },
+            twikoo: {
+                js: "\/themes\/theme-hao\/assets\/libs\/twikoo\/twikoo.all.min.js",
+                twikooUrl: "",
+                accessToken: "",
+            },
+            artalk: {
+                js: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.js",
+                css: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.css",
+                artalkUrl: "",
+                siteName: "",
+            },
+            waline: {
+                js: "https:\/\/cdn.cbd.int\/@waline\/client@2.15.7\/dist\/waline.js",
+                serverURL: "",
+                locale: "{'placeholder': '\u6B22\u8FCE\u8BC4\u8BBA', 'sofa': '\u6765\u53D1\u8BC4\u8BBA\u5427~1'}"
+            },
+            footer: {
+                default_enable: true
+            },
+            about: {
+                rewardList: [],
+                rewardAmount: 10
+            }
+        }
+    };
+
+</script>
+
+
+
+
+    
+    <!--  解决 katex pjax问题 -->
+    
+    <script src="/themes/theme-hao/assets/js/custom.js?v=1.7.3"></script>
+    
+        
+    
+    <!-- Open Graph Start -->
+    <meta property="og:site_name" content="午后阳光" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VxKex" />
+    <meta property="og:url" content="https://www.cuixinjiang.cn/tags/VxKex" />
+    <link rel="canonical" href="https://www.cuixinjiang.cn/tags/VxKex" />
+    
+    
+        <meta property="og:description" content="午后阳光，记录飞牛NAS教程、内网穿透、halo建站等日常技术难题的解决方法与生活随笔。" />
+        <meta name="description" content="午后阳光，记录飞牛NAS教程、内网穿透、halo建站等日常技术难题的解决方法与生活随笔。" />
+        <meta property="og:image" content="/wp-content/uploads/2024/12/logo.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VxKex" />
+    <meta name="twitter:url" content="https://www.cuixinjiang.cn/tags/VxKex" />
+    
+        <meta name="twitter:description" content="午后阳光，记录飞牛NAS教程、内网穿透、halo建站等日常技术难题的解决方法与生活随笔。" />
+        <meta name="twitter:image" content="/wp-content/uploads/2024/12/logo.png" />
+    
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"\u5348\u540E\u9633\u5149","url":"https://www.cuixinjiang.cn"}</script>
+    
+    <!-- Open Graph End -->
+
+
+    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?80e7423c8b31cdeee98630881eac33cb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-6884282846111963">
+<meta name="halo-showcase-verify" content="true" />
+<meta name="generator" content="Halo 2.26.1"/><!-- PluginSearchWidget start -->
+<script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
+<link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
+<!-- PluginSearchWidget end -->
+              <meta name="baidu-site-verification" content="codeva-isZaNyZ2Yy" />
+              <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
+<!-- plugin-comment-widget start -->
+<link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.3.2">
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.3.2" />
+<!-- plugin-comment-widget end -->
+<link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
+</head>
+
+<body>
+
+<!-- loading 页面 -->
+<!-- loading页面 -->
+
+    <style type="text/css">
+        #loading-box {
+            -webkit-user-select: none;
+        }
+
+        #loading-box .loading-bg {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: var(--heo-card-bg);
+            z-index: 1999;
+            opacity: 1;
+            transition: 0.2s;
+            pointer-events: all;
+            animation: showLoading 0.3s 0s backwards;
+        }
+
+        #loading-box.loaded .loading-bg {
+            pointer-events: none;
+            transition: 0.2s;
+            animation: hideLoading 0.3s 0s forwards;
+        }
+
+        #loading-box .loading-img {
+            width: 100px;
+            margin: auto;
+            animation-duration: 0.2s;
+            animation-name: loadingAction;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #loading-box .loading-image-dot {
+            width: 30px;
+            height: 30px;
+            background: #6bdf8f;
+            position: absolute;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(18px, 24px);
+            -moz-transform: translate(18px, 24px);
+            -o-transform: translate(18px, 24px);
+            -ms-transform: translate(18px, 24px);
+            transform: translate(18px, 24px);
+        }
+
+        @keyframes loadingAction {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes hideLoading {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes showLoading {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div id="loading-box" onclick="heo.hideLoading()">
+        <div class="loading-bg">
+            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
+            <div class="loading-image-dot"></div>
+        </div>
+    </div>
+    <script>
+        var preloader = {
+            endLoading: () => {
+                //- document.body.style.overflow = 'auto';
+                document.getElementById('loading-box').classList.add("loaded")
+            },
+            initLoading: () => {
+                //- document.body.style.overflow = '';
+                document.getElementById('loading-box').classList.remove("loaded")
+            }
+        }
+        window.addEventListener('load', preloader.endLoading())
+        setTimeout(function () {
+            preloader.endLoading();
+        }, 3000)
+    </script>
+
+
+
+
+<!-- 网站背景 -->
+<div id="web_bg">
+    <div>
+        <img class="global_background_img"
+             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=400 400w"
+        />
+        
+    </div>
+</div>
+
+
+    <style>
+        @media screen and (min-width: 1300px) {
+            .global_background_img {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                position: fixed;
+                z-index: -999;
+                background: var(--heo-background);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        
+        @media screen and (max-width: 1300px) {
+            .global_background_img {
+                display: none;
+            }
+        }
+    
+    </style>
+
+
+<script
+>
+    function toRandomPost() {
+        // 随机跳转全站的一篇文章
+        let permalink = "\/archives\/haloban-ben-sheng-ji-li-cheng";
+        
+        // 当前窗口打开
+        //window.location.href = permalink;
+        pjax.loadUrl(permalink);
+        // window.open(permalink);
+    }
+
+</script>
+
+<!-- 网站背景 -->
+<div id="an_music_bg"></div>
+
+<!-- 控制台 -->
+<!-- TODO 控制台功能 -->
+<div id="console" >
+  <div class="close-btn" onclick="heo.hideConsole()" href="javascript:void(0);">
+    <i class="haofont hao-icon-circle-xmark"></i>
+  </div>
+  <div class="console-card-group">
+    <!-- 评论，需要使用评论插件，获取最近评论 -->
+    <div class="console-card-group-left">
+      <div class="console-card" id="card-newest-comments" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">互动</div>
+          <span class="author-content-item-title">最近评论</span>
+        </div>
+        <div class="aside-list">
+          
+            <!-- BUG：由于当前的列出所有评论API无过滤功能，非文章页的评论无法查询到页面信息，所以非文章评论跳转至首页-->
+            <div class="aside-list-item" >
+              <a href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="Fire">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。" data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                <time datetime="2026-08-25 09:37:01"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
+                     alt="Administrator">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" title="心若无所求，👨‍👩‍👦有风无风皆自由" data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                <time datetime="2026-08-20 21:54:01"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="ice">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" title="很好" data-pjax-state="">很好</a>
+                <time datetime="2026-07-23 12:43:52"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png"
+                     alt="Administrator">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" title="都是基础知识，我备个份😁" data-pjax-state="">都是基础知识，我备个份😁</a>
+                <time datetime="2026-06-02 22:30:54"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="deepseek">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" title="👍我只是想评论可以吗？" data-pjax-state="">👍我只是想评论可以吗？</a>
+                <time datetime="2026-03-20 13:31:20"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/" class="thumbnail"  data-pjax-state="">
+                <img src=""
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="爱哭的小猫">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/" title="现在还没有公共课程？不知道官方在干什么？" data-pjax-state="">现在还没有公共课程？不知道官方在干什么？</a>
+                <time datetime="2026-02-26 15:17:26"></time>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <script data-pjax>
+              window.addEventListener('load', () => {
+                $(".aside-list time").each(function () {
+                  var timeVal = $(this).attr("datetime");
+                  $(this).text(btf.diffDateExact(timeVal,true));
+                })
+              });
+            </script>
+          
+          </div>
+      </div>
+    </div>
+    <!-- 右侧展示 tag -->
+    <div class="console-card-group-right">
+      <div class="console-card tags" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">标签</div>
+          <span class="author-content-item-title">寻找感兴趣的领域</span>
+        </div>
+        <div class="card-tag-cloud">
+          <a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AD%90%E5%AF%BC%E8%88%AA">
+            子导航<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F">
+            安全联盟<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BF%AE%E6%94%B9">
+            导航栏修改<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%B8%A6www%E5%9F%9F%E5%90%8D">
+            带www域名<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">
+            常用命令<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%8D%A2%E7%A9%BA%E9%97%B4">
+            换空间<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B">
+            最新教程<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/cravatar%E5%A4%B4%E5%83%8F">
+            Cravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90">
+            流量分析<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%94%B5%E8%84%91%E5%AD%97%E4%BD%93">
+            电脑字体<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87">
+            背景图片<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0">
+            自动添加<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%87%AA%E5%8A%A8%E8%8D%89%E7%A8%BF">
+            自动草稿<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5">
+            超级链接<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91">
+            重定向<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A">
+            阳光路上<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ftp%E6%9D%83%E9%99%90">
+            FTP权限<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA">
+            非插件显示<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96">
+            图片自动本地化<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/nicen-localize-image">
+            nicen-localize-image<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90">
+            心灵音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/aplayer">
+            APlayer<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/metingjs">
+            MetingJS<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90">
+            网易云音乐<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/httpd-conf">
+            httpd.conf<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/https%E5%90%8E">
+            https后<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1">
+            CSS样式错乱<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/gravatar%E5%A4%B4%E5%83%8F">
+            Gravatar头像<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/i-o-deadline-reached">
+            i/o deadline reached<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/%E9%A3%9E%E7%89%9Bnas">
+            飞牛NAS<sup>45</sup>
+          </a>
+        </div>
+      </div>
+      <!-- 底部展示时间归档 -->
+      <div class="console-card history" onclick="heo.hideConsole()">
+        <div class="item-headline"><i class="fas fa-archive"></i><span>文章</span></div>
+        <ul class="card-archive-list">
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">39</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/05"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  五月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2026/02"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  二月 2026
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">18</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">28</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">27</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/08"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  八月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">14</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2025/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2025
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">4</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/03"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  三月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/02"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  二月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2014/01"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  一月 2014
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">4</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/08"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  八月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/05"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  五月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">3</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/04"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  四月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">7</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2013/01"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  一月 2013
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">5</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">10</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2012/10"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十月 2012
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">13</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="button-group">
+    <div class="console-btn-item">
+      <a class="darkmode_switchbutton" href="javascript:void(0);" onclick="navFn.switchDarkMode();" rel="external nofollow"
+         title="显示模式切换"><i class="haofont hao-icon-moon-clear-fill" style="font-size:1rem"></i>
+      </a>
+    </div>
+    <div class="console-btn-item" id="consoleHideAside" onclick="heo.hideAsideBtn()" title="边栏显示控制"><a
+            class="asideSwitch" data-pjax-state=""><i class="haofont hao-icon-arrows-left-right"></i></a></div>
+    <div class="console-btn-item on" id="consoleCommentBarrage" onclick="heo.switchCommentBarrage()" title="热评开关"><a
+            class="commentBarrage" data-pjax-state=""><i class="haofont hao-icon-chat--fill"></i></a></div>
+
+    <!--<div class="console-btn-item" id="consoleKeyboard" onclick="heo.keyboardToggle()" title="快捷键开关"><a-->
+    <!--        class="keyboard-switch"><i class="fa-duotone fa-keyboard"></i></a>-->
+    <!--</div>-->
+    <!--<div class="console-btn-item" id="assist-open" onclick="heo.hideConsole()" title="无障碍工具栏"><a-->
+    <!--        class="assist-btn"><i class="fa-duotone fa-wheelchair"></i></a>-->
+    <!--</div>-->
+    
+  </div>
+  <div class="console-mask" href="javascript:void(0);" onclick="heo.hideConsole()" rel="external nofollow">
+  </div>
+</div>
+
+
+<!-- 侧栏，主要是手机端时会使用 -->
+<div id="sidebar">
+    <div id="menu-mask"></div>
+    <div id="sidebar-menus">
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" href="javascript:void(0);" onclick="rm.switchDarkMode()"
+               rel="external nofollow" title="显示模式切换">
+                <i class="haofont hao-icon-moon" style="font-size: 0.9rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">外链</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://mail.cuixinjiang.cn">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">我的邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mail.163.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">163邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://account.aliyun.com/login/login.htm">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">阿里云</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://fn.cuixinjiang.cn">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">飞牛</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mp.weixin.qq.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">微信平台</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://yiyan.baidu.com/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">文心一言</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.doubao.com/chat/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">豆包</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.baidu.com">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">百度</span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+
+            </div>
+        
+        
+            <div class="menus_items">
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>文章分类</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="/categories/shenghuobiji">
+                                        
+                                            <i class="haofont hao-icon-file-word"></i>
+                                        
+                                        
+                                        <span>生活笔记</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/xinlingyinyue">
+                                        
+                                            <i class="haofont hao-icon-radio"></i>
+                                        
+                                        
+                                        <span>心灵音乐</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/tupiangushi">
+                                        
+                                            <i class="haofont hao-icon-images"></i>
+                                        
+                                        
+                                        <span>图片故事</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/wzzhizuo">
+                                        
+                                            <i class="haofont hao-icon-shapes"></i>
+                                        
+                                        
+                                        <span>网站制作</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories/zhuanyejilu">
+                                        
+                                            <i class="haofont hao-icon-paper-plane"></i>
+                                        
+                                        
+                                        <span>专业记录</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/categories">
+                                        
+                                            <i class="haofont hao-icon-dashboard"></i>
+                                        
+                                        
+                                        <span>所有分类</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/archives">
+                                        
+                                            <i class="haofont hao-icon-book"></i>
+                                        
+                                        
+                                        <span>归档</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="/tags">
+                                        
+                                            <i class="haofont hao-icon-list-ul"></i>
+                                        
+                                        
+                                        <span>标签</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+            </div>
+        
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline"></div>
+            <div class="card-tag-cloud">
+                <a class="tag-item" style="font-size:1em" href="/tags/%E5%AD%90%E5%AF%BC%E8%88%AA"
+                   title="子导航">
+                    <!-- 角标 -->
+                    子导航<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F"
+                   title="安全联盟">
+                    <!-- 角标 -->
+                    安全联盟<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BF%AE%E6%94%B9"
+                   title="导航栏修改">
+                    <!-- 角标 -->
+                    导航栏修改<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%B8%A6www%E5%9F%9F%E5%90%8D"
+                   title="带www域名">
+                    <!-- 角标 -->
+                    带www域名<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+                   title="常用命令">
+                    <!-- 角标 -->
+                    常用命令<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%8D%A2%E7%A9%BA%E9%97%B4"
+                   title="换空间">
+                    <!-- 角标 -->
+                    换空间<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B"
+                   title="最新教程">
+                    <!-- 角标 -->
+                    最新教程<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/cravatar%E5%A4%B4%E5%83%8F"
+                   title="Cravatar头像">
+                    <!-- 角标 -->
+                    Cravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"
+                   title="流量分析">
+                    <!-- 角标 -->
+                    流量分析<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%94%B5%E8%84%91%E5%AD%97%E4%BD%93"
+                   title="电脑字体">
+                    <!-- 角标 -->
+                    电脑字体<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"
+                   title="背景图片">
+                    <!-- 角标 -->
+                    背景图片<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0"
+                   title="自动添加">
+                    <!-- 角标 -->
+                    自动添加<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%87%AA%E5%8A%A8%E8%8D%89%E7%A8%BF"
+                   title="自动草稿">
+                    <!-- 角标 -->
+                    自动草稿<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5"
+                   title="超级链接">
+                    <!-- 角标 -->
+                    超级链接<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91"
+                   title="重定向">
+                    <!-- 角标 -->
+                    重定向<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A"
+                   title="阳光路上">
+                    <!-- 角标 -->
+                    阳光路上<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ftp%E6%9D%83%E9%99%90"
+                   title="FTP权限">
+                    <!-- 角标 -->
+                    FTP权限<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA"
+                   title="非插件显示">
+                    <!-- 角标 -->
+                    非插件显示<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96"
+                   title="图片自动本地化">
+                    <!-- 角标 -->
+                    图片自动本地化<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/nicen-localize-image"
+                   title="nicen-localize-image">
+                    <!-- 角标 -->
+                    nicen-localize-image<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90"
+                   title="心灵音乐">
+                    <!-- 角标 -->
+                    心灵音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/aplayer"
+                   title="APlayer">
+                    <!-- 角标 -->
+                    APlayer<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/metingjs"
+                   title="MetingJS">
+                    <!-- 角标 -->
+                    MetingJS<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"
+                   title="网易云音乐">
+                    <!-- 角标 -->
+                    网易云音乐<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/httpd-conf"
+                   title="httpd.conf">
+                    <!-- 角标 -->
+                    httpd.conf<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/https%E5%90%8E"
+                   title="https后">
+                    <!-- 角标 -->
+                    https后<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1"
+                   title="CSS样式错乱">
+                    <!-- 角标 -->
+                    CSS样式错乱<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/gravatar%E5%A4%B4%E5%83%8F"
+                   title="Gravatar头像">
+                    <!-- 角标 -->
+                    Gravatar头像<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/i-o-deadline-reached"
+                   title="i/o deadline reached">
+                    <!-- 角标 -->
+                    i/o deadline reached<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/%E9%A3%9E%E7%89%9Bnas"
+                   title="飞牛NAS">
+                    <!-- 角标 -->
+                    飞牛NAS<sup>45</sup>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 左下角音乐 -->
+
+
+<!-- 内容 -->
+
+
+    <div class="page" id="body-wrap">
+        <header class="not-top-img" id="page-header">
+            <nav class="show" id="nav">
+    <div id="nav-group">
+
+        <!-- 导航栏左侧 -->
+        <!-- 导航栏左侧 -->
+<div id="blog_name" >
+
+    
+        <!-- 菜单栏左侧按钮，没有配置时，则不展示-->
+        <div class="back-home-button" tabindex="-1">
+
+            <i class="back-home-button-icon haofont hao-icon-apps-fill" style="font-size: 1rem"></i>
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">外链</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://mail.cuixinjiang.cn">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">我的邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mail.163.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">163邮箱</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://account.aliyun.com/login/login.htm">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">阿里云</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="http://fn.cuixinjiang.cn">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">飞牛</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://mp.weixin.qq.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">微信平台</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://yiyan.baidu.com/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">文心一言</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.doubao.com/chat/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">豆包</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.baidu.com">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">百度</span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    
+    <!-- 返回主页 -->
+    <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
+    <a href="/" id="site-name" title="返回博客主页">
+        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
+    </a>
+</div>
+
+        <div id="page-name-mask">
+            <div id="page-name" >
+                <a id="page-name-text" onclick="btf.scrollToDest(0,500)">标签: VxKex</a>
+            </div>
+        </div>
+
+        <!-- 导航栏中间 -->
+        <div id="menus">
+    
+    <div class="menus_items">
+        
+        <!-- 第一层仅展示使用，不做跳转 -->
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               href="/">
+                
+                <span>首页</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            
+            
+            <a class="site-page" rel="external nofollow">
+                
+                <span>文章分类</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/shenghuobiji">
+                    
+                    
+                        <i class="haofont hao-icon-file-word"
+                           style="font-size:.9em"></i>
+                    
+                    <span>生活笔记</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/xinlingyinyue">
+                    
+                    
+                        <i class="haofont hao-icon-radio"
+                           style="font-size:.9em"></i>
+                    
+                    <span>心灵音乐</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/tupiangushi">
+                    
+                    
+                        <i class="haofont hao-icon-images"
+                           style="font-size:.9em"></i>
+                    
+                    <span>图片故事</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/wzzhizuo">
+                    
+                    
+                        <i class="haofont hao-icon-shapes"
+                           style="font-size:.9em"></i>
+                    
+                    <span>网站制作</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self"
+                   href="/categories/zhuanyejilu">
+                    
+                    
+                        <i class="haofont hao-icon-paper-plane"
+                           style="font-size:.9em"></i>
+                    
+                    <span>专业记录</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/categories">
+                    
+                    
+                        <i class="haofont hao-icon-dashboard"
+                           style="font-size:.9em"></i>
+                    
+                    <span>所有分类</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/archives">
+                    
+                    
+                        <i class="haofont hao-icon-book"
+                           style="font-size:.9em"></i>
+                    
+                    <span>归档</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank"
+                   href="/tags">
+                    
+                    
+                        <i class="haofont hao-icon-list-ul"
+                           style="font-size:.9em"></i>
+                    
+                    <span>标签</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               target="_blank"
+               href="/tuku">
+                
+                <span>图片回忆</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               href="/wechat">
+                
+                <span>留言板</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+        <div class="menus_item">
+            
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               target="_blank"
+               href="/link">
+                
+                <span>友情链接</span>
+            </a>
+            
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            
+            <style type="text/css">
+                .ali_icon {
+                    width: 1.2em;
+                    height: 1.2em;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                    right: 0;
+                }
+            </style>
+        </div>
+    
+    </div>
+</div>
+
+        <!-- 导航栏右侧 -->
+        <!-- 导航栏菜单栏 -->
+<div id="nav-right">
+
+    <!-- 功能都需要添加开关 -->
+
+    <!-- 随机前往一个开往项目网站 -->
+    <div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站">
+        <a class="site-page" href="https://www.travellings.cn/go.html"  rel="external nofollow"
+           title="随机前往一个开往项目网站">
+            <i class="haofont hao-icon-eicon_train-line"></i>
+        </a>
+    </div>
+
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" href="javascript:void(0);" onclick="toRandomPost()" title="随机文章">
+            <i class="haofont hao-icon-signal-tower-fill"></i>
+        </a>
+    </div>
+
+    <!-- 切换模式 -->
+    <div class="nav-button" id="darkmode_button">
+        <a class="console_switchbutton" href="javascript:void(0);"  onclick="navFn.switchDarkMode();" rel="external nofollow"
+           title="切换模式 - 日夜交替，黑白互换。">
+            <i class="haofont hao-icon-moon-clear-fill" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+    <!-- 搜索使用搜索插件 -->
+    <div class="nav-button" id="search-button">
+        <a class="site-page social-icon search" href="javascript:SearchWidget.open();" rel="external nofollow"
+           title="站内搜索">
+            <i class="haofont hao-icon-search--line"></i>
+        </a>
+    </div>
+
+    <div class="console-button" tabindex="-1">
+        <span class="site-page nav-login">
+            <i class="haofont hao-icon-zhanghao1 " style="font-size: 19.5px;"></i>
+            
+        </span>
+        <div class="back-menu-list-groups">
+            <div class="back-menu-list-group" style="margin: -4px -9px -4px -18px">
+                <div class="back-menu-list">
+                    
+                    <a class="back-menu-item" rel="external nofollow" target="_blank"
+                       href="/login"
+                       onclick="this.href = '/login?redirect_uri=' + encodeURIComponent(window.location.href)">
+                        <span class="back-menu-item-text">登录</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="nav-button" id="nav-totop" onclick="btf.scrollToDest(0,500)">
+        <a class="totopbtn">
+            <i class="haofont hao-icon-arrow-up" style="font-size: 1rem;"></i><span id="percent">0</span>
+        </a>
+    </div>
+
+    <div id="toggle-menu">
+        <a class="site-page">
+            <i class="haofont hao-icon-bars"></i>
+        </a>
+    </div>
+</div>
+
+
+    </div>
+</nav>
+        </header>
+        <main class="layout" id="content-inner">
+            <div id="tag">
+                <div id="tag-page-tags">
+                    <a style="font-size:1em;color:#3c228c"
+                       href="/tags/VxKex"
+                       id="VxKex" class="select">
+                        <span class="tags-punctuation">VxKex</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%85%BC%E5%AE%B9%E5%B1%82"
+                       id="兼容层">
+                        <span class="tags-punctuation">兼容层</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/WIN7"
+                       id="WIN7">
+                        <span class="tags-punctuation">WIN7</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Nginx"
+                       id="Nginx">
+                        <span class="tags-punctuation">Nginx</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Web%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE"
+                       id="Web无法访问">
+                        <span class="tags-punctuation">Web无法访问</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91"
+                       id="华为云">
+                        <span class="tags-punctuation">华为云</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8E%9F%E5%9B%BE"
+                       id="原图">
+                        <span class="tags-punctuation">原图</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%9B%B8%E5%86%8C%E5%A4%87%E4%BB%BD"
+                       id="相册备份">
+                        <span class="tags-punctuation">相册备份</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%B8%BF%E8%92%99"
+                       id="鸿蒙">
+                        <span class="tags-punctuation">鸿蒙</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"
+                       id="系统更新">
+                        <span class="tags-punctuation">系统更新</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%88%AE%E5%89%8A"
+                       id="刮削">
+                        <span class="tags-punctuation">刮削</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/MusicScraper"
+                       id="MusicScraper">
+                        <span class="tags-punctuation">MusicScraper</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%AD%8C%E8%AF%8D"
+                       id="歌词">
+                        <span class="tags-punctuation">歌词</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/4Kn"
+                       id="4Kn">
+                        <span class="tags-punctuation">4Kn</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/512e"
+                       id="512e">
+                        <span class="tags-punctuation">512e</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%A1%AC%E7%9B%98"
+                       id="硬盘">
+                        <span class="tags-punctuation">硬盘</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AD%98%E5%82%A8%E6%B1%A0"
+                       id="存储池">
+                        <span class="tags-punctuation">存储池</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%89%8B%E6%9C%BA"
+                       id="手机">
+                        <span class="tags-punctuation">手机</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%95%B0%E6%8D%AE%E8%BF%98%E5%8E%9F"
+                       id="数据还原">
+                        <span class="tags-punctuation">数据还原</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%85%A7%E7%89%87%E5%A4%87%E4%BB%BD"
+                       id="照片备份">
+                        <span class="tags-punctuation">照片备份</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86"
+                       id="磁盘清理">
+                        <span class="tags-punctuation">磁盘清理</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%98%B2%E6%8A%A4"
+                       id="防护">
+                        <span class="tags-punctuation">防护</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8"
+                       id="网络安全">
+                        <span class="tags-punctuation">网络安全</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3"
+                       id="暴力破解">
+                        <span class="tags-punctuation">暴力破解</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/SSH"
+                       id="SSH">
+                        <span class="tags-punctuation">SSH</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AE%B6%E5%BA%AD%E5%85%B1%E4%BA%AB"
+                       id="家庭共享">
+                        <span class="tags-punctuation">家庭共享</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%A4%9A%E7%94%A8%E6%88%B7"
+                       id="多用户">
+                        <span class="tags-punctuation">多用户</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/NVIDIA"
+                       id="NVIDIA">
+                        <span class="tags-punctuation">NVIDIA</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/TESLA%20P4"
+                       id="TESLA P4">
+                        <span class="tags-punctuation">TESLA P4</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%A1%AC%E8%A7%A3"
+                       id="硬解">
+                        <span class="tags-punctuation">硬解</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8"
+                       id="显卡驱动">
+                        <span class="tags-punctuation">显卡驱动</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91"
+                       id="端口转发">
+                        <span class="tags-punctuation">端口转发</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE"
+                       id="外网访问">
+                        <span class="tags-punctuation">外网访问</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/FN%20Connect"
+                       id="FN Connect">
+                        <span class="tags-punctuation">FN Connect</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/DDNS"
+                       id="DDNS">
+                        <span class="tags-punctuation">DDNS</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%95%85%E9%9A%9C%E4%BF%AE%E5%A4%8D"
+                       id="故障修复">
+                        <span class="tags-punctuation">故障修复</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%BC%A9%E7%95%A5%E5%9B%BE"
+                       id="缩略图">
+                        <span class="tags-punctuation">缩略图</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7"
+                       id="系统升级">
+                        <span class="tags-punctuation">系统升级</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB"
+                       id="局域网共享">
+                        <span class="tags-punctuation">局域网共享</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/SMB"
+                       id="SMB">
+                        <span class="tags-punctuation">SMB</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Docker%E7%BD%91%E7%BB%9C"
+                       id="Docker网络">
+                        <span class="tags-punctuation">Docker网络</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/macvlan"
+                       id="macvlan">
+                        <span class="tags-punctuation">macvlan</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/OpenWrt"
+                       id="OpenWrt">
+                        <span class="tags-punctuation">OpenWrt</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/QWRT"
+                       id="QWRT">
+                        <span class="tags-punctuation">QWRT</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Kodbox"
+                       id="Kodbox">
+                        <span class="tags-punctuation">Kodbox</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88"
+                       id="在线预览">
+                        <span class="tags-punctuation">在线预览</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/WPS"
+                       id="WPS">
+                        <span class="tags-punctuation">WPS</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/eventlogger"
+                       id="eventlogger">
+                        <span class="tags-punctuation">eventlogger</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"
+                       id="故障排查">
+                        <span class="tags-punctuation">故障排查</span>
+                        <span class="tagsPageCount">6</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%97%A5%E5%BF%97%E4%B8%AD%E5%BF%83"
+                       id="日志中心">
+                        <span class="tags-punctuation">日志中心</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ARM"
+                       id="ARM">
+                        <span class="tags-punctuation">ARM</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7"
+                       id="开源工具">
+                        <span class="tags-punctuation">开源工具</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"
+                       id="网络配置">
+                        <span class="tags-punctuation">网络配置</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Mihomo"
+                       id="Mihomo">
+                        <span class="tags-punctuation">Mihomo</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ROCm"
+                       id="ROCm">
+                        <span class="tags-punctuation">ROCm</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/OpenVINO"
+                       id="OpenVINO">
+                        <span class="tags-punctuation">OpenVINO</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%A0%B8%E6%98%BE%E5%8A%A0%E9%80%9F"
+                       id="核显加速">
+                        <span class="tags-punctuation">核显加速</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%9B%B8%E5%86%8CAI"
+                       id="相册AI">
+                        <span class="tags-punctuation">相册AI</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/PT%E8%BE%85%E7%A7%8D"
+                       id="PT辅种">
+                        <span class="tags-punctuation">PT辅种</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/LVM"
+                       id="LVM">
+                        <span class="tags-punctuation">LVM</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%A3%81%E7%9B%98%E6%89%A9%E5%AE%B9"
+                       id="磁盘扩容">
+                        <span class="tags-punctuation">磁盘扩容</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%BD%B1%E8%A7%86%E4%BB%93"
+                       id="影视仓">
+                        <span class="tags-punctuation">影视仓</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%9B%B4%E6%92%AD%E6%BA%90"
+                       id="直播源">
+                        <span class="tags-punctuation">直播源</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/IPTV"
+                       id="IPTV">
+                        <span class="tags-punctuation">IPTV</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Ubuntu"
+                       id="Ubuntu">
+                        <span class="tags-punctuation">Ubuntu</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/AI"
+                       id="AI">
+                        <span class="tags-punctuation">AI</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/openclaw"
+                       id="openclaw">
+                        <span class="tags-punctuation">openclaw</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/GRUB"
+                       id="GRUB">
+                        <span class="tags-punctuation">GRUB</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86"
+                       id="电源管理">
+                        <span class="tags-punctuation">电源管理</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%BB%E6%9D%BF"
+                       id="主板">
+                        <span class="tags-punctuation">主板</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Z690"
+                       id="Z690">
+                        <span class="tags-punctuation">Z690</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"
+                       id="反向代理">
+                        <span class="tags-punctuation">反向代理</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%A7%86%E9%A2%91%E8%BD%AC%E7%A0%81"
+                       id="视频转码">
+                        <span class="tags-punctuation">视频转码</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E6%BA%90"
+                       id="在线音源">
+                        <span class="tags-punctuation">在线音源</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/VAAPI"
+                       id="VAAPI">
+                        <span class="tags-punctuation">VAAPI</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96"
+                       id="脚本自动化">
+                        <span class="tags-punctuation">脚本自动化</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%A7%86%E9%A2%91%E5%90%88%E5%B9%B6"
+                       id="视频合并">
+                        <span class="tags-punctuation">视频合并</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/FFmpeg"
+                       id="FFmpeg">
+                        <span class="tags-punctuation">FFmpeg</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%9B%B6%E4%BE%B5%E5%85%A5"
+                       id="零侵入">
+                        <span class="tags-punctuation">零侵入</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%9B%B6%E4%BE%B5%E5%85%A5%E9%83%A8%E7%BD%B2"
+                       id="零侵入部署">
+                        <span class="tags-punctuation">零侵入部署</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D"
+                       id="数据恢复">
+                        <span class="tags-punctuation">数据恢复</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/LVM%E7%BC%93%E5%AD%98"
+                       id="LVM缓存">
+                        <span class="tags-punctuation">LVM缓存</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/RAID5"
+                       id="RAID5">
+                        <span class="tags-punctuation">RAID5</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%BC%93%E5%AD%98%E6%95%85%E9%9A%9C"
+                       id="缓存故障">
+                        <span class="tags-punctuation">缓存故障</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%BE%85%E7%A7%8D"
+                       id="辅种">
+                        <span class="tags-punctuation">辅种</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/502%E9%94%99%E8%AF%AF"
+                       id="502错误">
+                        <span class="tags-punctuation">502错误</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/IYUUPlus"
+                       id="IYUUPlus">
+                        <span class="tags-punctuation">IYUUPlus</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/mdadm"
+                       id="mdadm">
+                        <span class="tags-punctuation">mdadm</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Btrfs"
+                       id="Btrfs">
+                        <span class="tags-punctuation">Btrfs</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/LVM%E6%89%A9%E5%AE%B9"
+                       id="LVM扩容">
+                        <span class="tags-punctuation">LVM扩容</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%B3%BB%E7%BB%9F%E7%9B%98%E8%BF%81%E7%A7%BB"
+                       id="系统盘迁移">
+                        <span class="tags-punctuation">系统盘迁移</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/homelab"
+                       id="homelab">
+                        <span class="tags-punctuation">homelab</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%87%AA%E5%BB%BA"
+                       id="自建">
+                        <span class="tags-punctuation">自建</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Docker"
+                       id="Docker">
+                        <span class="tags-punctuation">Docker</span>
+                        <span class="tagsPageCount">7</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/IPv6"
+                       id="IPv6">
+                        <span class="tags-punctuation">IPv6</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/NAS"
+                       id="NAS">
+                        <span class="tags-punctuation">NAS</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9C%A8%E7%BA%BF%E9%9F%B3%E4%B9%90%E6%BA%90"
+                       id="在线音乐源">
+                        <span class="tags-punctuation">在线音乐源</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%BC%80%E6%BA%90%E6%89%A9%E5%B1%95"
+                       id="开源扩展">
+                        <span class="tags-punctuation">开源扩展</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%A3%9E%E7%89%9B%E9%9F%B3%E4%B9%90"
+                       id="飞牛音乐">
+                        <span class="tags-punctuation">飞牛音乐</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%A3%9E%E7%89%9B%E7%A7%81%E6%9C%89%E4%BA%91"
+                       id="飞牛私有云">
+                        <span class="tags-punctuation">飞牛私有云</span>
+                        <span class="tagsPageCount">0</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%86%85%E6%A0%B8%E5%85%BC%E5%AE%B9"
+                       id="内核兼容">
+                        <span class="tags-punctuation">内核兼容</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/DKMS"
+                       id="DKMS">
+                        <span class="tags-punctuation">DKMS</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Debian%E9%A9%B1%E5%8A%A8"
+                       id="Debian驱动">
+                        <span class="tags-punctuation">Debian驱动</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/BCM4360"
+                       id="BCM4360">
+                        <span class="tags-punctuation">BCM4360</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8D%9A%E9%80%9A%E7%BD%91%E5%8D%A1"
+                       id="博通网卡">
+                        <span class="tags-punctuation">博通网卡</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/VBIOS%E6%8F%90%E5%8F%96"
+                       id="VBIOS提取">
+                        <span class="tags-punctuation">VBIOS提取</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/vfio-pci"
+                       id="vfio-pci">
+                        <span class="tags-punctuation">vfio-pci</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/AMD%E6%A0%B8%E6%98%BE%E7%9B%B4%E9%80%9A"
+                       id="AMD核显直通">
+                        <span class="tags-punctuation">AMD核显直通</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/PVE"
+                       id="PVE">
+                        <span class="tags-punctuation">PVE</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/MPV%E6%92%AD%E6%94%BE%E5%99%A8"
+                       id="MPV播放器">
+                        <span class="tags-punctuation">MPV播放器</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/AList%E7%9B%B4%E9%93%BE"
+                       id="AList直链">
+                        <span class="tags-punctuation">AList直链</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ISO%E8%93%9D%E5%85%89%E5%8E%9F%E7%9B%98"
+                       id="ISO蓝光原盘">
+                        <span class="tags-punctuation">ISO蓝光原盘</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/115%E7%BD%91%E7%9B%98"
+                       id="115网盘">
+                        <span class="tags-punctuation">115网盘</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9B%BA%E6%80%81U%E7%9B%98"
+                       id="固态U盘">
+                        <span class="tags-punctuation">固态U盘</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98"
+                       id="虚拟磁盘">
+                        <span class="tags-punctuation">虚拟磁盘</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ToGo"
+                       id="ToGo">
+                        <span class="tags-punctuation">ToGo</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fnOS"
+                       id="fnOS">
+                        <span class="tags-punctuation">fnOS</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/Ventoy"
+                       id="Ventoy">
+                        <span class="tags-punctuation">Ventoy</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/rclone"
+                       id="rclone">
+                        <span class="tags-punctuation">rclone</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F"
+                       id="配置文件损坏">
+                        <span class="tags-punctuation">配置文件损坏</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/cloud_storage_dav"
+                       id="cloud_storage_dav">
+                        <span class="tags-punctuation">cloud_storage_dav</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD"
+                       id="远程挂载">
+                        <span class="tags-punctuation">远程挂载</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%A3%9E%E7%89%9BfnOS"
+                       id="飞牛fnOS">
+                        <span class="tags-punctuation">飞牛fnOS</span>
+                        <span class="tagsPageCount">26</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%89%AB%E7%A0%81%E7%82%B9%E6%AD%8C"
+                       id="扫码点歌">
+                        <span class="tags-punctuation">扫码点歌</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%92%AD%E6%94%BE%E7%B3%BB%E7%BB%9F"
+                       id="播放系统">
+                        <span class="tags-punctuation">播放系统</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AE%B6%E5%BA%AD%E7%82%B9%E6%AD%8C"
+                       id="家庭点歌">
+                        <span class="tags-punctuation">家庭点歌</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%9C%AC%E5%9C%B0%E6%9B%B2%E5%BA%93"
+                       id="本地曲库">
+                        <span class="tags-punctuation">本地曲库</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%A3%B0%E5%9C%BAKTV"
+                       id="声场KTV">
+                        <span class="tags-punctuation">声场KTV</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/zhu-ti-xiu-gai"
+                       id="zhu-ti-xiu-gai">
+                        <span class="tags-punctuation">主题修改</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/thymeleaf"
+                       id="thymeleaf">
+                        <span class="tags-punctuation">Thymeleaf</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/meilisearch"
+                       id="meilisearch">
+                        <span class="tags-punctuation">Meilisearch</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/301tiao-zhuan-www"
+                       id="301tiao-zhuan-www">
+                        <span class="tags-punctuation">301跳转www</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xi-ping"
+                       id="xi-ping">
+                        <span class="tags-punctuation">熄屏</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/zeronews"
+                       id="zeronews">
+                        <span class="tags-punctuation">ZeroNews</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/zheng-jian-zhao"
+                       id="zheng-jian-zhao">
+                        <span class="tags-punctuation">证件照</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/pycharm"
+                       id="pycharm">
+                        <span class="tags-punctuation">pycharm</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/cun-chu-kong-jian-yi-yi-chu"
+                       id="cun-chu-kong-jian-yi-yi-chu">
+                        <span class="tags-punctuation">存储空间已移除</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/omnibox"
+                       id="omnibox">
+                        <span class="tags-punctuation">OmniBox</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/mumuainovel"
+                       id="mumuainovel">
+                        <span class="tags-punctuation">MuMuAINovel</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/rootzhang-hu"
+                       id="rootzhang-hu">
+                        <span class="tags-punctuation">root账户</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/team-ide"
+                       id="team-ide">
+                        <span class="tags-punctuation">Team IDE</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/teng-fei-webo"
+                       id="teng-fei-webo">
+                        <span class="tags-punctuation">腾飞webo</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/lycheeli-zhi-xiang-ce"
+                       id="lycheeli-zhi-xiang-ce">
+                        <span class="tags-punctuation">Lychee荔枝相册</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/gopeed"
+                       id="gopeed">
+                        <span class="tags-punctuation">Gopeed</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/qq"
+                       id="qq">
+                        <span class="tags-punctuation">QQ</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/wei-xin"
+                       id="wei-xin">
+                        <span class="tags-punctuation">微信</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/linkwarden"
+                       id="linkwarden">
+                        <span class="tags-punctuation">Linkwarden</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/dong-gua-haos"
+                       id="dong-gua-haos">
+                        <span class="tags-punctuation">冬瓜HAOS</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xiaomusic"
+                       id="xiaomusic">
+                        <span class="tags-punctuation">xiaomusic</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/otterwiki"
+                       id="otterwiki">
+                        <span class="tags-punctuation">OtterWiki</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/weknora"
+                       id="weknora">
+                        <span class="tags-punctuation">WeKnora</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/teng-xun-kai-yuan-zhi-shi-ku"
+                       id="teng-xun-kai-yuan-zhi-shi-ku">
+                        <span class="tags-punctuation">腾讯开源知识库</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/yue-du-3.0"
+                       id="yue-du-3.0">
+                        <span class="tags-punctuation">阅读3.0</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/easynode"
+                       id="easynode">
+                        <span class="tags-punctuation">EasyNode</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xiao-yuan-wang"
+                       id="xiao-yuan-wang">
+                        <span class="tags-punctuation">校园网</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/zi-dong-guan-bi-ping-mu"
+                       id="zi-dong-guan-bi-ping-mu">
+                        <span class="tags-punctuation">自动关闭屏幕</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/homarrdao-hang-ye"
+                       id="homarrdao-hang-ye">
+                        <span class="tags-punctuation">Homarr导航页</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/home-assistant"
+                       id="home-assistant">
+                        <span class="tags-punctuation">Home Assistant</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/gpu-xing-neng"
+                       id="gpu-xing-neng">
+                        <span class="tags-punctuation">GPU 性能</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/du-mo-gu-ce-shi"
+                       id="du-mo-gu-ce-shi">
+                        <span class="tags-punctuation">毒蘑菇测试</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/debian"
+                       id="debian">
+                        <span class="tags-punctuation">Debian</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/iscsifu-wu"
+                       id="iscsifu-wu">
+                        <span class="tags-punctuation">iSCSI服务</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/vscode"
+                       id="vscode">
+                        <span class="tags-punctuation">vscode</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/easytier"
+                       id="easytier">
+                        <span class="tags-punctuation">EasyTier</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/chromium"
+                       id="chromium">
+                        <span class="tags-punctuation">Chromium</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/uuyuan-cheng"
+                       id="uuyuan-cheng">
+                        <span class="tags-punctuation">UU远程</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/lian-xi-lao-zhu-ban"
+                       id="lian-xi-lao-zhu-ban">
+                        <span class="tags-punctuation">联系老主板</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xi-tong-fen-qu"
+                       id="xi-tong-fen-qu">
+                        <span class="tags-punctuation">系统分区</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xi-tong-pan"
+                       id="xi-tong-pan">
+                        <span class="tags-punctuation">系统盘</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ssdhuan-cun"
+                       id="ssdhuan-cun">
+                        <span class="tags-punctuation">SSD缓存</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/me-mini"
+                       id="me-mini">
+                        <span class="tags-punctuation">ME mini</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ling-ke"
+                       id="ling-ke">
+                        <span class="tags-punctuation">零刻</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/bei-fen"
+                       id="bei-fen">
+                        <span class="tags-punctuation">备份</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xiang-ce"
+                       id="xiang-ce">
+                        <span class="tags-punctuation">相册</span>
+                        <span class="tagsPageCount">5</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/rustdesk"
+                       id="rustdesk">
+                        <span class="tags-punctuation">rustdesk</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/mysql"
+                       id="mysql">
+                        <span class="tags-punctuation">mysql</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/docker"
+                       id="docker">
+                        <span class="tags-punctuation">docker</span>
+                        <span class="tagsPageCount">5</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/51.la"
+                       id="51.la">
+                        <span class="tags-punctuation">51.la</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/https"
+                       id="https">
+                        <span class="tags-punctuation">HTTPS</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/pansou"
+                       id="pansou">
+                        <span class="tags-punctuation">pansou</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fei-niu-fnconnect"
+                       id="fei-niu-fnconnect">
+                        <span class="tags-punctuation">飞牛FNconnect</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fnconnect"
+                       id="fnconnect">
+                        <span class="tags-punctuation">FNconnect</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/edgeone"
+                       id="edgeone">
+                        <span class="tags-punctuation">EdgeOne</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/you-pai-yun-cdn"
+                       id="you-pai-yun-cdn">
+                        <span class="tags-punctuation">又拍云CDN</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/xing-kong-zu-wang"
+                       id="xing-kong-zu-wang">
+                        <span class="tags-punctuation">星空组网</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/yun-fu-wu-qi"
+                       id="yun-fu-wu-qi">
+                        <span class="tags-punctuation">云服务器</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/npm"
+                       id="npm">
+                        <span class="tags-punctuation">npm</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/pdfbian-ji"
+                       id="pdfbian-ji">
+                        <span class="tags-punctuation">PDF编辑</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/yi-di-yuan-cheng-kong-zhi"
+                       id="yi-di-yuan-cheng-kong-zhi">
+                        <span class="tags-punctuation">异地远程控制</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fei-niu-ying-shi"
+                       id="fei-niu-ying-shi">
+                        <span class="tags-punctuation">飞牛影视</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/zhong-kong-tai"
+                       id="zhong-kong-tai">
+                        <span class="tags-punctuation">中控台</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/haloban-ben-sheng-ji"
+                       id="haloban-ben-sheng-ji">
+                        <span class="tags-punctuation">Halo版本升级</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/frpcke-hu-duan"
+                       id="frpcke-hu-duan">
+                        <span class="tags-punctuation">frpc客户端</span>
+                        <span class="tagsPageCount">4</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fei-niu"
+                       id="fei-niu">
+                        <span class="tags-punctuation">飞牛</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/jie-dian-xiao-bao"
+                       id="jie-dian-xiao-bao">
+                        <span class="tags-punctuation">节点小宝</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/fei-niu-tong-bu"
+                       id="fei-niu-tong-bu">
+                        <span class="tags-punctuation">飞牛同步</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/haozhu-ti"
+                       id="haozhu-ti">
+                        <span class="tags-punctuation">Hao主题</span>
+                        <span class="tagsPageCount">5</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/halobo-ke"
+                       id="halobo-ke">
+                        <span class="tags-punctuation">Halo博客</span>
+                        <span class="tagsPageCount">15</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%A3%9E%E7%89%9Bos"
+                       id="飞牛os">
+                        <span class="tags-punctuation">飞牛OS</span>
+                        <span class="tagsPageCount">27</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%A3%9E%E7%89%9Bnas"
+                       id="飞牛nas">
+                        <span class="tags-punctuation">飞牛NAS</span>
+                        <span class="tagsPageCount">45</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA"
+                       id="非插件显示">
+                        <span class="tags-punctuation">非插件显示</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%98%B3%E5%85%89%E8%B7%AF%E4%B8%8A"
+                       id="阳光路上">
+                        <span class="tags-punctuation">阳光路上</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91"
+                       id="重定向">
+                        <span class="tags-punctuation">重定向</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%B6%85%E7%BA%A7%E9%93%BE%E6%8E%A5"
+                       id="超级链接">
+                        <span class="tags-punctuation">超级链接</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%87%AA%E5%8A%A8%E8%8D%89%E7%A8%BF"
+                       id="自动草稿">
+                        <span class="tags-punctuation">自动草稿</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0"
+                       id="自动添加">
+                        <span class="tags-punctuation">自动添加</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"
+                       id="背景图片">
+                        <span class="tags-punctuation">背景图片</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"
+                       id="网易云音乐">
+                        <span class="tags-punctuation">网易云音乐</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E7%94%B5%E8%84%91%E5%AD%97%E4%BD%93"
+                       id="电脑字体">
+                        <span class="tags-punctuation">电脑字体</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"
+                       id="流量分析">
+                        <span class="tags-punctuation">流量分析</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B"
+                       id="最新教程">
+                        <span class="tags-punctuation">最新教程</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%9B%B4%E6%8D%A2%E8%B7%AF%E7%94%B1%E5%99%A8"
+                       id="更换路由器">
+                        <span class="tags-punctuation">更换路由器</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E6%8D%A2%E7%A9%BA%E9%97%B4"
+                       id="换空间">
+                        <span class="tags-punctuation">换空间</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%BF%83%E7%81%B5%E9%9F%B3%E4%B9%90"
+                       id="心灵音乐">
+                        <span class="tags-punctuation">心灵音乐</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+                       id="常用命令">
+                        <span class="tags-punctuation">常用命令</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%B8%A6www%E5%9F%9F%E5%90%8D"
+                       id="带www域名">
+                        <span class="tags-punctuation">带www域名</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BF%AE%E6%94%B9"
+                       id="导航栏修改">
+                        <span class="tags-punctuation">导航栏修改</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF"
+                       id="宝塔面板">
+                        <span class="tags-punctuation">宝塔面板</span>
+                        <span class="tagsPageCount">6</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AE%9D%E5%A1%94"
+                       id="宝塔">
+                        <span class="tags-punctuation">宝塔</span>
+                        <span class="tagsPageCount">3</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AE%89%E5%85%A8%E8%81%94%E7%9B%9F"
+                       id="安全联盟">
+                        <span class="tags-punctuation">安全联盟</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%AD%90%E5%AF%BC%E8%88%AA"
+                       id="子导航">
+                        <span class="tags-punctuation">子导航</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%9C%AC%E5%9C%B0%E5%8C%96"
+                       id="图片自动本地化">
+                        <span class="tags-punctuation">图片自动本地化</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9B%BE%E7%89%87%E7%9B%97%E9%93%BE"
+                       id="图片盗链">
+                        <span class="tags-punctuation">图片盗链</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9B%BA%E5%AE%9Aip"
+                       id="固定ip">
+                        <span class="tags-punctuation">固定IP</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8"
+                       id="回到顶部">
+                        <span class="tags-punctuation">回到顶部</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%92%8C%E5%85%B0%E8%8A%B1%E5%9C%A8%E4%B8%80%E8%B5%B7"
+                       id="和兰花在一起">
+                        <span class="tags-punctuation">和兰花在一起</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%90%8E%E5%8F%B0%E7%99%BB%E9%99%86%E5%AF%86%E7%A0%81"
+                       id="后台登陆密码">
+                        <span class="tags-punctuation">后台登陆密码</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%90%8E%E5%8F%B0%E7%A9%BA%E7%99%BD"
+                       id="后台空白">
+                        <span class="tags-punctuation">后台空白</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A"
+                       id="去广告">
+                        <span class="tags-punctuation">去广告</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8E%9F%E5%88%9B%E6%96%87%E7%AB%A0"
+                       id="原创文章">
+                        <span class="tags-punctuation">原创文章</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8D%A0%E7%94%A8%E8%B5%84%E6%BA%90"
+                       id="占用资源">
+                        <span class="tags-punctuation">占用资源</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%8A%A0%E9%80%9F%E8%A7%86%E9%A2%91"
+                       id="加速视频">
+                        <span class="tags-punctuation">加速视频</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%88%97%E8%A1%A8%E9%A1%B5"
+                       id="列表页">
+                        <span class="tags-punctuation">列表页</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"
+                       id="内网穿透">
+                        <span class="tags-punctuation">内网穿透</span>
+                        <span class="tagsPageCount">5</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%BF%AE%E6%94%B9-htaccess"
+                       id="修改-htaccess">
+                        <span class="tags-punctuation">修改.htaccess</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%BB%E5%88%86%E7%B1%BB%E5%AF%BC%E8%88%AA"
+                       id="主分类导航">
+                        <span class="tags-punctuation">主分类导航</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%AD%E6%96%87%E5%91%BD%E5%90%8D%E7%9A%84mp3"
+                       id="中文命名的mp3">
+                        <span class="tags-punctuation">中文命名的mp3</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%8D%E5%B8%A6www"
+                       id="不带www">
+                        <span class="tags-punctuation">不带www</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E9%94%99%E8%AF%AF"
+                       id="上传图片错误">
+                        <span class="tags-punctuation">上传图片错误</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/%E4%B8%87%E7%BD%91"
+                       id="万网">
+                        <span class="tags-punctuation">万网</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/wordpress"
+                       id="wordpress">
+                        <span class="tags-punctuation">wordpress</span>
+                        <span class="tagsPageCount">20</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/windowsxp-sp3"
+                       id="windowsxp-sp3">
+                        <span class="tags-punctuation">WindowsXP SP3</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/windows-11%E5%8D%87%E7%BA%A7"
+                       id="windows-11升级">
+                        <span class="tags-punctuation">Windows 11升级</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ssh"
+                       id="ssh">
+                        <span class="tags-punctuation">SSH</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/securecrt"
+                       id="securecrt">
+                        <span class="tags-punctuation">SecureCRT</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/putty"
+                       id="putty">
+                        <span class="tags-punctuation">putty</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/phpmyadmin"
+                       id="phpmyadmin">
+                        <span class="tags-punctuation">phpmyadmin</span>
+                        <span class="tagsPageCount">2</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/open_basedir-restriction-in-effect"
+                       id="open_basedir-restriction-in-effect">
+                        <span class="tags-punctuation">open_basedir restriction in effect</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/nicen-localize-image"
+                       id="nicen-localize-image">
+                        <span class="tags-punctuation">nicen-localize-image</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/metingjs"
+                       id="metingjs">
+                        <span class="tags-punctuation">MetingJS</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/linux%E7%A9%BA%E9%97%B4"
+                       id="linux空间">
+                        <span class="tags-punctuation">linux空间</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/linux%E4%BA%91%E4%B8%BB%E6%9C%BA"
+                       id="linux云主机">
+                        <span class="tags-punctuation">linux云主机</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/i-o-deadline-reached"
+                       id="i-o-deadline-reached">
+                        <span class="tags-punctuation">i/o deadline reached</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/httpd-conf"
+                       id="httpd-conf">
+                        <span class="tags-punctuation">httpd.conf</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/https%E5%90%8E"
+                       id="https后">
+                        <span class="tags-punctuation">https后</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/gravatar%E5%A4%B4%E5%83%8F"
+                       id="gravatar头像">
+                        <span class="tags-punctuation">Gravatar头像</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/ftp%E6%9D%83%E9%99%90"
+                       id="ftp权限">
+                        <span class="tags-punctuation">FTP权限</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/css%E6%A0%B7%E5%BC%8F%E9%94%99%E4%B9%B1"
+                       id="css样式错乱">
+                        <span class="tags-punctuation">CSS样式错乱</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/cravatar%E5%A4%B4%E5%83%8F"
+                       id="cravatar头像">
+                        <span class="tags-punctuation">Cravatar头像</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/aplayer"
+                       id="aplayer">
+                        <span class="tags-punctuation">APlayer</span>
+                        <span class="tagsPageCount">1</span>
+                    </a><a style="font-size:1em;color:#3c228c"
+                       href="/tags/1panel"
+                       id="1panel">
+                        <span class="tags-punctuation">1panel</span>
+                        <span class="tagsPageCount">1</span>
+                    </a>
+                </div>
+                <!-- 文章 -->
+                
+    <div class="recent-posts" id="recent-posts">
+        <!-- card，需要添加在没有图片时使用随机图片 -->
+        <div class="recent-post-item col2 top odd " onclick="pjax.loadUrl(&#39;/archives/fnnas-73250&#39;)">
+
+            <div class="post_cover left_radius">
+                <a href="/archives/fnnas-73250" title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路">
+                    <img class="post_bg"
+                         alt="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路" data-lazy-src="https://www.cuixinjiang.cn/upload/image-jvFk.png?width=800"
+                         src="">
+                </a>
+            </div>
+            <div class="recent-post-info">
+                <div class="recent-post-info-top">
+                    <div class="recent-post-info-top-tips">
+                        <!-- 类别非空时 -->
+                        
+                            <span href="/categories/zhuanyejilu"
+                                  title="专业记录"
+                                  class="original">专业记录</span>
+                        
+                        <a class="unvisited-post" href="/archives/fnnas-73250" title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路"
+                           data-pjax-state="">未读</a>
+                    </div>
+                    <a class="article-title" href="/archives/fnnas-73250"
+                       title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路">旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路</a>
+                    <div class="content">旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路 手头还有跑 Win7 的旧电脑/工控机，想装飞牛同步做文件备份，结果安装包直接报错装不下去。打系统补丁、换安装方式都试过还是不行——不是你的操作问题，是飞牛同步根本不支持 Win7。不过回复区给出了一条兼容思路，这篇把原因和可行的处理路径整理</div>
+                </div>
+
+                <div class="article-meta-wrap">
+                    <!-- tag -->
+                    
+                        <span class="article-meta tags">
+                            <a class="article-meta__tags" event.cancelbubble onclick="window.event.cancelBubble=!0"
+                               href="/tags/%E9%A3%9E%E7%89%9BfnOS"
+                               title="飞牛fnOS">
+                                <span class="tags-punctuation">飞牛fnOS</span>
+                            </a><a class="article-meta__tags" event.cancelbubble onclick="window.event.cancelBubble=!0"
+                               href="/tags/WIN7"
+                               title="WIN7">
+                                <span class="tags-punctuation">WIN7</span>
+                            </a><a class="article-meta__tags" event.cancelbubble onclick="window.event.cancelBubble=!0"
+                               href="/tags/fei-niu-tong-bu"
+                               title="飞牛同步">
+                                <span class="tags-punctuation">飞牛同步</span>
+                            </a><a class="article-meta__tags" event.cancelbubble onclick="window.event.cancelBubble=!0"
+                               href="/tags/%E5%85%BC%E5%AE%B9%E5%B1%82"
+                               title="兼容层">
+                                <span class="tags-punctuation">兼容层</span>
+                            </a><a class="article-meta__tags" event.cancelbubble onclick="window.event.cancelBubble=!0"
+                               href="/tags/VxKex"
+                               title="VxKex">
+                                <span class="tags-punctuation">VxKex</span>
+                            </a>
+                        </span>
+                    
+                    <!-- 创建时间 -->
+                    <span class="post-meta-date">
+                        <i class="far fa-calendar-alt"></i>
+                        
+                        
+                        <time style="display: inline;" datetime="2026-09-21T00:33:12.142708833Z" title="2026-09-21创建">最近</time>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- 分页 -->
+        <nav id="pagination">
+    <div class="pagination">
+
+        <!-- 页码按钮 -->
+        
+
+        
+            
+            
+        
+            
+            
+        
+            <span class="page-number current">1</span>
+            
+        
+            
+            
+        
+            
+            
+        
+
+        
+        <!-- 翻页按钮 -->
+        
+
+        
+        
+
+        <script>
+            function scrollToPost() {
+                if (document.querySelector(".pl-container")) {
+                    setTimeout(() => {
+                        btf.scrollToDest(window.innerHeight, 500);
+                    }, 1000)
+                }
+            }
+        </script>
+        
+
+    </div>
+</nav>
+
+    </div>
+
+            </div>
+            <!-- sidebar -->
+            <div class="aside-content" id="aside-content">
+
+    <!-- 侧栏部件，不包含 toc 则直接遍历 -->
+    
+        
+            
+                
+                    <!-- 侧边栏自我介绍 -->
+
+<div class="card-widget card-info" >
+
+    <!-- 默认 -->
+    
+        <!-- 描述信息 -->
+        <div class="card-content" style="background-image: url(/upload/bingjingtup.png);">
+            <div class="card-info-avatar is-center">
+                <div class="author-info__top-group">
+                    <div class="author-info__sayhi" id="author-info__sayhi" onclick="heo.changeSayHelloText()">你好啊！我是
+                    </div>
+                    <img class="avatar-img"
+                         src=""
+                         data-lazy-src="/wp-content/uploads/2024/12/logo.png">
+                </div>
+                
+                <div class="author-info__name">午后大叔</div>
+                <div class="author-info__description">🤖️ 数码科技爱好者</br>🔍 分享与热心帮助</br>🏠 智能家居小能手</br>🤝 专修交互与设计</br>🏃 脚踏实地行动派</br>🧱 团队小组发动机</div>
+            </div>
+        </div>
+
+        <!-- 跳转信息 -->
+        <div class="banner-button-group">
+            <a class="banner-button" href="/about">
+                <i class="haofont hao-icon-circle-arrow-right"></i>
+                <span class="banner-button-text">了解更多</span>
+            </a>
+        </div>
+
+        
+
+        <style>
+            /* 社交按钮 */
+            #aside-content .card-info #card-info-btn {
+                display: none;
+            }
+
+            #aside-content .card-info .card-info-social-icons {
+                margin: 0;
+                padding-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                cursor: pointer;
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+            }
+
+            #aside-content .card-info .card-info-social-icons .social-icon {
+                margin: 0;
+                margin-right: 8px;
+            }
+
+            #aside-content .card-info .card-info-social-icons i {
+                background: var(--heo-white-op);
+                color: var(--heo-white);
+                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            #aside-content .card-info .card-info-social-icons i:hover {
+                background: var(--heo-white-op);
+                transform: scale(1.1);
+                color: var(--heo-white);
+                box-shadow: none;
+            }
+
+            #aside-content .card-info .banner-button {
+                height: 40px;
+                width: 124px;
+                border-radius: 20px;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: 1300px) {
+                #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+
+                [data-theme=dark] #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+            }
+
+            #aside-content .card-info img {
+                width: 28px;
+                right: 24px;
+                top: 20px;
+                border-radius: 500px;
+                transition: all 0.5s ease 0s;
+                position: absolute;
+            }
+
+            #aside-content .card-info .author-info__name {
+                font-weight: 500;
+                font-size: 1.57em;
+            }
+
+            #aside-content .card-info .author-info__name {
+                text-align: left;
+                font-weight: bold;
+                color: var(--heo-white);
+                font-size: 28px;
+                line-height: 1.1;
+                margin-top: 0.8rem;
+                margin-bottom: 0.4rem;
+            }
+        </style>
+
+    
+
+
+    <!-- 样式一 -->
+    
+
+</div>
+
+                
+                
+            
+            
+
+        
+            
+                
+                    <div class="card-widget heo-right-widget" id="card-wechat" onclick="javascript:window.open(&#39;/wechat&#39;)">
+    <div id="flip-wrapper">
+        <div id="flip-content">
+            <div class="face"
+                 style="background: url(/upload/wechat2-dqzi.png) center center / 100% no-repeat;"></div>
+            <div class="back face"
+                 style="background: url(/upload/wechat2-dqzi.png) center center / 100% no-repeat;"></div>
+        </div>
+    </div>
+
+    <style>
+        #aside-content .card-widget#card-wechat {
+            background: #07C160;
+        }
+        #aside-content .card-widget#card-wechat::before {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 0;
+            background: url(/themes/theme-hao/assets/images/gzh_cover.png) center center no-repeat;
+            content: '';
+            background-size: cover;
+            transition: .2s cubic-bezier(.45,.04,.43,1.21)
+        }
+        #aside-content .card-widget#card-wechat:hover:before {
+            top: 100%;
+            opacity: 0;
+            transition: .3s ease-out
+        }
+
+    </style>
+</div>
+
+                
+                
+            
+            
+
+        
+            
+                
+                    <div class="card-widget card-recent-post">
+    <div class="item-headline"><i class="haofont hao-icon-eicon_map-2-line1"></i><span>最近发布</span></div>
+    <div class="aside-list">
+        <!-- 最新文章，用户可以自定义展示数量 -->
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73250" title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路">
+                <img alt="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-jvFk.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73250" title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路">旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路</a>
+                <time title="2026-09-21 08:33:12" datetime="2026-09-21 08:33:12">2026-09-21 08:33:12</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73256" title="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了">
+                <img alt="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-KRLb.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73256" title="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了">升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了</a>
+                <time title="2026-09-20 20:39:03" datetime="2026-09-20 20:39:03">2026-09-20 20:39:03</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73185" title="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份">
+                <img alt="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-Wgwx.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73185" title="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份">鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份</a>
+                <time title="2026-09-20 08:33:47" datetime="2026-09-20 08:33:47">2026-09-20 08:33:47</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73175" title="系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖">
+                <img alt="系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-fsuv.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73175" title="系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖">系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖</a>
+                <time title="2026-09-19 20:34:23" datetime="2026-09-19 20:34:23">2026-09-19 20:34:23</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73132" title="飞牛音乐歌词不能自动下载？两个实用办法让歌词自己到位">
+                <img alt="飞牛音乐歌词不能自动下载？两个实用办法让歌词自己到位"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-GlGg.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73132" title="飞牛音乐歌词不能自动下载？两个实用办法让歌词自己到位">飞牛音乐歌词不能自动下载？两个实用办法让歌词自己到位</a>
+                <time title="2026-09-19 15:06:41" datetime="2026-09-19 15:06:41">2026-09-19 15:06:41</time>
+            </div>
+        </div>
+    </div>
+</div>
+                
+                
+            
+            
+
+        
+            
+                
+                    <!-- 最新评论 -->
+<div class="card-widget card-recent-post" >
+    <a onclick="pjax.loadUrl(&quot;\/pinglun&quot;)"
+       title="查看更多"
+       class="card-more-btn"
+       style="cursor:pointer" draggable="false"><i class="haofont hao-icon-chevron-right"></i></a>
+    <div class="item-headline"><i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i><span>最新评论</span></div>
+    <div class="aside-list" id="newcomm">
+        
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/406260b4f06fe8735ab053253894cd5715a307df1b563f027e72ede1cd02d9dd">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/wechat#comment-65a0f666-6679-4a26-b62f-481939e504cb"
+                       title="Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。"
+                       data-pjax-state="">Deepseek收录了你的文章噢！搜索飞牛相册问题的时候找到这里了。</a>
+                    <div class="name">
+                        <span>Fire / </span>
+                        <time
+                                datetime="2026-08-25 09:37:01"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/wechat#comment-08f0cc75-722e-4fb9-8395-72a7a334b739"
+                       title="心若无所求，👨‍👩‍👦有风无风皆自由"
+                       data-pjax-state="">心若无所求，👨‍👩‍👦有风无风皆自由</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-08-20 21:54:01"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/61096e1e922eb5d8789413754804c87133d3518e6a96caf15883a8dc1efe42be">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/%E5%85%B3%E4%BA%8E%E9%A3%9E%E7%89%9Bnas%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A81panel%E7%9A%84%E5%8A%9E%E6%B3%95#comment-80cfc13e-b213-40d0-abe1-0ef27649d7eb"
+                       title="很好"
+                       data-pjax-state="">很好</a>
+                    <div class="name">
+                        <span>ice / </span>
+                        <time
+                                datetime="2026-07-23 12:43:52"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/docker-phpmyadmin-xiu-gai-mo-ren-2048kbshang-chuan-xian-zhi#comment-64b66e45-103b-4395-b0c0-56b8087ab651"
+                       title="都是基础知识，我备个份😁"
+                       data-pjax-state="">都是基础知识，我备个份😁</a>
+                    <div class="name">
+                        <span>Administrator / </span>
+                        <time
+                                datetime="2026-06-02 22:30:54"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813" data-pjax-state="">
+                    <img alt="头像"
+                         src="" data-lazy-src="https://cravatar.cn/avatar/d1db009995751fb39acdbc8d717c1caa31c8e6684e2fe079dce71792d4b163ca">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/fei-niu-nasbu-shu-zeronews#comment-962c756b-6280-4ae3-afa3-04415a4a8813"
+                       title="👍我只是想评论可以吗？"
+                       data-pjax-state="">👍我只是想评论可以吗？</a>
+                    <div class="name">
+                        <span>deepseek / </span>
+                        <time
+                                datetime="2026-03-20 13:31:20"></time>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+                
+                
+            
+            
+
+        
+            
+                
+                
+                    <div class="sticky_layout">
+                        <!-- 目录 -->
+<div class="card-widget card-categories">
+    <div class="item-headline"><i class="haofont hao-icon-folder-open"></i><span>分类</span></div>
+    <div class="aside-list">
+        <ul class="card-category-list">
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/wzzhizuo">
+                        <span class="card-category-list-name" title="网站制作">网站制作</span>
+                    <span class="card-category-list-count">68</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/shenghuobiji">
+                        <span class="card-category-list-name" title="生活笔记">生活笔记</span>
+                    <span class="card-category-list-count">11</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/xinlingyinyue">
+                        <span class="card-category-list-name" title="心灵音乐">心灵音乐</span>
+                    <span class="card-category-list-count">14</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/tupiangushi">
+                        <span class="card-category-list-name" title="图片故事">图片故事</span>
+                    <span class="card-category-list-count">4</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/zhuanyejilu">
+                        <span class="card-category-list-name" title="专业记录">专业记录</span>
+                    <span class="card-category-list-count">108</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+                    </div>
+                
+            
+            
+
+        
+    
+
+    <!-- 侧栏部件，toc 之后的组件需要被 sticky_layout 包裹 -->
+    </div>
+        </main>
+
+        <!-- 底部 -->
+        <!-- 页脚模块 -->
+<footer id="footer">
+
+    
+
+    <!-- 社交链接，需要填入 href class title -->
+    <div id="footer_deal">
+        
+            
+        
+
+        <img class="footer_mini_logo"
+             src=""
+             data-lazy-src="/upload/%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E5%9B%BE%E6%A0%87-QThY.png" title="返回顶部" onclick="btf.scrollToDest(0, 500)">
+
+        
+            
+        
+    </div>
+
+    <!-- 相关地址  -->
+    
+        <div id="heo-footer">
+            <div class="footer-group">
+                <h3 class="footer-title">关于我</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="/about" target="_self">关于我</a><a class="footer-item" href="/pinglun" target="_self">留言评论</a><a class="footer-item" href="/tuku" target="_self">图片回忆</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">服务</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://chat.deepseek.com/sign_in" target="_blank">deepseek</a><a class="footer-item" href="https://account.aliyun.com/login/login.htm" target="_blank">阿里云</a><a class="footer-item" href="https://tongji.baidu.com" target="_blank">百度统计</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">外链</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://mp.weixin.qq.com/" target="_blank">微信公众号</a><a class="footer-item" href="http://mail.cuixinjiang.cn" target="_blank">我的邮箱</a><a class="footer-item" href="https://cloud.tencent.com" target="_blank">腾讯云</a>
+                </div>
+            </div>
+            
+        </div>
+
+    
+    <!-- 底部 banner -->
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+    
+    
+    
+    
+
+    <style>
+        .copyright,
+        #ghbdages,
+        #workboard {
+            text-align: center;
+        }
+    </style>
+
+    
+
+    <div id="footer-banner" style="padding:0.3rem">
+        <div class="footer-banner-links">
+            <div class="footer-banner-left">
+                <div id="footer-banner-tips">
+                    <div style="display: flex;flex-direction: row;align-items: center;">
+                        
+                            ©2025 - 2026
+                        
+                        
+                        By <a class="footer-banner-link" href="/" target="_blank">午后阳光</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-banner-right">
+                
+                <!-- 又拍云 -->
+                
+                <!-- 阿里云 -->
+                
+                <!-- 腾讯云 -->
+                <a class="footer-banner-link cloud" href="https://cloud.tencent.com/"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>本网站由</span>&nbsp;&nbsp;
+                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
+                    &nbsp;&nbsp;<span>提供CDN加速/云存储服务</span>
+                </a>
+                <!-- 华为云 -->
+                
+                <!-- 自定义云服务信息 -->
+                
+                
+                <!-- 订阅 需要 RSS 插件支持 -->
+                <a class="footer-banner-link" href="/rss.xml">订阅</a>
+                
+                <a class="footer-banner-link" href="/about">关于</a>
+                <a class="footer-banner-link" href="https://beian.miit.gov.cn/#/Integrated/index"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>鲁ICP备2025178327号</span>
+                    
+                </a>
+                <a class="footer-banner-link" href="http://www.beian.gov.cn/portal/registerSystemInfo"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>鲁公网安备37070502000656号</span>
+                    
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 右下角 snackbar 弹窗 -->
+    
+    <div id="quit-box" onclick="RemoveRewardMask()"></div>
+
+    <!--评论弹幕弹窗 -->
+    <div class="comment-barrage needEndHide" style="display: none;"></div>
+
+    <style>
+        a.footer-banner-link.cloud {
+            display: flex;
+            align-items: center;
+        }
+        img.cloud-logo {
+            height: 32px;
+        }
+    </style>
+    
+    
+        <style>
+            @media screen and (min-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-card-bg-none) 0%, #fff0 25%);
+                    margin-top: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+            @media screen and (max-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-background) 0%, #fff0 25%);
+                    margin-top: 0;
+                    z-index: 3;
+                }
+            }
+        
+        </style>
+    
+    
+</footer>
+
+
+
+    </div>
+
+
+
+
+<!-- todo 右下角悬浮操作按钮 -->
+
+    <div id="rightside">
+        <div id="rightside-config-hide">
+            
+            
+            <button id="darkmode" type="button" title="浅色和深色模式转换"><i class="haofont hao-icon-circle-half-stroke"></i></button>
+            <button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="haofont hao-icon-arrows-left-right"></i></button>
+        </div>
+        <div id="rightside-config-show">
+            <button id="rightside-config" type="button" title="设置"><i class="haofont hao-icon-gear"></i></button>
+            
+            <a id="to_comment" href="#post-comment" title="直达评论" ><i class="haofont hao-icon-chat--fill" style="font-size: 17px;"></i></a>
+            <a id="switch-commentBarrage" href="javascript:heo.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕" draggable="false" data-pjax-state="external"><i class="haofont hao-icon-danmu"></i></a>
+            <button id="go-up" type="button" title="回到顶部"><i class="haofont hao-icon-arrow-up"></i></button>
+            
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/css/read-mode.css?v=1.7.3">
+
+
+
+<!-- 右键菜单 -->
+<div class="js-pjax">
+    <div id="rightMenu">
+        <div class="rightMenu-group rightMenu-small">
+            <div class="rightMenu-item" id="menu-backward"><i class="haofont hao-icon-arrow-left"></i></div>
+            <div class="rightMenu-item" id="menu-forward"><i class="haofont hao-icon-arrow-right"></i></div>
+            <div class="rightMenu-item" id="menu-refresh"><i class="haofont hao-icon-arrow-rotate-right"></i></div>
+            <div class="rightMenu-item" id="menu-top"><i class="haofont hao-icon-arrow-up"></i></div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuPlugin">
+            <div class="rightMenu-item" id="menu-copytext">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制选中文本</span>
+            </div>
+            <div class="rightMenu-item" id="menu-pastetext">
+                <i class="haofont hao-icon-paste"></i>
+                <span>粘贴文本</span>
+            </div>
+            <a class="rightMenu-item" id="menu-commenttext">
+                <i class="haofont hao-icon-comment-medical"></i>
+                <span>引用到评论</span>
+            </a>
+            <div class="rightMenu-item" id="menu-newwindow">
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copylink">
+                <i class="haofont hao-icon-link"></i>
+                <span>复制链接地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copyimg">
+                <i class="haofont hao-icon-images"></i>
+                <span>复制此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-downloadimg">
+                <i class="haofont hao-icon-download"></i>
+                <span>下载此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-newwindowimg" >
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-search">
+                <i class="haofont hao-icon-search--line"></i>
+                <span>站内搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-searchBaidu">
+                <i class="haofont hao-icon-baidu"></i>
+                <span>百度搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-toggle" style="">
+                <i class="haofont hao-icon-play"></i>
+                <span>播放音乐</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-back" style="">
+                <i class="haofont hao-icon-backward"></i>
+                <span>切换到上一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-forward" style="">
+                <i class="haofont hao-icon-forward"></i>
+                <span>切换到下一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-playlist"
+                 style="" onclick="javascript:window.open(&#39;https://music.163.com/#/playlist?id=707486358&#39;)">
+                <i class="haofont hao-icon-radio"></i>
+                <span>查看所有歌曲</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-copyMusicName" style="">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制歌名</span>
+            </div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <a class="rightMenu-item menu-link" id="menu-randomPost" onclick="toRandomPost()">
+                <i class="haofont hao-icon-shuffle"></i>
+                <span>随便逛逛</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../categories">
+                <i class="haofont hao-icon-cube"></i>
+                <span>博客分类</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../tags">
+                <i class="haofont hao-icon-tags"></i>
+                <span>文章标签</span>
+            </a>
+        </div>
+        <!-- <div class="rightMenu-group rightMenu-line">
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-hand-holding"></i>
+                <span>隐私协议</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-closed-captioning"></i>
+                <span>版权协议</span>
+            </a>
+        </div> -->
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <div class="rightMenu-item" id="menu-copy">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-commentBarrage"
+                 rel="external nofollow noreferrer" draggable="false" style="display: flex;">
+                <i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i>
+                <span class="menu-commentBarrage-text">关闭热评</span>
+            </div>
+            <div class="rightMenu-item" id="menu-darkmode">
+                <i class="haofont hao-icon-moon-clear-fill" style="font-size: 19px;"></i>
+                <span class="menu-darkmode-text">深色模式</span>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rightmenu-mask"></div>
+</div>
+
+
+<div>
+    <script src="/themes/theme-hao/assets/js/utils.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/halo.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/main.js?v=1.7.3"></script>
+    <script charset="utf-8" data-pjax src="/themes/theme-hao/assets/zhheo/blogex.js?v=1.7.3"></script>
+    <script src="/themes/theme-hao/assets/js/tw_cn.js?v=1.7.3"></script>
+    <!-- https://instant.page/ 网站预加载， 放在 </body> 之前 -->
+    <script src="/themes/theme-hao/assets/libs/instantpage/instantpage.min.js"
+            type="module"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/vanilla-lazyload/lazyload.iife.min.js"></script>
+    
+    <!-- 右下角通知 https://www.polonel.com/snackbar/ -->
+    <!-- todo head 中有它的 css，应该可以写一块，并改成后台可配置的功能，代码中应该还有他的 js -->
+    <script src="/themes/theme-hao/assets/libs/node-snackbar/snackbar.min.js"></script>
+    
+    <div class="js-pjax">
+        <!-- 动态标题 -->
+        <!-- 动态标题 -->
+
+    </div>
+    
+    <!-- 评论 -->
+    
+    
+    <!--音乐-->
+    <script>var meting_api = "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r"; </script>
+    
+    <!-- 深色模式下添加粒子效果canvas -->
+    <canvas id="universe" width="1312" height="880"></canvas>
+    <script async="" src="/themes/theme-hao/assets/libs/canvas/dark.js"></script>
+    
+    <!-- https://davidshimjs.github.io/qrcodejs/ 生成二维码 -->
+    <!-- 应该是文章页分享使用 -->
+    <script data-pjax src="/themes/theme-hao/assets/libs/qrcode/qrcode.min.js" ></script>
+    
+    <!--  https://raphamorim.io/waterfall.js/  应该是这个 还有相关的 js 代码 是否可以调整-->
+    <script src="/themes/theme-hao/assets/libs/waterfall/waterfall.min.js"></script>
+    
+    <!-- 获取主色 https://lokeshdhakar.com/projects/color-thief/ -->
+    <!--<script th:src="@{/assets/libs/color-thief/color-thief.umd.js}"></script>-->
+    <script src="/themes/theme-hao/assets/libs/fast-average-color/index.browser.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/view-image/view-image.min.js"></script>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/libs/aplayer/APlayer.min.css"
+          media="all" onload="this.media='all'">
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/APlayer.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/Meting2.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/pjax/pjax.min.js"></script>
+    
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <script data-pjax
+            src="/themes/theme-hao/assets/libs/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- 右键菜单 -->
+    <script src="/themes/theme-hao/assets/zhheo/rightmenu.js"></script>
+    
+    <!-- 评论弹幕 -->
+    
+    
+    <!-- Tocbot 目录生成 start -->
+    <!-- Tocbot 目录生成 start -->
+<th:bloc>
+    <script src="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <link href="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.css" rel="stylesheet">
+</th:bloc>
+    
+
+    <script>
+        let pjaxSelectors = ['title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax', '#site-config']
+        
+        pjaxSelectors.unshift('meta[property="og:type"]', 'meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]', 'meta[property="og:description"]'
+                , 'meta[name="twitter:title"]', 'meta[name="twitter:url"]', 'meta[name="twitter:description"]', 'meta[name="twitter:image"]')
+        
+        var pjax = new Pjax({
+            elements: 'a:not([target="_blank"])',
+            selectors: pjaxSelectors,
+            cacheBust: false,
+            analytics: false,
+            scrollRestoration: false
+        })
+        
+        document.addEventListener('pjax:send', function () {
+            
+            // removeEventListener toc scroll
+            window.removeEventListener('scroll', window.tocScrollFn)
+            
+            typeof preloader === 'object' && preloader.initLoading()
+            
+            if (window.aplayers) {
+                for (let i = 0; i < window.aplayers.length; i++) {
+                    if (!window.aplayers[i].options.fixed) {
+                        window.aplayers[i].destroy()
+                    }
+                }
+            }
+            
+            typeof typed === 'object' && typed.destroy()
+            
+            //reset readmode
+            const $bodyClassList = document.body.classList
+            $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+        })
+        
+        document.addEventListener('pjax:complete', function () {
+            window.refreshFn()
+            
+            document.querySelectorAll('script[data-pjax]').forEach(item => {
+                        const newScript = document.createElement('script')
+                        const content = item.text || item.textContent || item.innerHTML || ""
+                        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+                        newScript.appendChild(document.createTextNode(content))
+                        item.parentNode.replaceChild(newScript, item)
+                    }
+            )
+            
+            GLOBAL_CONFIG.lazyload.enable && window.lazyLoadInstance.update()
+            
+            typeof chatBtnFn === 'function' && chatBtnFn()
+            typeof panguInit === 'function' && panguInit()
+            
+            // google analytics
+            typeof gtag === 'function' && gtag('config', '', {
+                'page_path': window.location.pathname
+            });
+            
+            // baidu analytics
+            typeof _hmt === 'object' && _hmt.push(['_trackPageview', window.location.pathname]);
+            
+            typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+            
+            // Analytics
+            if (false) {
+                MtaH5.pgv()
+            }
+            
+            // prismjs
+            typeof Prism === 'object' && Prism.highlightAll()
+            
+            typeof preloader === 'object' && preloader.endLoading()
+        })
+        
+        document.addEventListener('pjax:error', (e) => {
+                    if (e.request.status === 404 || e.request.status === 500) {
+                        window.location.href = e.request.responseURL;
+                    }
+                }
+        )
+    </script>
+
+
+</div>
+
+<!-- 根据配置设置 css 变量值，全局 css 通过变量值进行处理 -->
+<style type="text/css">
+    [data-theme=light] {
+        --heo-theme: #63a600 !important;
+        --heo-theme-op: #63a60023 !important;
+        --heo-theme-op-deep: #63a600dd !important;
+        --heo-theme-none: #63a60000 !important;
+    }
+
+    [data-theme=dark] {
+        --heo-theme: #dfa70c !important;
+        --heo-theme-op: #dfa70c23 !important;
+        --heo-theme-op-deep: #dfa70cdd !important;
+        --heo-theme-none: #dfa70c00 !important;
+    }
+
+    :root {
+        --halo-comment-widget-component-card-bg: var(--heo-card-bg);
+        --halo-comment-widget-component-theme-op: var(--heo-theme-op);
+        --halo-comment-widget-component-card-border: var(--heo-card-border);
+        --halo-comment-widget-component-shadow-border: var(--heo-shadow-border);
+        --halo-comment-widget-component-secondtext: var(--heo-secondtext);
+        --halo-comment-widget-component-lighttext: var(--heo-lighttext);
+        --halo-comment-widget-component-secondbg: var(--heo-secondbg);
+        --halo-comment-widget-component-fontcolor: var(--heo-fontcolor);
+        --halo-comment-widget-component-main: var(--heo-main);
+        --halo-comment-widget-component-background: var(--heo-background);
+        --halo-comment-widget-component-white: var(--heo-white);
+        --halo-comment-widget-component-shadow-black: var(--heo-shadow-black);
+    }
+    #page {
+        --halo-comment-widget-component-padding: 1rem;
+    }
+
+    .color-scheme-dark,.dark,[data-color-scheme=dark] {
+        --halo-search-widget-color-modal-layer: var(--heo-maskbgdeep);
+        --halo-search-widget-color-modal-content-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-input: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-form-input-placeholder: #6b7280d9;
+        --halo-search-widget-color-form-input-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-divider: #bbbbbb0f;
+        --halo-search-widget-color-result-item-bg: var(--heo-card-bg);
+        --halo-search-widget-color-result-item-hover-bg: #90939914;
+        --halo-search-widget-color-result-item-title: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-result-item-content: #ffffff82;
+        --halo-search-widget-color-command-kbd-item: #c0c4ccb3;
+        --halo-search-widget-color-command-kbd-border: #bbbbbb0f;
+        --halo-search-widget-color-result-empty: #6b7280d9
+    }
+
+    [data-theme=light] {
+        --halo-search-widget-color-result-item-title : #4B5563
+    }
+    
+        #aside-content #card-toc .toc-content a.toc-link:not(.active)  {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    
+</style>
+
+<script data-pjax="">
+    
+    //页脚友联
+    GLOBAL_CONFIG.isFriendLinksInFooter && heo.addFriendLinksInFooter()
+    //音乐页面切换歌曲调用
+    if (GLOBAL_CONFIG.isMusic) {
+        heo.changeMusicBg(false);
+    }
+    //代码块
+    if (GLOBAL_CONFIG.prism.enable) {
+        halo.addPrismTool()
+        halo.dataCodeTheme()
+    }
+
+</script>
+</body>
+
+</html>
