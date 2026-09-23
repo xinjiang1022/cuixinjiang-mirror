@@ -389,16 +389,16 @@ var _hmt = _hmt || [];
 
 <meta name="google-adsense-account" content="ca-pub-6884282846111963">
 <meta name="halo-showcase-verify" content="true" />
-<meta name="generator" content="Halo 2.26.1"/><meta name="description" content="一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。 公开服务器（guest/guest123） https://reader.nxnow.top 官方详细文档： https://github.com/hectorqin/reader/blob/master/"/><!-- PluginSearchWidget start -->
+<meta name="generator" content="Halo 2.26.1"/><meta name="description" content="一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。 公开服务器（guest/guest123） https://reader.nxnow.top 官方详细文档： https://github.com/hectorqin/reader/blob/master/"/><!-- plugin-comment-widget start -->
+<link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.3.2">
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.3.2" />
+<!-- plugin-comment-widget end -->
+<!-- PluginSearchWidget start -->
 <script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.7.1" defer></script>
 <link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.7.1" />
 <!-- PluginSearchWidget end -->
               <meta name="baidu-site-verification" content="codeva-isZaNyZ2Yy" />
               <meta name="msvalidate.01" content="BAB56C0384CAFFAFC785206D9FA44F76" />
-<!-- plugin-comment-widget start -->
-<link rel="modulepreload" href="/plugins/PluginCommentWidget/assets/static/comment-widget.js?version=3.3.2">
-<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/index.css?version=3.3.2" />
-<!-- plugin-comment-widget end -->
 <script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="207fafe8-ab6d-4392-a674-3e48d76153c4"></script>
 <link rel="icon" href="/wp-content/uploads/2024/12/cropped-ico.png" />
 </head>
@@ -486,7 +486,7 @@ var _hmt = _hmt || [];
     </style>
     <div id="loading-box" onclick="heo.hideLoading()">
         <div class="loading-bg">
-            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
+            <img class="loading-img" style="border-radius: 50%;" src="/wp-content/uploads/2024/12/wuhouyangguang.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/wuhouyangguang.png?width=1600 1600w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=1200 1200w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=800 800w, /wp-content/uploads/2024/12/wuhouyangguang.png?width=400 400w">
             <div class="loading-image-dot"></div>
         </div>
     </div>
@@ -514,7 +514,7 @@ var _hmt = _hmt || [];
 <div id="web_bg">
     <div>
         <img class="global_background_img"
-             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=400 400w"
+             src="/upload/beijing.jpg" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/beijing.jpg?width=1600 1600w, /upload/beijing.jpg?width=1200 1200w, /upload/beijing.jpg?width=800 800w, /upload/beijing.jpg?width=400 400w"
         />
         
     </div>
@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
 >
     function toRandomPost() {
         // 随机跳转全站的一篇文章
-        let permalink = "\/archives\/zai-fei-niu-de-debianzhong-bu-shu-frpsbing-lian-jie-frpc";
+        let permalink = "\/archives\/%E7%94%A8%E5%8F%8C%E8%87%82%E5%92%8C%E7%AF%AE%E7%90%83%E6%94%AF%E8%B5%B7%E7%9A%84%E5%9D%9A%E5%BC%BA%E4%BA%BA%E7%94%9F";
         
         // 当前窗口打开
         //window.location.href = permalink;
@@ -792,7 +792,7 @@ var _hmt = _hmt || [];
                   九月 2026
                 </span>
                 <div class="card-archive-list-count-group"><span
-                        class="card-archive-list-count">41</span>
+                        class="card-archive-list-count">43</span>
                   <span class="card-archive-list-count-unit">篇</span>
                 </div>
               </a>
@@ -1540,7 +1540,7 @@ var _hmt = _hmt || [];
     <!-- 返回主页 -->
     <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
     <a href="/" id="site-name" title="返回博客主页">
-        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
+        <span><img src="/wp-content/uploads/2024/12/logo.png" alt="午后阳光" width="120" height="29" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/wp-content/uploads/2024/12/logo.png?width=1600 1600w, /wp-content/uploads/2024/12/logo.png?width=1200 1200w, /wp-content/uploads/2024/12/logo.png?width=800 800w, /wp-content/uploads/2024/12/logo.png?width=400 400w"></span>
     </a>
 </div>
 
@@ -1902,7 +1902,7 @@ var _hmt = _hmt || [];
 </nav>
             <div class="coverdiv loaded" id="coverdiv">
                 <img alt="cover" class="nolazyload" id="post-cover"
-                     src="/upload/145345q7cr48g7oif2gosp.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q7cr48g7oif2gosp.png?width=1600 1600w, /upload/145345q7cr48g7oif2gosp.png?width=800 800w, /upload/145345q7cr48g7oif2gosp.png?width=1200 1200w, /upload/145345q7cr48g7oif2gosp.png?width=400 400w">
+                     src="/upload/145345q7cr48g7oif2gosp.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q7cr48g7oif2gosp.png?width=1600 1600w, /upload/145345q7cr48g7oif2gosp.png?width=1200 1200w, /upload/145345q7cr48g7oif2gosp.png?width=800 800w, /upload/145345q7cr48g7oif2gosp.png?width=400 400w">
             </div>
 
             <div id="post-info">
@@ -1964,7 +1964,7 @@ var _hmt = _hmt || [];
                            title="热度" >
                             <i class="haofont hao-icon-fire post-meta-icon"></i>
                             <span class="post-meta-label">热度:</span>
-                            <span id="visit">836</span>
+                            <span id="visit">837</span>
                         </a>
                         <a class="post-meta-commentcount"  data-flag-title="评论数"
                            title="评论数"
@@ -2009,7 +2009,7 @@ var _hmt = _hmt || [];
                 <!-- 文章内容 -->
                 <article  class="post-content  line-numbers" id="article-container">
                     
-                    <p style="">一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。</p><p style=""><img src="/upload/145345oc34luh3v44bh3kc.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345oc34luh3v44bh3kc.png?width=1600 1600w, /upload/145345oc34luh3v44bh3kc.png?width=800 800w, /upload/145345oc34luh3v44bh3kc.png?width=1200 1200w, /upload/145345oc34luh3v44bh3kc.png?width=400 400w"></p><p style="">公开服务器（guest/guest123）</p><p style="">https://reader.nxnow.top</p><p style="">官方详细文档：</p><p style="">https://github.com/hectorqin/reader/blob/master/doc.md</p><h3 style="" id="%E5%AE%89%E8%A3%85"><strong>安装</strong></h3><p style="">Docker Compose</p><pre><code class="language-html">services:
+                    <p style="">一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。</p><p style=""><img src="/upload/145345oc34luh3v44bh3kc.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345oc34luh3v44bh3kc.png?width=1600 1600w, /upload/145345oc34luh3v44bh3kc.png?width=1200 1200w, /upload/145345oc34luh3v44bh3kc.png?width=800 800w, /upload/145345oc34luh3v44bh3kc.png?width=400 400w"></p><p style="">公开服务器（guest/guest123）</p><p style="">https://reader.nxnow.top</p><p style="">官方详细文档：</p><p style="">https://github.com/hectorqin/reader/blob/master/doc.md</p><h3 style="" id="%E5%AE%89%E8%A3%85"><strong>安装</strong></h3><p style="">Docker Compose</p><pre><code class="language-html">services:
 &nbsp;&nbsp;reader:
 &nbsp; &nbsp;&nbsp;image: hectorqin/reader:latest
 &nbsp; &nbsp;&nbsp;container_name: reader
@@ -2021,7 +2021,7 @@ var _hmt = _hmt || [];
 &nbsp; &nbsp; &nbsp; - ./log:/log
 &nbsp; &nbsp; &nbsp; - ./storage:/storage
 &nbsp; &nbsp;&nbsp;restart: always
-​</code></pre><p style="">参数说明（更多参数建议去看文档）</p><p style="">:::<br>/log（路径）：用于存储日志</p><p style="">/storage（路径）：用于存储书源及配置文件</p><p style="">:::</p><p style="">这里演示安装的是自用版，其他版本可以参考自行部署</p><p style=""><img src="/upload/145345dettbozqgzb5ffto.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345dettbozqgzb5ffto.png?width=1600 1600w, /upload/145345dettbozqgzb5ffto.png?width=800 800w, /upload/145345dettbozqgzb5ffto.png?width=1200 1200w, /upload/145345dettbozqgzb5ffto.png?width=400 400w"></p><h3 style="" id="%E4%BD%BF%E7%94%A8"><strong>使用</strong></h3><p style="">浏览器中输入 <code>http://NAS的IP:8080</code>&nbsp;就能看到界面</p><p style=""><img src="/upload/145346co8oj3cj8jffzfoq.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145346co8oj3cj8jffzfoq.png?width=1600 1600w, /upload/145346co8oj3cj8jffzfoq.png?width=800 800w, /upload/145346co8oj3cj8jffzfoq.png?width=1200 1200w, /upload/145346co8oj3cj8jffzfoq.png?width=400 400w"></p><p style="">界面挺清爽的（为了截图效果，切换为了深色主题）</p><p style=""><img src="/upload/145345gkmymwpepqku8msw.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345gkmymwpepqku8msw.png?width=1600 1600w, /upload/145345gkmymwpepqku8msw.png?width=800 800w, /upload/145345gkmymwpepqku8msw.png?width=1200 1200w, /upload/145345gkmymwpepqku8msw.png?width=400 400w"></p><p style="">打开提供书源的网站（注意是书源不是订阅源）</p><p style="">https://legado.aoaostar.com</p><p style="">https://flowus.cn/zyzyk/share/07b5bf19-2397-4065-bc1c-aecb7c00f2d4</p><p style=""><img src="/upload/145345huf44ihd5nmzfue2.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345huf44ihd5nmzfue2.png?width=1600 1600w, /upload/145345huf44ihd5nmzfue2.png?width=800 800w, /upload/145345huf44ihd5nmzfue2.png?width=1200 1200w, /upload/145345huf44ihd5nmzfue2.png?width=400 400w"></p><p style="">打开之后应该是 JSON 格式的，点击下载（也可以复制下面的内容，不过太多可能卡死）</p><p style=""><img src="/upload/145345xn1wwqf4tftt5g5z.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345xn1wwqf4tftt5g5z.png?width=1600 1600w, /upload/145345xn1wwqf4tftt5g5z.png?width=800 800w, /upload/145345xn1wwqf4tftt5g5z.png?width=1200 1200w, /upload/145345xn1wwqf4tftt5g5z.png?width=400 400w"></p><p style="">点击左侧“导入书源”，选择上面下载的 JSON 文件</p><p style=""><img src="/upload/145345brzzqkvx0tiiw03z.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345brzzqkvx0tiiw03z.png?width=1600 1600w, /upload/145345brzzqkvx0tiiw03z.png?width=800 800w, /upload/145345brzzqkvx0tiiw03z.png?width=1200 1200w, /upload/145345brzzqkvx0tiiw03z.png?width=400 400w"></p><p style="">全部勾选后，点击确定导入</p><p style=""><img src="/upload/145345fhktjw07n5gkohwp.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345fhktjw07n5gkohwp.png?width=1600 1600w, /upload/145345fhktjw07n5gkohwp.png?width=800 800w, /upload/145345fhktjw07n5gkohwp.png?width=1200 1200w, /upload/145345fhktjw07n5gkohwp.png?width=400 400w"></p><p style="">导入后，刷新网页能看到已经添加成功</p><p style=""><img src="/upload/145345e05ppaqh0lftkyqo.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345e05ppaqh0lftkyqo.png?width=1600 1600w, /upload/145345e05ppaqh0lftkyqo.png?width=800 800w, /upload/145345e05ppaqh0lftkyqo.png?width=1200 1200w, /upload/145345e05ppaqh0lftkyqo.png?width=400 400w"></p><p style="">TIP：直接打开书海找书籍是有问题（按道理应该是可以的）</p><p style=""><img src="/upload/145345gsam19rmigtcrqam.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345gsam19rmigtcrqam.png?width=1600 1600w, /upload/145345gsam19rmigtcrqam.png?width=800 800w, /upload/145345gsam19rmigtcrqam.png?width=1200 1200w, /upload/145345gsam19rmigtcrqam.png?width=400 400w"></p><p style="">需要先搜索名称，再添加到书架</p><p style=""><img src="/upload/145345i250hrcehqw4yqr2.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345i250hrcehqw4yqr2.png?width=1600 1600w, /upload/145345i250hrcehqw4yqr2.png?width=800 800w, /upload/145345i250hrcehqw4yqr2.png?width=1200 1200w, /upload/145345i250hrcehqw4yqr2.png?width=400 400w"></p><p style="">回到书架就能看到添加的书了</p><p style=""><img src="/upload/145345w19iu56iv9etryeu.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345w19iu56iv9etryeu.png?width=1600 1600w, /upload/145345w19iu56iv9etryeu.png?width=800 800w, /upload/145345w19iu56iv9etryeu.png?width=1200 1200w, /upload/145345w19iu56iv9etryeu.png?width=400 400w"></p><p style="">PC 网页端，功能挺齐全的</p><p style=""><img src="/upload/145345xybjk4s99kz595oc.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345xybjk4s99kz595oc.png?width=1600 1600w, /upload/145345xybjk4s99kz595oc.png?width=800 800w, /upload/145345xybjk4s99kz595oc.png?width=1200 1200w, /upload/145345xybjk4s99kz595oc.png?width=400 400w"></p><p style="">设置项，可以更换壁纸和字体</p><p style=""><img src="/upload/145345q62qz8pcwfzcwf8p.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q62qz8pcwfzcwf8p.png?width=1600 1600w, /upload/145345q62qz8pcwfzcwf8p.png?width=800 800w, /upload/145345q62qz8pcwfzcwf8p.png?width=1200 1200w, /upload/145345q62qz8pcwfzcwf8p.png?width=400 400w"></p><p style="">移动网页端，效果也是不错的</p><p style=""><img src="/upload/145345uq6xra76xqoxd6qt.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345uq6xra76xqoxd6qt.png?width=1600 1600w, /upload/145345uq6xra76xqoxd6qt.png?width=800 800w, /upload/145345uq6xra76xqoxd6qt.png?width=1200 1200w, /upload/145345uq6xra76xqoxd6qt.png?width=400 400w"></p><p style="">除了使用书源，也是支持导入本地书籍的</p><p style=""><img src="/upload/145345q7cr48g7oif2gosp.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q7cr48g7oif2gosp.png?width=1600 1600w, /upload/145345q7cr48g7oif2gosp.png?width=800 800w, /upload/145345q7cr48g7oif2gosp.png?width=1200 1200w, /upload/145345q7cr48g7oif2gosp.png?width=400 400w"></p><p style="">可以识别到章节，阅读效果和前面是一样的</p><p style=""><img src="/upload/145345vkq2w55gq3y2agka.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345vkq2w55gq3y2agka.png?width=1600 1600w, /upload/145345vkq2w55gq3y2agka.png?width=800 800w, /upload/145345vkq2w55gq3y2agka.png?width=1200 1200w, /upload/145345vkq2w55gq3y2agka.png?width=400 400w"></p><p style="">除了 TXT 文本，还可以导入 cbz 漫画压缩包文件</p><p style=""><img src="/upload/145345nfvzqy7vv017vyyv.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345nfvzqy7vv017vyyv.png?width=1600 1600w, /upload/145345nfvzqy7vv017vyyv.png?width=800 800w, /upload/145345nfvzqy7vv017vyyv.png?width=1200 1200w, /upload/145345nfvzqy7vv017vyyv.png?width=400 400w"></p><p style="">可以正常浏览里面的图片</p><p style=""><img src="/upload/145345yke99n2ieji660iz.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345yke99n2ieji660iz.png?width=1600 1600w, /upload/145345yke99n2ieji660iz.png?width=800 800w, /upload/145345yke99n2ieji660iz.png?width=1200 1200w, /upload/145345yke99n2ieji660iz.png?width=400 400w"></p><h3 style="" id="%E6%80%BB%E7%BB%93"><strong>总结</strong></h3><p style="">这款阅读工具用的人应该还是比较多的，可以自定义添加书源，更加灵活解决没有资源的问题。使用上手简单，该有的功能都有，可以配合 APP 应用（我个人觉得，装其中一个就行，没必要多此一举）进行联动。不过，在使用过程中也存在一些小问题，比如不能直接浏览书源里的图书资源，需要搜索名称再添加到书架。</p><p style="">综合推荐：⭐⭐⭐（用的人多，适合网络阅读爱好者）</p><p style="">使用体验：⭐⭐⭐（功能简单，存在些小问题）</p><p style="">部署难易：⭐⭐（简单）︎︎</p>
+​</code></pre><p style="">参数说明（更多参数建议去看文档）</p><p style="">:::<br>/log（路径）：用于存储日志</p><p style="">/storage（路径）：用于存储书源及配置文件</p><p style="">:::</p><p style="">这里演示安装的是自用版，其他版本可以参考自行部署</p><p style=""><img src="/upload/145345dettbozqgzb5ffto.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345dettbozqgzb5ffto.png?width=1600 1600w, /upload/145345dettbozqgzb5ffto.png?width=1200 1200w, /upload/145345dettbozqgzb5ffto.png?width=800 800w, /upload/145345dettbozqgzb5ffto.png?width=400 400w"></p><h3 style="" id="%E4%BD%BF%E7%94%A8"><strong>使用</strong></h3><p style="">浏览器中输入 <code>http://NAS的IP:8080</code>&nbsp;就能看到界面</p><p style=""><img src="/upload/145346co8oj3cj8jffzfoq.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145346co8oj3cj8jffzfoq.png?width=1600 1600w, /upload/145346co8oj3cj8jffzfoq.png?width=1200 1200w, /upload/145346co8oj3cj8jffzfoq.png?width=800 800w, /upload/145346co8oj3cj8jffzfoq.png?width=400 400w"></p><p style="">界面挺清爽的（为了截图效果，切换为了深色主题）</p><p style=""><img src="/upload/145345gkmymwpepqku8msw.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345gkmymwpepqku8msw.png?width=1600 1600w, /upload/145345gkmymwpepqku8msw.png?width=1200 1200w, /upload/145345gkmymwpepqku8msw.png?width=800 800w, /upload/145345gkmymwpepqku8msw.png?width=400 400w"></p><p style="">打开提供书源的网站（注意是书源不是订阅源）</p><p style="">https://legado.aoaostar.com</p><p style="">https://flowus.cn/zyzyk/share/07b5bf19-2397-4065-bc1c-aecb7c00f2d4</p><p style=""><img src="/upload/145345huf44ihd5nmzfue2.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345huf44ihd5nmzfue2.png?width=1600 1600w, /upload/145345huf44ihd5nmzfue2.png?width=1200 1200w, /upload/145345huf44ihd5nmzfue2.png?width=800 800w, /upload/145345huf44ihd5nmzfue2.png?width=400 400w"></p><p style="">打开之后应该是 JSON 格式的，点击下载（也可以复制下面的内容，不过太多可能卡死）</p><p style=""><img src="/upload/145345xn1wwqf4tftt5g5z.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345xn1wwqf4tftt5g5z.png?width=1600 1600w, /upload/145345xn1wwqf4tftt5g5z.png?width=1200 1200w, /upload/145345xn1wwqf4tftt5g5z.png?width=800 800w, /upload/145345xn1wwqf4tftt5g5z.png?width=400 400w"></p><p style="">点击左侧“导入书源”，选择上面下载的 JSON 文件</p><p style=""><img src="/upload/145345brzzqkvx0tiiw03z.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345brzzqkvx0tiiw03z.png?width=1600 1600w, /upload/145345brzzqkvx0tiiw03z.png?width=1200 1200w, /upload/145345brzzqkvx0tiiw03z.png?width=800 800w, /upload/145345brzzqkvx0tiiw03z.png?width=400 400w"></p><p style="">全部勾选后，点击确定导入</p><p style=""><img src="/upload/145345fhktjw07n5gkohwp.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345fhktjw07n5gkohwp.png?width=1600 1600w, /upload/145345fhktjw07n5gkohwp.png?width=1200 1200w, /upload/145345fhktjw07n5gkohwp.png?width=800 800w, /upload/145345fhktjw07n5gkohwp.png?width=400 400w"></p><p style="">导入后，刷新网页能看到已经添加成功</p><p style=""><img src="/upload/145345e05ppaqh0lftkyqo.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345e05ppaqh0lftkyqo.png?width=1600 1600w, /upload/145345e05ppaqh0lftkyqo.png?width=1200 1200w, /upload/145345e05ppaqh0lftkyqo.png?width=800 800w, /upload/145345e05ppaqh0lftkyqo.png?width=400 400w"></p><p style="">TIP：直接打开书海找书籍是有问题（按道理应该是可以的）</p><p style=""><img src="/upload/145345gsam19rmigtcrqam.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345gsam19rmigtcrqam.png?width=1600 1600w, /upload/145345gsam19rmigtcrqam.png?width=1200 1200w, /upload/145345gsam19rmigtcrqam.png?width=800 800w, /upload/145345gsam19rmigtcrqam.png?width=400 400w"></p><p style="">需要先搜索名称，再添加到书架</p><p style=""><img src="/upload/145345i250hrcehqw4yqr2.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345i250hrcehqw4yqr2.png?width=1600 1600w, /upload/145345i250hrcehqw4yqr2.png?width=1200 1200w, /upload/145345i250hrcehqw4yqr2.png?width=800 800w, /upload/145345i250hrcehqw4yqr2.png?width=400 400w"></p><p style="">回到书架就能看到添加的书了</p><p style=""><img src="/upload/145345w19iu56iv9etryeu.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345w19iu56iv9etryeu.png?width=1600 1600w, /upload/145345w19iu56iv9etryeu.png?width=1200 1200w, /upload/145345w19iu56iv9etryeu.png?width=800 800w, /upload/145345w19iu56iv9etryeu.png?width=400 400w"></p><p style="">PC 网页端，功能挺齐全的</p><p style=""><img src="/upload/145345xybjk4s99kz595oc.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345xybjk4s99kz595oc.png?width=1600 1600w, /upload/145345xybjk4s99kz595oc.png?width=1200 1200w, /upload/145345xybjk4s99kz595oc.png?width=800 800w, /upload/145345xybjk4s99kz595oc.png?width=400 400w"></p><p style="">设置项，可以更换壁纸和字体</p><p style=""><img src="/upload/145345q62qz8pcwfzcwf8p.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q62qz8pcwfzcwf8p.png?width=1600 1600w, /upload/145345q62qz8pcwfzcwf8p.png?width=1200 1200w, /upload/145345q62qz8pcwfzcwf8p.png?width=800 800w, /upload/145345q62qz8pcwfzcwf8p.png?width=400 400w"></p><p style="">移动网页端，效果也是不错的</p><p style=""><img src="/upload/145345uq6xra76xqoxd6qt.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345uq6xra76xqoxd6qt.png?width=1600 1600w, /upload/145345uq6xra76xqoxd6qt.png?width=1200 1200w, /upload/145345uq6xra76xqoxd6qt.png?width=800 800w, /upload/145345uq6xra76xqoxd6qt.png?width=400 400w"></p><p style="">除了使用书源，也是支持导入本地书籍的</p><p style=""><img src="/upload/145345q7cr48g7oif2gosp.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345q7cr48g7oif2gosp.png?width=1600 1600w, /upload/145345q7cr48g7oif2gosp.png?width=1200 1200w, /upload/145345q7cr48g7oif2gosp.png?width=800 800w, /upload/145345q7cr48g7oif2gosp.png?width=400 400w"></p><p style="">可以识别到章节，阅读效果和前面是一样的</p><p style=""><img src="/upload/145345vkq2w55gq3y2agka.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345vkq2w55gq3y2agka.png?width=1600 1600w, /upload/145345vkq2w55gq3y2agka.png?width=1200 1200w, /upload/145345vkq2w55gq3y2agka.png?width=800 800w, /upload/145345vkq2w55gq3y2agka.png?width=400 400w"></p><p style="">除了 TXT 文本，还可以导入 cbz 漫画压缩包文件</p><p style=""><img src="/upload/145345nfvzqy7vv017vyyv.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345nfvzqy7vv017vyyv.png?width=1600 1600w, /upload/145345nfvzqy7vv017vyyv.png?width=1200 1200w, /upload/145345nfvzqy7vv017vyyv.png?width=800 800w, /upload/145345nfvzqy7vv017vyyv.png?width=400 400w"></p><p style="">可以正常浏览里面的图片</p><p style=""><img src="/upload/145345yke99n2ieji660iz.png" alt="飞牛NAS上部署阅读3.0：开源免费，本地+网络书籍都拥有" title="null" width="100%" height="100%" style="display: inline-block" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/145345yke99n2ieji660iz.png?width=1600 1600w, /upload/145345yke99n2ieji660iz.png?width=1200 1200w, /upload/145345yke99n2ieji660iz.png?width=800 800w, /upload/145345yke99n2ieji660iz.png?width=400 400w"></p><h3 style="" id="%E6%80%BB%E7%BB%93"><strong>总结</strong></h3><p style="">这款阅读工具用的人应该还是比较多的，可以自定义添加书源，更加灵活解决没有资源的问题。使用上手简单，该有的功能都有，可以配合 APP 应用（我个人觉得，装其中一个就行，没必要多此一举）进行联动。不过，在使用过程中也存在一些小问题，比如不能直接浏览书源里的图书资源，需要搜索名称再添加到书架。</p><p style="">综合推荐：⭐⭐⭐（用的人多，适合网络阅读爱好者）</p><p style="">使用体验：⭐⭐⭐（功能简单，存在些小问题）</p><p style="">部署难易：⭐⭐（简单）︎︎</p>
                 </article>
 
                 <!-- 文章ai摘要 -->
@@ -2047,7 +2047,7 @@ var _hmt = _hmt || [];
                     <!--                 th:src="@{${#strings.isEmpty(site.logo) ?  assets_link + '/images/hao-logo.jpg' : site.logo}}">-->
                     <!-- 获取当前文章对象（假设变量为 $post） -->
                     <img class="post-copyright__author_img_back entered loading"
-                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w"/>
+                         src="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1600 1600w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=1200 1200w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=800 800w, /upload/f5292fe4-a129-44b8-af97-b9a0f1bb3cc9.png?width=400 400w"/>
                 </a>
             </div>
             <div class="post-copyright__author_name">午后阳光</div>
@@ -2149,6 +2149,34 @@ var _hmt = _hmt || [];
             <!-- 建议阅读，这里可以自定义文章数量，然后遍历展示 -->
             
                 <div>
+                    <a href="/archives/fnnas-73414" title="团体文件夹同名文件总被覆盖？多半是这个设置没改对">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-vEsh.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-22
+                            </div>
+                            <div class="title" style="color: white">团体文件夹同名文件总被覆盖？多半是这个设置没改对</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
+                    <a href="/archives/fnnas-73384" title="星际蜗牛双固态+机械盘怎么分配？这套方案最省心">
+                        <img alt="cover" class="cover" id="preimg"
+                             src=""
+                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-Rsdo.png?width=800">
+                        <div class="content is-center">
+                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
+                                2026-09-22
+                            </div>
+                            <div class="title" style="color: white">星际蜗牛双固态+机械盘怎么分配？这套方案最省心</div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div>
                     <a href="/archives/fnnas-73376" title="飞牛系统打不开了？数据盘直接换到新飞牛能读吗——一文讲清">
                         <img alt="cover" class="cover" id="preimg"
                              src=""
@@ -2200,34 +2228,6 @@ var _hmt = _hmt || [];
                                 2026-09-20
                             </div>
                             <div class="title" style="color: white">升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-73185" title="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-Wgwx.png?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-20
-                            </div>
-                            <div class="title" style="color: white">鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份</div>
-                        </div>
-                    </a>
-                </div>
-            
-                <div>
-                    <a href="/archives/fnnas-73175" title="系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖">
-                        <img alt="cover" class="cover" id="preimg"
-                             src=""
-                             data-lazy-src="https://www.cuixinjiang.cn/upload/image-fsuv.png?width=800">
-                        <div class="content is-center">
-                            <div class="date" style="color: white"><i class="far fa-calendar-alt fa-fw"></i>
-                                2026-09-19
-                            </div>
-                            <div class="title" style="color: white">系统更新后崩溃、应用不停重启？可能是相册里的远程挂载目录在作妖</div>
                         </div>
                     </a>
                 </div>
@@ -2483,6 +2483,28 @@ var _hmt = _hmt || [];
     <div class="aside-list">
         <!-- 最新文章，用户可以自定义展示数量 -->
         <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73414" title="团体文件夹同名文件总被覆盖？多半是这个设置没改对">
+                <img alt="团体文件夹同名文件总被覆盖？多半是这个设置没改对"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-vEsh.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73414" title="团体文件夹同名文件总被覆盖？多半是这个设置没改对">团体文件夹同名文件总被覆盖？多半是这个设置没改对</a>
+                <time title="2026-09-22 20:33:09" datetime="2026-09-22 20:33:09">2026-09-22 20:33:09</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/fnnas-73384" title="星际蜗牛双固态+机械盘怎么分配？这套方案最省心">
+                <img alt="星际蜗牛双固态+机械盘怎么分配？这套方案最省心"
+                     src=""
+                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-Rsdo.png?width=400">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/fnnas-73384" title="星际蜗牛双固态+机械盘怎么分配？这套方案最省心">星际蜗牛双固态+机械盘怎么分配？这套方案最省心</a>
+                <time title="2026-09-22 14:32:17" datetime="2026-09-22 14:32:17">2026-09-22 14:32:17</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
             <a class="thumbnail" href="/archives/fnnas-73376" title="飞牛系统打不开了？数据盘直接换到新飞牛能读吗——一文讲清">
                 <img alt="飞牛系统打不开了？数据盘直接换到新飞牛能读吗——一文讲清"
                      src=""
@@ -2513,28 +2535,6 @@ var _hmt = _hmt || [];
             <div class="content">
                 <a class="title" href="/archives/fnnas-73250" title="旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路">旧电脑还在用 Win7？飞牛同步装不上，试试这个兼容思路</a>
                 <time title="2026-09-21 08:33:12" datetime="2026-09-21 08:33:12">2026-09-21 08:33:12</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-73256" title="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了">
-                <img alt="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-KRLb.png?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-73256" title="升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了">升级后 Web 和 App 突然进不去？Docker 正常说明只是管理服务挂了</a>
-                <time title="2026-09-20 20:39:03" datetime="2026-09-20 20:39:03">2026-09-20 20:39:03</time>
-            </div>
-        </div>
-        <div class="aside-list-item">
-            <a class="thumbnail" href="/archives/fnnas-73185" title="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份">
-                <img alt="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份"
-                     src=""
-                     data-lazy-src="https://www.cuixinjiang.cn/upload/image-Wgwx.png?width=400">
-            </a>
-            <div class="content">
-                <a class="title" href="/archives/fnnas-73185" title="鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份">鸿蒙手机备份到飞牛只有缩略图？先让原图留在本地再备份</a>
-                <time title="2026-09-20 08:33:47" datetime="2026-09-20 08:33:47">2026-09-20 08:33:47</time>
             </div>
         </div>
     </div>
@@ -2689,7 +2689,7 @@ var _hmt = _hmt || [];
             <li class="card-category-list-item">
                 <a class="card-category-list-link" href="/categories/zhuanyejilu">
                         <span class="card-category-list-name" title="专业记录">专业记录</span>
-                    <span class="card-category-list-count">110</span>
+                    <span class="card-category-list-count">112</span>
                 </a>
             </li>
         </ul>
@@ -2806,7 +2806,7 @@ var _hmt = _hmt || [];
                    rel="noopener external nofollow noreferrer noopener"
                    target="_blank">
                     <span>本网站由</span>&nbsp;&nbsp;
-                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
+                    <img src="/themes/theme-hao/assets/images/footer/tencent.png" alt="tencent_cloud" class="cloud-logo" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/themes/theme-hao/assets/images/footer/tencent.png?width=1600 1600w, /themes/theme-hao/assets/images/footer/tencent.png?width=1200 1200w, /themes/theme-hao/assets/images/footer/tencent.png?width=800 800w, /themes/theme-hao/assets/images/footer/tencent.png?width=400 400w" />
                     &nbsp;&nbsp;<span>提供CDN加速/云存储服务</span>
                 </a>
                 <!-- 华为云 -->
